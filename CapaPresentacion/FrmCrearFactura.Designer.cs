@@ -28,15 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCrearFactura));
             this.SuspendLayout();
             // 
             // FrmCrearFactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1282, 762);
+            this.ClientSize = new System.Drawing.Size(1282, 732);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "FrmCrearFactura";
-            this.Text = "FrmCrearFactura";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
+            this.Text = "VAND y MONTI";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
 
         }
