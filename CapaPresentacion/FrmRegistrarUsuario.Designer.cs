@@ -30,17 +30,33 @@
         {
             this.PanelTop = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.BtnFoto = new System.Windows.Forms.Button();
+            this.BtnLimpiar = new System.Windows.Forms.Button();
+            this.BtnGuardar = new System.Windows.Forms.Button();
+            this.BtnCancelar = new System.Windows.Forms.Button();
             this.FotoUsuario = new System.Windows.Forms.PictureBox();
             this.IconoRegistrar = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.TxtNombre = new System.Windows.Forms.TextBox();
+            this.TxtTelefono = new System.Windows.Forms.TextBox();
+            this.TxtCorreo = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.CmbRol = new System.Windows.Forms.ComboBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.BtnQuitar = new System.Windows.Forms.Button();
+            this.BtnSeleccionar = new System.Windows.Forms.Button();
             this.PanelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FotoUsuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IconoRegistrar)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // PanelTop
@@ -66,50 +82,54 @@
             this.label1.Text = "Registrar Usuarios";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // button1
+            // BtnFoto
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(91)))), ((int)(((byte)(178)))));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(29, 220);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(147, 57);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.BtnFoto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(91)))), ((int)(((byte)(178)))));
+            this.BtnFoto.Font = new System.Drawing.Font("Segoe UI Black", 8F, System.Drawing.FontStyle.Bold);
+            this.BtnFoto.ForeColor = System.Drawing.Color.White;
+            this.BtnFoto.Location = new System.Drawing.Point(29, 220);
+            this.BtnFoto.Name = "BtnFoto";
+            this.BtnFoto.Size = new System.Drawing.Size(147, 57);
+            this.BtnFoto.TabIndex = 1;
+            this.BtnFoto.Text = "Subir foto";
+            this.BtnFoto.UseVisualStyleBackColor = false;
+            this.BtnFoto.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // BtnLimpiar
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(91)))), ((int)(((byte)(178)))));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(29, 283);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(147, 57);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = false;
+            this.BtnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(91)))), ((int)(((byte)(178)))));
+            this.BtnLimpiar.Font = new System.Drawing.Font("Segoe UI Black", 8F, System.Drawing.FontStyle.Bold);
+            this.BtnLimpiar.ForeColor = System.Drawing.Color.White;
+            this.BtnLimpiar.Location = new System.Drawing.Point(29, 283);
+            this.BtnLimpiar.Name = "BtnLimpiar";
+            this.BtnLimpiar.Size = new System.Drawing.Size(147, 57);
+            this.BtnLimpiar.TabIndex = 2;
+            this.BtnLimpiar.Text = "Limpiar Datos";
+            this.BtnLimpiar.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // BtnGuardar
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(91)))), ((int)(((byte)(178)))));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(29, 346);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(147, 57);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = false;
+            this.BtnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(91)))), ((int)(((byte)(178)))));
+            this.BtnGuardar.Font = new System.Drawing.Font("Segoe UI Black", 8F, System.Drawing.FontStyle.Bold);
+            this.BtnGuardar.ForeColor = System.Drawing.Color.White;
+            this.BtnGuardar.Location = new System.Drawing.Point(29, 346);
+            this.BtnGuardar.Name = "BtnGuardar";
+            this.BtnGuardar.Size = new System.Drawing.Size(147, 57);
+            this.BtnGuardar.TabIndex = 3;
+            this.BtnGuardar.Text = "Guardar";
+            this.BtnGuardar.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // BtnCancelar
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(91)))), ((int)(((byte)(178)))));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(29, 409);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(147, 57);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = false;
+            this.BtnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(91)))), ((int)(((byte)(178)))));
+            this.BtnCancelar.Font = new System.Drawing.Font("Segoe UI Black", 8F, System.Drawing.FontStyle.Bold);
+            this.BtnCancelar.ForeColor = System.Drawing.Color.White;
+            this.BtnCancelar.Location = new System.Drawing.Point(29, 409);
+            this.BtnCancelar.Name = "BtnCancelar";
+            this.BtnCancelar.Size = new System.Drawing.Size(147, 57);
+            this.BtnCancelar.TabIndex = 4;
+            this.BtnCancelar.Text = "Cancelar";
+            this.BtnCancelar.UseVisualStyleBackColor = false;
             // 
             // FotoUsuario
             // 
@@ -137,6 +157,14 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(91)))), ((int)(((byte)(178)))));
+            this.panel1.Controls.Add(this.CmbRol);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.TxtCorreo);
+            this.panel1.Controls.Add(this.TxtTelefono);
+            this.panel1.Controls.Add(this.TxtNombre);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label3);
             this.panel1.Location = new System.Drawing.Point(233, 111);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(300, 355);
@@ -153,18 +181,162 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "Datos del usuario";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Black", 8F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(31, 22);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(136, 19);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Nombre y apellido";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Black", 8F, System.Drawing.FontStyle.Bold);
+            this.label4.Location = new System.Drawing.Point(31, 109);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(71, 19);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Telefono";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Black", 8F, System.Drawing.FontStyle.Bold);
+            this.label5.Location = new System.Drawing.Point(31, 191);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(56, 19);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Correo";
+            // 
+            // TxtNombre
+            // 
+            this.TxtNombre.Location = new System.Drawing.Point(35, 52);
+            this.TxtNombre.Multiline = true;
+            this.TxtNombre.Name = "TxtNombre";
+            this.TxtNombre.Size = new System.Drawing.Size(143, 36);
+            this.TxtNombre.TabIndex = 3;
+            // 
+            // TxtTelefono
+            // 
+            this.TxtTelefono.Location = new System.Drawing.Point(35, 140);
+            this.TxtTelefono.Multiline = true;
+            this.TxtTelefono.Name = "TxtTelefono";
+            this.TxtTelefono.Size = new System.Drawing.Size(143, 36);
+            this.TxtTelefono.TabIndex = 4;
+            // 
+            // TxtCorreo
+            // 
+            this.TxtCorreo.Location = new System.Drawing.Point(35, 223);
+            this.TxtCorreo.Multiline = true;
+            this.TxtCorreo.Name = "TxtCorreo";
+            this.TxtCorreo.Size = new System.Drawing.Size(143, 36);
+            this.TxtCorreo.TabIndex = 5;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI Black", 8F, System.Drawing.FontStyle.Bold);
+            this.label6.Location = new System.Drawing.Point(31, 273);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(32, 19);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Rol";
+            // 
+            // CmbRol
+            // 
+            this.CmbRol.FormattingEnabled = true;
+            this.CmbRol.Items.AddRange(new object[] {
+            "Administrador",
+            "Vendedor"});
+            this.CmbRol.Location = new System.Drawing.Point(35, 298);
+            this.CmbRol.Name = "CmbRol";
+            this.CmbRol.Size = new System.Drawing.Size(143, 24);
+            this.CmbRol.TabIndex = 7;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(91)))), ((int)(((byte)(178)))));
+            this.panel2.Controls.Add(this.BtnSeleccionar);
+            this.panel2.Controls.Add(this.BtnQuitar);
+            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.label8);
+            this.panel2.Location = new System.Drawing.Point(594, 111);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(300, 355);
+            this.panel2.TabIndex = 8;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI Black", 14F, System.Drawing.FontStyle.Bold);
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(640, 67);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(218, 32);
+            this.label7.TabIndex = 9;
+            this.label7.Text = "Administrar roles";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(36, 52);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(143, 36);
+            this.textBox1.TabIndex = 5;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI Black", 8F, System.Drawing.FontStyle.Bold);
+            this.label8.Location = new System.Drawing.Point(32, 22);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(121, 19);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "Buscar id del rol";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
+            // 
+            // BtnQuitar
+            // 
+            this.BtnQuitar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(0)))));
+            this.BtnQuitar.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.BtnQuitar.ForeColor = System.Drawing.Color.Black;
+            this.BtnQuitar.Location = new System.Drawing.Point(163, 316);
+            this.BtnQuitar.Name = "BtnQuitar";
+            this.BtnQuitar.Size = new System.Drawing.Size(101, 23);
+            this.BtnQuitar.TabIndex = 6;
+            this.BtnQuitar.Text = "Quitar";
+            this.BtnQuitar.UseVisualStyleBackColor = false;
+            // 
+            // BtnSeleccionar
+            // 
+            this.BtnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.BtnSeleccionar.Location = new System.Drawing.Point(36, 316);
+            this.BtnSeleccionar.Name = "BtnSeleccionar";
+            this.BtnSeleccionar.Size = new System.Drawing.Size(101, 23);
+            this.BtnSeleccionar.TabIndex = 6;
+            this.BtnSeleccionar.Text = "Seleccionar";
+            this.BtnSeleccionar.UseVisualStyleBackColor = true;
+            // 
             // FrmRegistrarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(932, 508);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.FotoUsuario);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.BtnCancelar);
+            this.Controls.Add(this.BtnGuardar);
+            this.Controls.Add(this.BtnLimpiar);
+            this.Controls.Add(this.BtnFoto);
             this.Controls.Add(this.PanelTop);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(0)))));
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -174,6 +346,10 @@
             this.PanelTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FotoUsuario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IconoRegistrar)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -184,12 +360,26 @@
         private System.Windows.Forms.Panel PanelTop;
         private System.Windows.Forms.PictureBox IconoRegistrar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button BtnFoto;
+        private System.Windows.Forms.Button BtnLimpiar;
+        private System.Windows.Forms.Button BtnGuardar;
+        private System.Windows.Forms.Button BtnCancelar;
         private System.Windows.Forms.PictureBox FotoUsuario;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox TxtNombre;
+        private System.Windows.Forms.TextBox TxtCorreo;
+        private System.Windows.Forms.TextBox TxtTelefono;
+        private System.Windows.Forms.ComboBox CmbRol;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button BtnSeleccionar;
+        private System.Windows.Forms.Button BtnQuitar;
     }
 }
