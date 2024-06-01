@@ -52,7 +52,7 @@
             this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources.usuario;
             this.pictureBox1.Location = new System.Drawing.Point(3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(65, 50);
+            this.pictureBox1.Size = new System.Drawing.Size(60, 50);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
