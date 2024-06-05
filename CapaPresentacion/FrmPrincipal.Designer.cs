@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -38,8 +37,11 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,19 +55,11 @@
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(0, 84);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(447, 1341);
+            this.panel1.Size = new System.Drawing.Size(447, 845);
             this.panel1.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(91)))), ((int)(((byte)(178)))));
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1282, 88);
-            this.panel2.TabIndex = 2;
             // 
             // button7
             // 
@@ -187,11 +181,34 @@
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(91)))), ((int)(((byte)(178)))));
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(447, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(835, 88);
+            this.panel2.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(0)))));
+            this.label2.Location = new System.Drawing.Point(2, 18);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(230, 48);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Bienvenido ";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Location = new System.Drawing.Point(572, 227);
+            this.pictureBox1.Location = new System.Drawing.Point(609, 251);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(496, 469);
             this.pictureBox1.TabIndex = 1;
@@ -213,6 +230,8 @@
             this.Text = "FrmPrincipal";
             this.Load += new System.EventHandler(this.FrmPrincipal_Load);
             this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -230,5 +249,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label2;
     }
 }

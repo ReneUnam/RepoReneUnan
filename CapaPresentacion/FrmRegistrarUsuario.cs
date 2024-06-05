@@ -15,7 +15,11 @@ namespace CapaPresentacion
         public FrmRegistrarUsuario()
         {
             InitializeComponent();
+
+            
+
         }
+
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -111,6 +115,11 @@ namespace CapaPresentacion
         private void BtnLimpiar_Click(object sender, EventArgs e)
         {
             LimpiarCasillas();
+        }
+
+        private void FrmRegistrarUsuario_Load(object sender, EventArgs e)
+        {
+            IconoRegistrar.BorderStyle = BorderStyle.None;
         }
     }
 }
