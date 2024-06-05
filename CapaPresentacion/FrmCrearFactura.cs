@@ -111,5 +111,10 @@ namespace CapaPresentacion
         {
 
         }
+
+        private void FrmCrearFactura_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

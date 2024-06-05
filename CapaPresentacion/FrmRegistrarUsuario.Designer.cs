@@ -46,6 +46,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.BtnSeleccionar = new System.Windows.Forms.Button();
             this.BtnQuitar = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -53,13 +54,12 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.ImagenRegistro = new System.Windows.Forms.PictureBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.PanelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.IconoRegistrar)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ImagenRegistro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImagenRegistro)).BeginInit();
             this.SuspendLayout();
             // 
             // PanelTop
@@ -69,7 +69,7 @@
             this.PanelTop.Controls.Add(this.IconoRegistrar);
             this.PanelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelTop.Location = new System.Drawing.Point(0, 0);
-            this.PanelTop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PanelTop.Margin = new System.Windows.Forms.Padding(4);
             this.PanelTop.Name = "PanelTop";
             this.PanelTop.Size = new System.Drawing.Size(1282, 82);
             this.PanelTop.TabIndex = 0;
@@ -93,7 +93,7 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.IconoRegistrar.Image = global::CapaPresentacion.Properties.Resources.agregar_usuario__2_;
             this.IconoRegistrar.Location = new System.Drawing.Point(40, 4);
-            this.IconoRegistrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.IconoRegistrar.Margin = new System.Windows.Forms.Padding(4);
             this.IconoRegistrar.Name = "IconoRegistrar";
             this.IconoRegistrar.Size = new System.Drawing.Size(69, 68);
             this.IconoRegistrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -106,7 +106,7 @@
             this.BtnFoto.Font = new System.Drawing.Font("Segoe UI Black", 8F, System.Drawing.FontStyle.Bold);
             this.BtnFoto.ForeColor = System.Drawing.Color.White;
             this.BtnFoto.Location = new System.Drawing.Point(40, 330);
-            this.BtnFoto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnFoto.Margin = new System.Windows.Forms.Padding(4);
             this.BtnFoto.Name = "BtnFoto";
             this.BtnFoto.Size = new System.Drawing.Size(202, 86);
             this.BtnFoto.TabIndex = 1;
@@ -120,7 +120,7 @@
             this.BtnLimpiar.Font = new System.Drawing.Font("Segoe UI Black", 8F, System.Drawing.FontStyle.Bold);
             this.BtnLimpiar.ForeColor = System.Drawing.Color.White;
             this.BtnLimpiar.Location = new System.Drawing.Point(40, 424);
-            this.BtnLimpiar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnLimpiar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnLimpiar.Name = "BtnLimpiar";
             this.BtnLimpiar.Size = new System.Drawing.Size(202, 86);
             this.BtnLimpiar.TabIndex = 2;
@@ -134,7 +134,7 @@
             this.BtnGuardar.Font = new System.Drawing.Font("Segoe UI Black", 8F, System.Drawing.FontStyle.Bold);
             this.BtnGuardar.ForeColor = System.Drawing.Color.White;
             this.BtnGuardar.Location = new System.Drawing.Point(40, 519);
-            this.BtnGuardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnGuardar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnGuardar.Name = "BtnGuardar";
             this.BtnGuardar.Size = new System.Drawing.Size(202, 86);
             this.BtnGuardar.TabIndex = 3;
@@ -147,7 +147,7 @@
             this.BtnCancelar.Font = new System.Drawing.Font("Segoe UI Black", 8F, System.Drawing.FontStyle.Bold);
             this.BtnCancelar.ForeColor = System.Drawing.Color.White;
             this.BtnCancelar.Location = new System.Drawing.Point(40, 614);
-            this.BtnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnCancelar.Name = "BtnCancelar";
             this.BtnCancelar.Size = new System.Drawing.Size(202, 86);
             this.BtnCancelar.TabIndex = 4;
@@ -167,7 +167,7 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Location = new System.Drawing.Point(336, 166);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(412, 532);
             this.panel1.TabIndex = 6;
@@ -176,7 +176,7 @@
             // TextBox
             // 
             this.TextBox.Location = new System.Drawing.Point(48, 78);
-            this.TextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TextBox.Margin = new System.Windows.Forms.Padding(4);
             this.TextBox.Multiline = true;
             this.TextBox.Name = "TextBox";
             this.TextBox.Size = new System.Drawing.Size(195, 52);
@@ -190,7 +190,7 @@
             "Administrador",
             "Vendedor"});
             this.CmbRol.Location = new System.Drawing.Point(48, 447);
-            this.CmbRol.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CmbRol.Margin = new System.Windows.Forms.Padding(4);
             this.CmbRol.Name = "CmbRol";
             this.CmbRol.Size = new System.Drawing.Size(195, 32);
             this.CmbRol.TabIndex = 7;
@@ -209,7 +209,7 @@
             // TxtCorreo
             // 
             this.TxtCorreo.Location = new System.Drawing.Point(48, 334);
-            this.TxtCorreo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtCorreo.Margin = new System.Windows.Forms.Padding(4);
             this.TxtCorreo.Multiline = true;
             this.TxtCorreo.Name = "TxtCorreo";
             this.TxtCorreo.Size = new System.Drawing.Size(195, 52);
@@ -218,7 +218,7 @@
             // TxtTelefono
             // 
             this.TxtTelefono.Location = new System.Drawing.Point(48, 210);
-            this.TxtTelefono.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtTelefono.Margin = new System.Windows.Forms.Padding(4);
             this.TxtTelefono.Multiline = true;
             this.TxtTelefono.Name = "TxtTelefono";
             this.TxtTelefono.Size = new System.Drawing.Size(195, 52);
@@ -261,7 +261,6 @@
             // 
             // panel2
             // 
-            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(91)))), ((int)(((byte)(178)))));
             this.panel2.Controls.Add(this.dataGridView1);
             this.panel2.Controls.Add(this.BtnSeleccionar);
@@ -269,16 +268,25 @@
             this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Location = new System.Drawing.Point(817, 166);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(412, 532);
             this.panel2.TabIndex = 8;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(46, 181);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 72;
+            this.dataGridView1.Size = new System.Drawing.Size(316, 257);
+            this.dataGridView1.TabIndex = 7;
             // 
             // BtnSeleccionar
             // 
             this.BtnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.BtnSeleccionar.Location = new System.Drawing.Point(50, 474);
-            this.BtnSeleccionar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnSeleccionar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnSeleccionar.Name = "BtnSeleccionar";
             this.BtnSeleccionar.Size = new System.Drawing.Size(139, 34);
             this.BtnSeleccionar.TabIndex = 6;
@@ -291,7 +299,7 @@
             this.BtnQuitar.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.BtnQuitar.ForeColor = System.Drawing.Color.Black;
             this.BtnQuitar.Location = new System.Drawing.Point(224, 474);
-            this.BtnQuitar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnQuitar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnQuitar.Name = "BtnQuitar";
             this.BtnQuitar.Size = new System.Drawing.Size(139, 34);
             this.BtnQuitar.TabIndex = 6;
@@ -301,7 +309,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(50, 78);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(195, 52);
@@ -349,21 +357,12 @@
             // 
             this.ImagenRegistro.Image = global::CapaPresentacion.Properties.Resources.agregar_usuario;
             this.ImagenRegistro.Location = new System.Drawing.Point(55, 139);
-            this.ImagenRegistro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ImagenRegistro.Margin = new System.Windows.Forms.Padding(4);
             this.ImagenRegistro.Name = "ImagenRegistro";
             this.ImagenRegistro.Size = new System.Drawing.Size(165, 166);
             this.ImagenRegistro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ImagenRegistro.TabIndex = 10;
             this.ImagenRegistro.TabStop = false;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(46, 181);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 72;
-            this.dataGridView1.Size = new System.Drawing.Size(316, 257);
-            this.dataGridView1.TabIndex = 7;
             // 
             // FrmRegistrarUsuario
             // 
@@ -393,8 +392,8 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ImagenRegistro)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImagenRegistro)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
