@@ -36,11 +36,11 @@
             this.BtnGuardar = new System.Windows.Forms.Button();
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.TextBox = new System.Windows.Forms.TextBox();
             this.CmbRol = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.TxtCorreo = new System.Windows.Forms.TextBox();
             this.TxtTelefono = new System.Windows.Forms.TextBox();
-            this.TextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -118,6 +118,7 @@
             this.BtnLimpiar.TabIndex = 2;
             this.BtnLimpiar.Text = "Limpiar Datos";
             this.BtnLimpiar.UseVisualStyleBackColor = false;
+            this.BtnLimpiar.Click += new System.EventHandler(this.BtnLimpiar_Click);
             // 
             // BtnGuardar
             // 
@@ -161,6 +162,15 @@
             this.panel1.TabIndex = 6;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
             // 
+            // TextBox
+            // 
+            this.TextBox.Location = new System.Drawing.Point(35, 52);
+            this.TextBox.Multiline = true;
+            this.TextBox.Name = "TextBox";
+            this.TextBox.Size = new System.Drawing.Size(143, 36);
+            this.TextBox.TabIndex = 3;
+            this.TextBox.TextChanged += new System.EventHandler(this.TxtNombre_TextChanged);
+            // 
             // CmbRol
             // 
             this.CmbRol.FormattingEnabled = true;
@@ -198,15 +208,6 @@
             this.TxtTelefono.Size = new System.Drawing.Size(143, 36);
             this.TxtTelefono.TabIndex = 4;
             this.TxtTelefono.TextChanged += new System.EventHandler(this.TxtTelefono_TextChanged);
-            // 
-            // TextBox
-            // 
-            this.TextBox.Location = new System.Drawing.Point(35, 52);
-            this.TextBox.Multiline = true;
-            this.TextBox.Name = "TextBox";
-            this.TextBox.Size = new System.Drawing.Size(143, 36);
-            this.TextBox.TabIndex = 3;
-            this.TextBox.TextChanged += new System.EventHandler(this.TxtNombre_TextChanged);
             // 
             // label5
             // 

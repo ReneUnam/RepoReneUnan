@@ -74,7 +74,7 @@ namespace CapaPresentacion
 
         private void BtnCancelar_Click(object sender, EventArgs e)
         {
-            LimpiarCasillas();
+           
         }
 
         private void TxtNombre_TextChanged(object sender, EventArgs e)
@@ -106,6 +106,11 @@ namespace CapaPresentacion
             private void panel1_Paint_1(object sender, PaintEventArgs e)
         {
             
+        }
+
+        private void BtnLimpiar_Click(object sender, EventArgs e)
+        {
+            LimpiarCasillas();
         }
     }
 }
