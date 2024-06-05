@@ -32,7 +32,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
@@ -40,17 +39,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.textBox16 = new System.Windows.Forms.TextBox();
             this.textBox17 = new System.Windows.Forms.TextBox();
@@ -68,10 +56,22 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.domainUpDown1 = new System.Windows.Forms.DomainUpDown();
+            this.domainUpDown2 = new System.Windows.Forms.DomainUpDown();
+            this.domainUpDown3 = new System.Windows.Forms.DomainUpDown();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.domainUpDown12 = new System.Windows.Forms.DomainUpDown();
+            this.domainUpDown11 = new System.Windows.Forms.DomainUpDown();
+            this.domainUpDown10 = new System.Windows.Forms.DomainUpDown();
+            this.domainUpDown9 = new System.Windows.Forms.DomainUpDown();
+            this.domainUpDown8 = new System.Windows.Forms.DomainUpDown();
+            this.domainUpDown7 = new System.Windows.Forms.DomainUpDown();
+            this.domainUpDown6 = new System.Windows.Forms.DomainUpDown();
+            this.domainUpDown5 = new System.Windows.Forms.DomainUpDown();
+            this.domainUpDown4 = new System.Windows.Forms.DomainUpDown();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -82,7 +82,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1282, 55);
+            this.panel1.Size = new System.Drawing.Size(862, 55);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -100,52 +100,13 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources.usuario;
+            this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources.factura;
             this.pictureBox1.Location = new System.Drawing.Point(12, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(52, 50);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Controls.Add(this.domainUpDown1);
-            this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.textBox8);
-            this.panel2.Controls.Add(this.textBox7);
-            this.panel2.Controls.Add(this.textBox6);
-            this.panel2.Controls.Add(this.textBox5);
-            this.panel2.Controls.Add(this.textBox4);
-            this.panel2.Controls.Add(this.textBox26);
-            this.panel2.Controls.Add(this.textBox25);
-            this.panel2.Controls.Add(this.textBox24);
-            this.panel2.Controls.Add(this.textBox23);
-            this.panel2.Controls.Add(this.textBox22);
-            this.panel2.Controls.Add(this.textBox21);
-            this.panel2.Controls.Add(this.textBox20);
-            this.panel2.Controls.Add(this.textBox19);
-            this.panel2.Controls.Add(this.textBox18);
-            this.panel2.Controls.Add(this.textBox17);
-            this.panel2.Controls.Add(this.textBox16);
-            this.panel2.Controls.Add(this.textBox15);
-            this.panel2.Controls.Add(this.textBox14);
-            this.panel2.Controls.Add(this.textBox13);
-            this.panel2.Controls.Add(this.textBox12);
-            this.panel2.Controls.Add(this.textBox11);
-            this.panel2.Controls.Add(this.textBox10);
-            this.panel2.Controls.Add(this.textBox9);
-            this.panel2.ForeColor = System.Drawing.Color.Coral;
-            this.panel2.Location = new System.Drawing.Point(12, 190);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1258, 471);
-            this.panel2.TabIndex = 9;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // label2
             // 
@@ -168,7 +129,7 @@
             this.dateTimePicker1.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
             this.dateTimePicker1.Location = new System.Drawing.Point(12, 154);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(421, 35);
+            this.dateTimePicker1.Size = new System.Drawing.Size(425, 35);
             this.dateTimePicker1.TabIndex = 12;
             this.dateTimePicker1.Tag = "";
             // 
@@ -216,83 +177,6 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(274, 20);
             this.textBox2.TabIndex = 19;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(3, 64);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(209, 20);
-            this.textBox4.TabIndex = 6;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(3, 90);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(209, 20);
-            this.textBox5.TabIndex = 7;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(3, 116);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(209, 20);
-            this.textBox6.TabIndex = 8;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(3, 142);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(209, 20);
-            this.textBox7.TabIndex = 9;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(3, 168);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(209, 20);
-            this.textBox8.TabIndex = 10;
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(218, 38);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(526, 20);
-            this.textBox9.TabIndex = 11;
-            // 
-            // textBox10
-            // 
-            this.textBox10.Location = new System.Drawing.Point(218, 64);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(526, 20);
-            this.textBox10.TabIndex = 12;
-            // 
-            // textBox11
-            // 
-            this.textBox11.Location = new System.Drawing.Point(218, 90);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(526, 20);
-            this.textBox11.TabIndex = 13;
-            // 
-            // textBox12
-            // 
-            this.textBox12.Location = new System.Drawing.Point(218, 116);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(526, 20);
-            this.textBox12.TabIndex = 14;
-            // 
-            // textBox13
-            // 
-            this.textBox13.Location = new System.Drawing.Point(218, 142);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(526, 20);
-            this.textBox13.TabIndex = 15;
-            // 
-            // textBox14
-            // 
-            this.textBox14.Location = new System.Drawing.Point(218, 168);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(526, 20);
-            this.textBox14.TabIndex = 16;
             // 
             // textBox15
             // 
@@ -443,15 +327,289 @@
             this.domainUpDown1.Items.Add("15");
             this.domainUpDown1.Location = new System.Drawing.Point(3, 38);
             this.domainUpDown1.Name = "domainUpDown1";
+            this.domainUpDown1.ReadOnly = true;
             this.domainUpDown1.Size = new System.Drawing.Size(209, 20);
             this.domainUpDown1.TabIndex = 33;
-            this.domainUpDown1.Text = "domainUpDown1";
+            this.domainUpDown1.Text = "0";
             this.domainUpDown1.SelectedItemChanged += new System.EventHandler(this.domainUpDown1_SelectedItemChanged_1);
+            // 
+            // domainUpDown2
+            // 
+            this.domainUpDown2.Items.Add("1");
+            this.domainUpDown2.Items.Add("2");
+            this.domainUpDown2.Items.Add("3");
+            this.domainUpDown2.Items.Add("4");
+            this.domainUpDown2.Items.Add("5");
+            this.domainUpDown2.Items.Add("6");
+            this.domainUpDown2.Items.Add("7");
+            this.domainUpDown2.Items.Add("8");
+            this.domainUpDown2.Items.Add("9");
+            this.domainUpDown2.Items.Add("10");
+            this.domainUpDown2.Items.Add("11");
+            this.domainUpDown2.Items.Add("12");
+            this.domainUpDown2.Items.Add("13");
+            this.domainUpDown2.Items.Add("14");
+            this.domainUpDown2.Items.Add("15");
+            this.domainUpDown2.Location = new System.Drawing.Point(3, 64);
+            this.domainUpDown2.Name = "domainUpDown2";
+            this.domainUpDown2.ReadOnly = true;
+            this.domainUpDown2.Size = new System.Drawing.Size(209, 20);
+            this.domainUpDown2.TabIndex = 34;
+            this.domainUpDown2.Text = "0";
+            // 
+            // domainUpDown3
+            // 
+            this.domainUpDown3.Items.Add("1");
+            this.domainUpDown3.Items.Add("2");
+            this.domainUpDown3.Items.Add("3");
+            this.domainUpDown3.Items.Add("4");
+            this.domainUpDown3.Items.Add("5");
+            this.domainUpDown3.Items.Add("6");
+            this.domainUpDown3.Items.Add("7");
+            this.domainUpDown3.Items.Add("8");
+            this.domainUpDown3.Items.Add("9");
+            this.domainUpDown3.Items.Add("10");
+            this.domainUpDown3.Items.Add("11");
+            this.domainUpDown3.Items.Add("12");
+            this.domainUpDown3.Items.Add("13");
+            this.domainUpDown3.Items.Add("14");
+            this.domainUpDown3.Items.Add("15");
+            this.domainUpDown3.Location = new System.Drawing.Point(3, 90);
+            this.domainUpDown3.Name = "domainUpDown3";
+            this.domainUpDown3.ReadOnly = true;
+            this.domainUpDown3.Size = new System.Drawing.Size(209, 20);
+            this.domainUpDown3.TabIndex = 35;
+            this.domainUpDown3.Text = "0";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.domainUpDown12);
+            this.panel2.Controls.Add(this.domainUpDown11);
+            this.panel2.Controls.Add(this.domainUpDown10);
+            this.panel2.Controls.Add(this.domainUpDown9);
+            this.panel2.Controls.Add(this.domainUpDown8);
+            this.panel2.Controls.Add(this.domainUpDown7);
+            this.panel2.Controls.Add(this.domainUpDown6);
+            this.panel2.Controls.Add(this.domainUpDown5);
+            this.panel2.Controls.Add(this.domainUpDown4);
+            this.panel2.Controls.Add(this.domainUpDown3);
+            this.panel2.Controls.Add(this.domainUpDown2);
+            this.panel2.Controls.Add(this.domainUpDown1);
+            this.panel2.Controls.Add(this.label8);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.textBox26);
+            this.panel2.Controls.Add(this.textBox25);
+            this.panel2.Controls.Add(this.textBox24);
+            this.panel2.Controls.Add(this.textBox23);
+            this.panel2.Controls.Add(this.textBox22);
+            this.panel2.Controls.Add(this.textBox21);
+            this.panel2.Controls.Add(this.textBox20);
+            this.panel2.Controls.Add(this.textBox19);
+            this.panel2.Controls.Add(this.textBox18);
+            this.panel2.Controls.Add(this.textBox17);
+            this.panel2.Controls.Add(this.textBox16);
+            this.panel2.Controls.Add(this.textBox15);
+            this.panel2.ForeColor = System.Drawing.Color.Coral;
+            this.panel2.Location = new System.Drawing.Point(12, 195);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1258, 466);
+            this.panel2.TabIndex = 9;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // domainUpDown12
+            // 
+            this.domainUpDown12.Items.Add("Lt. Pinesol");
+            this.domainUpDown12.Items.Add("Lt. Creolina");
+            this.domainUpDown12.Items.Add("Lt. Cera Liquida");
+            this.domainUpDown12.Items.Add("Lt. Nice (Abrillantador)");
+            this.domainUpDown12.Items.Add("Lt. Llantil");
+            this.domainUpDown12.Items.Add("Lt. Ambientador");
+            this.domainUpDown12.Items.Add("Lt. Desengrasante");
+            this.domainUpDown12.Items.Add("Lt. Suavitel");
+            this.domainUpDown12.Items.Add("Lt. Shampoo para mascotas");
+            this.domainUpDown12.Items.Add("Lt. Cloro");
+            this.domainUpDown12.Location = new System.Drawing.Point(218, 168);
+            this.domainUpDown12.Name = "domainUpDown12";
+            this.domainUpDown12.ReadOnly = true;
+            this.domainUpDown12.Size = new System.Drawing.Size(526, 20);
+            this.domainUpDown12.TabIndex = 44;
+            this.domainUpDown12.Text = "Producto";
+            // 
+            // domainUpDown11
+            // 
+            this.domainUpDown11.Items.Add("Lt. Pinesol");
+            this.domainUpDown11.Items.Add("Lt. Creolina");
+            this.domainUpDown11.Items.Add("Lt. Cera Liquida");
+            this.domainUpDown11.Items.Add("Lt. Nice (Abrillantador)");
+            this.domainUpDown11.Items.Add("Lt. Llantil");
+            this.domainUpDown11.Items.Add("Lt. Ambientador");
+            this.domainUpDown11.Items.Add("Lt. Desengrasante");
+            this.domainUpDown11.Items.Add("Lt. Suavitel");
+            this.domainUpDown11.Items.Add("Lt. Shampoo para mascotas");
+            this.domainUpDown11.Items.Add("Lt. Cloro");
+            this.domainUpDown11.Location = new System.Drawing.Point(218, 142);
+            this.domainUpDown11.Name = "domainUpDown11";
+            this.domainUpDown11.ReadOnly = true;
+            this.domainUpDown11.Size = new System.Drawing.Size(526, 20);
+            this.domainUpDown11.TabIndex = 43;
+            this.domainUpDown11.Text = "Producto";
+            // 
+            // domainUpDown10
+            // 
+            this.domainUpDown10.Items.Add("Lt. Pinesol");
+            this.domainUpDown10.Items.Add("Lt. Creolina");
+            this.domainUpDown10.Items.Add("Lt. Cera Liquida");
+            this.domainUpDown10.Items.Add("Lt. Nice (Abrillantador)");
+            this.domainUpDown10.Items.Add("Lt. Llantil");
+            this.domainUpDown10.Items.Add("Lt. Ambientador");
+            this.domainUpDown10.Items.Add("Lt. Desengrasante");
+            this.domainUpDown10.Items.Add("Lt. Suavitel");
+            this.domainUpDown10.Items.Add("Lt. Shampoo para mascotas");
+            this.domainUpDown10.Items.Add("Lt. Cloro");
+            this.domainUpDown10.Location = new System.Drawing.Point(218, 117);
+            this.domainUpDown10.Name = "domainUpDown10";
+            this.domainUpDown10.ReadOnly = true;
+            this.domainUpDown10.Size = new System.Drawing.Size(526, 20);
+            this.domainUpDown10.TabIndex = 42;
+            this.domainUpDown10.Text = "Producto";
+            // 
+            // domainUpDown9
+            // 
+            this.domainUpDown9.Items.Add("Lt. Pinesol");
+            this.domainUpDown9.Items.Add("Lt. Creolina");
+            this.domainUpDown9.Items.Add("Lt. Cera Liquida");
+            this.domainUpDown9.Items.Add("Lt. Nice (Abrillantador)");
+            this.domainUpDown9.Items.Add("Lt. Llantil");
+            this.domainUpDown9.Items.Add("Lt. Ambientador");
+            this.domainUpDown9.Items.Add("Lt. Desengrasante");
+            this.domainUpDown9.Items.Add("Lt. Suavitel");
+            this.domainUpDown9.Items.Add("Lt. Shampoo para mascotas");
+            this.domainUpDown9.Items.Add("Lt. Cloro");
+            this.domainUpDown9.Location = new System.Drawing.Point(218, 91);
+            this.domainUpDown9.Name = "domainUpDown9";
+            this.domainUpDown9.ReadOnly = true;
+            this.domainUpDown9.Size = new System.Drawing.Size(526, 20);
+            this.domainUpDown9.TabIndex = 41;
+            this.domainUpDown9.Text = "Producto";
+            // 
+            // domainUpDown8
+            // 
+            this.domainUpDown8.Items.Add("Lt. Pinesol");
+            this.domainUpDown8.Items.Add("Lt. Creolina");
+            this.domainUpDown8.Items.Add("Lt. Cera Liquida");
+            this.domainUpDown8.Items.Add("Lt. Nice (Abrillantador)");
+            this.domainUpDown8.Items.Add("Lt. Llantil");
+            this.domainUpDown8.Items.Add("Lt. Ambientador");
+            this.domainUpDown8.Items.Add("Lt. Desengrasante");
+            this.domainUpDown8.Items.Add("Lt. Suavitel");
+            this.domainUpDown8.Items.Add("Lt. Shampoo para mascotas");
+            this.domainUpDown8.Items.Add("Lt. Cloro");
+            this.domainUpDown8.Location = new System.Drawing.Point(218, 65);
+            this.domainUpDown8.Name = "domainUpDown8";
+            this.domainUpDown8.ReadOnly = true;
+            this.domainUpDown8.Size = new System.Drawing.Size(526, 20);
+            this.domainUpDown8.TabIndex = 40;
+            this.domainUpDown8.Text = "Producto";
+            // 
+            // domainUpDown7
+            // 
+            this.domainUpDown7.Items.Add("Lt. Pinesol");
+            this.domainUpDown7.Items.Add("Lt. Creolina");
+            this.domainUpDown7.Items.Add("Lt. Cera Liquida");
+            this.domainUpDown7.Items.Add("Lt. Nice (Abrillantador)");
+            this.domainUpDown7.Items.Add("Lt. Llantil");
+            this.domainUpDown7.Items.Add("Lt. Ambientador");
+            this.domainUpDown7.Items.Add("Lt. Desengrasante");
+            this.domainUpDown7.Items.Add("Lt. Suavitel");
+            this.domainUpDown7.Items.Add("Lt. Shampoo para mascotas");
+            this.domainUpDown7.Items.Add("Lt. Cloro");
+            this.domainUpDown7.Location = new System.Drawing.Point(218, 39);
+            this.domainUpDown7.Name = "domainUpDown7";
+            this.domainUpDown7.ReadOnly = true;
+            this.domainUpDown7.Size = new System.Drawing.Size(526, 20);
+            this.domainUpDown7.TabIndex = 39;
+            this.domainUpDown7.Text = "Producto";
+            // 
+            // domainUpDown6
+            // 
+            this.domainUpDown6.Items.Add("1");
+            this.domainUpDown6.Items.Add("2");
+            this.domainUpDown6.Items.Add("3");
+            this.domainUpDown6.Items.Add("4");
+            this.domainUpDown6.Items.Add("5");
+            this.domainUpDown6.Items.Add("6");
+            this.domainUpDown6.Items.Add("7");
+            this.domainUpDown6.Items.Add("8");
+            this.domainUpDown6.Items.Add("9");
+            this.domainUpDown6.Items.Add("10");
+            this.domainUpDown6.Items.Add("11");
+            this.domainUpDown6.Items.Add("12");
+            this.domainUpDown6.Items.Add("13");
+            this.domainUpDown6.Items.Add("14");
+            this.domainUpDown6.Items.Add("15");
+            this.domainUpDown6.Location = new System.Drawing.Point(3, 169);
+            this.domainUpDown6.Name = "domainUpDown6";
+            this.domainUpDown6.ReadOnly = true;
+            this.domainUpDown6.Size = new System.Drawing.Size(209, 20);
+            this.domainUpDown6.TabIndex = 38;
+            this.domainUpDown6.Text = "0";
+            // 
+            // domainUpDown5
+            // 
+            this.domainUpDown5.Items.Add("1");
+            this.domainUpDown5.Items.Add("2");
+            this.domainUpDown5.Items.Add("3");
+            this.domainUpDown5.Items.Add("4");
+            this.domainUpDown5.Items.Add("5");
+            this.domainUpDown5.Items.Add("6");
+            this.domainUpDown5.Items.Add("7");
+            this.domainUpDown5.Items.Add("8");
+            this.domainUpDown5.Items.Add("9");
+            this.domainUpDown5.Items.Add("10");
+            this.domainUpDown5.Items.Add("11");
+            this.domainUpDown5.Items.Add("12");
+            this.domainUpDown5.Items.Add("13");
+            this.domainUpDown5.Items.Add("14");
+            this.domainUpDown5.Items.Add("15");
+            this.domainUpDown5.Location = new System.Drawing.Point(3, 142);
+            this.domainUpDown5.Name = "domainUpDown5";
+            this.domainUpDown5.ReadOnly = true;
+            this.domainUpDown5.Size = new System.Drawing.Size(209, 20);
+            this.domainUpDown5.TabIndex = 37;
+            this.domainUpDown5.Text = "0";
+            // 
+            // domainUpDown4
+            // 
+            this.domainUpDown4.Items.Add("1");
+            this.domainUpDown4.Items.Add("2");
+            this.domainUpDown4.Items.Add("3");
+            this.domainUpDown4.Items.Add("4");
+            this.domainUpDown4.Items.Add("5");
+            this.domainUpDown4.Items.Add("6");
+            this.domainUpDown4.Items.Add("7");
+            this.domainUpDown4.Items.Add("8");
+            this.domainUpDown4.Items.Add("9");
+            this.domainUpDown4.Items.Add("10");
+            this.domainUpDown4.Items.Add("11");
+            this.domainUpDown4.Items.Add("12");
+            this.domainUpDown4.Items.Add("13");
+            this.domainUpDown4.Items.Add("14");
+            this.domainUpDown4.Items.Add("15");
+            this.domainUpDown4.Location = new System.Drawing.Point(3, 117);
+            this.domainUpDown4.Name = "domainUpDown4";
+            this.domainUpDown4.ReadOnly = true;
+            this.domainUpDown4.Size = new System.Drawing.Size(209, 20);
+            this.domainUpDown4.TabIndex = 36;
+            this.domainUpDown4.Text = "0";
             // 
             // FrmCrearFactura
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
-            this.ClientSize = new System.Drawing.Size(1282, 701);
+            this.ClientSize = new System.Drawing.Size(862, 701);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox1);
@@ -468,10 +626,10 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -482,7 +640,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label3;
@@ -490,33 +647,34 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox26;
-        private System.Windows.Forms.TextBox textBox25;
-        private System.Windows.Forms.TextBox textBox24;
-        private System.Windows.Forms.TextBox textBox23;
-        private System.Windows.Forms.TextBox textBox22;
-        private System.Windows.Forms.TextBox textBox21;
-        private System.Windows.Forms.TextBox textBox20;
-        private System.Windows.Forms.TextBox textBox19;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.TextBox textBox16;
         private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.TextBox textBox17;
+        private System.Windows.Forms.TextBox textBox18;
+        private System.Windows.Forms.TextBox textBox19;
+        private System.Windows.Forms.TextBox textBox20;
+        private System.Windows.Forms.TextBox textBox21;
+        private System.Windows.Forms.TextBox textBox22;
+        private System.Windows.Forms.TextBox textBox23;
+        private System.Windows.Forms.TextBox textBox24;
+        private System.Windows.Forms.TextBox textBox25;
+        private System.Windows.Forms.TextBox textBox26;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DomainUpDown domainUpDown1;
+        private System.Windows.Forms.DomainUpDown domainUpDown2;
+        private System.Windows.Forms.DomainUpDown domainUpDown3;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.DomainUpDown domainUpDown6;
+        private System.Windows.Forms.DomainUpDown domainUpDown5;
+        private System.Windows.Forms.DomainUpDown domainUpDown4;
+        private System.Windows.Forms.DomainUpDown domainUpDown7;
+        private System.Windows.Forms.DomainUpDown domainUpDown12;
+        private System.Windows.Forms.DomainUpDown domainUpDown11;
+        private System.Windows.Forms.DomainUpDown domainUpDown10;
+        private System.Windows.Forms.DomainUpDown domainUpDown9;
+        private System.Windows.Forms.DomainUpDown domainUpDown8;
     }
 }
