@@ -34,7 +34,22 @@ namespace CapaPresentacion
 
         private void button1_Click(object sender, EventArgs e)
         {
+            string Imagen = "";
+            try 
+            {
+                OpenFileDialog dialog = new OpenFileDialog();
+                dialog.Filter = "jpg files (*.jpg)|*.jpg| PNG files(*.png)|*.png| All files(*.*)|*.*";
 
+                if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    Imagen = dialog.FileName;
+                    ImagenRegistro.ImageLocation = Imagen;
+                }
+            } 
+            catch (Exception)
+            {
+                MessageBox.Show("error", "error al cargar");
+            }
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -55,6 +70,47 @@ namespace CapaPresentacion
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void BtnCancelar_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void TxtNombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtTelefono_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        #region
+        private void LimpiarCasillas()
+        {
+            foreach (TextBox textBox in panel1.Controls.OfType<TextBox>())
+            {
+                textBox.Text = "";
+            }
+
+            foreach (ComboBox comboBox in panel1.Controls.OfType<ComboBox>())
+            {
+                ((ComboBox)comboBox).SelectedIndex = -1;
+            }
+
+        }
+         #endregion
+
+            private void panel1_Paint_1(object sender, PaintEventArgs e)
+        {
+            
+        }
+
+        private void BtnLimpiar_Click(object sender, EventArgs e)
+        {
+            LimpiarCasillas();
         }
     }
 }
