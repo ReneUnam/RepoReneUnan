@@ -31,21 +31,21 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.lblNombreUsuario = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.btnAcceder = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.btnAcceder = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -75,6 +75,57 @@
             this.panel1.Size = new System.Drawing.Size(1289, 72);
             this.panel1.TabIndex = 2;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(91)))), ((int)(((byte)(178)))));
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.button3);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Location = new System.Drawing.Point(-2, -2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1289, 72);
+            this.panel2.TabIndex = 10;
+            // 
+            // button3
+            // 
+            this.button3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button3.BackgroundImage = global::CapaPresentacion.Properties.Resources.usuario;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.Enabled = false;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(23, 13);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(45, 44);
+            this.button3.TabIndex = 9;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(0)))));
+            this.label2.Location = new System.Drawing.Point(74, 10);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(412, 48);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "ACCEDER AL SISTEMA";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // button2
+            // 
+            this.button2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button2.BackgroundImage = global::CapaPresentacion.Properties.Resources.usuario;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.Enabled = false;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(23, 13);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(45, 44);
+            this.button2.TabIndex = 9;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // lblNombreUsuario
             // 
             this.lblNombreUsuario.AutoSize = true;
@@ -94,28 +145,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(552, 59);
             this.textBox1.TabIndex = 8;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(91)))), ((int)(((byte)(178)))));
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(-2, -2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1289, 72);
-            this.panel2.TabIndex = 10;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(0)))));
-            this.label2.Location = new System.Drawing.Point(74, 10);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(412, 48);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "ACCEDER AL SISTEMA";
             // 
             // label3
             // 
@@ -156,77 +185,6 @@
             this.panel3.Size = new System.Drawing.Size(615, 344);
             this.panel3.TabIndex = 10;
             // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(91, 90);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(343, 29);
-            this.textBox2.TabIndex = 12;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(91, 206);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.PasswordChar = '*';
-            this.textBox3.Size = new System.Drawing.Size(343, 29);
-            this.textBox3.TabIndex = 13;
-            // 
-            // btnAcceder
-            // 
-            this.btnAcceder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(162)))), ((int)(((byte)(192)))));
-            this.btnAcceder.FlatAppearance.BorderSize = 0;
-            this.btnAcceder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAcceder.Font = new System.Drawing.Font("Segoe UI Black", 11.14286F, System.Drawing.FontStyle.Bold);
-            this.btnAcceder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(91)))), ((int)(((byte)(178)))));
-            this.btnAcceder.Location = new System.Drawing.Point(30, 258);
-            this.btnAcceder.Name = "btnAcceder";
-            this.btnAcceder.Size = new System.Drawing.Size(551, 62);
-            this.btnAcceder.TabIndex = 14;
-            this.btnAcceder.Text = "Acceder";
-            this.btnAcceder.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button1.BackgroundImage = global::CapaPresentacion.Properties.Resources.Logo;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Enabled = false;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(-1, 68);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(410, 395);
-            this.button1.TabIndex = 7;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button3.BackgroundImage = global::CapaPresentacion.Properties.Resources.usuario;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.Enabled = false;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(23, 13);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(45, 44);
-            this.button3.TabIndex = 9;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button2.BackgroundImage = global::CapaPresentacion.Properties.Resources.usuario;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Enabled = false;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(23, 13);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(45, 44);
-            this.button2.TabIndex = 9;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // button5
             // 
             this.button5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -254,6 +212,49 @@
             this.button4.Size = new System.Drawing.Size(45, 44);
             this.button4.TabIndex = 10;
             this.button4.UseVisualStyleBackColor = true;
+            // 
+            // btnAcceder
+            // 
+            this.btnAcceder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(162)))), ((int)(((byte)(192)))));
+            this.btnAcceder.FlatAppearance.BorderSize = 0;
+            this.btnAcceder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAcceder.Font = new System.Drawing.Font("Segoe UI Black", 11.14286F, System.Drawing.FontStyle.Bold);
+            this.btnAcceder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(91)))), ((int)(((byte)(178)))));
+            this.btnAcceder.Location = new System.Drawing.Point(30, 258);
+            this.btnAcceder.Name = "btnAcceder";
+            this.btnAcceder.Size = new System.Drawing.Size(551, 62);
+            this.btnAcceder.TabIndex = 14;
+            this.btnAcceder.Text = "Acceder";
+            this.btnAcceder.UseVisualStyleBackColor = false;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(91, 206);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.PasswordChar = '*';
+            this.textBox3.Size = new System.Drawing.Size(343, 29);
+            this.textBox3.TabIndex = 13;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(91, 90);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(343, 29);
+            this.textBox2.TabIndex = 12;
+            // 
+            // button1
+            // 
+            this.button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = global::CapaPresentacion.Properties.Resources.Logo;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(-1, 68);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(410, 395);
+            this.button1.TabIndex = 7;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // FrmLogin
             // 

@@ -86,6 +86,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomControls\CustomButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="FrmCrearFactura.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -220,6 +223,57 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\retrato %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu-hamburguesa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu-hamburguesa %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu-hamburguesa %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu-hamburguesa %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3eb40abb-35b7-4be8-8a22-36a532669d0a-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hogar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hogar %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logopng.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\factura-punto-de-venta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reloj-tres %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\factura-punto-de-venta %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nota-medica.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuarios-alt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ajustes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\caja-de-herramientas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lista-del-portapapeles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\energia.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
