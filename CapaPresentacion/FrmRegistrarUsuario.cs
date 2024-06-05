@@ -99,9 +99,9 @@ namespace CapaPresentacion
                 textBox.Text = "";
             }
 
-            foreach (ComboBox comboBox in panel1.Controls.OfType<ComboBox>())
+            foreach (TextBox textBox in panel2.Controls.OfType<TextBox>())
             {
-                ((ComboBox)comboBox).SelectedIndex = -1;
+                textBox.Text = "";
             }
 
         }
