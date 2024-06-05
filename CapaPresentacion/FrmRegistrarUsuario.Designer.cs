@@ -86,7 +86,6 @@
             // 
             this.IconoRegistrar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.IconoRegistrar.Image = global::CapaPresentacion.Properties.Resources.agregar_usuario__2_;
             this.IconoRegistrar.Location = new System.Drawing.Point(29, 3);
             this.IconoRegistrar.Name = "IconoRegistrar";
             this.IconoRegistrar.Size = new System.Drawing.Size(50, 45);
