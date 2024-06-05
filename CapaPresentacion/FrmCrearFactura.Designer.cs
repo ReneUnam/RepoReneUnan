@@ -59,15 +59,15 @@
             this.domainUpDown2 = new System.Windows.Forms.DomainUpDown();
             this.domainUpDown3 = new System.Windows.Forms.DomainUpDown();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.domainUpDown4 = new System.Windows.Forms.DomainUpDown();
-            this.domainUpDown5 = new System.Windows.Forms.DomainUpDown();
-            this.domainUpDown6 = new System.Windows.Forms.DomainUpDown();
-            this.domainUpDown7 = new System.Windows.Forms.DomainUpDown();
-            this.domainUpDown8 = new System.Windows.Forms.DomainUpDown();
-            this.domainUpDown9 = new System.Windows.Forms.DomainUpDown();
-            this.domainUpDown10 = new System.Windows.Forms.DomainUpDown();
-            this.domainUpDown11 = new System.Windows.Forms.DomainUpDown();
             this.domainUpDown12 = new System.Windows.Forms.DomainUpDown();
+            this.domainUpDown11 = new System.Windows.Forms.DomainUpDown();
+            this.domainUpDown10 = new System.Windows.Forms.DomainUpDown();
+            this.domainUpDown9 = new System.Windows.Forms.DomainUpDown();
+            this.domainUpDown8 = new System.Windows.Forms.DomainUpDown();
+            this.domainUpDown7 = new System.Windows.Forms.DomainUpDown();
+            this.domainUpDown6 = new System.Windows.Forms.DomainUpDown();
+            this.domainUpDown5 = new System.Windows.Forms.DomainUpDown();
+            this.domainUpDown4 = new System.Windows.Forms.DomainUpDown();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
@@ -100,7 +100,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources.usuario;
+            this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources.factura;
             this.pictureBox1.Location = new System.Drawing.Point(12, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(52, 50);
@@ -129,7 +129,7 @@
             this.dateTimePicker1.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
             this.dateTimePicker1.Location = new System.Drawing.Point(12, 154);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(421, 35);
+            this.dateTimePicker1.Size = new System.Drawing.Size(425, 35);
             this.dateTimePicker1.TabIndex = 12;
             this.dateTimePicker1.Tag = "";
             // 
@@ -414,59 +414,125 @@
             this.panel2.Controls.Add(this.textBox16);
             this.panel2.Controls.Add(this.textBox15);
             this.panel2.ForeColor = System.Drawing.Color.Coral;
-            this.panel2.Location = new System.Drawing.Point(12, 190);
+            this.panel2.Location = new System.Drawing.Point(12, 195);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1258, 471);
+            this.panel2.Size = new System.Drawing.Size(1258, 466);
             this.panel2.TabIndex = 9;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // domainUpDown4
+            // domainUpDown12
             // 
-            this.domainUpDown4.Items.Add("1");
-            this.domainUpDown4.Items.Add("2");
-            this.domainUpDown4.Items.Add("3");
-            this.domainUpDown4.Items.Add("4");
-            this.domainUpDown4.Items.Add("5");
-            this.domainUpDown4.Items.Add("6");
-            this.domainUpDown4.Items.Add("7");
-            this.domainUpDown4.Items.Add("8");
-            this.domainUpDown4.Items.Add("9");
-            this.domainUpDown4.Items.Add("10");
-            this.domainUpDown4.Items.Add("11");
-            this.domainUpDown4.Items.Add("12");
-            this.domainUpDown4.Items.Add("13");
-            this.domainUpDown4.Items.Add("14");
-            this.domainUpDown4.Items.Add("15");
-            this.domainUpDown4.Location = new System.Drawing.Point(3, 117);
-            this.domainUpDown4.Name = "domainUpDown4";
-            this.domainUpDown4.ReadOnly = true;
-            this.domainUpDown4.Size = new System.Drawing.Size(209, 20);
-            this.domainUpDown4.TabIndex = 36;
-            this.domainUpDown4.Text = "0";
+            this.domainUpDown12.Items.Add("Lt. Pinesol");
+            this.domainUpDown12.Items.Add("Lt. Creolina");
+            this.domainUpDown12.Items.Add("Lt. Cera Liquida");
+            this.domainUpDown12.Items.Add("Lt. Nice (Abrillantador)");
+            this.domainUpDown12.Items.Add("Lt. Llantil");
+            this.domainUpDown12.Items.Add("Lt. Ambientador");
+            this.domainUpDown12.Items.Add("Lt. Desengrasante");
+            this.domainUpDown12.Items.Add("Lt. Suavitel");
+            this.domainUpDown12.Items.Add("Lt. Shampoo para mascotas");
+            this.domainUpDown12.Items.Add("Lt. Cloro");
+            this.domainUpDown12.Location = new System.Drawing.Point(218, 168);
+            this.domainUpDown12.Name = "domainUpDown12";
+            this.domainUpDown12.ReadOnly = true;
+            this.domainUpDown12.Size = new System.Drawing.Size(526, 20);
+            this.domainUpDown12.TabIndex = 44;
+            this.domainUpDown12.Text = "Producto";
             // 
-            // domainUpDown5
+            // domainUpDown11
             // 
-            this.domainUpDown5.Items.Add("1");
-            this.domainUpDown5.Items.Add("2");
-            this.domainUpDown5.Items.Add("3");
-            this.domainUpDown5.Items.Add("4");
-            this.domainUpDown5.Items.Add("5");
-            this.domainUpDown5.Items.Add("6");
-            this.domainUpDown5.Items.Add("7");
-            this.domainUpDown5.Items.Add("8");
-            this.domainUpDown5.Items.Add("9");
-            this.domainUpDown5.Items.Add("10");
-            this.domainUpDown5.Items.Add("11");
-            this.domainUpDown5.Items.Add("12");
-            this.domainUpDown5.Items.Add("13");
-            this.domainUpDown5.Items.Add("14");
-            this.domainUpDown5.Items.Add("15");
-            this.domainUpDown5.Location = new System.Drawing.Point(3, 142);
-            this.domainUpDown5.Name = "domainUpDown5";
-            this.domainUpDown5.ReadOnly = true;
-            this.domainUpDown5.Size = new System.Drawing.Size(209, 20);
-            this.domainUpDown5.TabIndex = 37;
-            this.domainUpDown5.Text = "0";
+            this.domainUpDown11.Items.Add("Lt. Pinesol");
+            this.domainUpDown11.Items.Add("Lt. Creolina");
+            this.domainUpDown11.Items.Add("Lt. Cera Liquida");
+            this.domainUpDown11.Items.Add("Lt. Nice (Abrillantador)");
+            this.domainUpDown11.Items.Add("Lt. Llantil");
+            this.domainUpDown11.Items.Add("Lt. Ambientador");
+            this.domainUpDown11.Items.Add("Lt. Desengrasante");
+            this.domainUpDown11.Items.Add("Lt. Suavitel");
+            this.domainUpDown11.Items.Add("Lt. Shampoo para mascotas");
+            this.domainUpDown11.Items.Add("Lt. Cloro");
+            this.domainUpDown11.Location = new System.Drawing.Point(218, 142);
+            this.domainUpDown11.Name = "domainUpDown11";
+            this.domainUpDown11.ReadOnly = true;
+            this.domainUpDown11.Size = new System.Drawing.Size(526, 20);
+            this.domainUpDown11.TabIndex = 43;
+            this.domainUpDown11.Text = "Producto";
+            // 
+            // domainUpDown10
+            // 
+            this.domainUpDown10.Items.Add("Lt. Pinesol");
+            this.domainUpDown10.Items.Add("Lt. Creolina");
+            this.domainUpDown10.Items.Add("Lt. Cera Liquida");
+            this.domainUpDown10.Items.Add("Lt. Nice (Abrillantador)");
+            this.domainUpDown10.Items.Add("Lt. Llantil");
+            this.domainUpDown10.Items.Add("Lt. Ambientador");
+            this.domainUpDown10.Items.Add("Lt. Desengrasante");
+            this.domainUpDown10.Items.Add("Lt. Suavitel");
+            this.domainUpDown10.Items.Add("Lt. Shampoo para mascotas");
+            this.domainUpDown10.Items.Add("Lt. Cloro");
+            this.domainUpDown10.Location = new System.Drawing.Point(218, 117);
+            this.domainUpDown10.Name = "domainUpDown10";
+            this.domainUpDown10.ReadOnly = true;
+            this.domainUpDown10.Size = new System.Drawing.Size(526, 20);
+            this.domainUpDown10.TabIndex = 42;
+            this.domainUpDown10.Text = "Producto";
+            // 
+            // domainUpDown9
+            // 
+            this.domainUpDown9.Items.Add("Lt. Pinesol");
+            this.domainUpDown9.Items.Add("Lt. Creolina");
+            this.domainUpDown9.Items.Add("Lt. Cera Liquida");
+            this.domainUpDown9.Items.Add("Lt. Nice (Abrillantador)");
+            this.domainUpDown9.Items.Add("Lt. Llantil");
+            this.domainUpDown9.Items.Add("Lt. Ambientador");
+            this.domainUpDown9.Items.Add("Lt. Desengrasante");
+            this.domainUpDown9.Items.Add("Lt. Suavitel");
+            this.domainUpDown9.Items.Add("Lt. Shampoo para mascotas");
+            this.domainUpDown9.Items.Add("Lt. Cloro");
+            this.domainUpDown9.Location = new System.Drawing.Point(218, 91);
+            this.domainUpDown9.Name = "domainUpDown9";
+            this.domainUpDown9.ReadOnly = true;
+            this.domainUpDown9.Size = new System.Drawing.Size(526, 20);
+            this.domainUpDown9.TabIndex = 41;
+            this.domainUpDown9.Text = "Producto";
+            // 
+            // domainUpDown8
+            // 
+            this.domainUpDown8.Items.Add("Lt. Pinesol");
+            this.domainUpDown8.Items.Add("Lt. Creolina");
+            this.domainUpDown8.Items.Add("Lt. Cera Liquida");
+            this.domainUpDown8.Items.Add("Lt. Nice (Abrillantador)");
+            this.domainUpDown8.Items.Add("Lt. Llantil");
+            this.domainUpDown8.Items.Add("Lt. Ambientador");
+            this.domainUpDown8.Items.Add("Lt. Desengrasante");
+            this.domainUpDown8.Items.Add("Lt. Suavitel");
+            this.domainUpDown8.Items.Add("Lt. Shampoo para mascotas");
+            this.domainUpDown8.Items.Add("Lt. Cloro");
+            this.domainUpDown8.Location = new System.Drawing.Point(218, 65);
+            this.domainUpDown8.Name = "domainUpDown8";
+            this.domainUpDown8.ReadOnly = true;
+            this.domainUpDown8.Size = new System.Drawing.Size(526, 20);
+            this.domainUpDown8.TabIndex = 40;
+            this.domainUpDown8.Text = "Producto";
+            // 
+            // domainUpDown7
+            // 
+            this.domainUpDown7.Items.Add("Lt. Pinesol");
+            this.domainUpDown7.Items.Add("Lt. Creolina");
+            this.domainUpDown7.Items.Add("Lt. Cera Liquida");
+            this.domainUpDown7.Items.Add("Lt. Nice (Abrillantador)");
+            this.domainUpDown7.Items.Add("Lt. Llantil");
+            this.domainUpDown7.Items.Add("Lt. Ambientador");
+            this.domainUpDown7.Items.Add("Lt. Desengrasante");
+            this.domainUpDown7.Items.Add("Lt. Suavitel");
+            this.domainUpDown7.Items.Add("Lt. Shampoo para mascotas");
+            this.domainUpDown7.Items.Add("Lt. Cloro");
+            this.domainUpDown7.Location = new System.Drawing.Point(218, 39);
+            this.domainUpDown7.Name = "domainUpDown7";
+            this.domainUpDown7.ReadOnly = true;
+            this.domainUpDown7.Size = new System.Drawing.Size(526, 20);
+            this.domainUpDown7.TabIndex = 39;
+            this.domainUpDown7.Text = "Producto";
             // 
             // domainUpDown6
             // 
@@ -492,119 +558,53 @@
             this.domainUpDown6.TabIndex = 38;
             this.domainUpDown6.Text = "0";
             // 
-            // domainUpDown7
+            // domainUpDown5
             // 
-            this.domainUpDown7.Items.Add("Lt. Pinesol");
-            this.domainUpDown7.Items.Add("Lt. Creolina");
-            this.domainUpDown7.Items.Add("Lt. Cera Liquida");
-            this.domainUpDown7.Items.Add("Lt. Nice (Abrillantador)");
-            this.domainUpDown7.Items.Add("Lt. Llantil");
-            this.domainUpDown7.Items.Add("Lt. Ambientador");
-            this.domainUpDown7.Items.Add("Lt. Desengrasante");
-            this.domainUpDown7.Items.Add("Lt. Suavitel");
-            this.domainUpDown7.Items.Add("Lt. Shampoo para mascotas");
-            this.domainUpDown7.Items.Add("Lt. Cloro");
-            this.domainUpDown7.Location = new System.Drawing.Point(218, 39);
-            this.domainUpDown7.Name = "domainUpDown7";
-            this.domainUpDown7.ReadOnly = true;
-            this.domainUpDown7.Size = new System.Drawing.Size(526, 20);
-            this.domainUpDown7.TabIndex = 39;
-            this.domainUpDown7.Text = "Producto";
+            this.domainUpDown5.Items.Add("1");
+            this.domainUpDown5.Items.Add("2");
+            this.domainUpDown5.Items.Add("3");
+            this.domainUpDown5.Items.Add("4");
+            this.domainUpDown5.Items.Add("5");
+            this.domainUpDown5.Items.Add("6");
+            this.domainUpDown5.Items.Add("7");
+            this.domainUpDown5.Items.Add("8");
+            this.domainUpDown5.Items.Add("9");
+            this.domainUpDown5.Items.Add("10");
+            this.domainUpDown5.Items.Add("11");
+            this.domainUpDown5.Items.Add("12");
+            this.domainUpDown5.Items.Add("13");
+            this.domainUpDown5.Items.Add("14");
+            this.domainUpDown5.Items.Add("15");
+            this.domainUpDown5.Location = new System.Drawing.Point(3, 142);
+            this.domainUpDown5.Name = "domainUpDown5";
+            this.domainUpDown5.ReadOnly = true;
+            this.domainUpDown5.Size = new System.Drawing.Size(209, 20);
+            this.domainUpDown5.TabIndex = 37;
+            this.domainUpDown5.Text = "0";
             // 
-            // domainUpDown8
+            // domainUpDown4
             // 
-            this.domainUpDown8.Items.Add("Lt. Pinesol");
-            this.domainUpDown8.Items.Add("Lt. Creolina");
-            this.domainUpDown8.Items.Add("Lt. Cera Liquida");
-            this.domainUpDown8.Items.Add("Lt. Nice (Abrillantador)");
-            this.domainUpDown8.Items.Add("Lt. Llantil");
-            this.domainUpDown8.Items.Add("Lt. Ambientador");
-            this.domainUpDown8.Items.Add("Lt. Desengrasante");
-            this.domainUpDown8.Items.Add("Lt. Suavitel");
-            this.domainUpDown8.Items.Add("Lt. Shampoo para mascotas");
-            this.domainUpDown8.Items.Add("Lt. Cloro");
-            this.domainUpDown8.Location = new System.Drawing.Point(218, 65);
-            this.domainUpDown8.Name = "domainUpDown8";
-            this.domainUpDown8.ReadOnly = true;
-            this.domainUpDown8.Size = new System.Drawing.Size(526, 20);
-            this.domainUpDown8.TabIndex = 40;
-            this.domainUpDown8.Text = "Producto";
-            // 
-            // domainUpDown9
-            // 
-            this.domainUpDown9.Items.Add("Lt. Pinesol");
-            this.domainUpDown9.Items.Add("Lt. Creolina");
-            this.domainUpDown9.Items.Add("Lt. Cera Liquida");
-            this.domainUpDown9.Items.Add("Lt. Nice (Abrillantador)");
-            this.domainUpDown9.Items.Add("Lt. Llantil");
-            this.domainUpDown9.Items.Add("Lt. Ambientador");
-            this.domainUpDown9.Items.Add("Lt. Desengrasante");
-            this.domainUpDown9.Items.Add("Lt. Suavitel");
-            this.domainUpDown9.Items.Add("Lt. Shampoo para mascotas");
-            this.domainUpDown9.Items.Add("Lt. Cloro");
-            this.domainUpDown9.Location = new System.Drawing.Point(218, 91);
-            this.domainUpDown9.Name = "domainUpDown9";
-            this.domainUpDown9.ReadOnly = true;
-            this.domainUpDown9.Size = new System.Drawing.Size(526, 20);
-            this.domainUpDown9.TabIndex = 41;
-            this.domainUpDown9.Text = "Producto";
-            // 
-            // domainUpDown10
-            // 
-            this.domainUpDown10.Items.Add("Lt. Pinesol");
-            this.domainUpDown10.Items.Add("Lt. Creolina");
-            this.domainUpDown10.Items.Add("Lt. Cera Liquida");
-            this.domainUpDown10.Items.Add("Lt. Nice (Abrillantador)");
-            this.domainUpDown10.Items.Add("Lt. Llantil");
-            this.domainUpDown10.Items.Add("Lt. Ambientador");
-            this.domainUpDown10.Items.Add("Lt. Desengrasante");
-            this.domainUpDown10.Items.Add("Lt. Suavitel");
-            this.domainUpDown10.Items.Add("Lt. Shampoo para mascotas");
-            this.domainUpDown10.Items.Add("Lt. Cloro");
-            this.domainUpDown10.Location = new System.Drawing.Point(218, 117);
-            this.domainUpDown10.Name = "domainUpDown10";
-            this.domainUpDown10.ReadOnly = true;
-            this.domainUpDown10.Size = new System.Drawing.Size(526, 20);
-            this.domainUpDown10.TabIndex = 42;
-            this.domainUpDown10.Text = "Producto";
-            // 
-            // domainUpDown11
-            // 
-            this.domainUpDown11.Items.Add("Lt. Pinesol");
-            this.domainUpDown11.Items.Add("Lt. Creolina");
-            this.domainUpDown11.Items.Add("Lt. Cera Liquida");
-            this.domainUpDown11.Items.Add("Lt. Nice (Abrillantador)");
-            this.domainUpDown11.Items.Add("Lt. Llantil");
-            this.domainUpDown11.Items.Add("Lt. Ambientador");
-            this.domainUpDown11.Items.Add("Lt. Desengrasante");
-            this.domainUpDown11.Items.Add("Lt. Suavitel");
-            this.domainUpDown11.Items.Add("Lt. Shampoo para mascotas");
-            this.domainUpDown11.Items.Add("Lt. Cloro");
-            this.domainUpDown11.Location = new System.Drawing.Point(218, 142);
-            this.domainUpDown11.Name = "domainUpDown11";
-            this.domainUpDown11.ReadOnly = true;
-            this.domainUpDown11.Size = new System.Drawing.Size(526, 20);
-            this.domainUpDown11.TabIndex = 43;
-            this.domainUpDown11.Text = "Producto";
-            // 
-            // domainUpDown12
-            // 
-            this.domainUpDown12.Items.Add("Lt. Pinesol");
-            this.domainUpDown12.Items.Add("Lt. Creolina");
-            this.domainUpDown12.Items.Add("Lt. Cera Liquida");
-            this.domainUpDown12.Items.Add("Lt. Nice (Abrillantador)");
-            this.domainUpDown12.Items.Add("Lt. Llantil");
-            this.domainUpDown12.Items.Add("Lt. Ambientador");
-            this.domainUpDown12.Items.Add("Lt. Desengrasante");
-            this.domainUpDown12.Items.Add("Lt. Suavitel");
-            this.domainUpDown12.Items.Add("Lt. Shampoo para mascotas");
-            this.domainUpDown12.Items.Add("Lt. Cloro");
-            this.domainUpDown12.Location = new System.Drawing.Point(218, 168);
-            this.domainUpDown12.Name = "domainUpDown12";
-            this.domainUpDown12.ReadOnly = true;
-            this.domainUpDown12.Size = new System.Drawing.Size(526, 20);
-            this.domainUpDown12.TabIndex = 44;
-            this.domainUpDown12.Text = "Producto";
+            this.domainUpDown4.Items.Add("1");
+            this.domainUpDown4.Items.Add("2");
+            this.domainUpDown4.Items.Add("3");
+            this.domainUpDown4.Items.Add("4");
+            this.domainUpDown4.Items.Add("5");
+            this.domainUpDown4.Items.Add("6");
+            this.domainUpDown4.Items.Add("7");
+            this.domainUpDown4.Items.Add("8");
+            this.domainUpDown4.Items.Add("9");
+            this.domainUpDown4.Items.Add("10");
+            this.domainUpDown4.Items.Add("11");
+            this.domainUpDown4.Items.Add("12");
+            this.domainUpDown4.Items.Add("13");
+            this.domainUpDown4.Items.Add("14");
+            this.domainUpDown4.Items.Add("15");
+            this.domainUpDown4.Location = new System.Drawing.Point(3, 117);
+            this.domainUpDown4.Name = "domainUpDown4";
+            this.domainUpDown4.ReadOnly = true;
+            this.domainUpDown4.Size = new System.Drawing.Size(209, 20);
+            this.domainUpDown4.TabIndex = 36;
+            this.domainUpDown4.Text = "0";
             // 
             // FrmCrearFactura
             // 
