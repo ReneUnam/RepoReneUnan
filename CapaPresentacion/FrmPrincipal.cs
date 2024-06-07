@@ -22,7 +22,6 @@ namespace CapaPresentacion
             InitializeComponent();
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage; // Ajustar el modo de tamaño del PictureBox
   
-
         }
     
 
@@ -120,14 +119,19 @@ namespace CapaPresentacion
             openChildForm(new FrmRegistrarUsuario());
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void btnMenu_Click(object sender, EventArgs e)
         {
             sideBarTimer.Start();
+        }
+
+        private void btnProductos_Click(object sender, EventArgs e)
+        {
+            openChildForm(new FrmCRUDproductos());
+        }
+
+        private void btnCrearFactura_Click(object sender, EventArgs e)
+        {
+            openChildForm (new FrmCrearFactura());
         }
     }
 }

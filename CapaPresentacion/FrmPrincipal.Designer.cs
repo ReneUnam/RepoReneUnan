@@ -31,14 +31,14 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
             this.sideBar = new System.Windows.Forms.Panel();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.btnOff = new System.Windows.Forms.Button();
+            this.btnAjustes = new System.Windows.Forms.Button();
             this.btnUsers = new System.Windows.Forms.Button();
             this.btnReports = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnHistorial = new System.Windows.Forms.Button();
+            this.btnCrearFactura = new System.Windows.Forms.Button();
+            this.btnProductos = new System.Windows.Forms.Button();
+            this.btnMenu = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.sideBarTimer = new System.Windows.Forms.Timer(this.components);
             this.panelChildForm = new System.Windows.Forms.Panel();
@@ -52,14 +52,14 @@
             // 
             this.sideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(91)))), ((int)(((byte)(178)))));
             this.sideBar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.sideBar.Controls.Add(this.button8);
-            this.sideBar.Controls.Add(this.button7);
+            this.sideBar.Controls.Add(this.btnOff);
+            this.sideBar.Controls.Add(this.btnAjustes);
             this.sideBar.Controls.Add(this.btnUsers);
             this.sideBar.Controls.Add(this.btnReports);
-            this.sideBar.Controls.Add(this.button4);
-            this.sideBar.Controls.Add(this.button3);
-            this.sideBar.Controls.Add(this.button2);
-            this.sideBar.Controls.Add(this.button1);
+            this.sideBar.Controls.Add(this.btnHistorial);
+            this.sideBar.Controls.Add(this.btnCrearFactura);
+            this.sideBar.Controls.Add(this.btnProductos);
+            this.sideBar.Controls.Add(this.btnMenu);
             this.sideBar.Location = new System.Drawing.Point(1, 0);
             this.sideBar.MaximumSize = new System.Drawing.Size(374, 1379);
             this.sideBar.MinimumSize = new System.Drawing.Size(72, 1379);
@@ -67,39 +67,39 @@
             this.sideBar.Size = new System.Drawing.Size(72, 1379);
             this.sideBar.TabIndex = 0;
             // 
-            // button8
+            // btnOff
             // 
-            this.button8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
-            this.button8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(0)))));
-            this.button8.Image = global::CapaPresentacion.Properties.Resources.energia;
-            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.Location = new System.Drawing.Point(0, 729);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(68, 88);
-            this.button8.TabIndex = 8;
-            this.button8.Text = "      Cerrar Sesión";
-            this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.UseVisualStyleBackColor = true;
+            this.btnOff.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnOff.FlatAppearance.BorderSize = 0;
+            this.btnOff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOff.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
+            this.btnOff.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(0)))));
+            this.btnOff.Image = global::CapaPresentacion.Properties.Resources.energia;
+            this.btnOff.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnOff.Location = new System.Drawing.Point(0, 729);
+            this.btnOff.Name = "btnOff";
+            this.btnOff.Size = new System.Drawing.Size(68, 88);
+            this.btnOff.TabIndex = 8;
+            this.btnOff.Text = "      Cerrar Sesión";
+            this.btnOff.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnOff.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // btnAjustes
             // 
-            this.button7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Segoe UI Black", 13.14286F, System.Drawing.FontStyle.Bold);
-            this.button7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(0)))));
-            this.button7.Image = global::CapaPresentacion.Properties.Resources.ajustes;
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(0, 612);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(68, 117);
-            this.button7.TabIndex = 7;
-            this.button7.Text = "       Ajustes";
-            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.UseVisualStyleBackColor = true;
+            this.btnAjustes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAjustes.FlatAppearance.BorderSize = 0;
+            this.btnAjustes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAjustes.Font = new System.Drawing.Font("Segoe UI Black", 13.14286F, System.Drawing.FontStyle.Bold);
+            this.btnAjustes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(0)))));
+            this.btnAjustes.Image = global::CapaPresentacion.Properties.Resources.ajustes;
+            this.btnAjustes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAjustes.Location = new System.Drawing.Point(0, 612);
+            this.btnAjustes.Name = "btnAjustes";
+            this.btnAjustes.Size = new System.Drawing.Size(68, 117);
+            this.btnAjustes.TabIndex = 7;
+            this.btnAjustes.Text = "       Ajustes";
+            this.btnAjustes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAjustes.UseVisualStyleBackColor = true;
             // 
             // btnUsers
             // 
@@ -136,74 +136,76 @@
             this.btnReports.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReports.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnHistorial
             // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
-            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(0)))));
-            this.button4.Image = global::CapaPresentacion.Properties.Resources.reloj_tres__1_;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(0, 306);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(68, 102);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "       Historial";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnHistorial.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnHistorial.FlatAppearance.BorderSize = 0;
+            this.btnHistorial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHistorial.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
+            this.btnHistorial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(0)))));
+            this.btnHistorial.Image = global::CapaPresentacion.Properties.Resources.reloj_tres__1_;
+            this.btnHistorial.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHistorial.Location = new System.Drawing.Point(0, 306);
+            this.btnHistorial.Name = "btnHistorial";
+            this.btnHistorial.Size = new System.Drawing.Size(68, 102);
+            this.btnHistorial.TabIndex = 4;
+            this.btnHistorial.Text = "       Historial";
+            this.btnHistorial.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHistorial.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnCrearFactura
             // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(0)))));
-            this.button3.Image = global::CapaPresentacion.Properties.Resources.mas;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(0, 204);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(68, 102);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "       Nueva factura";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnCrearFactura.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCrearFactura.FlatAppearance.BorderSize = 0;
+            this.btnCrearFactura.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCrearFactura.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
+            this.btnCrearFactura.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(0)))));
+            this.btnCrearFactura.Image = global::CapaPresentacion.Properties.Resources.mas;
+            this.btnCrearFactura.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCrearFactura.Location = new System.Drawing.Point(0, 204);
+            this.btnCrearFactura.Name = "btnCrearFactura";
+            this.btnCrearFactura.Size = new System.Drawing.Size(68, 102);
+            this.btnCrearFactura.TabIndex = 3;
+            this.btnCrearFactura.Text = "       Nueva factura";
+            this.btnCrearFactura.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCrearFactura.UseVisualStyleBackColor = true;
+            this.btnCrearFactura.Click += new System.EventHandler(this.btnCrearFactura_Click);
             // 
-            // button2
+            // btnProductos
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(0)))));
-            this.button2.Image = global::CapaPresentacion.Properties.Resources.caja_de_herramientas;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(0, 102);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(68, 102);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "       Productos";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnProductos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnProductos.FlatAppearance.BorderSize = 0;
+            this.btnProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProductos.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
+            this.btnProductos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(0)))));
+            this.btnProductos.Image = global::CapaPresentacion.Properties.Resources.caja_de_herramientas;
+            this.btnProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProductos.Location = new System.Drawing.Point(0, 102);
+            this.btnProductos.Name = "btnProductos";
+            this.btnProductos.Size = new System.Drawing.Size(68, 102);
+            this.btnProductos.TabIndex = 2;
+            this.btnProductos.Text = "       Productos";
+            this.btnProductos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProductos.UseVisualStyleBackColor = true;
+            this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
             // 
-            // button1
+            // btnMenu
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(0)))));
-            this.button1.Image = global::CapaPresentacion.Properties.Resources.menu_hamburguesa__1_;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(68, 102);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "       Menú";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMenu.FlatAppearance.BorderSize = 0;
+            this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenu.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
+            this.btnMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(0)))));
+            this.btnMenu.Image = global::CapaPresentacion.Properties.Resources.menu_hamburguesa__1_;
+            this.btnMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMenu.Location = new System.Drawing.Point(0, 0);
+            this.btnMenu.Name = "btnMenu";
+            this.btnMenu.Size = new System.Drawing.Size(68, 102);
+            this.btnMenu.TabIndex = 1;
+            this.btnMenu.Text = "       Menú";
+            this.btnMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMenu.UseVisualStyleBackColor = true;
+            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
             // pictureBox1
             // 
@@ -238,7 +240,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(73, 1364);
             this.panel1.TabIndex = 4;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // FrmPrincipal
             // 
@@ -265,15 +266,15 @@
         #endregion
 
         private System.Windows.Forms.Panel sideBar;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnMenu;
+        private System.Windows.Forms.Button btnAjustes;
         private System.Windows.Forms.Button btnUsers;
         private System.Windows.Forms.Button btnReports;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnHistorial;
+        private System.Windows.Forms.Button btnCrearFactura;
+        private System.Windows.Forms.Button btnProductos;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button btnOff;
         private System.Windows.Forms.Timer sideBarTimer;
         private System.Windows.Forms.Panel panelChildForm;
         private System.Windows.Forms.Panel panel1;
