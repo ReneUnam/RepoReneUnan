@@ -21,6 +21,8 @@ namespace CapaPresentacion
         {
             InitializeComponent();
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage; // Ajustar el modo de tamaño del PictureBox
+  
+
         }
     
 
@@ -64,11 +66,68 @@ namespace CapaPresentacion
             return bitmap;
         }
 
-        private void button5_Click(object sender, EventArgs e)
+
+        bool sideBarExpand;
+        private void sideBarTimer_Tick(object sender, EventArgs e)
+        {
+            if (sideBarExpand)
+            {
+                sideBar.Width -= 10;
+                if (sideBar.Width == sideBar.MinimumSize.Width)
+                {
+                    sideBarExpand = false;
+                    sideBarTimer.Stop();
+                }
+               
+
+                }
+            else
+            {
+                sideBar.Width += 10;
+                if (sideBar.Width == sideBar.MaximumSize.Width)
+                {
+                    sideBarExpand = true;
+                    sideBarTimer.Stop();
+                }
+
+            }
+        }
+
+        //Variable para cerrar formularios abiertos y abrir formularios cerrados
+        private Form activeForm = null;
+
+        //Metodo que abre los formularios hijos en el form padre
+        private void openChildForm(Form childForm)
+        {
+            if(activeForm != null) 
+            {
+                activeForm .Close();
+            }
+
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelChildForm.Controls.Add(childForm);
+            panelChildForm.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+                
+        }
+
+        private void btnUsers_Click(object sender, EventArgs e)
+        {
+            openChildForm(new FrmRegistrarUsuario());
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-
+        private void button1_Click(object sender, EventArgs e)
+        {
+            sideBarTimer.Start();
+        }
     }
 }
