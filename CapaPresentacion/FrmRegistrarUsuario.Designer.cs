@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRegistrarUsuario));
-            this.PanelTop = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.IconoRegistrar = new System.Windows.Forms.PictureBox();
             this.BtnFoto = new System.Windows.Forms.Button();
             this.BtnLimpiar = new System.Windows.Forms.Button();
             this.BtnGuardar = new System.Windows.Forms.Button();
@@ -53,51 +50,15 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.ImagenRegistro = new System.Windows.Forms.PictureBox();
-            this.PanelTop.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.IconoRegistrar)).BeginInit();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImagenRegistro)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // PanelTop
-            // 
-            this.PanelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(91)))), ((int)(((byte)(178)))));
-            this.PanelTop.Controls.Add(this.label1);
-            this.PanelTop.Controls.Add(this.IconoRegistrar);
-            this.PanelTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelTop.Location = new System.Drawing.Point(0, 0);
-            this.PanelTop.Margin = new System.Windows.Forms.Padding(4);
-            this.PanelTop.Name = "PanelTop";
-            this.PanelTop.Size = new System.Drawing.Size(1235, 82);
-            this.PanelTop.TabIndex = 0;
-            this.PanelTop.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Black", 16F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(133, 14);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(367, 51);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Registrar Usuarios";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // IconoRegistrar
-            // 
-            this.IconoRegistrar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.IconoRegistrar.Image = global::CapaPresentacion.Properties.Resources.agregar_usuario__2_;
-            this.IconoRegistrar.Location = new System.Drawing.Point(40, 4);
-            this.IconoRegistrar.Margin = new System.Windows.Forms.Padding(4);
-            this.IconoRegistrar.Name = "IconoRegistrar";
-            this.IconoRegistrar.Size = new System.Drawing.Size(69, 68);
-            this.IconoRegistrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.IconoRegistrar.TabIndex = 0;
-            this.IconoRegistrar.TabStop = false;
             // 
             // BtnFoto
             // 
@@ -350,10 +311,50 @@
             this.ImagenRegistro.TabIndex = 10;
             this.ImagenRegistro.TabStop = false;
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(91)))), ((int)(((byte)(178)))));
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel3.Controls.Add(this.button3);
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Location = new System.Drawing.Point(-5, -2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1295, 76);
+            this.panel3.TabIndex = 11;
+            // 
+            // button3
+            // 
+            this.button3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button3.BackgroundImage = global::CapaPresentacion.Properties.Resources.usuarios_alt;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.Enabled = false;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(23, 13);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(45, 44);
+            this.button3.TabIndex = 9;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(0)))));
+            this.label1.Location = new System.Drawing.Point(75, 10);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(424, 48);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "REGISTRAR USUARIOS";
+            // 
             // FrmRegistrarUsuario
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.ClientSize = new System.Drawing.Size(1235, 734);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.ImagenRegistro);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.panel2);
@@ -363,7 +364,6 @@
             this.Controls.Add(this.BtnGuardar);
             this.Controls.Add(this.BtnLimpiar);
             this.Controls.Add(this.BtnFoto);
-            this.Controls.Add(this.PanelTop);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(0)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -372,25 +372,20 @@
             this.Text = "VAND y MONTI";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmRegistrarUsuario_Load);
-            this.PanelTop.ResumeLayout(false);
-            this.PanelTop.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.IconoRegistrar)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImagenRegistro)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel PanelTop;
-        private System.Windows.Forms.PictureBox IconoRegistrar;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button BtnFoto;
         private System.Windows.Forms.Button BtnLimpiar;
         private System.Windows.Forms.Button BtnGuardar;
@@ -412,5 +407,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox ImagenRegistro;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label1;
     }
 }

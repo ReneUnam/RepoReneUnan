@@ -317,5 +317,8 @@
   <ItemGroup>
     <None Include="Resources\factura.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\archivo-factura-dolar.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

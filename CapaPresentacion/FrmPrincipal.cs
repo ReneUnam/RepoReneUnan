@@ -23,8 +23,6 @@ namespace CapaPresentacion
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage; // Ajustar el modo de tamaño del PictureBox
   
         }
-    
-
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
             pictureBox1.BorderStyle = BorderStyle.None; // Establecer el borde del PictureBox a ninguno
@@ -43,7 +41,6 @@ namespace CapaPresentacion
             pictureBox1.Image = transparentImage;
 
         }
-
         private Bitmap ChangeImageOpacity(Image originalImage, float opacity)
         {
             // Crea una imagen en blanco del mismo tamaño que la original
@@ -64,8 +61,6 @@ namespace CapaPresentacion
 
             return bitmap;
         }
-
-
         bool sideBarExpand;
         private void sideBarTimer_Tick(object sender, EventArgs e)
         {
@@ -77,9 +72,7 @@ namespace CapaPresentacion
                     sideBarExpand = false;
                     sideBarTimer.Stop();
                 }
-               
-
-                }
+            }
             else
             {
                 sideBar.Width += 10;
@@ -91,7 +84,6 @@ namespace CapaPresentacion
 
             }
         }
-
         //Variable para cerrar formularios abiertos y abrir formularios cerrados
         private Form activeForm = null;
 
@@ -114,6 +106,8 @@ namespace CapaPresentacion
                 
         }
 
+        //Botones del menu
+
         private void btnUsers_Click(object sender, EventArgs e)
         {
             openChildForm(new FrmRegistrarUsuario());
@@ -132,6 +126,21 @@ namespace CapaPresentacion
         private void btnCrearFactura_Click(object sender, EventArgs e)
         {
             openChildForm (new FrmCrearFactura());
+        }
+
+        private void btnHistorial_Click(object sender, EventArgs e)
+        {
+            openChildForm(new FrmHistorialFacturas());
+        }
+
+        private void btnReports_Click(object sender, EventArgs e)
+        {
+            openChildForm (new FrmGenerarReporte());
+        }
+
+        private void btnOff_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

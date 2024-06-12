@@ -119,7 +119,7 @@ namespace CapaPresentacion
 
         private void FrmRegistrarUsuario_Load(object sender, EventArgs e)
         {
-            IconoRegistrar.BorderStyle = BorderStyle.None;
+           
         }
     }
 }
