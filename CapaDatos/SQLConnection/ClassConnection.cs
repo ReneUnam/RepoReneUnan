@@ -11,7 +11,10 @@ namespace CapaDatos.SQLConnection
     internal class ClassConnection
     {   
         //Rene
-        SqlConnection Connection = new SqlConnection("Data Source=RENEALEXANDER;Initial Catalog=VAND_y_MONTI;Integrated Security=True");
+        //SqlConnection Connection = new SqlConnection("Data Source=RENEALEXANDER;Initial Catalog=VAND_y_MONTI;Integrated Security=True");
+
+        //Gary Guapo
+        SqlConnection Connection = new SqlConnection("Data Source=GARY\\MYSQL;Initial Catalog=Vand_Y_Monti;Integrated Security=True;Trust Server Certificate=True");
         public SqlConnection OpenConnetion ()
         {
             if (Connection.State == ConnectionState.Closed)
