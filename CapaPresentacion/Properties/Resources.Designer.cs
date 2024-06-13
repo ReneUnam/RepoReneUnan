@@ -83,6 +83,36 @@ namespace CapaPresentacion.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap advertencia_de_triangulo {
+            get {
+                object obj = ResourceManager.GetObject("advertencia-de-triangulo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap advertencia_de_triangulo__1_ {
+            get {
+                object obj = ResourceManager.GetObject("advertencia-de-triangulo (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap advertencia_de_triangulo__2_ {
+            get {
+                object obj = ResourceManager.GetObject("advertencia-de-triangulo (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap agregar_usuario {
             get {
                 object obj = ResourceManager.GetObject("agregar-usuario", resourceCulture);

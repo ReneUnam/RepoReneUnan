@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaLogicaNegocio; //Referenciamos a la capa logica de negocio
+using CapaLogicaNegocio.Entidades;
 
 namespace CapaPresentacion
 {
@@ -21,5 +23,39 @@ namespace CapaPresentacion
         {
             Application.Exit();
         }
+
+        private void btnAcceder_Click(object sender, EventArgs e)
+        {
+            if (textUserId.Text != "")
+            {
+                if (textPassword.Text != "")
+                {
+                    NUsuario usuario = new NUsuario();
+
+                    // Intentar convertir el texto del TextBox a un int
+                    bool success = int.TryParse(textUserId.Text, out int userIdToInt );
+
+                    if (success)
+                    {
+                        var validLogin = usuario.Login(userIdToInt, textPassword.Text);
+                    }
+                    else
+                    {
+                        // Mostrar mensaje de error si la conversión falla
+                        MessageBox.Show("El ID de usuario debe ser un número entero.", "Error de formato", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    
+                }
+                else msgError("Ingrese una contraseña");
+            }
+            else msgError("Ingrese un ID");
+        }
+
+        private void msgError(string msg)
+        {
+            lblError.Text = "    " + msg;
+            lblError.Visible = true;
+        }
+
     }
 }

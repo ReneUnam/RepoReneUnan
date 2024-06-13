@@ -320,5 +320,20 @@
   <ItemGroup>
     <None Include="Resources\archivo-factura-dolar.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CapaLogicaNegocio\CapaLogicaNegocio.csproj">
+      <Project>{6662cbad-1be5-43a2-ad3b-8adb6704cfe5}</Project>
+      <Name>CapaLogicaNegocio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\advertencia-de-triangulo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\advertencia-de-triangulo %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\advertencia-de-triangulo %282%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
