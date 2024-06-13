@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CapaLogicaNegocio.Entidades
 {
-    internal class Factura
+    internal class NFactura
     {
         private int idFactura { get; set; }
 
