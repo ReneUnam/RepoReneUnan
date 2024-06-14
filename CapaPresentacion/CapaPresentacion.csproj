@@ -321,6 +321,10 @@
     <None Include="Resources\archivo-factura-dolar.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CapaComun\CapaComun.csproj">
+      <Project>{cc8bd278-e28e-402e-9996-af7729001fe5}</Project>
+      <Name>CapaComun</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CapaLogicaNegocio\CapaLogicaNegocio.csproj">
       <Project>{6662cbad-1be5-43a2-ad3b-8adb6704cfe5}</Project>
       <Name>CapaLogicaNegocio</Name>

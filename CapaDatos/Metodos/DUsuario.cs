@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using CapaDatos.SQLConnection;
 using System.Data;
+using CapaComun.Cache;
 
 namespace CapaDatos.Metodos
 {
@@ -43,7 +44,20 @@ namespace CapaDatos.Metodos
                     command.Parameters.AddWithValue("@pass", password);
                     SqlDataReader reader = command.ExecuteReader();
 
-                    if (reader.HasRows) return true;
+                    if (reader.HasRows)
+                    {
+                        while(reader.Read())
+                        {
+                            UserCache.IdUsuario = reader.GetInt32(0);
+                            UserCache.NombreUsuario = reader.GetString(1);
+                            UserCache.Correo = reader.GetString(4);
+                            UserCache.IdRoles = reader.GetInt32(5);
+                        }
+
+                        return true;
+                    }
+                        
+
                     else return false;
 
                 }

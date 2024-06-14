@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaPresentacion.CustomControls;
-
+using CapaComun.Cache;
 namespace CapaPresentacion
 {
     public partial class FrmPrincipal : Form
@@ -40,7 +40,18 @@ namespace CapaPresentacion
             // Mostrar la imagen con opacidad reducida en el PictureBox
             pictureBox1.Image = transparentImage;
 
+            userAccess();
+
+            lblNombre.Text = UserCache.NombreUsuario;
+            lblEmail.Text = UserCache.Correo;
+
         }
+
+        private void userAccess()
+        {
+            if (UserCache.IdRoles == Roles.Vendedor) btnUsers.Enabled = false;
+        }
+
         private Bitmap ChangeImageOpacity(Image originalImage, float opacity)
         {
             // Crea una imagen en blanco del mismo tamaño que la original
@@ -145,6 +156,7 @@ namespace CapaPresentacion
                 this.Close();
         }
 
+     
     }
 }
 

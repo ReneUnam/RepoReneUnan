@@ -46,6 +46,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SQLConnection\ClassConnection.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\CapaComun\CapaComun.csproj">
+      <Project>{cc8bd278-e28e-402e-9996-af7729001fe5}</Project>
+      <Name>CapaComun</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
