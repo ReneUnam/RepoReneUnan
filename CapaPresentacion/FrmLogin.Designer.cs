@@ -36,13 +36,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnAcceder = new System.Windows.Forms.Button();
             this.textPassword = new System.Windows.Forms.TextBox();
             this.textUserId = new System.Windows.Forms.TextBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnAcceder = new System.Windows.Forms.Button();
             this.lblError = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.BtnPasswordHide = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -120,6 +121,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(91)))), ((int)(((byte)(178)))));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel3.Controls.Add(this.BtnPasswordHide);
             this.panel3.Controls.Add(this.button5);
             this.panel3.Controls.Add(this.button4);
             this.panel3.Controls.Add(this.textPassword);
@@ -129,8 +131,29 @@
             this.panel3.Location = new System.Drawing.Point(416, 92);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(615, 280);
+            this.panel3.Size = new System.Drawing.Size(495, 280);
             this.panel3.TabIndex = 10;
+            // 
+            // textPassword
+            // 
+            this.textPassword.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textPassword.Location = new System.Drawing.Point(90, 195);
+            this.textPassword.Margin = new System.Windows.Forms.Padding(2);
+            this.textPassword.MaxLength = 15;
+            this.textPassword.Name = "textPassword";
+            this.textPassword.PasswordChar = '*';
+            this.textPassword.Size = new System.Drawing.Size(343, 45);
+            this.textPassword.TabIndex = 13;
+            // 
+            // textUserId
+            // 
+            this.textUserId.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textUserId.Location = new System.Drawing.Point(90, 78);
+            this.textUserId.Margin = new System.Windows.Forms.Padding(2);
+            this.textUserId.MaxLength = 15;
+            this.textUserId.Name = "textUserId";
+            this.textUserId.Size = new System.Drawing.Size(343, 45);
+            this.textUserId.TabIndex = 12;
             // 
             // btnCancelar
             // 
@@ -139,10 +162,10 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
             this.btnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(91)))), ((int)(((byte)(178)))));
-            this.btnCancelar.Location = new System.Drawing.Point(737, 419);
+            this.btnCancelar.Location = new System.Drawing.Point(681, 419);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(294, 62);
+            this.btnCancelar.Size = new System.Drawing.Size(230, 62);
             this.btnCancelar.TabIndex = 16;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -159,31 +182,12 @@
             this.btnAcceder.Location = new System.Drawing.Point(416, 419);
             this.btnAcceder.Margin = new System.Windows.Forms.Padding(2);
             this.btnAcceder.Name = "btnAcceder";
-            this.btnAcceder.Size = new System.Drawing.Size(284, 62);
+            this.btnAcceder.Size = new System.Drawing.Size(230, 62);
             this.btnAcceder.TabIndex = 14;
             this.btnAcceder.Text = "Acceder";
             this.btnAcceder.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnAcceder.UseVisualStyleBackColor = false;
             this.btnAcceder.Click += new System.EventHandler(this.btnAcceder_Click);
-            // 
-            // textPassword
-            // 
-            this.textPassword.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textPassword.Location = new System.Drawing.Point(90, 195);
-            this.textPassword.Margin = new System.Windows.Forms.Padding(2);
-            this.textPassword.Name = "textPassword";
-            this.textPassword.PasswordChar = '*';
-            this.textPassword.Size = new System.Drawing.Size(343, 45);
-            this.textPassword.TabIndex = 13;
-            // 
-            // textUserId
-            // 
-            this.textUserId.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textUserId.Location = new System.Drawing.Point(90, 78);
-            this.textUserId.Margin = new System.Windows.Forms.Padding(2);
-            this.textUserId.Name = "textUserId";
-            this.textUserId.Size = new System.Drawing.Size(343, 45);
-            this.textUserId.TabIndex = 12;
             // 
             // lblError
             // 
@@ -230,6 +234,20 @@
             this.button2.TabIndex = 9;
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // BtnPasswordHide
+            // 
+            this.BtnPasswordHide.BackColor = System.Drawing.Color.White;
+            this.BtnPasswordHide.BackgroundImage = global::CapaPresentacion.Properties.Resources.ojo;
+            this.BtnPasswordHide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnPasswordHide.FlatAppearance.BorderSize = 0;
+            this.BtnPasswordHide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnPasswordHide.Location = new System.Drawing.Point(379, 206);
+            this.BtnPasswordHide.Name = "BtnPasswordHide";
+            this.BtnPasswordHide.Size = new System.Drawing.Size(44, 37);
+            this.BtnPasswordHide.TabIndex = 16;
+            this.BtnPasswordHide.UseVisualStyleBackColor = false;
+            this.BtnPasswordHide.Click += new System.EventHandler(this.BtnPasswordHide_Click);
+            // 
             // button5
             // 
             this.button5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -265,7 +283,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1054, 496);
+            this.ClientSize = new System.Drawing.Size(950, 496);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnCancelar);
@@ -306,6 +324,7 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label lblError;
+        private System.Windows.Forms.Button BtnPasswordHide;
     }
 }
 

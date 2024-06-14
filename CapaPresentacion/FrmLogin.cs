@@ -28,34 +28,62 @@ namespace CapaPresentacion
         {
             if (textUserId.Text != "")
             {
+                NUsuario usuario = new NUsuario();
+                // Intentar convertir el texto del TextBox a un int
+                bool success = int.TryParse(textUserId.Text, out int userIdToInt);
+
+                if (!success)
+                {
+                    // Mostrar mensaje de error si la conversión falla
+                    MessageBox.Show("El ID de usuario debe ser un número entero.", "Error de formato", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
                 if (textPassword.Text != "")
                 {
-                    NUsuario usuario = new NUsuario();
-
-                    // Intentar convertir el texto del TextBox a un int
-                    bool success = int.TryParse(textUserId.Text, out int userIdToInt );
-
                     if (success)
                     {
                         var validLogin = usuario.Login(userIdToInt, textPassword.Text);
+                        if (validLogin == true)
+                        {
+                            FrmPrincipal frmPrincipal = new FrmPrincipal();
+                            frmPrincipal.Show();
+                            this.Hide();
+                        }
+                        else
+                        {
+                            msgError("Id o Contraseña incorrecta.");
+                            textPassword.Clear();
+                            textUserId.Focus();
+                        }
                     }
-                    else
-                    {
-                        // Mostrar mensaje de error si la conversión falla
-                        MessageBox.Show("El ID de usuario debe ser un número entero.", "Error de formato", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    
                 }
-                else msgError("Ingrese una contraseña");
+                else msgError("Ingrese una contraseña.");
             }
-            else msgError("Ingrese un ID");
+            else msgError("Ingrese un ID.");
         }
-
         private void msgError(string msg)
         {
             lblError.Text = "    " + msg;
             lblError.Visible = true;
         }
 
+        //Codigo para esconder y mostrar contraseña
+        bool verification = true;
+        private void BtnPasswordHide_Click(object sender, EventArgs e)
+        {
+
+            if (verification)
+            {
+                BtnPasswordHide.BackgroundImage = Properties.Resources.ojos_cruzados;
+                textPassword.PasswordChar = '\0';
+                verification = false;
+            }
+            else
+            {
+                textPassword.PasswordChar = '*';
+                BtnPasswordHide.BackgroundImage = Properties.Resources.ojo;
+                verification = true;
+            }
+
+        }
     }
 }

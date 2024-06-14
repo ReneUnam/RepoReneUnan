@@ -335,5 +335,11 @@
   <ItemGroup>
     <None Include="Resources\advertencia-de-triangulo %282%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ojo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ojos-cruzados.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
