@@ -46,6 +46,7 @@ namespace CapaPresentacion
                         {
                             FrmPrincipal frmPrincipal = new FrmPrincipal();
                             frmPrincipal.Show();
+                            frmPrincipal.FormClosed += LogOut;
                             this.Hide();
                         }
                         else
@@ -64,6 +65,15 @@ namespace CapaPresentacion
         {
             lblError.Text = "    " + msg;
             lblError.Visible = true;
+        }
+
+        private void LogOut(object sender, EventArgs e)
+        {
+            textPassword.Clear();
+            textUserId.Clear();
+            lblError.Visible = false;
+            this.Show();
+            textUserId.Focus();
         }
 
         //Codigo para esconder y mostrar contraseña

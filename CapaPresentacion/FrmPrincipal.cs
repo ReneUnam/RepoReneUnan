@@ -140,7 +140,11 @@ namespace CapaPresentacion
 
         private void btnOff_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            if (MessageBox.Show("¿Estás seguro de querer cerrar sesión?", "Advertencia",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                this.Close();
         }
+
     }
 }
+
