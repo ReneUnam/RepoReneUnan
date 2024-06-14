@@ -44,7 +44,7 @@ namespace CapaPresentacion
                         var validLogin = usuario.Login(userIdToInt, textPassword.Text);
                         if (validLogin == true)
                         {
-                            FrmPrincipal frmPrincipal = new FrmPrincipal();
+                            FrmPrincipalAdmin frmPrincipal = new FrmPrincipalAdmin();
                             frmPrincipal.Show();
                             frmPrincipal.FormClosed += LogOut;
                             this.Hide();

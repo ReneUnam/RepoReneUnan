@@ -1,6 +1,6 @@
 ﻿namespace CapaPresentacion
 {
-    partial class FrmPrincipal
+    partial class FrmPrincipalAdmin
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipalAdmin));
             this.sideBar = new System.Windows.Forms.Panel();
             this.btnOff = new System.Windows.Forms.Button();
             this.btnAjustes = new System.Windows.Forms.Button();
@@ -244,7 +244,7 @@
             this.panel1.Size = new System.Drawing.Size(73, 1364);
             this.panel1.TabIndex = 4;
             // 
-            // FrmPrincipal
+            // FrmPrincipalAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -254,7 +254,7 @@
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "FrmPrincipal";
+            this.Name = "FrmPrincipalAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "VAND y MONTI";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
