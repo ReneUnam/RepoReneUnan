@@ -34,10 +34,8 @@
             this.BtnGuardar = new System.Windows.Forms.Button();
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.TextBox = new System.Windows.Forms.TextBox();
+            this.textNombre = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.TxtCorreo = new System.Windows.Forms.TextBox();
-            this.TxtTelefono = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -53,6 +51,12 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.textApellidos = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textTelefono = new System.Windows.Forms.TextBox();
+            this.textCorreo = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textContraseña = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -63,7 +67,7 @@
             // BtnFoto
             // 
             this.BtnFoto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(91)))), ((int)(((byte)(178)))));
-            this.BtnFoto.Font = new System.Drawing.Font("Segoe UI Black", 8F, System.Drawing.FontStyle.Bold);
+            this.BtnFoto.Font = new System.Drawing.Font("Segoe UI Black", 13F, System.Drawing.FontStyle.Bold);
             this.BtnFoto.ForeColor = System.Drawing.Color.White;
             this.BtnFoto.Location = new System.Drawing.Point(40, 330);
             this.BtnFoto.Margin = new System.Windows.Forms.Padding(4);
@@ -77,7 +81,7 @@
             // BtnLimpiar
             // 
             this.BtnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(91)))), ((int)(((byte)(178)))));
-            this.BtnLimpiar.Font = new System.Drawing.Font("Segoe UI Black", 8F, System.Drawing.FontStyle.Bold);
+            this.BtnLimpiar.Font = new System.Drawing.Font("Segoe UI Black", 13F, System.Drawing.FontStyle.Bold);
             this.BtnLimpiar.ForeColor = System.Drawing.Color.White;
             this.BtnLimpiar.Location = new System.Drawing.Point(40, 424);
             this.BtnLimpiar.Margin = new System.Windows.Forms.Padding(4);
@@ -91,7 +95,7 @@
             // BtnGuardar
             // 
             this.BtnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(91)))), ((int)(((byte)(178)))));
-            this.BtnGuardar.Font = new System.Drawing.Font("Segoe UI Black", 8F, System.Drawing.FontStyle.Bold);
+            this.BtnGuardar.Font = new System.Drawing.Font("Segoe UI Black", 13F, System.Drawing.FontStyle.Bold);
             this.BtnGuardar.ForeColor = System.Drawing.Color.White;
             this.BtnGuardar.Location = new System.Drawing.Point(40, 519);
             this.BtnGuardar.Margin = new System.Windows.Forms.Padding(4);
@@ -104,7 +108,7 @@
             // BtnCancelar
             // 
             this.BtnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(91)))), ((int)(((byte)(178)))));
-            this.BtnCancelar.Font = new System.Drawing.Font("Segoe UI Black", 8F, System.Drawing.FontStyle.Bold);
+            this.BtnCancelar.Font = new System.Drawing.Font("Segoe UI Black", 13F, System.Drawing.FontStyle.Bold);
             this.BtnCancelar.ForeColor = System.Drawing.Color.White;
             this.BtnCancelar.Location = new System.Drawing.Point(40, 614);
             this.BtnCancelar.Margin = new System.Windows.Forms.Padding(4);
@@ -118,10 +122,14 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(91)))), ((int)(((byte)(178)))));
-            this.panel1.Controls.Add(this.TextBox);
+            this.panel1.Controls.Add(this.textContraseña);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.textCorreo);
+            this.panel1.Controls.Add(this.textTelefono);
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.textApellidos);
+            this.panel1.Controls.Add(this.textNombre);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.TxtCorreo);
-            this.panel1.Controls.Add(this.TxtTelefono);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
@@ -132,65 +140,47 @@
             this.panel1.TabIndex = 6;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
             // 
-            // TextBox
+            // textNombre
             // 
-            this.TextBox.Location = new System.Drawing.Point(48, 78);
-            this.TextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.TextBox.Multiline = true;
-            this.TextBox.Name = "TextBox";
-            this.TextBox.Size = new System.Drawing.Size(195, 52);
-            this.TextBox.TabIndex = 3;
-            this.TextBox.TextChanged += new System.EventHandler(this.TxtNombre_TextChanged);
+            this.textNombre.Location = new System.Drawing.Point(48, 36);
+            this.textNombre.Margin = new System.Windows.Forms.Padding(4);
+            this.textNombre.Multiline = true;
+            this.textNombre.Name = "textNombre";
+            this.textNombre.Size = new System.Drawing.Size(194, 43);
+            this.textNombre.TabIndex = 3;
+            this.textNombre.TextChanged += new System.EventHandler(this.TxtNombre_TextChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Black", 15F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(43, 410);
+            this.label6.Location = new System.Drawing.Point(43, 434);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(77, 47);
+            this.label6.Size = new System.Drawing.Size(56, 35);
             this.label6.TabIndex = 6;
             this.label6.Text = "Rol";
-            // 
-            // TxtCorreo
-            // 
-            this.TxtCorreo.Location = new System.Drawing.Point(48, 334);
-            this.TxtCorreo.Margin = new System.Windows.Forms.Padding(4);
-            this.TxtCorreo.Multiline = true;
-            this.TxtCorreo.Name = "TxtCorreo";
-            this.TxtCorreo.Size = new System.Drawing.Size(195, 52);
-            this.TxtCorreo.TabIndex = 5;
-            // 
-            // TxtTelefono
-            // 
-            this.TxtTelefono.Location = new System.Drawing.Point(48, 210);
-            this.TxtTelefono.Margin = new System.Windows.Forms.Padding(4);
-            this.TxtTelefono.Multiline = true;
-            this.TxtTelefono.Name = "TxtTelefono";
-            this.TxtTelefono.Size = new System.Drawing.Size(195, 52);
-            this.TxtTelefono.TabIndex = 4;
-            this.TxtTelefono.TextChanged += new System.EventHandler(this.TxtTelefono_TextChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Black", 15F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(43, 286);
+            this.label5.Font = new System.Drawing.Font("Segoe UI Black", 13F, System.Drawing.FontStyle.Bold);
+            this.label5.Location = new System.Drawing.Point(43, 258);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(136, 47);
+            this.label5.Size = new System.Drawing.Size(87, 30);
             this.label5.TabIndex = 2;
             this.label5.Text = "Correo";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Black", 15F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(43, 164);
+            this.label4.Font = new System.Drawing.Font("Segoe UI Black", 13F, System.Drawing.FontStyle.Bold);
+            this.label4.Location = new System.Drawing.Point(44, 173);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(174, 47);
+            this.label4.Size = new System.Drawing.Size(109, 30);
             this.label4.TabIndex = 1;
             this.label4.Text = "Telefono";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -198,13 +188,13 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Black", 15F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(43, 33);
+            this.label3.Font = new System.Drawing.Font("Segoe UI Black", 13F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(43, 2);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(339, 47);
+            this.label3.Size = new System.Drawing.Size(113, 30);
             this.label3.TabIndex = 0;
-            this.label3.Text = "Nombre y apellido";
+            this.label3.Text = "Nombres";
             // 
             // panel2
             // 
@@ -270,7 +260,7 @@
             this.label8.Location = new System.Drawing.Point(44, 33);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(299, 47);
+            this.label8.Size = new System.Drawing.Size(215, 35);
             this.label8.TabIndex = 4;
             this.label8.Text = "Buscar id del rol";
             this.label8.Click += new System.EventHandler(this.label8_Click);
@@ -280,12 +270,12 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Black", 20F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(776, 100);
+            this.label7.Location = new System.Drawing.Point(785, 100);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(429, 62);
+            this.label7.Size = new System.Drawing.Size(240, 46);
             this.label7.TabIndex = 9;
-            this.label7.Text = "Administrar roles";
+            this.label7.Text = "Asignar roles";
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label2
@@ -296,7 +286,7 @@
             this.label2.Location = new System.Drawing.Point(340, 100);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(429, 62);
+            this.label2.Size = new System.Drawing.Size(310, 46);
             this.label2.TabIndex = 7;
             this.label2.Text = "Datos del usuario";
             // 
@@ -346,9 +336,71 @@
             this.label1.Location = new System.Drawing.Point(75, 10);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(424, 48);
+            this.label1.Size = new System.Drawing.Size(305, 36);
             this.label1.TabIndex = 8;
             this.label1.Text = "REGISTRAR USUARIOS";
+            // 
+            // textApellidos
+            // 
+            this.textApellidos.Location = new System.Drawing.Point(48, 117);
+            this.textApellidos.Margin = new System.Windows.Forms.Padding(4);
+            this.textApellidos.Multiline = true;
+            this.textApellidos.Name = "textApellidos";
+            this.textApellidos.Size = new System.Drawing.Size(194, 43);
+            this.textApellidos.TabIndex = 7;
+            this.textApellidos.TextChanged += new System.EventHandler(this.textApeliidos_TextChanged);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI Black", 13F, System.Drawing.FontStyle.Bold);
+            this.label9.Location = new System.Drawing.Point(44, 83);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(116, 30);
+            this.label9.TabIndex = 8;
+            this.label9.Text = "Apellidos";
+            // 
+            // textTelefono
+            // 
+            this.textTelefono.Location = new System.Drawing.Point(49, 207);
+            this.textTelefono.Margin = new System.Windows.Forms.Padding(4);
+            this.textTelefono.Multiline = true;
+            this.textTelefono.Name = "textTelefono";
+            this.textTelefono.Size = new System.Drawing.Size(194, 43);
+            this.textTelefono.TabIndex = 9;
+            this.textTelefono.TextChanged += new System.EventHandler(this.textTelefono_TextChanged);
+            // 
+            // textCorreo
+            // 
+            this.textCorreo.Location = new System.Drawing.Point(48, 301);
+            this.textCorreo.Margin = new System.Windows.Forms.Padding(4);
+            this.textCorreo.Multiline = true;
+            this.textCorreo.Name = "textCorreo";
+            this.textCorreo.Size = new System.Drawing.Size(194, 43);
+            this.textCorreo.TabIndex = 10;
+            this.textCorreo.TextChanged += new System.EventHandler(this.textCorreo_TextChanged);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI Black", 13F, System.Drawing.FontStyle.Bold);
+            this.label10.Location = new System.Drawing.Point(44, 353);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(135, 30);
+            this.label10.TabIndex = 11;
+            this.label10.Text = "Contraseña";
+            // 
+            // textContraseña
+            // 
+            this.textContraseña.Location = new System.Drawing.Point(48, 387);
+            this.textContraseña.Margin = new System.Windows.Forms.Padding(4);
+            this.textContraseña.Multiline = true;
+            this.textContraseña.Name = "textContraseña";
+            this.textContraseña.Size = new System.Drawing.Size(194, 43);
+            this.textContraseña.TabIndex = 12;
+            this.textContraseña.TextChanged += new System.EventHandler(this.textContraseña_TextChanged);
             // 
             // FrmRegistrarUsuario
             // 
@@ -394,9 +446,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox TextBox;
-        private System.Windows.Forms.TextBox TxtCorreo;
-        private System.Windows.Forms.TextBox TxtTelefono;
+        private System.Windows.Forms.TextBox textNombre;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label7;
@@ -410,5 +460,11 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textApellidos;
+        private System.Windows.Forms.TextBox textTelefono;
+        private System.Windows.Forms.TextBox textContraseña;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox textCorreo;
     }
 }

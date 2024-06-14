@@ -83,7 +83,7 @@ namespace CapaPresentacion
 
         private void TxtNombre_TextChanged(object sender, EventArgs e)
         {
-
+          
         }
 
         private void TxtTelefono_TextChanged(object sender, EventArgs e)
@@ -119,7 +119,32 @@ namespace CapaPresentacion
 
         private void FrmRegistrarUsuario_Load(object sender, EventArgs e)
         {
-           
+            BtnGuardar.Enabled = false;
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textApeliidos_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textTelefono_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textContraseña_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textCorreo_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
