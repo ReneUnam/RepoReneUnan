@@ -1,6 +1,6 @@
 ﻿namespace CapaPresentacion
 {
-    partial class FrmPrincipalAdmin
+    partial class FrmPrincipal
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipalAdmin));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
             this.sideBar = new System.Windows.Forms.Panel();
             this.btnOff = new System.Windows.Forms.Button();
             this.btnAjustes = new System.Windows.Forms.Button();
@@ -43,15 +43,21 @@
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lblRol = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
             this.sideBar.SuspendLayout();
             this.panelChildForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // sideBar
             // 
             this.sideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(91)))), ((int)(((byte)(178)))));
             this.sideBar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.sideBar.Controls.Add(this.panel2);
             this.sideBar.Controls.Add(this.btnOff);
             this.sideBar.Controls.Add(this.btnAjustes);
             this.sideBar.Controls.Add(this.btnUsers);
@@ -64,7 +70,7 @@
             this.sideBar.MaximumSize = new System.Drawing.Size(374, 1379);
             this.sideBar.MinimumSize = new System.Drawing.Size(72, 1379);
             this.sideBar.Name = "sideBar";
-            this.sideBar.Size = new System.Drawing.Size(72, 1379);
+            this.sideBar.Size = new System.Drawing.Size(374, 1379);
             this.sideBar.TabIndex = 0;
             // 
             // btnOff
@@ -78,7 +84,7 @@
             this.btnOff.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnOff.Location = new System.Drawing.Point(0, 729);
             this.btnOff.Name = "btnOff";
-            this.btnOff.Size = new System.Drawing.Size(68, 88);
+            this.btnOff.Size = new System.Drawing.Size(370, 88);
             this.btnOff.TabIndex = 8;
             this.btnOff.Text = "      Cerrar Sesión";
             this.btnOff.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -96,7 +102,7 @@
             this.btnAjustes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAjustes.Location = new System.Drawing.Point(0, 612);
             this.btnAjustes.Name = "btnAjustes";
-            this.btnAjustes.Size = new System.Drawing.Size(68, 117);
+            this.btnAjustes.Size = new System.Drawing.Size(370, 117);
             this.btnAjustes.TabIndex = 7;
             this.btnAjustes.Text = "       Ajustes";
             this.btnAjustes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -113,7 +119,7 @@
             this.btnUsers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUsers.Location = new System.Drawing.Point(0, 510);
             this.btnUsers.Name = "btnUsers";
-            this.btnUsers.Size = new System.Drawing.Size(68, 102);
+            this.btnUsers.Size = new System.Drawing.Size(370, 102);
             this.btnUsers.TabIndex = 6;
             this.btnUsers.Text = "       Usuarios";
             this.btnUsers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -131,7 +137,7 @@
             this.btnReports.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReports.Location = new System.Drawing.Point(0, 408);
             this.btnReports.Name = "btnReports";
-            this.btnReports.Size = new System.Drawing.Size(68, 102);
+            this.btnReports.Size = new System.Drawing.Size(370, 102);
             this.btnReports.TabIndex = 5;
             this.btnReports.Text = "       Reportes";
             this.btnReports.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -149,7 +155,7 @@
             this.btnHistorial.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHistorial.Location = new System.Drawing.Point(0, 306);
             this.btnHistorial.Name = "btnHistorial";
-            this.btnHistorial.Size = new System.Drawing.Size(68, 102);
+            this.btnHistorial.Size = new System.Drawing.Size(370, 102);
             this.btnHistorial.TabIndex = 4;
             this.btnHistorial.Text = "       Historial";
             this.btnHistorial.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -167,7 +173,7 @@
             this.btnCrearFactura.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCrearFactura.Location = new System.Drawing.Point(0, 204);
             this.btnCrearFactura.Name = "btnCrearFactura";
-            this.btnCrearFactura.Size = new System.Drawing.Size(68, 102);
+            this.btnCrearFactura.Size = new System.Drawing.Size(370, 102);
             this.btnCrearFactura.TabIndex = 3;
             this.btnCrearFactura.Text = "       Nueva factura";
             this.btnCrearFactura.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -185,7 +191,7 @@
             this.btnProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnProductos.Location = new System.Drawing.Point(0, 102);
             this.btnProductos.Name = "btnProductos";
-            this.btnProductos.Size = new System.Drawing.Size(68, 102);
+            this.btnProductos.Size = new System.Drawing.Size(370, 102);
             this.btnProductos.TabIndex = 2;
             this.btnProductos.Text = "       Productos";
             this.btnProductos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -203,7 +209,7 @@
             this.btnMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMenu.Location = new System.Drawing.Point(0, 0);
             this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(68, 102);
+            this.btnMenu.Size = new System.Drawing.Size(370, 102);
             this.btnMenu.TabIndex = 1;
             this.btnMenu.Text = "       Menú";
             this.btnMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -244,7 +250,45 @@
             this.panel1.Size = new System.Drawing.Size(73, 1364);
             this.panel1.TabIndex = 4;
             // 
-            // FrmPrincipalAdmin
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.lblEmail);
+            this.panel2.Controls.Add(this.lblNombre);
+            this.panel2.Controls.Add(this.lblRol);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 980);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(370, 395);
+            this.panel2.TabIndex = 2;
+            // 
+            // lblRol
+            // 
+            this.lblRol.AutoSize = true;
+            this.lblRol.Location = new System.Drawing.Point(165, 60);
+            this.lblRol.Name = "lblRol";
+            this.lblRol.Size = new System.Drawing.Size(40, 25);
+            this.lblRol.TabIndex = 0;
+            this.lblRol.Text = "Rol";
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(141, 137);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(81, 25);
+            this.lblNombre.TabIndex = 1;
+            this.lblNombre.Text = "Nombre";
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Location = new System.Drawing.Point(147, 210);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(58, 25);
+            this.lblEmail.TabIndex = 2;
+            this.lblEmail.Text = "email";
+            // 
+            // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -254,7 +298,7 @@
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "FrmPrincipalAdmin";
+            this.Name = "FrmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "VAND y MONTI";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -262,6 +306,8 @@
             this.sideBar.ResumeLayout(false);
             this.panelChildForm.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -281,5 +327,9 @@
         private System.Windows.Forms.Timer sideBarTimer;
         private System.Windows.Forms.Panel panelChildForm;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.Label lblRol;
     }
 }

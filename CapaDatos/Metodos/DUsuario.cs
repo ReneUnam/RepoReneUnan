@@ -11,6 +11,24 @@ namespace CapaDatos.Metodos
 {
     public class DUsuario:ClassConnection
     {
+        // Propiedades
+        private int _IdUsuario;
+        private string _NombreUsuario;
+        private string _Contraseña;
+        private int _Telefono;
+        private string _Correo;
+        private int _IdRoles;
+        private byte[] _imagenUsuario;
+
+        //Atributos 
+        public int IdUsuario { get => _IdUsuario; set => _IdUsuario = value; }
+        public string NombreUsuario { get => _NombreUsuario; set => _NombreUsuario = value; }
+        public string Contraseña { get => _Contraseña; set => Contraseña = value; }
+        public int Telefono { get => _Telefono; set => _Telefono = value; }
+        public string Correo { get => _Correo; set => _Correo = value; }
+        public int IdRoles { get; set; }
+        public byte[] ImagenUsuario { get; set; }
+
         public bool Login(int userId, string password)
         {
             using (var connection = GetConnection())

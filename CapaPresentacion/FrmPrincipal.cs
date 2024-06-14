@@ -13,11 +13,11 @@ using CapaPresentacion.CustomControls;
 
 namespace CapaPresentacion
 {
-    public partial class FrmPrincipalAdmin : Form
+    public partial class FrmPrincipal : Form
     {
         private Image originalImage;
 
-        public FrmPrincipalAdmin()
+        public FrmPrincipal()
         {
             InitializeComponent();
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage; // Ajustar el modo de tamaño del PictureBox
