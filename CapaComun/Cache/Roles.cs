@@ -10,5 +10,15 @@ namespace CapaComun.Cache
     {
         public const int Administrador = 1;
         public const int Vendedor = 2;
+
+        static public string rolConverter(int rol)
+        {
+            string rolToString;
+            if (rol == Administrador) rolToString = "Administrador";
+            else rolToString = "Vendedor";
+
+            return rolToString;
+        }
     }
+
 }

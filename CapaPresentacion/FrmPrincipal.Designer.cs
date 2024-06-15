@@ -32,8 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
             this.sideBar = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.ImageUser = new System.Windows.Forms.PictureBox();
+            this.lblID = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblRol = new System.Windows.Forms.Label();
@@ -51,7 +51,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.sideBar.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImageUser)).BeginInit();
             this.panelChildForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -70,45 +70,45 @@
             this.sideBar.Controls.Add(this.btnProductos);
             this.sideBar.Controls.Add(this.btnMenu);
             this.sideBar.Location = new System.Drawing.Point(1, 0);
-            this.sideBar.MaximumSize = new System.Drawing.Size(391, 1379);
+            this.sideBar.MaximumSize = new System.Drawing.Size(406, 1379);
             this.sideBar.MinimumSize = new System.Drawing.Size(72, 1379);
             this.sideBar.Name = "sideBar";
-            this.sideBar.Size = new System.Drawing.Size(377, 1379);
+            this.sideBar.Size = new System.Drawing.Size(72, 1379);
             this.sideBar.TabIndex = 0;
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.ImageUser);
+            this.panel2.Controls.Add(this.lblID);
             this.panel2.Controls.Add(this.lblEmail);
             this.panel2.Controls.Add(this.lblNombre);
             this.panel2.Controls.Add(this.lblRol);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 850);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(373, 525);
+            this.panel2.Size = new System.Drawing.Size(68, 525);
             this.panel2.TabIndex = 2;
             // 
-            // pictureBox2
+            // ImageUser
             // 
-            this.pictureBox2.Image = global::CapaPresentacion.Properties.Resources.agregar_usuario;
-            this.pictureBox2.Location = new System.Drawing.Point(93, 46);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(168, 146);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
+            this.ImageUser.Image = global::CapaPresentacion.Properties.Resources.agregar_usuario;
+            this.ImageUser.Location = new System.Drawing.Point(93, 46);
+            this.ImageUser.Name = "ImageUser";
+            this.ImageUser.Size = new System.Drawing.Size(168, 146);
+            this.ImageUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ImageUser.TabIndex = 4;
+            this.ImageUser.TabStop = false;
             // 
-            // label1
+            // lblID
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Black", 11.14286F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(59, 269);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 37);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "ID";
+            this.lblID.AutoSize = true;
+            this.lblID.Font = new System.Drawing.Font("Segoe UI Black", 11.14286F, System.Drawing.FontStyle.Bold);
+            this.lblID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(0)))));
+            this.lblID.Location = new System.Drawing.Point(59, 269);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(46, 37);
+            this.lblID.TabIndex = 3;
+            this.lblID.Text = "ID";
             // 
             // lblEmail
             // 
@@ -154,7 +154,7 @@
             this.btnOff.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnOff.Location = new System.Drawing.Point(0, 729);
             this.btnOff.Name = "btnOff";
-            this.btnOff.Size = new System.Drawing.Size(373, 88);
+            this.btnOff.Size = new System.Drawing.Size(68, 88);
             this.btnOff.TabIndex = 8;
             this.btnOff.Text = "      Cerrar Sesión";
             this.btnOff.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -172,7 +172,7 @@
             this.btnAjustes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAjustes.Location = new System.Drawing.Point(0, 612);
             this.btnAjustes.Name = "btnAjustes";
-            this.btnAjustes.Size = new System.Drawing.Size(373, 117);
+            this.btnAjustes.Size = new System.Drawing.Size(68, 117);
             this.btnAjustes.TabIndex = 7;
             this.btnAjustes.Text = "       Ajustes";
             this.btnAjustes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -189,7 +189,7 @@
             this.btnUsers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUsers.Location = new System.Drawing.Point(0, 510);
             this.btnUsers.Name = "btnUsers";
-            this.btnUsers.Size = new System.Drawing.Size(373, 102);
+            this.btnUsers.Size = new System.Drawing.Size(68, 102);
             this.btnUsers.TabIndex = 6;
             this.btnUsers.Text = "       Usuarios";
             this.btnUsers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -207,7 +207,7 @@
             this.btnReports.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReports.Location = new System.Drawing.Point(0, 408);
             this.btnReports.Name = "btnReports";
-            this.btnReports.Size = new System.Drawing.Size(373, 102);
+            this.btnReports.Size = new System.Drawing.Size(68, 102);
             this.btnReports.TabIndex = 5;
             this.btnReports.Text = "       Reportes";
             this.btnReports.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -225,7 +225,7 @@
             this.btnHistorial.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHistorial.Location = new System.Drawing.Point(0, 306);
             this.btnHistorial.Name = "btnHistorial";
-            this.btnHistorial.Size = new System.Drawing.Size(373, 102);
+            this.btnHistorial.Size = new System.Drawing.Size(68, 102);
             this.btnHistorial.TabIndex = 4;
             this.btnHistorial.Text = "       Historial";
             this.btnHistorial.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -243,7 +243,7 @@
             this.btnCrearFactura.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCrearFactura.Location = new System.Drawing.Point(0, 204);
             this.btnCrearFactura.Name = "btnCrearFactura";
-            this.btnCrearFactura.Size = new System.Drawing.Size(373, 102);
+            this.btnCrearFactura.Size = new System.Drawing.Size(68, 102);
             this.btnCrearFactura.TabIndex = 3;
             this.btnCrearFactura.Text = "       Nueva factura";
             this.btnCrearFactura.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -261,7 +261,7 @@
             this.btnProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnProductos.Location = new System.Drawing.Point(0, 102);
             this.btnProductos.Name = "btnProductos";
-            this.btnProductos.Size = new System.Drawing.Size(373, 102);
+            this.btnProductos.Size = new System.Drawing.Size(68, 102);
             this.btnProductos.TabIndex = 2;
             this.btnProductos.Text = "       Productos";
             this.btnProductos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -279,7 +279,7 @@
             this.btnMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMenu.Location = new System.Drawing.Point(0, 0);
             this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(373, 102);
+            this.btnMenu.Size = new System.Drawing.Size(68, 102);
             this.btnMenu.TabIndex = 1;
             this.btnMenu.Text = "       Menú";
             this.btnMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -338,7 +338,7 @@
             this.sideBar.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImageUser)).EndInit();
             this.panelChildForm.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -364,7 +364,7 @@
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblRol;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label lblID;
+        private System.Windows.Forms.PictureBox ImageUser;
     }
 }
