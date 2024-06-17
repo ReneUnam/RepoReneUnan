@@ -36,26 +36,6 @@ namespace CapaPresentacion
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            string Imagen = "";
-            try 
-            {
-                OpenFileDialog dialog = new OpenFileDialog();
-                dialog.Filter = "jpg files (*.jpg)|*.jpg| PNG files(*.png)|*.png| All files(*.*)|*.*";
-
-                if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-                {
-                    Imagen = dialog.FileName;
-                    ImagenRegistro.ImageLocation = Imagen;
-                }
-            } 
-            catch (Exception)
-            {
-                MessageBox.Show("error", "error al cargar");
-            }
-        }
-
         private void label4_Click(object sender, EventArgs e)
         {
 
@@ -83,14 +63,14 @@ namespace CapaPresentacion
 
         private void TxtNombre_TextChanged(object sender, EventArgs e)
         {
-
+          
         }
 
         private void TxtTelefono_TextChanged(object sender, EventArgs e)
         {
 
         }
-
+        // Esta region es para limpiar los datos en los paneles
         #region
         private void LimpiarCasillas()
         {
@@ -119,7 +99,89 @@ namespace CapaPresentacion
 
         private void FrmRegistrarUsuario_Load(object sender, EventArgs e)
         {
-           
+            BtnGuardar.Enabled = false;
+
+            //En esta region esta el codigo de desactivar los textbox 
+            #region
+            textNombre.Enabled = false;
+            textApellido.Enabled = false;
+            textTelefono.Enabled = false;
+            textCorreo.Enabled = false;
+            textContraseña.Enabled = false;
+            textRol.Enabled = false;
+            #endregion
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            BtnGuardar.Enabled = true;
+            BtnNuevo.Enabled = false;
+
+            //En esta region esta donde se activan al darle a nuevo
+            #region
+            textNombre.Enabled = !textNombre.Enabled;
+            textApellido.Enabled = !textApellido.Enabled;
+            textTelefono.Enabled = !textTelefono.Enabled;
+            textCorreo.Enabled = !textCorreo.Enabled;
+            textContraseña.Enabled = !textContraseña.Enabled;
+            textRol.Enabled = !textRol.Enabled;
+            #endregion
+        }
+
+        private void BtnGuardar_Click(object sender, EventArgs e)
+        {
+            BtnGuardar.Enabled = !BtnGuardar.Enabled;
+            BtnNuevo.Enabled = !BtnNuevo.Enabled;
+
+            //Para seguir la secuencia del nuevo y desactivar los text al darle guardar
+            #region
+            textNombre.Enabled = !textNombre.Enabled;
+            textApellido.Enabled = !textApellido.Enabled;
+            textTelefono.Enabled = !textTelefono.Enabled;
+            textCorreo.Enabled = !textCorreo.Enabled;
+            textContraseña.Enabled = !textContraseña.Enabled;
+            textRol.Enabled = !textRol.Enabled;
+            #endregion
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textApeliidos_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textTelefono_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textContraseña_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textCorreo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ImagenRegistro_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
