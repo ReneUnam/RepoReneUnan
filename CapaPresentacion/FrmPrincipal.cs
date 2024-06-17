@@ -20,16 +20,16 @@ namespace CapaPresentacion
         public FrmPrincipal()
         {
             InitializeComponent();
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage; // Ajustar el modo de tamaño del PictureBox
+            picLogo.SizeMode = PictureBoxSizeMode.StretchImage; // Ajustar el modo de tamaño del PictureBox
   
         }
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
-            pictureBox1.BorderStyle = BorderStyle.None; // Establecer el borde del PictureBox a ninguno
+            picLogo.BorderStyle = BorderStyle.None; // Establecer el borde del PictureBox a ninguno
 
             // Cargar la imagen original en el PictureBox
             originalImage = Properties.Resources.logopng;
-            pictureBox1.Image = originalImage;
+            picLogo.Image = originalImage;
 
 
             float opacity = 0.5f; // Cambia este valor según lo necesites
@@ -38,7 +38,7 @@ namespace CapaPresentacion
             Bitmap transparentImage = ChangeImageOpacity(originalImage, opacity);
 
             // Mostrar la imagen con opacidad reducida en el PictureBox
-            pictureBox1.Image = transparentImage;
+            picLogo.Image = transparentImage;
 
             userAccess();
 
@@ -106,7 +106,7 @@ namespace CapaPresentacion
         {
             if(activeForm != null) 
             {
-                activeForm .Close();
+                activeForm.Close();
             }
 
             activeForm = childForm;
@@ -124,7 +124,7 @@ namespace CapaPresentacion
 
         private void btnUsers_Click(object sender, EventArgs e)
         {
-            openChildForm(new FrmRegistrarUsuario());
+            openChildForm(new FrmUsuarios());
         }
 
         private void btnMenu_Click(object sender, EventArgs e)

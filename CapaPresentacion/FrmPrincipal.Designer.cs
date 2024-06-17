@@ -32,28 +32,28 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
             this.sideBar = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.ImageUser = new System.Windows.Forms.PictureBox();
             this.lblID = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblRol = new System.Windows.Forms.Label();
+            this.sideBarTimer = new System.Windows.Forms.Timer(this.components);
+            this.panelChildForm = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.ImageUser = new System.Windows.Forms.PictureBox();
             this.btnOff = new System.Windows.Forms.Button();
             this.btnAjustes = new System.Windows.Forms.Button();
             this.btnUsers = new System.Windows.Forms.Button();
             this.btnReports = new System.Windows.Forms.Button();
+            this.btnCompras = new System.Windows.Forms.Button();
             this.btnVentas = new System.Windows.Forms.Button();
             this.btnProductos = new System.Windows.Forms.Button();
             this.btnMenu = new System.Windows.Forms.Button();
-            this.sideBarTimer = new System.Windows.Forms.Timer(this.components);
-            this.panelChildForm = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnCompras = new System.Windows.Forms.Button();
+            this.picLogo = new System.Windows.Forms.PictureBox();
             this.sideBar.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ImageUser)).BeginInit();
             this.panelChildForm.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImageUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // sideBar
@@ -88,16 +88,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(402, 525);
             this.panel2.TabIndex = 2;
-            // 
-            // ImageUser
-            // 
-            this.ImageUser.Image = global::CapaPresentacion.Properties.Resources.agregar_usuario;
-            this.ImageUser.Location = new System.Drawing.Point(93, 46);
-            this.ImageUser.Name = "ImageUser";
-            this.ImageUser.Size = new System.Drawing.Size(168, 146);
-            this.ImageUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ImageUser.TabIndex = 4;
-            this.ImageUser.TabStop = false;
             // 
             // lblID
             // 
@@ -142,6 +132,40 @@
             this.lblRol.Size = new System.Drawing.Size(60, 37);
             this.lblRol.TabIndex = 0;
             this.lblRol.Text = "Rol";
+            // 
+            // sideBarTimer
+            // 
+            this.sideBarTimer.Interval = 10;
+            this.sideBarTimer.Tick += new System.EventHandler(this.sideBarTimer_Tick);
+            // 
+            // panelChildForm
+            // 
+            this.panelChildForm.BackColor = System.Drawing.SystemColors.Control;
+            this.panelChildForm.Controls.Add(this.picLogo);
+            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelChildForm.Location = new System.Drawing.Point(73, 0);
+            this.panelChildForm.Name = "panelChildForm";
+            this.panelChildForm.Size = new System.Drawing.Size(1677, 1364);
+            this.panelChildForm.TabIndex = 3;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(91)))), ((int)(((byte)(178)))));
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(73, 1364);
+            this.panel1.TabIndex = 4;
+            // 
+            // ImageUser
+            // 
+            this.ImageUser.Image = global::CapaPresentacion.Properties.Resources.agregar_usuario;
+            this.ImageUser.Location = new System.Drawing.Point(93, 46);
+            this.ImageUser.Name = "ImageUser";
+            this.ImageUser.Size = new System.Drawing.Size(168, 146);
+            this.ImageUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ImageUser.TabIndex = 4;
+            this.ImageUser.TabStop = false;
             // 
             // btnOff
             // 
@@ -214,6 +238,24 @@
             this.btnReports.UseVisualStyleBackColor = true;
             this.btnReports.Click += new System.EventHandler(this.btnReports_Click);
             // 
+            // btnCompras
+            // 
+            this.btnCompras.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCompras.FlatAppearance.BorderSize = 0;
+            this.btnCompras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCompras.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
+            this.btnCompras.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(0)))));
+            this.btnCompras.Image = global::CapaPresentacion.Properties.Resources.carrito_de_compras;
+            this.btnCompras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCompras.Location = new System.Drawing.Point(0, 306);
+            this.btnCompras.Name = "btnCompras";
+            this.btnCompras.Size = new System.Drawing.Size(402, 102);
+            this.btnCompras.TabIndex = 4;
+            this.btnCompras.Text = "       Compras";
+            this.btnCompras.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCompras.UseVisualStyleBackColor = true;
+            this.btnCompras.Click += new System.EventHandler(this.btnHistorial_Click);
+            // 
             // btnVentas
             // 
             this.btnVentas.Dock = System.Windows.Forms.DockStyle.Top;
@@ -268,57 +310,15 @@
             this.btnMenu.UseVisualStyleBackColor = true;
             this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
-            // sideBarTimer
+            // picLogo
             // 
-            this.sideBarTimer.Interval = 10;
-            this.sideBarTimer.Tick += new System.EventHandler(this.sideBarTimer_Tick);
-            // 
-            // panelChildForm
-            // 
-            this.panelChildForm.BackColor = System.Drawing.SystemColors.Control;
-            this.panelChildForm.Controls.Add(this.pictureBox1);
-            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelChildForm.Location = new System.Drawing.Point(73, 0);
-            this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(1677, 1364);
-            this.panelChildForm.TabIndex = 3;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Location = new System.Drawing.Point(567, 461);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(496, 469);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(91)))), ((int)(((byte)(178)))));
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(73, 1364);
-            this.panel1.TabIndex = 4;
-            // 
-            // btnCompras
-            // 
-            this.btnCompras.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCompras.FlatAppearance.BorderSize = 0;
-            this.btnCompras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCompras.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
-            this.btnCompras.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(0)))));
-            this.btnCompras.Image = global::CapaPresentacion.Properties.Resources.carrito_de_compras;
-            this.btnCompras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCompras.Location = new System.Drawing.Point(0, 306);
-            this.btnCompras.Name = "btnCompras";
-            this.btnCompras.Size = new System.Drawing.Size(402, 102);
-            this.btnCompras.TabIndex = 4;
-            this.btnCompras.Text = "       Compras";
-            this.btnCompras.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCompras.UseVisualStyleBackColor = true;
-            this.btnCompras.Click += new System.EventHandler(this.btnHistorial_Click);
+            this.picLogo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.picLogo.BackColor = System.Drawing.Color.Transparent;
+            this.picLogo.Location = new System.Drawing.Point(567, 461);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(496, 469);
+            this.picLogo.TabIndex = 1;
+            this.picLogo.TabStop = false;
             // 
             // FrmPrincipal
             // 
@@ -338,9 +338,9 @@
             this.sideBar.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ImageUser)).EndInit();
             this.panelChildForm.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImageUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -354,7 +354,7 @@
         private System.Windows.Forms.Button btnReports;
         private System.Windows.Forms.Button btnVentas;
         private System.Windows.Forms.Button btnProductos;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picLogo;
         private System.Windows.Forms.Button btnOff;
         private System.Windows.Forms.Timer sideBarTimer;
         private System.Windows.Forms.Panel panelChildForm;

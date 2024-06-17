@@ -58,7 +58,7 @@ namespace CapaPresentacion
 
         private void BtnCancelar_Click(object sender, EventArgs e)
         {
-           
+         this.Close();
         }
 
         private void TxtNombre_TextChanged(object sender, EventArgs e)
