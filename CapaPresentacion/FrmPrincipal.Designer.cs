@@ -32,27 +32,27 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
             this.sideBar = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.ImageUser = new System.Windows.Forms.PictureBox();
             this.lblID = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblRol = new System.Windows.Forms.Label();
+            this.sideBarTimer = new System.Windows.Forms.Timer(this.components);
+            this.panelChildForm = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.ImageUser = new System.Windows.Forms.PictureBox();
             this.btnOff = new System.Windows.Forms.Button();
             this.btnAjustes = new System.Windows.Forms.Button();
             this.btnUsers = new System.Windows.Forms.Button();
             this.btnReports = new System.Windows.Forms.Button();
-            this.btnHistorial = new System.Windows.Forms.Button();
+            this.btnCompras = new System.Windows.Forms.Button();
             this.btnCrearFactura = new System.Windows.Forms.Button();
             this.btnProductos = new System.Windows.Forms.Button();
             this.btnMenu = new System.Windows.Forms.Button();
-            this.sideBarTimer = new System.Windows.Forms.Timer(this.components);
-            this.panelChildForm = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.sideBar.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ImageUser)).BeginInit();
             this.panelChildForm.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ImageUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,7 +65,7 @@
             this.sideBar.Controls.Add(this.btnAjustes);
             this.sideBar.Controls.Add(this.btnUsers);
             this.sideBar.Controls.Add(this.btnReports);
-            this.sideBar.Controls.Add(this.btnHistorial);
+            this.sideBar.Controls.Add(this.btnCompras);
             this.sideBar.Controls.Add(this.btnCrearFactura);
             this.sideBar.Controls.Add(this.btnProductos);
             this.sideBar.Controls.Add(this.btnMenu);
@@ -73,7 +73,7 @@
             this.sideBar.MaximumSize = new System.Drawing.Size(406, 1379);
             this.sideBar.MinimumSize = new System.Drawing.Size(72, 1379);
             this.sideBar.Name = "sideBar";
-            this.sideBar.Size = new System.Drawing.Size(72, 1379);
+            this.sideBar.Size = new System.Drawing.Size(406, 1379);
             this.sideBar.TabIndex = 0;
             // 
             // panel2
@@ -86,18 +86,8 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 850);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(68, 525);
+            this.panel2.Size = new System.Drawing.Size(402, 525);
             this.panel2.TabIndex = 2;
-            // 
-            // ImageUser
-            // 
-            this.ImageUser.Image = global::CapaPresentacion.Properties.Resources.agregar_usuario;
-            this.ImageUser.Location = new System.Drawing.Point(93, 46);
-            this.ImageUser.Name = "ImageUser";
-            this.ImageUser.Size = new System.Drawing.Size(168, 146);
-            this.ImageUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ImageUser.TabIndex = 4;
-            this.ImageUser.TabStop = false;
             // 
             // lblID
             // 
@@ -143,6 +133,40 @@
             this.lblRol.TabIndex = 0;
             this.lblRol.Text = "Rol";
             // 
+            // sideBarTimer
+            // 
+            this.sideBarTimer.Interval = 10;
+            this.sideBarTimer.Tick += new System.EventHandler(this.sideBarTimer_Tick);
+            // 
+            // panelChildForm
+            // 
+            this.panelChildForm.BackColor = System.Drawing.SystemColors.Control;
+            this.panelChildForm.Controls.Add(this.pictureBox1);
+            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelChildForm.Location = new System.Drawing.Point(73, 0);
+            this.panelChildForm.Name = "panelChildForm";
+            this.panelChildForm.Size = new System.Drawing.Size(1677, 1364);
+            this.panelChildForm.TabIndex = 3;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(91)))), ((int)(((byte)(178)))));
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(73, 1364);
+            this.panel1.TabIndex = 4;
+            // 
+            // ImageUser
+            // 
+            this.ImageUser.Image = global::CapaPresentacion.Properties.Resources.agregar_usuario;
+            this.ImageUser.Location = new System.Drawing.Point(93, 46);
+            this.ImageUser.Name = "ImageUser";
+            this.ImageUser.Size = new System.Drawing.Size(168, 146);
+            this.ImageUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ImageUser.TabIndex = 4;
+            this.ImageUser.TabStop = false;
+            // 
             // btnOff
             // 
             this.btnOff.Dock = System.Windows.Forms.DockStyle.Top;
@@ -154,7 +178,7 @@
             this.btnOff.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnOff.Location = new System.Drawing.Point(0, 729);
             this.btnOff.Name = "btnOff";
-            this.btnOff.Size = new System.Drawing.Size(68, 88);
+            this.btnOff.Size = new System.Drawing.Size(402, 88);
             this.btnOff.TabIndex = 8;
             this.btnOff.Text = "      Cerrar Sesión";
             this.btnOff.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -172,7 +196,7 @@
             this.btnAjustes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAjustes.Location = new System.Drawing.Point(0, 612);
             this.btnAjustes.Name = "btnAjustes";
-            this.btnAjustes.Size = new System.Drawing.Size(68, 117);
+            this.btnAjustes.Size = new System.Drawing.Size(402, 117);
             this.btnAjustes.TabIndex = 7;
             this.btnAjustes.Text = "       Ajustes";
             this.btnAjustes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -189,7 +213,7 @@
             this.btnUsers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUsers.Location = new System.Drawing.Point(0, 510);
             this.btnUsers.Name = "btnUsers";
-            this.btnUsers.Size = new System.Drawing.Size(68, 102);
+            this.btnUsers.Size = new System.Drawing.Size(402, 102);
             this.btnUsers.TabIndex = 6;
             this.btnUsers.Text = "       Usuarios";
             this.btnUsers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -207,30 +231,30 @@
             this.btnReports.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReports.Location = new System.Drawing.Point(0, 408);
             this.btnReports.Name = "btnReports";
-            this.btnReports.Size = new System.Drawing.Size(68, 102);
+            this.btnReports.Size = new System.Drawing.Size(402, 102);
             this.btnReports.TabIndex = 5;
             this.btnReports.Text = "       Reportes";
             this.btnReports.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReports.UseVisualStyleBackColor = true;
             this.btnReports.Click += new System.EventHandler(this.btnReports_Click);
             // 
-            // btnHistorial
+            // btnCompras
             // 
-            this.btnHistorial.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnHistorial.FlatAppearance.BorderSize = 0;
-            this.btnHistorial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHistorial.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
-            this.btnHistorial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(0)))));
-            this.btnHistorial.Image = global::CapaPresentacion.Properties.Resources.reloj_tres__1_;
-            this.btnHistorial.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHistorial.Location = new System.Drawing.Point(0, 306);
-            this.btnHistorial.Name = "btnHistorial";
-            this.btnHistorial.Size = new System.Drawing.Size(68, 102);
-            this.btnHistorial.TabIndex = 4;
-            this.btnHistorial.Text = "       Historial";
-            this.btnHistorial.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHistorial.UseVisualStyleBackColor = true;
-            this.btnHistorial.Click += new System.EventHandler(this.btnHistorial_Click);
+            this.btnCompras.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCompras.FlatAppearance.BorderSize = 0;
+            this.btnCompras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCompras.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
+            this.btnCompras.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(0)))));
+            this.btnCompras.Image = global::CapaPresentacion.Properties.Resources.carrito_de_compras;
+            this.btnCompras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCompras.Location = new System.Drawing.Point(0, 306);
+            this.btnCompras.Name = "btnCompras";
+            this.btnCompras.Size = new System.Drawing.Size(402, 102);
+            this.btnCompras.TabIndex = 4;
+            this.btnCompras.Text = "       Compras";
+            this.btnCompras.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCompras.UseVisualStyleBackColor = true;
+            this.btnCompras.Click += new System.EventHandler(this.btnHistorial_Click);
             // 
             // btnCrearFactura
             // 
@@ -239,13 +263,13 @@
             this.btnCrearFactura.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCrearFactura.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
             this.btnCrearFactura.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(0)))));
-            this.btnCrearFactura.Image = global::CapaPresentacion.Properties.Resources.mas;
+            this.btnCrearFactura.Image = global::CapaPresentacion.Properties.Resources.factura_punto_de_venta__1_;
             this.btnCrearFactura.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCrearFactura.Location = new System.Drawing.Point(0, 204);
             this.btnCrearFactura.Name = "btnCrearFactura";
-            this.btnCrearFactura.Size = new System.Drawing.Size(68, 102);
+            this.btnCrearFactura.Size = new System.Drawing.Size(402, 102);
             this.btnCrearFactura.TabIndex = 3;
-            this.btnCrearFactura.Text = "       Nueva factura";
+            this.btnCrearFactura.Text = "       Ventas";
             this.btnCrearFactura.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCrearFactura.UseVisualStyleBackColor = true;
             this.btnCrearFactura.Click += new System.EventHandler(this.btnCrearFactura_Click);
@@ -261,7 +285,7 @@
             this.btnProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnProductos.Location = new System.Drawing.Point(0, 102);
             this.btnProductos.Name = "btnProductos";
-            this.btnProductos.Size = new System.Drawing.Size(68, 102);
+            this.btnProductos.Size = new System.Drawing.Size(402, 102);
             this.btnProductos.TabIndex = 2;
             this.btnProductos.Text = "       Productos";
             this.btnProductos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -279,27 +303,12 @@
             this.btnMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMenu.Location = new System.Drawing.Point(0, 0);
             this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(68, 102);
+            this.btnMenu.Size = new System.Drawing.Size(402, 102);
             this.btnMenu.TabIndex = 1;
             this.btnMenu.Text = "       Menú";
             this.btnMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMenu.UseVisualStyleBackColor = true;
             this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
-            // 
-            // sideBarTimer
-            // 
-            this.sideBarTimer.Interval = 10;
-            this.sideBarTimer.Tick += new System.EventHandler(this.sideBarTimer_Tick);
-            // 
-            // panelChildForm
-            // 
-            this.panelChildForm.BackColor = System.Drawing.SystemColors.Control;
-            this.panelChildForm.Controls.Add(this.pictureBox1);
-            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelChildForm.Location = new System.Drawing.Point(73, 0);
-            this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(1677, 1364);
-            this.panelChildForm.TabIndex = 3;
             // 
             // pictureBox1
             // 
@@ -310,15 +319,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(496, 469);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(91)))), ((int)(((byte)(178)))));
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(73, 1364);
-            this.panel1.TabIndex = 4;
             // 
             // FrmPrincipal
             // 
@@ -338,8 +338,8 @@
             this.sideBar.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ImageUser)).EndInit();
             this.panelChildForm.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ImageUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -352,7 +352,7 @@
         private System.Windows.Forms.Button btnAjustes;
         private System.Windows.Forms.Button btnUsers;
         private System.Windows.Forms.Button btnReports;
-        private System.Windows.Forms.Button btnHistorial;
+        private System.Windows.Forms.Button btnCompras;
         private System.Windows.Forms.Button btnCrearFactura;
         private System.Windows.Forms.Button btnProductos;
         private System.Windows.Forms.PictureBox pictureBox1;
