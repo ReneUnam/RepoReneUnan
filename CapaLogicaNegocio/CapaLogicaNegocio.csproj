@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Entidades\NFactura.cs" />
     <Compile Include="Entidades\NProducto.cs" />
+    <Compile Include="Entidades\NRoles.cs" />
     <Compile Include="Entidades\NUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

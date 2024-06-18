@@ -7,9 +7,10 @@ using System.Data;
 using System.Data.SqlClient;
 using CapaDatos.SQLConnection;
 
+
 namespace CapaDatos.Metodos
 {
-    internal class DRoles:ClassConnection
+    public class DRoles:ClassConnection
     {
         private int _IdRoles;
         private string _NombreDelRol;
@@ -20,5 +21,27 @@ namespace CapaDatos.Metodos
         public string Descripcion { get => _Descripcion; set => _Descripcion = value; }
 
 
+        SqlDataReader leer;
+        DataTable tabla = new DataTable();
+        SqlCommand comando = new SqlCommand();
+
+        public DataTable Mostrar()
+        {
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    comando.CommandText = "SpMostrarRoles";
+                    comando.CommandType = CommandType.StoredProcedure;
+                    leer = comando.ExecuteReader();
+                    tabla.Load(leer);
+
+                    return tabla;
+
+                }
+
+            }
+        }
     }
 }

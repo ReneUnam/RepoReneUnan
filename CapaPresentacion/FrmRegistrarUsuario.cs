@@ -7,11 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaLogicaNegocio;
+using CapaLogicaNegocio.Entidades;
+
+
 
 namespace CapaPresentacion
 {
     public partial class FrmRegistrarUsuario : Form
     {
+        NRoles RCN = new NRoles();
+
         public FrmRegistrarUsuario()
         {
             InitializeComponent();
@@ -97,8 +103,16 @@ namespace CapaPresentacion
             LimpiarCasillas();
         }
 
+        private void MostrarRoles()
+        {
+            NRoles RCP = new NRoles();
+            DgvRoles.DataSource = RCN.MostrarRoles();
+        }
+
+
         private void FrmRegistrarUsuario_Load(object sender, EventArgs e)
         {
+            MostrarRoles();
             BtnGuardar.Enabled = false;
 
             //En esta region esta el codigo de desactivar los textbox 
