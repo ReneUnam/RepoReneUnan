@@ -10,11 +10,11 @@ namespace CapaComun.Cache
     public static class UserCache
     {
         public static int IdUsuario { get; set; }
-        public static string NombreUsuario { get; set; }
+        public static string Nombre{ get; set; }
+        public static string Apellido { get; set; }
         public static string Contraseña { get; set; }
         public static int Telefono { get; set; }
         public static string Correo { get; set; }
         public static int IdRoles { get; set; }
-        public static byte[] ImagenUsuario { get; set; }
     }
 }

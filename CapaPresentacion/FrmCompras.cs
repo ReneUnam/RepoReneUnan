@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaLogicaNegocio.Entidades;
 
 namespace CapaPresentacion
 {
@@ -19,7 +20,20 @@ namespace CapaPresentacion
 
         private void FrmCompras_Load(object sender, EventArgs e)
         {
-            //Cargar metodo que lee las filas de la tabla compras.
+            Mostrar();
         }
+
+        private void Mostrar()
+        {
+            dgvListado.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgvListado.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvListado.DataSource = new NIngreso().MostrarIngresos();
+            dgvListado.Refresh();
+           
+
+            //Totalizar los registros
+            lblTotal.Text = "Total de Registros: " + Convert.ToString(dgvListado.Rows.Count);
+        }
+
     }
 }

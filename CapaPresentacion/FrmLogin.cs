@@ -45,7 +45,7 @@ namespace CapaPresentacion
                         var validLogin = usuario.Login(userIdToInt, textPassword.Text);
                         if (validLogin == true) //Si validlogin nos devuelve verdadero significa que existe un usuario y contraseña validos en la base de datos
                         {   
-                            MessageBox.Show($"Bienvenido {UserCache.NombreUsuario}", "", MessageBoxButtons.OK, MessageBoxIcon.Information); //Mostramos un mensaje de bienvenida
+                            MessageBox.Show($"Bienvenido {UserCache.Nombre} {UserCache.Apellido}", "", MessageBoxButtons.OK, MessageBoxIcon.Information); //Mostramos un mensaje de bienvenida
                             FrmPrincipal frmPrincipal = new FrmPrincipal(); //Instanciamos el formulario principal
                             frmPrincipal.Show();//Mostramos el formulario principal llamando a su metodo show()
                             frmPrincipal.FormClosed += LogOut;

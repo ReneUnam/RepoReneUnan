@@ -49,9 +49,10 @@ namespace CapaDatos.Metodos
                         while(reader.Read())
                         {
                             UserCache.IdUsuario = reader.GetInt32(0);
-                            UserCache.NombreUsuario = reader.GetString(1);
-                            UserCache.Correo = reader.GetString(4);
-                            UserCache.IdRoles = reader.GetInt32(5);
+                            UserCache.Nombre = reader.GetString(1);
+                            UserCache.Apellido = reader.GetString(2);
+                            UserCache.Correo = reader.GetString(5);
+                            UserCache.IdRoles = reader.GetInt32(6);
                         }
 
                         return true;

@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entidades\NFactura.cs" />
+    <Compile Include="Entidades\NIngreso.cs" />
     <Compile Include="Entidades\NProducto.cs" />
     <Compile Include="Entidades\NRoles.cs" />
     <Compile Include="Entidades\NUsuario.cs" />

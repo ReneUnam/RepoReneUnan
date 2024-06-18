@@ -42,7 +42,7 @@ namespace CapaPresentacion
 
             userAccess();
 
-            lblNombre.Text = UserCache.NombreUsuario;
+            lblNombre.Text = UserCache.Nombre + " " + UserCache.Apellido;
             lblEmail.Text = UserCache.Correo;
             lblID.Text = UserCache.IdUsuario.ToString();//Convertimos el id de usuario a string para que sea compatible con el texto de textbox
             //Convertimos el id del rol a string con el metodo ya hecho en la clase roles. Despues esto se lo asignamos al texto del label rol.

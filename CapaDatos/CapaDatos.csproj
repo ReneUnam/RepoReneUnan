@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Metodos\DIngreso.cs" />
     <Compile Include="Metodos\DProducto.cs" />
     <Compile Include="Metodos\DRoles.cs" />
     <Compile Include="Metodos\DUsuario.cs" />
