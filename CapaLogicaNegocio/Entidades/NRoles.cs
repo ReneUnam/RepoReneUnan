@@ -13,14 +13,10 @@ namespace CapaLogicaNegocio.Entidades
 {
     public class NRoles
     {
-        private DRoles RCD = new DRoles();
-
         public DataTable MostrarRoles()
         {
-            DataTable tabla = new DataTable();
-            tabla = RCD.Mostrar();
-            return tabla;
-
+          
+           return new DRoles().MostrarRoles();
         }
     }
 }

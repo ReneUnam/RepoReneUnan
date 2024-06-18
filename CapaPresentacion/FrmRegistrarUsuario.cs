@@ -16,7 +16,7 @@ namespace CapaPresentacion
 {
     public partial class FrmRegistrarUsuario : Form
     {
-        NRoles RCN = new NRoles();
+  
 
         public FrmRegistrarUsuario()
         {
@@ -26,41 +26,6 @@ namespace CapaPresentacion
 
         }
 
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void BtnCancelar_Click(object sender, EventArgs e)
         {
@@ -106,7 +71,10 @@ namespace CapaPresentacion
         private void MostrarRoles()
         {
             NRoles RCP = new NRoles();
-            DgvRoles.DataSource = RCN.MostrarRoles();
+            DgvRoles.DataSource = RCP.MostrarRoles();
+            DgvRoles.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            DgvRoles.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            DgvRoles.DefaultCellStyle.ForeColor = Color.Black;
         }
 
 

@@ -15,7 +15,7 @@ namespace CapaDatos.SQLConnection
         public ClassConnection()
         {
             //NOTA: Si van a cambiar a su base de dato simplemente copien y peguen aquí.
-            ConnectionToString = ("Data Source=RENEALEXANDER;Initial Catalog=Vand_Y_Monti;Integrated Security=True");
+            ConnectionToString = ("Data Source=GARY\\MYSQL;Initial Catalog=Vand_Y_Monti;Integrated Security=True;TrustServerCertificate=True");
         }
         protected SqlConnection GetConnection() 
         {
@@ -25,7 +25,7 @@ namespace CapaDatos.SQLConnection
         //static public SqlConnection Connection = new SqlConnection("Data Source=RENEALEXANDER;Initial Catalog=Vand_Y_Monti;Integrated Security=True");
 
         //Gary Guapo
-        //SqlConnection Connection = new SqlConnection("Data Source=GARY\\MYSQL;Initial Catalog=Vand_Y_Monti;Integrated Security=True;Trust Server Certificate=True");
+        //SqlConnection Connection = new SqlConnection("Data Source=GARY\\MYSQL;Initial Catalog=Vand_Y_Monti;Integrated Security=True;TrustServerCertificate=True");
 
     }
 }
