@@ -27,6 +27,7 @@ namespace CapaDatos.SQLConnection
         //Gary Guapo
         //SqlConnection Connection = new SqlConnection("Data Source=GARY\\MYSQL;Initial Catalog=Vand_Y_Monti;Integrated Security=True;TrustServerCertificate=True");
 
+        //kenner
         //Data Source=DESKTOP-69623FA;Initial Catalog=Vand_Y_Monti;Integrated Security=True;Encrypt=True;TrustServerCertificate=True
     }
 }
