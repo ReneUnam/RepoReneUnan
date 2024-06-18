@@ -32,14 +32,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
             this.sideBar = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.ImageUser = new System.Windows.Forms.PictureBox();
             this.lblID = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblRol = new System.Windows.Forms.Label();
-            this.sideBarTimer = new System.Windows.Forms.Timer(this.components);
-            this.panelChildForm = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.ImageUser = new System.Windows.Forms.PictureBox();
             this.btnOff = new System.Windows.Forms.Button();
             this.btnAjustes = new System.Windows.Forms.Button();
             this.btnUsers = new System.Windows.Forms.Button();
@@ -48,11 +45,14 @@
             this.btnVentas = new System.Windows.Forms.Button();
             this.btnProductos = new System.Windows.Forms.Button();
             this.btnMenu = new System.Windows.Forms.Button();
+            this.sideBarTimer = new System.Windows.Forms.Timer(this.components);
+            this.panelChildForm = new System.Windows.Forms.Panel();
             this.picLogo = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.sideBar.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panelChildForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ImageUser)).BeginInit();
+            this.panelChildForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,7 +73,7 @@
             this.sideBar.MaximumSize = new System.Drawing.Size(406, 1379);
             this.sideBar.MinimumSize = new System.Drawing.Size(72, 1379);
             this.sideBar.Name = "sideBar";
-            this.sideBar.Size = new System.Drawing.Size(406, 1379);
+            this.sideBar.Size = new System.Drawing.Size(72, 1379);
             this.sideBar.TabIndex = 0;
             // 
             // panel2
@@ -86,8 +86,18 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 850);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(402, 525);
+            this.panel2.Size = new System.Drawing.Size(68, 525);
             this.panel2.TabIndex = 2;
+            // 
+            // ImageUser
+            // 
+            this.ImageUser.Image = global::CapaPresentacion.Properties.Resources.agregar_usuario;
+            this.ImageUser.Location = new System.Drawing.Point(93, 46);
+            this.ImageUser.Name = "ImageUser";
+            this.ImageUser.Size = new System.Drawing.Size(168, 146);
+            this.ImageUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ImageUser.TabIndex = 4;
+            this.ImageUser.TabStop = false;
             // 
             // lblID
             // 
@@ -133,40 +143,6 @@
             this.lblRol.TabIndex = 0;
             this.lblRol.Text = "Rol";
             // 
-            // sideBarTimer
-            // 
-            this.sideBarTimer.Interval = 10;
-            this.sideBarTimer.Tick += new System.EventHandler(this.sideBarTimer_Tick);
-            // 
-            // panelChildForm
-            // 
-            this.panelChildForm.BackColor = System.Drawing.SystemColors.Control;
-            this.panelChildForm.Controls.Add(this.picLogo);
-            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelChildForm.Location = new System.Drawing.Point(73, 0);
-            this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(1677, 1364);
-            this.panelChildForm.TabIndex = 3;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(91)))), ((int)(((byte)(178)))));
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(73, 1364);
-            this.panel1.TabIndex = 4;
-            // 
-            // ImageUser
-            // 
-            this.ImageUser.Image = global::CapaPresentacion.Properties.Resources.agregar_usuario;
-            this.ImageUser.Location = new System.Drawing.Point(93, 46);
-            this.ImageUser.Name = "ImageUser";
-            this.ImageUser.Size = new System.Drawing.Size(168, 146);
-            this.ImageUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ImageUser.TabIndex = 4;
-            this.ImageUser.TabStop = false;
-            // 
             // btnOff
             // 
             this.btnOff.Dock = System.Windows.Forms.DockStyle.Top;
@@ -178,7 +154,7 @@
             this.btnOff.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnOff.Location = new System.Drawing.Point(0, 729);
             this.btnOff.Name = "btnOff";
-            this.btnOff.Size = new System.Drawing.Size(402, 88);
+            this.btnOff.Size = new System.Drawing.Size(68, 88);
             this.btnOff.TabIndex = 8;
             this.btnOff.Text = "      Cerrar Sesión";
             this.btnOff.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -196,7 +172,7 @@
             this.btnAjustes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAjustes.Location = new System.Drawing.Point(0, 612);
             this.btnAjustes.Name = "btnAjustes";
-            this.btnAjustes.Size = new System.Drawing.Size(402, 117);
+            this.btnAjustes.Size = new System.Drawing.Size(68, 117);
             this.btnAjustes.TabIndex = 7;
             this.btnAjustes.Text = "       Ajustes";
             this.btnAjustes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -213,7 +189,7 @@
             this.btnUsers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUsers.Location = new System.Drawing.Point(0, 510);
             this.btnUsers.Name = "btnUsers";
-            this.btnUsers.Size = new System.Drawing.Size(402, 102);
+            this.btnUsers.Size = new System.Drawing.Size(68, 102);
             this.btnUsers.TabIndex = 6;
             this.btnUsers.Text = "       Usuarios";
             this.btnUsers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -231,7 +207,7 @@
             this.btnReports.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReports.Location = new System.Drawing.Point(0, 408);
             this.btnReports.Name = "btnReports";
-            this.btnReports.Size = new System.Drawing.Size(402, 102);
+            this.btnReports.Size = new System.Drawing.Size(68, 102);
             this.btnReports.TabIndex = 5;
             this.btnReports.Text = "       Reportes";
             this.btnReports.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -249,7 +225,7 @@
             this.btnCompras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCompras.Location = new System.Drawing.Point(0, 306);
             this.btnCompras.Name = "btnCompras";
-            this.btnCompras.Size = new System.Drawing.Size(402, 102);
+            this.btnCompras.Size = new System.Drawing.Size(68, 102);
             this.btnCompras.TabIndex = 4;
             this.btnCompras.Text = "       Compras";
             this.btnCompras.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -267,7 +243,7 @@
             this.btnVentas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVentas.Location = new System.Drawing.Point(0, 204);
             this.btnVentas.Name = "btnVentas";
-            this.btnVentas.Size = new System.Drawing.Size(402, 102);
+            this.btnVentas.Size = new System.Drawing.Size(68, 102);
             this.btnVentas.TabIndex = 3;
             this.btnVentas.Text = "       Ventas";
             this.btnVentas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -285,7 +261,7 @@
             this.btnProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnProductos.Location = new System.Drawing.Point(0, 102);
             this.btnProductos.Name = "btnProductos";
-            this.btnProductos.Size = new System.Drawing.Size(402, 102);
+            this.btnProductos.Size = new System.Drawing.Size(68, 102);
             this.btnProductos.TabIndex = 2;
             this.btnProductos.Text = "       Productos";
             this.btnProductos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -303,12 +279,27 @@
             this.btnMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMenu.Location = new System.Drawing.Point(0, 0);
             this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(402, 102);
+            this.btnMenu.Size = new System.Drawing.Size(68, 102);
             this.btnMenu.TabIndex = 1;
             this.btnMenu.Text = "       Menú";
             this.btnMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMenu.UseVisualStyleBackColor = true;
             this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
+            // 
+            // sideBarTimer
+            // 
+            this.sideBarTimer.Interval = 10;
+            this.sideBarTimer.Tick += new System.EventHandler(this.sideBarTimer_Tick);
+            // 
+            // panelChildForm
+            // 
+            this.panelChildForm.BackColor = System.Drawing.SystemColors.Control;
+            this.panelChildForm.Controls.Add(this.picLogo);
+            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelChildForm.Location = new System.Drawing.Point(73, 0);
+            this.panelChildForm.Name = "panelChildForm";
+            this.panelChildForm.Size = new System.Drawing.Size(1677, 1364);
+            this.panelChildForm.TabIndex = 3;
             // 
             // picLogo
             // 
@@ -319,6 +310,15 @@
             this.picLogo.Size = new System.Drawing.Size(496, 469);
             this.picLogo.TabIndex = 1;
             this.picLogo.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(91)))), ((int)(((byte)(178)))));
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(73, 1364);
+            this.panel1.TabIndex = 4;
             // 
             // FrmPrincipal
             // 
@@ -338,8 +338,8 @@
             this.sideBar.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panelChildForm.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ImageUser)).EndInit();
+            this.panelChildForm.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.ResumeLayout(false);
 
