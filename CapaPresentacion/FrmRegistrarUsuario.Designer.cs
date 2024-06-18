@@ -127,11 +127,13 @@
             // 
             // textContraseña
             // 
+            this.textContraseña.Font = new System.Drawing.Font("Segoe UI Black", 14.2F, System.Drawing.FontStyle.Bold);
             this.textContraseña.Location = new System.Drawing.Point(48, 448);
             this.textContraseña.Margin = new System.Windows.Forms.Padding(4);
+            this.textContraseña.MaxLength = 22;
             this.textContraseña.Multiline = true;
             this.textContraseña.Name = "textContraseña";
-            this.textContraseña.Size = new System.Drawing.Size(215, 47);
+            this.textContraseña.Size = new System.Drawing.Size(323, 47);
             this.textContraseña.TabIndex = 12;
             this.textContraseña.TextChanged += new System.EventHandler(this.textContraseña_TextChanged);
             // 
@@ -148,21 +150,25 @@
             // 
             // textCorreo
             // 
+            this.textCorreo.Font = new System.Drawing.Font("Segoe UI Black", 14.2F, System.Drawing.FontStyle.Bold);
             this.textCorreo.Location = new System.Drawing.Point(48, 344);
             this.textCorreo.Margin = new System.Windows.Forms.Padding(4);
+            this.textCorreo.MaxLength = 22;
             this.textCorreo.Multiline = true;
             this.textCorreo.Name = "textCorreo";
-            this.textCorreo.Size = new System.Drawing.Size(215, 47);
+            this.textCorreo.Size = new System.Drawing.Size(323, 47);
             this.textCorreo.TabIndex = 10;
             this.textCorreo.TextChanged += new System.EventHandler(this.textCorreo_TextChanged);
             // 
             // textTelefono
             // 
+            this.textTelefono.Font = new System.Drawing.Font("Segoe UI Black", 14.2F, System.Drawing.FontStyle.Bold);
             this.textTelefono.Location = new System.Drawing.Point(48, 254);
             this.textTelefono.Margin = new System.Windows.Forms.Padding(4);
+            this.textTelefono.MaxLength = 22;
             this.textTelefono.Multiline = true;
             this.textTelefono.Name = "textTelefono";
-            this.textTelefono.Size = new System.Drawing.Size(215, 47);
+            this.textTelefono.Size = new System.Drawing.Size(323, 47);
             this.textTelefono.TabIndex = 9;
             this.textTelefono.TextChanged += new System.EventHandler(this.textTelefono_TextChanged);
             // 
@@ -179,21 +185,25 @@
             // 
             // textApellido
             // 
+            this.textApellido.Font = new System.Drawing.Font("Segoe UI Black", 14.2F, System.Drawing.FontStyle.Bold);
             this.textApellido.Location = new System.Drawing.Point(48, 153);
             this.textApellido.Margin = new System.Windows.Forms.Padding(4);
+            this.textApellido.MaxLength = 22;
             this.textApellido.Multiline = true;
             this.textApellido.Name = "textApellido";
-            this.textApellido.Size = new System.Drawing.Size(215, 47);
+            this.textApellido.Size = new System.Drawing.Size(323, 47);
             this.textApellido.TabIndex = 7;
             this.textApellido.TextChanged += new System.EventHandler(this.textApeliidos_TextChanged);
             // 
             // textNombre
             // 
-            this.textNombre.Location = new System.Drawing.Point(48, 48);
+            this.textNombre.Font = new System.Drawing.Font("Segoe UI Black", 14.2F, System.Drawing.FontStyle.Bold);
+            this.textNombre.Location = new System.Drawing.Point(48, 53);
             this.textNombre.Margin = new System.Windows.Forms.Padding(4);
+            this.textNombre.MaxLength = 22;
             this.textNombre.Multiline = true;
             this.textNombre.Name = "textNombre";
-            this.textNombre.Size = new System.Drawing.Size(215, 47);
+            this.textNombre.Size = new System.Drawing.Size(323, 47);
             this.textNombre.TabIndex = 3;
             this.textNombre.TextChanged += new System.EventHandler(this.TxtNombre_TextChanged);
             // 
@@ -224,7 +234,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Black", 15F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(55, 9);
+            this.label3.Location = new System.Drawing.Point(42, 14);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(116, 35);
@@ -315,8 +325,9 @@
             this.textRol.Margin = new System.Windows.Forms.Padding(4);
             this.textRol.Multiline = true;
             this.textRol.Name = "textRol";
-            this.textRol.Size = new System.Drawing.Size(195, 52);
+            this.textRol.Size = new System.Drawing.Size(323, 47);
             this.textRol.TabIndex = 5;
+            this.textRol.TextChanged += new System.EventHandler(this.textRol_TextChanged);
             // 
             // label7
             // 
@@ -387,7 +398,7 @@
             this.BtnNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(91)))), ((int)(((byte)(178)))));
             this.BtnNuevo.Font = new System.Drawing.Font("Segoe UI Black", 13F, System.Drawing.FontStyle.Bold);
             this.BtnNuevo.ForeColor = System.Drawing.Color.White;
-            this.BtnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnNuevo.Location = new System.Drawing.Point(40, 214);
             this.BtnNuevo.Margin = new System.Windows.Forms.Padding(4);
             this.BtnNuevo.Name = "BtnNuevo";
