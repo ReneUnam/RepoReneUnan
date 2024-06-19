@@ -15,7 +15,7 @@ namespace CapaDatos.SQLConnection
         public ClassConnection()
         {
             //NOTA: Si van a cambiar a su base de dato simplemente copien y peguen aquí.
-            ConnectionToString = ("Data Source=ReneAlexander\\SQLEXPRESS;Initial Catalog=Vand_Y_Monti;Integrated Security=True");
+            ConnectionToString = ("Data Source=GARY\\MYSQL;Initial Catalog=Vand_Y_Monti;Integrated Security=True;TrustServerCertificate=True");
         }
         protected SqlConnection GetConnection() 
         {
