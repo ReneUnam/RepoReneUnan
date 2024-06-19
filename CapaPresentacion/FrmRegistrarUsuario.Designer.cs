@@ -47,6 +47,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.textIdRol = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.DgvRoles = new System.Windows.Forms.DataGridView();
             this.textRol = new System.Windows.Forms.TextBox();
@@ -56,7 +57,6 @@
             this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.BtnNuevo = new System.Windows.Forms.Button();
-            this.textIdRol = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvRoles)).BeginInit();
@@ -267,6 +267,16 @@
             this.panel2.Size = new System.Drawing.Size(412, 532);
             this.panel2.TabIndex = 8;
             // 
+            // textIdRol
+            // 
+            this.textIdRol.Font = new System.Drawing.Font("Segoe UI Black", 14.2F, System.Drawing.FontStyle.Bold);
+            this.textIdRol.Location = new System.Drawing.Point(23, 151);
+            this.textIdRol.Margin = new System.Windows.Forms.Padding(4);
+            this.textIdRol.Multiline = true;
+            this.textIdRol.Name = "textIdRol";
+            this.textIdRol.Size = new System.Drawing.Size(323, 47);
+            this.textIdRol.TabIndex = 9;
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -387,25 +397,17 @@
             this.BtnNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(91)))), ((int)(((byte)(178)))));
             this.BtnNuevo.Font = new System.Drawing.Font("Segoe UI Black", 13F, System.Drawing.FontStyle.Bold);
             this.BtnNuevo.ForeColor = System.Drawing.Color.White;
-            this.BtnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("BtnNuevo.Image")));
+            this.BtnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnNuevo.Location = new System.Drawing.Point(40, 214);
             this.BtnNuevo.Margin = new System.Windows.Forms.Padding(4);
             this.BtnNuevo.Name = "BtnNuevo";
+            this.BtnNuevo.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
             this.BtnNuevo.Size = new System.Drawing.Size(268, 86);
             this.BtnNuevo.TabIndex = 12;
             this.BtnNuevo.Text = "Nuevo";
             this.BtnNuevo.UseVisualStyleBackColor = false;
             this.BtnNuevo.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // textIdRol
-            // 
-            this.textIdRol.Font = new System.Drawing.Font("Segoe UI Black", 14.2F, System.Drawing.FontStyle.Bold);
-            this.textIdRol.Location = new System.Drawing.Point(23, 151);
-            this.textIdRol.Margin = new System.Windows.Forms.Padding(4);
-            this.textIdRol.Multiline = true;
-            this.textIdRol.Name = "textIdRol";
-            this.textIdRol.Size = new System.Drawing.Size(323, 47);
-            this.textIdRol.TabIndex = 9;
             // 
             // FrmRegistrarUsuario
             // 
