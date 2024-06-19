@@ -91,6 +91,7 @@ namespace CapaPresentacion
             textCorreo.Enabled = false;
             textContraseña.Enabled = false;
             textRol.Enabled = false;
+            textIdRol.Enabled = false;
             #endregion
         }
 
@@ -107,6 +108,7 @@ namespace CapaPresentacion
             textCorreo.Enabled = !textCorreo.Enabled;
             textContraseña.Enabled = !textContraseña.Enabled;
             textRol.Enabled = !textRol.Enabled;
+            textIdRol.Enabled = !textIdRol.Enabled;
             #endregion
         }
 
@@ -123,6 +125,7 @@ namespace CapaPresentacion
             textCorreo.Enabled = !textCorreo.Enabled;
             textContraseña.Enabled = !textContraseña.Enabled;
             textRol.Enabled = !textRol.Enabled;
+            textIdRol.Enabled = !textIdRol.Enabled;
             #endregion
         }
 
@@ -174,6 +177,9 @@ namespace CapaPresentacion
         private void DgvRoles_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
           textRol.Text = DgvRoles.CurrentRow.Cells[1].Value.ToString();
+          textIdRol.Text = DgvRoles.CurrentRow.Cells[0].Value.ToString();
         }
+
+
     }
 }

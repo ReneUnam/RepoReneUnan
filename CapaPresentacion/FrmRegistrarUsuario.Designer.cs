@@ -47,9 +47,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
             this.DgvRoles = new System.Windows.Forms.DataGridView();
-            this.BtnSeleccionar = new System.Windows.Forms.Button();
-            this.BtnQuitar = new System.Windows.Forms.Button();
             this.textRol = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -57,6 +56,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.BtnNuevo = new System.Windows.Forms.Button();
+            this.textIdRol = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvRoles)).BeginInit();
@@ -245,7 +245,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Black", 15F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(17, 34);
+            this.label6.Location = new System.Drawing.Point(17, 12);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(56, 35);
@@ -256,9 +256,9 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(91)))), ((int)(((byte)(178)))));
+            this.panel2.Controls.Add(this.textIdRol);
+            this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.DgvRoles);
-            this.panel2.Controls.Add(this.BtnSeleccionar);
-            this.panel2.Controls.Add(this.BtnQuitar);
             this.panel2.Controls.Add(this.textRol);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Location = new System.Drawing.Point(793, 168);
@@ -266,6 +266,17 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(412, 532);
             this.panel2.TabIndex = 8;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI Black", 15F, System.Drawing.FontStyle.Bold);
+            this.label8.Location = new System.Drawing.Point(17, 111);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(40, 35);
+            this.label8.TabIndex = 8;
+            this.label8.Text = "Id";
             // 
             // DgvRoles
             // 
@@ -288,42 +299,18 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DgvRoles.DefaultCellStyle = dataGridViewCellStyle2;
-            this.DgvRoles.Location = new System.Drawing.Point(23, 171);
+            this.DgvRoles.Location = new System.Drawing.Point(13, 231);
             this.DgvRoles.Name = "DgvRoles";
             this.DgvRoles.ReadOnly = true;
             this.DgvRoles.RowHeadersWidth = 72;
-            this.DgvRoles.Size = new System.Drawing.Size(369, 257);
+            this.DgvRoles.Size = new System.Drawing.Size(387, 283);
             this.DgvRoles.TabIndex = 7;
             this.DgvRoles.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvRoles_CellDoubleClick);
-            // 
-            // BtnSeleccionar
-            // 
-            this.BtnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.BtnSeleccionar.Location = new System.Drawing.Point(50, 474);
-            this.BtnSeleccionar.Margin = new System.Windows.Forms.Padding(4);
-            this.BtnSeleccionar.Name = "BtnSeleccionar";
-            this.BtnSeleccionar.Size = new System.Drawing.Size(139, 34);
-            this.BtnSeleccionar.TabIndex = 6;
-            this.BtnSeleccionar.Text = "Seleccionar";
-            this.BtnSeleccionar.UseVisualStyleBackColor = true;
-            // 
-            // BtnQuitar
-            // 
-            this.BtnQuitar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(0)))));
-            this.BtnQuitar.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.BtnQuitar.ForeColor = System.Drawing.Color.Black;
-            this.BtnQuitar.Location = new System.Drawing.Point(224, 474);
-            this.BtnQuitar.Margin = new System.Windows.Forms.Padding(4);
-            this.BtnQuitar.Name = "BtnQuitar";
-            this.BtnQuitar.Size = new System.Drawing.Size(139, 34);
-            this.BtnQuitar.TabIndex = 6;
-            this.BtnQuitar.Text = "Quitar";
-            this.BtnQuitar.UseVisualStyleBackColor = false;
             // 
             // textRol
             // 
             this.textRol.Font = new System.Drawing.Font("Segoe UI Black", 14.2F, System.Drawing.FontStyle.Bold);
-            this.textRol.Location = new System.Drawing.Point(23, 82);
+            this.textRol.Location = new System.Drawing.Point(23, 51);
             this.textRol.Margin = new System.Windows.Forms.Padding(4);
             this.textRol.Multiline = true;
             this.textRol.Name = "textRol";
@@ -410,6 +397,16 @@
             this.BtnNuevo.UseVisualStyleBackColor = false;
             this.BtnNuevo.Click += new System.EventHandler(this.button1_Click);
             // 
+            // textIdRol
+            // 
+            this.textIdRol.Font = new System.Drawing.Font("Segoe UI Black", 14.2F, System.Drawing.FontStyle.Bold);
+            this.textIdRol.Location = new System.Drawing.Point(23, 151);
+            this.textIdRol.Margin = new System.Windows.Forms.Padding(4);
+            this.textIdRol.Multiline = true;
+            this.textIdRol.Name = "textIdRol";
+            this.textIdRol.Size = new System.Drawing.Size(323, 47);
+            this.textIdRol.TabIndex = 9;
+            // 
             // FrmRegistrarUsuario
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -456,8 +453,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textRol;
-        private System.Windows.Forms.Button BtnSeleccionar;
-        private System.Windows.Forms.Button BtnQuitar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView DgvRoles;
         private System.Windows.Forms.Panel panel3;
@@ -470,5 +465,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox textCorreo;
         private System.Windows.Forms.Button BtnNuevo;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textIdRol;
     }
 }
