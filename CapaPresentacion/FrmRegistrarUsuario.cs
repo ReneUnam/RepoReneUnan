@@ -32,15 +32,6 @@ namespace CapaPresentacion
          this.Close();
         }
 
-        private void TxtNombre_TextChanged(object sender, EventArgs e)
-        {
-          
-        }
-
-        private void TxtTelefono_TextChanged(object sender, EventArgs e)
-        {
-
-        }
         // Esta region es para limpiar los datos en los paneles
         #region
         private void LimpiarCasillas()
@@ -127,51 +118,6 @@ namespace CapaPresentacion
             textRol.Enabled = !textRol.Enabled;
             textIdRol.Enabled = !textIdRol.Enabled;
             #endregion
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textApeliidos_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textTelefono_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textContraseña_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textCorreo_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ImagenRegistro_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void textRol_TextChanged(object sender, EventArgs e)
-        {
-
         }
        
         private void DgvRoles_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
