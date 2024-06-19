@@ -8,5 +8,6 @@ namespace CapaLogicaNegocio.Entidades
 {
     internal class NDetalleIngreso
     {
+
     }
 }
