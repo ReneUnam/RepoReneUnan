@@ -71,5 +71,36 @@ namespace CapaPresentacion
                 dataGridView1.Rows.Add(fila); // Agregar las filas filtradas al DataGridView
             }*/
         }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBuscar_Click_1(object sender, EventArgs e)
+        {
+            // Obtener el texto a buscar
+            string textoABuscar = textBuscar.Text.ToLower(); // Convertir a minúsculas para una búsqueda sin distinción de mayúsculas/minúsculas
+
+            // Filtrar la DataGridView
+            var filasFiltradas = dataGridView1.Rows.Cast<DataGridViewRow>()
+                .Where(fila =>
+                    fila.Cells["Nombre"].Value != null && fila.Cells["Nombre"].Value.ToString().ToLower().Contains(textoABuscar) ||
+                    fila.Cells["Descripción"].Value != null && fila.Cells["Descripción"].Value.ToString().ToLower().Contains(textoABuscar))
+                .ToList();
+
+            // Mostrar resultados
+            dataGridView1.DataSource = null; // Limpiar DataSource previo
+            dataGridView1.Rows.Clear(); // Limpiar filas previas si es necesario
+            foreach (DataGridViewRow fila in filasFiltradas)
+            {
+                dataGridView1.Rows.Add(fila); // Agregar las filas filtradas al DataGridView
+            }
+        }
     }
 }
