@@ -13,7 +13,7 @@ using CapaComun.Cache;
 
 namespace CapaDatos.Metodos
 {
-    public class DetallesVenta
+    public class DetallesVenta : ClassConnection
     {
         private int _IdDetallesVenta;
         private int _Cantidad;
@@ -59,5 +59,7 @@ namespace CapaDatos.Metodos
 
                 return dtResultado;
             }
+
         }
+    }
 }

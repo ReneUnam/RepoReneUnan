@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaLogicaNegocio;
+using CapaLogicaNegocio.Entidades;
 
 namespace CapaPresentacion
 {
@@ -45,6 +47,19 @@ namespace CapaPresentacion
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+        private void MostrarDetallesVenta()
+        {
+            NDetallesVenta NCP = new NDetallesVenta();
+            dgvDetalles.DataSource = NCP.MostrarDetallesVenta();
+            dgvDetalles.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgvDetalles.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgvDetalles.DefaultCellStyle.ForeColor = Color.Black;
+        }
+
+        private void FrmCrearFactura_Load(object sender, EventArgs e)
+        {
+            MostrarDetallesVenta();
         }
     }
 }
