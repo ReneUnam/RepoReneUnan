@@ -30,34 +30,34 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCrearFactura));
             this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtmFecha = new System.Windows.Forms.DateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblProducto = new System.Windows.Forms.Label();
+            this.lblCodigo = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.lblPrecio = new System.Windows.Forms.Label();
+            this.lblCantidad = new System.Windows.Forms.Label();
             this.dgvDetalles = new System.Windows.Forms.DataGridView();
-            this.label9 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
+            this.lblCodigo1 = new System.Windows.Forms.Label();
+            this.cmbProducto1 = new System.Windows.Forms.ComboBox();
+            this.lblNombre1 = new System.Windows.Forms.Label();
+            this.lblPrecio1 = new System.Windows.Forms.Label();
+            this.txtCantidd = new System.Windows.Forms.TextBox();
+            this.lblTotal = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
+            this.lblTotalAPagar1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.label16 = new System.Windows.Forms.Label();
+            this.lblDevolución = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label17 = new System.Windows.Forms.Label();
+            this.lblDevolución1 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnVender = new System.Windows.Forms.Button();
+            this.btnAñadir = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalles)).BeginInit();
@@ -77,17 +77,17 @@
             this.label2.TabIndex = 10;
             this.label2.Text = "Distribuidora de productos quimicos \r\n                 VAND Y MONTI";
             // 
-            // dateTimePicker1
+            // dtmFecha
             // 
-            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.SystemColors.InactiveBorder;
-            this.dateTimePicker1.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText;
-            this.dateTimePicker1.CalendarTitleForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.dateTimePicker1.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
-            this.dateTimePicker1.Location = new System.Drawing.Point(12, 160);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(425, 48);
-            this.dateTimePicker1.TabIndex = 12;
-            this.dateTimePicker1.Tag = "";
+            this.dtmFecha.CalendarMonthBackground = System.Drawing.SystemColors.InactiveBorder;
+            this.dtmFecha.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText;
+            this.dtmFecha.CalendarTitleForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.dtmFecha.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
+            this.dtmFecha.Location = new System.Drawing.Point(12, 160);
+            this.dtmFecha.Name = "dtmFecha";
+            this.dtmFecha.Size = new System.Drawing.Size(425, 48);
+            this.dtmFecha.TabIndex = 12;
+            this.dtmFecha.Tag = "";
             // 
             // panel3
             // 
@@ -138,56 +138,56 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "CREAR FACTURA";
             // 
-            // label3
+            // lblProducto
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(14, 212);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(194, 42);
-            this.label3.TabIndex = 21;
-            this.label3.Text = "PRODUCTO";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.lblProducto.AutoSize = true;
+            this.lblProducto.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
+            this.lblProducto.Location = new System.Drawing.Point(14, 212);
+            this.lblProducto.Name = "lblProducto";
+            this.lblProducto.Size = new System.Drawing.Size(194, 42);
+            this.lblProducto.TabIndex = 21;
+            this.lblProducto.Text = "PRODUCTO";
+            this.lblProducto.Click += new System.EventHandler(this.label3_Click);
             // 
-            // label4
+            // lblCodigo
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(11, 254);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(144, 42);
-            this.label4.TabIndex = 22;
-            this.label4.Text = "CODIGO";
+            this.lblCodigo.AutoSize = true;
+            this.lblCodigo.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
+            this.lblCodigo.Location = new System.Drawing.Point(11, 254);
+            this.lblCodigo.Name = "lblCodigo";
+            this.lblCodigo.Size = new System.Drawing.Size(144, 42);
+            this.lblCodigo.TabIndex = 22;
+            this.lblCodigo.Text = "CODIGO";
             // 
-            // label5
+            // lblNombre
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(14, 296);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(157, 42);
-            this.label5.TabIndex = 23;
-            this.label5.Text = "NOMBRE";
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
+            this.lblNombre.Location = new System.Drawing.Point(14, 296);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(157, 42);
+            this.lblNombre.TabIndex = 23;
+            this.lblNombre.Text = "NOMBRE";
             // 
-            // label7
+            // lblPrecio
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(14, 338);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(131, 42);
-            this.label7.TabIndex = 25;
-            this.label7.Text = "PRECIO";
+            this.lblPrecio.AutoSize = true;
+            this.lblPrecio.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
+            this.lblPrecio.Location = new System.Drawing.Point(14, 338);
+            this.lblPrecio.Name = "lblPrecio";
+            this.lblPrecio.Size = new System.Drawing.Size(131, 42);
+            this.lblPrecio.TabIndex = 25;
+            this.lblPrecio.Text = "PRECIO";
             // 
-            // label8
+            // lblCantidad
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(12, 391);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(188, 42);
-            this.label8.TabIndex = 26;
-            this.label8.Text = "CANTIDAD";
+            this.lblCantidad.AutoSize = true;
+            this.lblCantidad.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
+            this.lblCantidad.Location = new System.Drawing.Point(12, 391);
+            this.lblCantidad.Name = "lblCantidad";
+            this.lblCantidad.Size = new System.Drawing.Size(188, 42);
+            this.lblCantidad.TabIndex = 26;
+            this.lblCantidad.Text = "CANTIDAD";
             // 
             // dgvDetalles
             // 
@@ -199,60 +199,60 @@
             this.dgvDetalles.Size = new System.Drawing.Size(683, 179);
             this.dgvDetalles.TabIndex = 27;
             // 
-            // label9
+            // lblCodigo1
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
-            this.label9.Location = new System.Drawing.Point(218, 253);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(31, 42);
-            this.label9.TabIndex = 28;
-            this.label9.Text = "-";
+            this.lblCodigo1.AutoSize = true;
+            this.lblCodigo1.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
+            this.lblCodigo1.Location = new System.Drawing.Point(218, 253);
+            this.lblCodigo1.Name = "lblCodigo1";
+            this.lblCodigo1.Size = new System.Drawing.Size(31, 42);
+            this.lblCodigo1.TabIndex = 28;
+            this.lblCodigo1.Text = "-";
             // 
-            // comboBox1
+            // cmbProducto1
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(225, 225);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(212, 28);
-            this.comboBox1.TabIndex = 29;
+            this.cmbProducto1.FormattingEnabled = true;
+            this.cmbProducto1.Location = new System.Drawing.Point(225, 225);
+            this.cmbProducto1.Name = "cmbProducto1";
+            this.cmbProducto1.Size = new System.Drawing.Size(212, 28);
+            this.cmbProducto1.TabIndex = 29;
             // 
-            // label10
+            // lblNombre1
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
-            this.label10.Location = new System.Drawing.Point(218, 295);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(31, 42);
-            this.label10.TabIndex = 30;
-            this.label10.Text = "-";
+            this.lblNombre1.AutoSize = true;
+            this.lblNombre1.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
+            this.lblNombre1.Location = new System.Drawing.Point(218, 295);
+            this.lblNombre1.Name = "lblNombre1";
+            this.lblNombre1.Size = new System.Drawing.Size(31, 42);
+            this.lblNombre1.TabIndex = 30;
+            this.lblNombre1.Text = "-";
             // 
-            // label12
+            // lblPrecio1
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
-            this.label12.Location = new System.Drawing.Point(218, 338);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(31, 42);
-            this.label12.TabIndex = 32;
-            this.label12.Text = "-";
+            this.lblPrecio1.AutoSize = true;
+            this.lblPrecio1.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
+            this.lblPrecio1.Location = new System.Drawing.Point(218, 338);
+            this.lblPrecio1.Name = "lblPrecio1";
+            this.lblPrecio1.Size = new System.Drawing.Size(31, 42);
+            this.lblPrecio1.TabIndex = 32;
+            this.lblPrecio1.Text = "-";
             // 
-            // textBox1
+            // txtCantidd
             // 
-            this.textBox1.Location = new System.Drawing.Point(225, 407);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(212, 26);
-            this.textBox1.TabIndex = 33;
+            this.txtCantidd.Location = new System.Drawing.Point(225, 407);
+            this.txtCantidd.Name = "txtCantidd";
+            this.txtCantidd.Size = new System.Drawing.Size(212, 26);
+            this.txtCantidd.TabIndex = 33;
             // 
-            // label13
+            // lblTotal
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
-            this.label13.Location = new System.Drawing.Point(739, 251);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(227, 42);
-            this.label13.TabIndex = 34;
-            this.label13.Text = "Total A Pagar";
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
+            this.lblTotal.Location = new System.Drawing.Point(739, 251);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(227, 42);
+            this.lblTotal.TabIndex = 34;
+            this.lblTotal.Text = "Total A Pagar";
             // 
             // label14
             // 
@@ -265,21 +265,21 @@
             this.label14.TabIndex = 35;
             this.label14.Text = "$";
             // 
-            // label15
+            // lblTotalAPagar1
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
-            this.label15.ForeColor = System.Drawing.Color.Red;
-            this.label15.Location = new System.Drawing.Point(47, 16);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(85, 42);
-            this.label15.TabIndex = 36;
-            this.label15.Text = "0.00";
+            this.lblTotalAPagar1.AutoSize = true;
+            this.lblTotalAPagar1.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
+            this.lblTotalAPagar1.ForeColor = System.Drawing.Color.Red;
+            this.lblTotalAPagar1.Location = new System.Drawing.Point(47, 16);
+            this.lblTotalAPagar1.Name = "lblTotalAPagar1";
+            this.lblTotalAPagar1.Size = new System.Drawing.Size(85, 42);
+            this.lblTotalAPagar1.TabIndex = 36;
+            this.lblTotalAPagar1.Text = "0.00";
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel2.Controls.Add(this.label15);
+            this.panel2.Controls.Add(this.lblTotalAPagar1);
             this.panel2.Controls.Add(this.label14);
             this.panel2.Location = new System.Drawing.Point(734, 296);
             this.panel2.Name = "panel2";
@@ -296,36 +296,36 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label16
+            // lblDevolución
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
-            this.label16.Location = new System.Drawing.Point(748, 451);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(190, 42);
-            this.label16.TabIndex = 38;
-            this.label16.Text = "Devolución";
+            this.lblDevolución.AutoSize = true;
+            this.lblDevolución.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
+            this.lblDevolución.Location = new System.Drawing.Point(748, 451);
+            this.lblDevolución.Name = "lblDevolución";
+            this.lblDevolución.Size = new System.Drawing.Size(190, 42);
+            this.lblDevolución.TabIndex = 38;
+            this.lblDevolución.Text = "Devolución";
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel4.Controls.Add(this.label17);
+            this.panel4.Controls.Add(this.lblDevolución1);
             this.panel4.Controls.Add(this.label18);
             this.panel4.Location = new System.Drawing.Point(734, 496);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(257, 69);
             this.panel4.TabIndex = 39;
             // 
-            // label17
+            // lblDevolución1
             // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
-            this.label17.ForeColor = System.Drawing.Color.Lime;
-            this.label17.Location = new System.Drawing.Point(47, 16);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(85, 42);
-            this.label17.TabIndex = 36;
-            this.label17.Text = "0.00";
+            this.lblDevolución1.AutoSize = true;
+            this.lblDevolución1.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
+            this.lblDevolución1.ForeColor = System.Drawing.Color.Lime;
+            this.lblDevolución1.Location = new System.Drawing.Point(47, 16);
+            this.lblDevolución1.Name = "lblDevolución1";
+            this.lblDevolución1.Size = new System.Drawing.Size(85, 42);
+            this.lblDevolución1.TabIndex = 36;
+            this.lblDevolución1.Text = "0.00";
             // 
             // label18
             // 
@@ -338,57 +338,57 @@
             this.label18.TabIndex = 35;
             this.label18.Text = "$";
             // 
-            // button2
+            // btnVender
             // 
-            this.button2.Location = new System.Drawing.Point(755, 614);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(211, 61);
-            this.button2.TabIndex = 40;
-            this.button2.Text = "Vender";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnVender.Location = new System.Drawing.Point(755, 614);
+            this.btnVender.Name = "btnVender";
+            this.btnVender.Size = new System.Drawing.Size(211, 61);
+            this.btnVender.TabIndex = 40;
+            this.btnVender.Text = "Vender";
+            this.btnVender.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnAñadir
             // 
-            this.button4.Location = new System.Drawing.Point(490, 273);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(167, 50);
-            this.button4.TabIndex = 41;
-            this.button4.Text = "Añadir a lista";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnAñadir.Location = new System.Drawing.Point(490, 273);
+            this.btnAñadir.Name = "btnAñadir";
+            this.btnAñadir.Size = new System.Drawing.Size(167, 50);
+            this.btnAñadir.TabIndex = 41;
+            this.btnAñadir.Text = "Añadir a lista";
+            this.btnAñadir.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btnEliminar
             // 
-            this.button5.Location = new System.Drawing.Point(490, 371);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(167, 50);
-            this.button5.TabIndex = 42;
-            this.button5.Text = "Eliminar";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnEliminar.Location = new System.Drawing.Point(490, 371);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(167, 50);
+            this.btnEliminar.TabIndex = 42;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
             // 
             // FrmCrearFactura
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.ClientSize = new System.Drawing.Size(1275, 737);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.btnAñadir);
+            this.Controls.Add(this.btnVender);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.label16);
+            this.Controls.Add(this.lblDevolución);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label9);
+            this.Controls.Add(this.lblTotal);
+            this.Controls.Add(this.txtCantidd);
+            this.Controls.Add(this.lblPrecio1);
+            this.Controls.Add(this.lblNombre1);
+            this.Controls.Add(this.cmbProducto1);
+            this.Controls.Add(this.lblCodigo1);
             this.Controls.Add(this.dgvDetalles);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblCantidad);
+            this.Controls.Add(this.lblPrecio);
+            this.Controls.Add(this.lblNombre);
+            this.Controls.Add(this.lblCodigo);
+            this.Controls.Add(this.lblProducto);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtmFecha);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -413,33 +413,33 @@
 
         #endregion
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtmFecha;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblProducto;
+        private System.Windows.Forms.Label lblCodigo;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.Label lblPrecio;
+        private System.Windows.Forms.Label lblCantidad;
         private System.Windows.Forms.DataGridView dgvDetalles;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lblCodigo1;
+        private System.Windows.Forms.ComboBox cmbProducto1;
+        private System.Windows.Forms.Label lblNombre1;
+        private System.Windows.Forms.Label lblPrecio1;
+        private System.Windows.Forms.TextBox txtCantidd;
+        private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label lblTotalAPagar1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label lblDevolución;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label lblDevolución1;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnVender;
+        private System.Windows.Forms.Button btnAñadir;
+        private System.Windows.Forms.Button btnEliminar;
     }
 }
