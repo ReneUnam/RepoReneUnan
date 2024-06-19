@@ -142,9 +142,8 @@
             this.textContraseña.MaxLength = 22;
             this.textContraseña.Multiline = true;
             this.textContraseña.Name = "textContraseña";
-            this.textContraseña.Size = new System.Drawing.Size(323, 47);
+            this.textContraseña.Size = new System.Drawing.Size(314, 47);
             this.textContraseña.TabIndex = 12;
-            this.textContraseña.TextChanged += new System.EventHandler(this.textContraseña_TextChanged);
             // 
             // label10
             // 
@@ -165,9 +164,8 @@
             this.textCorreo.MaxLength = 22;
             this.textCorreo.Multiline = true;
             this.textCorreo.Name = "textCorreo";
-            this.textCorreo.Size = new System.Drawing.Size(323, 47);
+            this.textCorreo.Size = new System.Drawing.Size(314, 47);
             this.textCorreo.TabIndex = 10;
-            this.textCorreo.TextChanged += new System.EventHandler(this.textCorreo_TextChanged);
             // 
             // textTelefono
             // 
@@ -177,9 +175,8 @@
             this.textTelefono.MaxLength = 22;
             this.textTelefono.Multiline = true;
             this.textTelefono.Name = "textTelefono";
-            this.textTelefono.Size = new System.Drawing.Size(323, 47);
+            this.textTelefono.Size = new System.Drawing.Size(314, 47);
             this.textTelefono.TabIndex = 9;
-            this.textTelefono.TextChanged += new System.EventHandler(this.textTelefono_TextChanged);
             // 
             // label9
             // 
@@ -200,21 +197,19 @@
             this.textApellido.MaxLength = 22;
             this.textApellido.Multiline = true;
             this.textApellido.Name = "textApellido";
-            this.textApellido.Size = new System.Drawing.Size(323, 47);
+            this.textApellido.Size = new System.Drawing.Size(314, 47);
             this.textApellido.TabIndex = 7;
-            this.textApellido.TextChanged += new System.EventHandler(this.textApeliidos_TextChanged);
             // 
             // textNombre
             // 
             this.textNombre.Font = new System.Drawing.Font("Segoe UI Black", 14.2F, System.Drawing.FontStyle.Bold);
-            this.textNombre.Location = new System.Drawing.Point(48, 53);
+            this.textNombre.Location = new System.Drawing.Point(49, 53);
             this.textNombre.Margin = new System.Windows.Forms.Padding(4);
             this.textNombre.MaxLength = 22;
             this.textNombre.Multiline = true;
             this.textNombre.Name = "textNombre";
-            this.textNombre.Size = new System.Drawing.Size(323, 47);
+            this.textNombre.Size = new System.Drawing.Size(314, 47);
             this.textNombre.TabIndex = 3;
-            this.textNombre.TextChanged += new System.EventHandler(this.TxtNombre_TextChanged);
             // 
             // label5
             // 
@@ -226,7 +221,6 @@
             this.label5.Size = new System.Drawing.Size(99, 35);
             this.label5.TabIndex = 2;
             this.label5.Text = "Correo";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label4
             // 
@@ -254,13 +248,12 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Black", 15F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(17, 12);
+            this.label6.Location = new System.Drawing.Point(57, 12);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(56, 35);
             this.label6.TabIndex = 6;
             this.label6.Text = "Rol";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // panel2
             // 
@@ -279,18 +272,18 @@
             // textIdRol
             // 
             this.textIdRol.Font = new System.Drawing.Font("Segoe UI Black", 14.2F, System.Drawing.FontStyle.Bold);
-            this.textIdRol.Location = new System.Drawing.Point(23, 151);
+            this.textIdRol.Location = new System.Drawing.Point(49, 150);
             this.textIdRol.Margin = new System.Windows.Forms.Padding(4);
             this.textIdRol.Multiline = true;
             this.textIdRol.Name = "textIdRol";
-            this.textIdRol.Size = new System.Drawing.Size(323, 47);
+            this.textIdRol.Size = new System.Drawing.Size(314, 47);
             this.textIdRol.TabIndex = 9;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI Black", 15F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(17, 111);
+            this.label8.Location = new System.Drawing.Point(57, 111);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(40, 35);
@@ -318,24 +311,23 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DgvRoles.DefaultCellStyle = dataGridViewCellStyle4;
-            this.DgvRoles.Location = new System.Drawing.Point(13, 231);
+            this.DgvRoles.Location = new System.Drawing.Point(23, 231);
             this.DgvRoles.Name = "DgvRoles";
             this.DgvRoles.ReadOnly = true;
             this.DgvRoles.RowHeadersWidth = 72;
-            this.DgvRoles.Size = new System.Drawing.Size(387, 283);
+            this.DgvRoles.Size = new System.Drawing.Size(358, 283);
             this.DgvRoles.TabIndex = 7;
             this.DgvRoles.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvRoles_CellDoubleClick);
             // 
             // textRol
             // 
             this.textRol.Font = new System.Drawing.Font("Segoe UI Black", 14.2F, System.Drawing.FontStyle.Bold);
-            this.textRol.Location = new System.Drawing.Point(23, 51);
+            this.textRol.Location = new System.Drawing.Point(49, 51);
             this.textRol.Margin = new System.Windows.Forms.Padding(4);
             this.textRol.Multiline = true;
             this.textRol.Name = "textRol";
-            this.textRol.Size = new System.Drawing.Size(323, 47);
+            this.textRol.Size = new System.Drawing.Size(314, 47);
             this.textRol.TabIndex = 5;
-            this.textRol.TextChanged += new System.EventHandler(this.textRol_TextChanged);
             // 
             // label7
             // 
@@ -372,7 +364,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1295, 76);
             this.panel3.TabIndex = 11;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // button3
             // 

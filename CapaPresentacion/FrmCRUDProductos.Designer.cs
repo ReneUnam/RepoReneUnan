@@ -53,6 +53,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textStock = new System.Windows.Forms.TextBox();
             this.panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel12.SuspendLayout();
@@ -73,7 +75,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources.caja_de_herramientas;
             this.pictureBox1.Location = new System.Drawing.Point(12, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(70, 73);
@@ -95,6 +97,8 @@
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(91)))), ((int)(((byte)(178)))));
+            this.panel12.Controls.Add(this.label6);
+            this.panel12.Controls.Add(this.textStock);
             this.panel12.Controls.Add(this.btnEditar);
             this.panel12.Controls.Add(this.btnBuscar);
             this.panel12.Controls.Add(this.btnCancelar);
@@ -164,7 +168,7 @@
             // dateTimePickerVencimiento
             // 
             this.dateTimePickerVencimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.dateTimePickerVencimiento.Location = new System.Drawing.Point(30, 389);
+            this.dateTimePickerVencimiento.Location = new System.Drawing.Point(30, 340);
             this.dateTimePickerVencimiento.Name = "dateTimePickerVencimiento";
             this.dateTimePickerVencimiento.Size = new System.Drawing.Size(200, 23);
             this.dateTimePickerVencimiento.TabIndex = 16;
@@ -173,7 +177,8 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Black", 13F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(27, 447);
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(0)))));
+            this.label5.Location = new System.Drawing.Point(25, 403);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(152, 25);
             this.label5.TabIndex = 15;
@@ -183,7 +188,8 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI Black", 13F, System.Drawing.FontStyle.Bold);
-            this.label11.Location = new System.Drawing.Point(28, 56);
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(0)))));
+            this.label11.Location = new System.Drawing.Point(27, 36);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(117, 25);
             this.label11.TabIndex = 0;
@@ -193,7 +199,7 @@
             // 
             this.textBuscar.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
             this.textBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.textBuscar.Location = new System.Drawing.Point(309, 465);
+            this.textBuscar.Location = new System.Drawing.Point(321, 462);
             this.textBuscar.Name = "textBuscar";
             this.textBuscar.Size = new System.Drawing.Size(202, 23);
             this.textBuscar.TabIndex = 6;
@@ -202,7 +208,8 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Black", 13F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(27, 138);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(0)))));
+            this.label4.Location = new System.Drawing.Point(25, 119);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(85, 25);
             this.label4.TabIndex = 14;
@@ -212,7 +219,7 @@
             // 
             this.textDescripcion.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
             this.textDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.textDescripcion.Location = new System.Drawing.Point(30, 277);
+            this.textDescripcion.Location = new System.Drawing.Point(30, 243);
             this.textDescripcion.Name = "textDescripcion";
             this.textDescripcion.Size = new System.Drawing.Size(200, 23);
             this.textDescripcion.TabIndex = 7;
@@ -221,7 +228,7 @@
             // 
             this.textIdProducto.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
             this.textIdProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.textIdProducto.Location = new System.Drawing.Point(30, 95);
+            this.textIdProducto.Location = new System.Drawing.Point(30, 69);
             this.textIdProducto.Name = "textIdProducto";
             this.textIdProducto.Size = new System.Drawing.Size(200, 23);
             this.textIdProducto.TabIndex = 5;
@@ -230,7 +237,8 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Black", 13F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(28, 234);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(0)))));
+            this.label3.Location = new System.Drawing.Point(25, 205);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(117, 25);
             this.label3.TabIndex = 13;
@@ -252,7 +260,8 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Black", 13F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(27, 339);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(0)))));
+            this.label2.Location = new System.Drawing.Point(25, 297);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(206, 25);
             this.label2.TabIndex = 12;
@@ -262,7 +271,7 @@
             // 
             this.textPrecioVenta.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
             this.textPrecioVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.textPrecioVenta.Location = new System.Drawing.Point(30, 491);
+            this.textPrecioVenta.Location = new System.Drawing.Point(30, 445);
             this.textPrecioVenta.Name = "textPrecioVenta";
             this.textPrecioVenta.Size = new System.Drawing.Size(203, 23);
             this.textPrecioVenta.TabIndex = 10;
@@ -272,7 +281,7 @@
             // 
             this.textNombre.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
             this.textNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.textNombre.Location = new System.Drawing.Point(32, 177);
+            this.textNombre.Location = new System.Drawing.Point(30, 151);
             this.textNombre.Name = "textNombre";
             this.textNombre.Size = new System.Drawing.Size(198, 23);
             this.textNombre.TabIndex = 8;
@@ -316,6 +325,26 @@
             this.label1.Size = new System.Drawing.Size(251, 30);
             this.label1.TabIndex = 0;
             this.label1.Text = "AGREGAR PRODUCTO";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI Black", 13F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(0)))));
+            this.label6.Location = new System.Drawing.Point(25, 491);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(61, 25);
+            this.label6.TabIndex = 22;
+            this.label6.Text = "Stock";
+            // 
+            // textStock
+            // 
+            this.textStock.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
+            this.textStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.textStock.Location = new System.Drawing.Point(30, 533);
+            this.textStock.Name = "textStock";
+            this.textStock.Size = new System.Drawing.Size(203, 23);
+            this.textStock.TabIndex = 21;
             // 
             // FrmCRUDproductos
             // 
@@ -370,5 +399,7 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.DateTimePicker dateTimePickerVencimiento;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textStock;
     }
 }

@@ -12,13 +12,6 @@ namespace CapaLogicaNegocio.Entidades
 {
     public class NUsuario
     {
-        private int idUsuario { get; set; }
-        public int Nombre { get; set; }
-        public int Apellido { get; set; }
-        public int Contraseña { get; set; }
-        public int Telefeno { get; set; }
-        public int Correo { get; set; }
-        public int IdRoles { get; set; }
 
         DUsuario dUsuario = new DUsuario();
 
