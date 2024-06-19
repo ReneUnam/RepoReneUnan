@@ -17,7 +17,7 @@ namespace CapaDatos.Metodos
         private string _Nombre;
         private string _Apellido;
         private string _Contraseña;
-        private int _Telefono;
+        private int _Telefeno;
         private string _Correo;
         private int _IdRoles;
 
@@ -26,7 +26,7 @@ namespace CapaDatos.Metodos
         public string Nombre { get => _Nombre; set => _Nombre = value; }
         public string Apellido { get => _Apellido; set => _Apellido = value; }
         public string Contraseña { get => _Contraseña; set => _Contraseña = value; }
-        public int Telefono { get => _Telefono; set => _Telefono = value; }
+        public int Telefeno { get => _Telefeno; set => _Telefeno = value; }
         public string Correo { get => _Correo; set => _Correo = value; }
         public int IdRoles { get => _IdRoles; set => _IdRoles = value; }
 
@@ -59,6 +59,36 @@ namespace CapaDatos.Metodos
                     }
                     else return false;
                 }
+            }
+        }
+
+        public DataTable MostrarUsuarios()
+        {
+            using (var Connection = GetConnection())
+            {
+                Connection.Open();
+                DataTable dtResultado = new DataTable("Usuarios");
+
+                using (var Command = new SqlCommand())
+                {
+                    Command.Connection = Connection;
+                    Command.CommandType = CommandType.StoredProcedure;
+                    Command.CommandText = "SpMostrarUsuarios";
+
+                    try
+                    {
+                        SqlDataAdapter SqlDat = new SqlDataAdapter(Command);
+                        SqlDat.Fill(dtResultado);
+                    }
+                    catch (Exception ex)
+                    {
+                        // Log the exception or handle it as necessary (modo duolingo)
+                        Console.WriteLine("Error: " + ex.Message);
+                        dtResultado = null;
+                    }
+                }
+
+                return dtResultado;
             }
         }
     } 
