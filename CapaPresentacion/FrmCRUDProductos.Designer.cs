@@ -34,20 +34,25 @@
             this.label10 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.textBuscar = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textDescripcion = new System.Windows.Forms.TextBox();
+            this.textIdProducto = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textPrecioVenta = new System.Windows.Forms.TextBox();
+            this.textNombre = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.dateTimePickerVencimiento = new System.Windows.Forms.DateTimePicker();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
             this.panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel12.SuspendLayout();
@@ -63,15 +68,15 @@
             this.panel11.Controls.Add(this.label10);
             this.panel11.Location = new System.Drawing.Point(0, 0);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(1283, 64);
+            this.panel11.Size = new System.Drawing.Size(1283, 79);
             this.panel11.TabIndex = 2;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 6);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(53, 50);
+            this.pictureBox1.Size = new System.Drawing.Size(70, 73);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -79,28 +84,33 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI Black", 16F, System.Drawing.FontStyle.Bold);
+            this.label10.Font = new System.Drawing.Font("Segoe UI Black", 18F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(0)))));
-            this.label10.Location = new System.Drawing.Point(86, 15);
+            this.label10.Location = new System.Drawing.Point(122, 22);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(124, 30);
+            this.label10.Size = new System.Drawing.Size(162, 32);
             this.label10.TabIndex = 0;
-            this.label10.Text = "Productos";
+            this.label10.Text = "PRODUCTOS";
             // 
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(91)))), ((int)(((byte)(178)))));
+            this.panel12.Controls.Add(this.btnEditar);
+            this.panel12.Controls.Add(this.btnBuscar);
+            this.panel12.Controls.Add(this.btnCancelar);
+            this.panel12.Controls.Add(this.btnEliminar);
+            this.panel12.Controls.Add(this.dateTimePickerVencimiento);
             this.panel12.Controls.Add(this.label5);
             this.panel12.Controls.Add(this.label11);
-            this.panel12.Controls.Add(this.textBox2);
+            this.panel12.Controls.Add(this.textBuscar);
             this.panel12.Controls.Add(this.label4);
-            this.panel12.Controls.Add(this.textBox3);
-            this.panel12.Controls.Add(this.textBox1);
+            this.panel12.Controls.Add(this.textDescripcion);
+            this.panel12.Controls.Add(this.textIdProducto);
             this.panel12.Controls.Add(this.label3);
-            this.panel12.Controls.Add(this.button1);
+            this.panel12.Controls.Add(this.btnGuardar);
             this.panel12.Controls.Add(this.label2);
-            this.panel12.Controls.Add(this.textBox5);
-            this.panel12.Controls.Add(this.textBox4);
+            this.panel12.Controls.Add(this.textPrecioVenta);
+            this.panel12.Controls.Add(this.textNombre);
             this.panel12.Location = new System.Drawing.Point(29, 143);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(606, 577);
@@ -109,102 +119,110 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Black", 8F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(27, 474);
+            this.label5.Font = new System.Drawing.Font("Segoe UI Black", 13F, System.Drawing.FontStyle.Bold);
+            this.label5.Location = new System.Drawing.Point(27, 447);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
+            this.label5.Size = new System.Drawing.Size(152, 25);
             this.label5.TabIndex = 15;
-            this.label5.Text = "I.V.A";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Black", 8F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(37, 128);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 13);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "Existencias";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Black", 8F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(28, 246);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 13);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "Precio";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Black", 8F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(27, 382);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 13);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "Descripcion ";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Silver;
-            this.button1.Location = new System.Drawing.Point(315, 53);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Guardar";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // textBox5
-            // 
-            this.textBox5.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
-            this.textBox5.Location = new System.Drawing.Point(30, 506);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 10;
-            // 
-            // textBox4
-            // 
-            this.textBox4.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
-            this.textBox4.Location = new System.Drawing.Point(30, 159);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 8;
-            // 
-            // textBox3
-            // 
-            this.textBox3.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
-            this.textBox3.Location = new System.Drawing.Point(30, 274);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 7;
-            // 
-            // textBox2
-            // 
-            this.textBox2.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
-            this.textBox2.Location = new System.Drawing.Point(30, 422);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 6;
-            // 
-            // textBox1
-            // 
-            this.textBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
-            this.textBox1.Location = new System.Drawing.Point(30, 78);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 5;
+            this.label5.Text = "Precio de Venta";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI Black", 8F, System.Drawing.FontStyle.Bold);
-            this.label11.Location = new System.Drawing.Point(37, 53);
+            this.label11.Font = new System.Drawing.Font("Segoe UI Black", 13F, System.Drawing.FontStyle.Bold);
+            this.label11.Location = new System.Drawing.Point(28, 56);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(45, 13);
+            this.label11.Size = new System.Drawing.Size(117, 25);
             this.label11.TabIndex = 0;
-            this.label11.Text = "Codigo";
+            this.label11.Text = "Id Producto";
+            // 
+            // textBuscar
+            // 
+            this.textBuscar.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
+            this.textBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.textBuscar.Location = new System.Drawing.Point(309, 465);
+            this.textBuscar.Name = "textBuscar";
+            this.textBuscar.Size = new System.Drawing.Size(202, 23);
+            this.textBuscar.TabIndex = 6;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Black", 13F, System.Drawing.FontStyle.Bold);
+            this.label4.Location = new System.Drawing.Point(27, 138);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(85, 25);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Nombre";
+            // 
+            // textDescripcion
+            // 
+            this.textDescripcion.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
+            this.textDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.textDescripcion.Location = new System.Drawing.Point(30, 277);
+            this.textDescripcion.Name = "textDescripcion";
+            this.textDescripcion.Size = new System.Drawing.Size(200, 23);
+            this.textDescripcion.TabIndex = 7;
+            // 
+            // textIdProducto
+            // 
+            this.textIdProducto.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
+            this.textIdProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.textIdProducto.Location = new System.Drawing.Point(30, 95);
+            this.textIdProducto.Name = "textIdProducto";
+            this.textIdProducto.Size = new System.Drawing.Size(200, 23);
+            this.textIdProducto.TabIndex = 5;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Black", 13F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(28, 234);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(117, 25);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Descripcion";
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(162)))), ((int)(((byte)(192)))));
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.btnGuardar.Location = new System.Drawing.Point(362, 69);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(115, 46);
+            this.btnGuardar.TabIndex = 11;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Black", 13F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(27, 339);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(206, 25);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Fecha de Vencimiento";
+            // 
+            // textPrecioVenta
+            // 
+            this.textPrecioVenta.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
+            this.textPrecioVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.textPrecioVenta.Location = new System.Drawing.Point(30, 491);
+            this.textPrecioVenta.Name = "textPrecioVenta";
+            this.textPrecioVenta.Size = new System.Drawing.Size(203, 23);
+            this.textPrecioVenta.TabIndex = 10;
+            this.textPrecioVenta.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            // 
+            // textNombre
+            // 
+            this.textNombre.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
+            this.textNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.textNombre.Location = new System.Drawing.Point(32, 177);
+            this.textNombre.Name = "textNombre";
+            this.textNombre.Size = new System.Drawing.Size(198, 23);
+            this.textNombre.TabIndex = 8;
             // 
             // dataGridView1
             // 
@@ -245,6 +263,59 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "AGREGAR PRODUCTO";
             // 
+            // dateTimePickerVencimiento
+            // 
+            this.dateTimePickerVencimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.dateTimePickerVencimiento.Location = new System.Drawing.Point(30, 389);
+            this.dateTimePickerVencimiento.Name = "dateTimePickerVencimiento";
+            this.dateTimePickerVencimiento.Size = new System.Drawing.Size(200, 23);
+            this.dateTimePickerVencimiento.TabIndex = 16;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(162)))), ((int)(((byte)(192)))));
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.btnEliminar.Location = new System.Drawing.Point(362, 254);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(115, 46);
+            this.btnEliminar.TabIndex = 17;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(162)))), ((int)(((byte)(192)))));
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.btnCancelar.Location = new System.Drawing.Point(362, 363);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(115, 46);
+            this.btnCancelar.TabIndex = 18;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(162)))), ((int)(((byte)(192)))));
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.btnBuscar.Location = new System.Drawing.Point(362, 491);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(115, 46);
+            this.btnBuscar.TabIndex = 19;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click_1);
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(162)))), ((int)(((byte)(192)))));
+            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.btnEditar.Location = new System.Drawing.Point(362, 151);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(115, 46);
+            this.btnEditar.TabIndex = 20;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = false;
+            // 
             // FrmCRUDproductos
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -278,13 +349,13 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textDescripcion;
+        private System.Windows.Forms.TextBox textBuscar;
+        private System.Windows.Forms.TextBox textIdProducto;
+        private System.Windows.Forms.TextBox textNombre;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.TextBox textPrecioVenta;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
@@ -293,5 +364,10 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.DateTimePicker dateTimePickerVencimiento;
     }
 }
