@@ -144,7 +144,7 @@ namespace CapaPresentacion
 
         private void btnHistorial_Click(object sender, EventArgs e)
         {
-            openChildForm(new FrmHistorialFacturas());
+            openChildForm(new FrmCompras());
         }
 
         private void btnReports_Click(object sender, EventArgs e)

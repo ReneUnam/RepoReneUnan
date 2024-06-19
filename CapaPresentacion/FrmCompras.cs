@@ -28,9 +28,6 @@ namespace CapaPresentacion
             dgvListado.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dgvListado.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvListado.DataSource = new NIngreso().MostrarIngresos();
-         
-           
-
             //Totalizar los registros
             lblTotal.Text = "Total de Registros: " + Convert.ToString(dgvListado.Rows.Count);
         }

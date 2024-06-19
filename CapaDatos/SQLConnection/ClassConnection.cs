@@ -15,14 +15,14 @@ namespace CapaDatos.SQLConnection
         public ClassConnection()
         {
             //NOTA: Si van a cambiar a su base de dato simplemente copien y peguen aquí.
-            ConnectionToString = ("Data Source=GARY\\MYSQL;Initial Catalog=Vand_Y_Monti;Integrated Security=True;TrustServerCertificate=True");
+            ConnectionToString = ("Data Source=ReneAlexander\\SQLEXPRESS;Initial Catalog=Vand_Y_Monti;Integrated Security=True");
         }
         protected SqlConnection GetConnection() 
         {
             return new SqlConnection(ConnectionToString);
         }
         //Rene
-        //static public SqlConnection Connection = new SqlConnection("Data Source=RENEALEXANDER;Initial Catalog=Vand_Y_Monti;Integrated Security=True");
+        //static public SqlConnection Connection = new SqlConnection("Data Source=ReneAlexander\SQLEXPRESS;Initial Catalog=Vand_Y_Monti;Integrated Security=True");
 
         //Gary Guapo
         //SqlConnection Connection = new SqlConnection("Data Source=GARY\\MYSQL;Initial Catalog=Vand_Y_Monti;Integrated Security=True;TrustServerCertificate=True");
