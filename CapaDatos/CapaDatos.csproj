@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Metodos\DDetalleIngreso.cs" />
+    <Compile Include="Metodos\DetallesVenta.cs" />
     <Compile Include="Metodos\DIngreso.cs" />
     <Compile Include="Metodos\DProducto.cs" />
     <Compile Include="Metodos\DRoles.cs" />

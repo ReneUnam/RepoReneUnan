@@ -16,13 +16,13 @@ namespace CapaPresentacion
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-<<<<<<< HEAD
+
             Application.Run(new FrmCrearFactura());
 
 
-=======
-            Application.Run(new FrmRegistrarUsuario());
->>>>>>> ad11c314236d33020d2aac2076c8774f26f90ee2
+
+            Application.Run(new FrmCrearFactura());
+
         }
     }
 }
