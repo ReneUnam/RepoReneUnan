@@ -33,6 +33,11 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.dateTimePickerVencimiento = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.textBuscar = new System.Windows.Forms.TextBox();
@@ -48,11 +53,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePickerVencimiento = new System.Windows.Forms.DateTimePicker();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.btnEditar = new System.Windows.Forms.Button();
             this.panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel12.SuspendLayout();
@@ -115,6 +115,59 @@
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(606, 577);
             this.panel12.TabIndex = 3;
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(162)))), ((int)(((byte)(192)))));
+            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.btnEditar.Location = new System.Drawing.Point(362, 151);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(115, 46);
+            this.btnEditar.TabIndex = 20;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = false;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(162)))), ((int)(((byte)(192)))));
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.btnBuscar.Location = new System.Drawing.Point(362, 491);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(115, 46);
+            this.btnBuscar.TabIndex = 19;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click_1);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(162)))), ((int)(((byte)(192)))));
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.btnCancelar.Location = new System.Drawing.Point(362, 363);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(115, 46);
+            this.btnCancelar.TabIndex = 18;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(162)))), ((int)(((byte)(192)))));
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.btnEliminar.Location = new System.Drawing.Point(362, 254);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(115, 46);
+            this.btnEliminar.TabIndex = 17;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            // 
+            // dateTimePickerVencimiento
+            // 
+            this.dateTimePickerVencimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.dateTimePickerVencimiento.Location = new System.Drawing.Point(30, 389);
+            this.dateTimePickerVencimiento.Name = "dateTimePickerVencimiento";
+            this.dateTimePickerVencimiento.Size = new System.Drawing.Size(200, 23);
+            this.dateTimePickerVencimiento.TabIndex = 16;
             // 
             // label5
             // 
@@ -232,6 +285,7 @@
             this.dataGridView1.RowHeadersWidth = 72;
             this.dataGridView1.Size = new System.Drawing.Size(562, 624);
             this.dataGridView1.TabIndex = 4;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
             // panel1
             // 
@@ -262,59 +316,6 @@
             this.label1.Size = new System.Drawing.Size(251, 30);
             this.label1.TabIndex = 0;
             this.label1.Text = "AGREGAR PRODUCTO";
-            // 
-            // dateTimePickerVencimiento
-            // 
-            this.dateTimePickerVencimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.dateTimePickerVencimiento.Location = new System.Drawing.Point(30, 389);
-            this.dateTimePickerVencimiento.Name = "dateTimePickerVencimiento";
-            this.dateTimePickerVencimiento.Size = new System.Drawing.Size(200, 23);
-            this.dateTimePickerVencimiento.TabIndex = 16;
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(162)))), ((int)(((byte)(192)))));
-            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.btnEliminar.Location = new System.Drawing.Point(362, 254);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(115, 46);
-            this.btnEliminar.TabIndex = 17;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = false;
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(162)))), ((int)(((byte)(192)))));
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.btnCancelar.Location = new System.Drawing.Point(362, 363);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(115, 46);
-            this.btnCancelar.TabIndex = 18;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(162)))), ((int)(((byte)(192)))));
-            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.btnBuscar.Location = new System.Drawing.Point(362, 491);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(115, 46);
-            this.btnBuscar.TabIndex = 19;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = false;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click_1);
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(162)))), ((int)(((byte)(192)))));
-            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.btnEditar.Location = new System.Drawing.Point(362, 151);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(115, 46);
-            this.btnEditar.TabIndex = 20;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.UseVisualStyleBackColor = false;
             // 
             // FrmCRUDproductos
             // 

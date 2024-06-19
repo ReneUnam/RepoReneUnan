@@ -2,16 +2,20 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace CapaPresentacion
 {
     public partial class FrmCRUDproductos : Form
     {
+        private SqlConnection connection;
+
         public FrmCRUDproductos()
         {
             InitializeComponent();
@@ -19,7 +23,8 @@ namespace CapaPresentacion
 
         private void FrmCRUDproductos_Load(object sender, EventArgs e)
         {
-
+            // cargar la tabla de datos en la DataGridView
+            object dataSource = dataGridView1.DataSource;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -79,7 +84,43 @@ namespace CapaPresentacion
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (textIdProducto.Text != "" && textNombre.Text != "" && textPrecioVenta.Text != "" && dateTimePickerVencimiento.Text != "")
+            {
+                // Obtener los nuevos datos
+                int id = Convert.ToInt32(textIdProducto.Text);
+                string nombre = textNombre.Text;
+                decimal precioVenta = Convert.ToDecimal(textPrecioVenta.Text);
+                DateTime fechaVencimiento = Convert.ToDateTime(dateTimePickerVencimiento.Text);
 
+                // Actualizar los datos en la tabla de datos
+                string query = "UPDATE TuTabla SET Nombre = @Nombre, PrecioVenta = @PrecioVenta, FechaVencimiento = @FechaVencimiento WHERE ID = @ID";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Nombre", nombre);
+                    command.Parameters.AddWithValue("@PrecioVenta", precioVenta);
+                    command.Parameters.AddWithValue("@FechaVencimiento", fechaVencimiento);
+                    command.Parameters.AddWithValue("@ID", id);
+
+                    int rowsAffected = command.ExecuteNonQuery();
+
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Datos actualizados correctamente");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error al actualizar los datos");
+                    }
+                }
+
+                // Actualizar la tabla de datos en el DataGridView
+                dataGridView1.Refresh();
+            }
+            else
+            {
+                MessageBox.Show("Todos los campos son obligatorios");
+            }
         }
 
         private void btnBuscar_Click_1(object sender, EventArgs e)
@@ -100,6 +141,24 @@ namespace CapaPresentacion
             foreach (DataGridViewRow fila in filasFiltradas)
             {
                 dataGridView1.Rows.Add(fila); // Agregar las filas filtradas al DataGridView
+            }
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                // Obtener los datos de la fila seleccionada
+                int id = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["ID"].Value);
+                string nombre = dataGridView1.Rows[e.RowIndex].Cells["Nombre"].Value.ToString();
+                decimal precioVenta = Convert.ToDecimal(dataGridView1.Rows[e.RowIndex].Cells["PrecioVenta"].Value);
+                DateTime fechaVencimiento = Convert.ToDateTime(dataGridView1.Rows[e.RowIndex].Cells["FechaVencimiento"].Value);
+
+                // Mostrar los datos en la caja de texto del formulario
+                textIdProducto.Text = id.ToString();
+                textNombre.Text = nombre;
+                textPrecioVenta.Text = precioVenta.ToString();
+                dateTimePickerVencimiento.Text = fechaVencimiento.ToString("yyyy-MM-dd");
             }
         }
     }
