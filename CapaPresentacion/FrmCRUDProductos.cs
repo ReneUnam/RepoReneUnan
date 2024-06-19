@@ -54,7 +54,7 @@ namespace CapaPresentacion
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             // Obtener el texto a buscar
-            string textoABuscar = textBuscar.Text.ToLower(); // Convertir a minúsculas para una búsqueda sin distinción de mayúsculas/minúsculas
+          /*  string textoABuscar = textBuscar.Text.ToLower(); // Convertir a minúsculas para una búsqueda sin distinción de mayúsculas/minúsculas
 
             // Filtrar la DataGridView
             var filasFiltradas = dataGridView1.Rows.Cast<DataGridViewRow>()
@@ -69,7 +69,7 @@ namespace CapaPresentacion
             foreach (DataGridViewRow fila in filasFiltradas)
             {
                 dataGridView1.Rows.Add(fila); // Agregar las filas filtradas al DataGridView
-            }
+            }*/
         }
     }
 }

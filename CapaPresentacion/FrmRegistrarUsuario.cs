@@ -26,7 +26,7 @@ namespace CapaPresentacion
 
         }
 
-
+       
         private void BtnCancelar_Click(object sender, EventArgs e)
         {
          this.Close();
@@ -169,6 +169,11 @@ namespace CapaPresentacion
         private void textRol_TextChanged(object sender, EventArgs e)
         {
 
+        }
+       
+        private void DgvRoles_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+          textRol.Text = DgvRoles.CurrentRow.Cells[1].Value.ToString();
         }
     }
 }
