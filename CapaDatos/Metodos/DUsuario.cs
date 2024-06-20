@@ -30,6 +30,25 @@ namespace CapaDatos.Metodos
         public string Correo { get => _Correo; set => _Correo = value; }
         public int IdRoles { get => _IdRoles; set => _IdRoles = value; }
 
+        //Constructores
+        public DUsuario()
+        {
+
+        }
+
+        public DUsuario(int idUsuario, string nombre, string apellido, string contraseña, int telefono, string correo, int idRoles)
+        {
+            this.IdUsuario = idUsuario;
+            this.Nombre = nombre;
+            this.Nombre = nombre;
+            this.Contraseña = contraseña;
+            this.Telefeno = telefono;
+            this.Correo = correo;
+            this.IdRoles = idRoles;
+        }
+
+
+
         public bool Login(int userId, string password)
         {
             using (var connection = GetConnection())
@@ -91,5 +110,18 @@ namespace CapaDatos.Metodos
                 return dtResultado;
             }
         }
+
+        /*public string InsertarUsuario(DUsuario usuario)
+        {
+            using (var Connection = GetConnection())
+            {
+                Connection.Open();
+                using (var Command = new SqlCommand())
+                {
+                    Command.Connection = Connection;
+
+                }
+            }
+        }*/
     } 
 }
