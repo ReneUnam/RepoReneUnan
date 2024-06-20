@@ -45,6 +45,8 @@
             this.dgvDetalles = new System.Windows.Forms.DataGridView();
             this.lblCodigo1 = new System.Windows.Forms.Label();
             this.cmbProducto1 = new System.Windows.Forms.ComboBox();
+            this.productosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vand_Y_MontiDataSet = new CapaPresentacion.Vand_Y_MontiDataSet();
             this.lblNombre1 = new System.Windows.Forms.Label();
             this.lblPrecio1 = new System.Windows.Forms.Label();
             this.txtCantidd = new System.Windows.Forms.TextBox();
@@ -59,17 +61,15 @@
             this.btnVender = new System.Windows.Forms.Button();
             this.btnAñadir = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.vand_Y_MontiDataSet = new CapaPresentacion.Vand_Y_MontiDataSet();
-            this.productosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.productosTableAdapter = new CapaPresentacion.Vand_Y_MontiDataSetTableAdapters.productosTableAdapter();
             this.label3 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalles)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vand_Y_MontiDataSet)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.vand_Y_MontiDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -215,6 +215,7 @@
             this.dgvDetalles.RowTemplate.Height = 28;
             this.dgvDetalles.Size = new System.Drawing.Size(683, 179);
             this.dgvDetalles.TabIndex = 27;
+            this.dgvDetalles.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDetalles_CellContentClick);
             // 
             // lblCodigo1
             // 
@@ -236,6 +237,16 @@
             this.cmbProducto1.Size = new System.Drawing.Size(212, 28);
             this.cmbProducto1.TabIndex = 29;
             this.cmbProducto1.SelectedIndexChanged += new System.EventHandler(this.cmbProducto1_SelectedIndexChanged);
+            // 
+            // productosBindingSource
+            // 
+            this.productosBindingSource.DataMember = "productos";
+            this.productosBindingSource.DataSource = this.vand_Y_MontiDataSet;
+            // 
+            // vand_Y_MontiDataSet
+            // 
+            this.vand_Y_MontiDataSet.DataSetName = "Vand_Y_MontiDataSet";
+            this.vand_Y_MontiDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // lblNombre1
             // 
@@ -359,7 +370,7 @@
             // 
             // btnAñadir
             // 
-            this.btnAñadir.Location = new System.Drawing.Point(490, 273);
+            this.btnAñadir.Location = new System.Drawing.Point(490, 256);
             this.btnAñadir.Name = "btnAñadir";
             this.btnAñadir.Size = new System.Drawing.Size(167, 50);
             this.btnAñadir.TabIndex = 41;
@@ -368,22 +379,12 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(490, 371);
+            this.btnEliminar.Location = new System.Drawing.Point(490, 340);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(167, 50);
             this.btnEliminar.TabIndex = 42;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
-            // 
-            // vand_Y_MontiDataSet
-            // 
-            this.vand_Y_MontiDataSet.DataSetName = "Vand_Y_MontiDataSet";
-            this.vand_Y_MontiDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // productosBindingSource
-            // 
-            this.productosBindingSource.DataMember = "productos";
-            this.productosBindingSource.DataSource = this.vand_Y_MontiDataSet;
             // 
             // productosTableAdapter
             // 
@@ -437,12 +438,12 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalles)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vand_Y_MontiDataSet)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.vand_Y_MontiDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
