@@ -62,6 +62,7 @@
             this.vand_Y_MontiDataSet = new CapaPresentacion.Vand_Y_MontiDataSet();
             this.productosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.productosTableAdapter = new CapaPresentacion.Vand_Y_MontiDataSetTableAdapters.productosTableAdapter();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalles)).BeginInit();
@@ -388,10 +389,21 @@
             // 
             this.productosTableAdapter.ClearBeforeFill = true;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(463, 166);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(194, 42);
+            this.label3.TabIndex = 43;
+            this.label3.Text = "PRODUCTO";
+            // 
             // FrmCrearFactura
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.ClientSize = new System.Drawing.Size(1275, 737);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnAñadir);
             this.Controls.Add(this.btnVender);
@@ -469,5 +481,6 @@
         private Vand_Y_MontiDataSet vand_Y_MontiDataSet;
         private System.Windows.Forms.BindingSource productosBindingSource;
         private Vand_Y_MontiDataSetTableAdapters.productosTableAdapter productosTableAdapter;
+        private System.Windows.Forms.Label label3;
     }
 }
