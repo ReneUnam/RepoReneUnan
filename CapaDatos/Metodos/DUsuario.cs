@@ -36,13 +36,13 @@ namespace CapaDatos.Metodos
 
         }
 
-        public DUsuario(int idUsuario, string nombre, string apellido, string contraseña, int telefono, string correo, int idRoles)
+        public DUsuario( string nombre, string apellido, string contraseña, int telefeno, string correo, int idRoles)
         {
-            this.IdUsuario = idUsuario;
+           // this.IdUsuario = idUsuario;
             this.Nombre = nombre;
-            this.Nombre = nombre;
+            this.Apellido = apellido;
             this.Contraseña = contraseña;
-            this.Telefeno = telefono;
+            this.Telefeno = telefeno;
             this.Correo = correo;
             this.IdRoles = idRoles;
         }
@@ -111,14 +111,83 @@ namespace CapaDatos.Metodos
             }
         }
 
-        /*public string InsertarUsuario(DUsuario usuario)
+        public string InsertarUsuario(DUsuario usuario)
         {
+            string rpta = "";
+            SqlConnection sqlCon = new SqlConnection();
             using (var Connection = GetConnection())
             {
                 Connection.Open();
                 using (var Command = new SqlCommand())
                 {
-                    Command.Connection = Connection;
+                    SqlCommand sqlCmd = new SqlCommand();
+
+                    try
+                    {
+                        Command.Connection = Connection;
+                        Command.CommandType = CommandType.StoredProcedure;
+                        Command.CommandText = "SpCrearUsuario";
+
+                        /*SqlParameter ParIdUsuario = new SqlParameter();
+                        ParIdUsuario.ParameterName = "@idUsuario";
+                        ParIdUsuario.SqlDbType = SqlDbType.Int;
+                        ParIdUsuario.Direction = ParameterDirection.Output;
+                        sqlCmd.Parameters.Add(ParIdUsuario);*/
+
+                        SqlParameter ParNombre = new SqlParameter();
+                        ParNombre.ParameterName = "@Nombre";
+                        ParNombre.SqlDbType = SqlDbType.VarChar;
+                        ParNombre.Size = 50;
+                        ParNombre.Value = usuario.Nombre;
+                        sqlCmd.Parameters.Add(ParNombre);
+
+                        SqlParameter ParApellido = new SqlParameter();
+                        ParApellido.ParameterName = "@Apellido";
+                        ParApellido.SqlDbType = SqlDbType.VarChar;
+                        ParApellido.Size = 50;
+                        ParApellido.Value = usuario.Apellido;
+                        sqlCmd.Parameters.Add(ParApellido);
+
+                        SqlParameter ParContraseña = new SqlParameter();
+                        ParContraseña.ParameterName = "@Contrasena";
+                        ParContraseña.SqlDbType = SqlDbType.VarChar;
+                        ParContraseña.Size = 30;
+                        ParContraseña.Value = usuario.Contraseña;
+                        sqlCmd.Parameters.Add(ParContraseña);
+
+                        SqlParameter ParTelefono = new SqlParameter();
+                        ParTelefono.ParameterName = "@Telefeno";
+                        ParTelefono.SqlDbType = SqlDbType.Int;
+                        ParTelefono.Direction = ParameterDirection.Output;
+                        sqlCmd.Parameters.Add(ParTelefono);
+
+                        SqlParameter ParCorreo = new SqlParameter();
+                        ParCorreo.ParameterName = "@Correo";
+                        ParCorreo.SqlDbType = SqlDbType.VarChar;
+                        ParCorreo.Size = 80;
+                        ParCorreo.Value = usuario.Correo;
+                        sqlCmd.Parameters.Add(ParCorreo);
+
+                        SqlParameter ParIdRoles = new SqlParameter();
+                        ParIdRoles.ParameterName = "@idcategoria";
+                        ParIdRoles.SqlDbType = SqlDbType.Int;
+                        ParIdRoles.Value = usuario.IdRoles;
+                        sqlCmd.Parameters.Add(ParIdRoles);
+
+                        rpta = sqlCmd.ExecuteNonQuery() == 1 ? "Ok" : "No se Ingreso el Reistro";
+                    }
+                    catch (Exception ex)
+                    {
+
+                        rpta = ex.Message;
+                    }
+
+                    finally
+                    {
+                        if (sqlCon.State == ConnectionState.Open) sqlCon.Close();
+                    }
+                    return rpta;
+                    
 
                 }
             }
