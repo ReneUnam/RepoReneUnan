@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCrearFactura));
             this.label2 = new System.Windows.Forms.Label();
             this.dtmFecha = new System.Windows.Forms.DateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lblProducto = new System.Windows.Forms.Label();
@@ -50,7 +52,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.lblTotalAPagar1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.lblDevolución = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lblDevolución1 = new System.Windows.Forms.Label();
@@ -58,11 +59,16 @@
             this.btnVender = new System.Windows.Forms.Button();
             this.btnAñadir = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
+            this.vand_Y_MontiDataSet = new CapaPresentacion.Vand_Y_MontiDataSet();
+            this.productosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.productosTableAdapter = new CapaPresentacion.Vand_Y_MontiDataSetTableAdapters.productosTableAdapter();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalles)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.vand_Y_MontiDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -110,6 +116,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1289, 72);
             this.panel1.TabIndex = 20;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(1185, 27);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button3
             // 
@@ -211,11 +227,14 @@
             // 
             // cmbProducto1
             // 
+            this.cmbProducto1.DataSource = this.productosBindingSource;
+            this.cmbProducto1.DisplayMember = "nombre";
             this.cmbProducto1.FormattingEnabled = true;
             this.cmbProducto1.Location = new System.Drawing.Point(225, 225);
             this.cmbProducto1.Name = "cmbProducto1";
             this.cmbProducto1.Size = new System.Drawing.Size(212, 28);
             this.cmbProducto1.TabIndex = 29;
+            this.cmbProducto1.SelectedIndexChanged += new System.EventHandler(this.cmbProducto1_SelectedIndexChanged);
             // 
             // lblNombre1
             // 
@@ -286,16 +305,6 @@
             this.panel2.Size = new System.Drawing.Size(257, 69);
             this.panel2.TabIndex = 37;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(1185, 27);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // lblDevolución
             // 
             this.lblDevolución.AutoSize = true;
@@ -365,6 +374,20 @@
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
             // 
+            // vand_Y_MontiDataSet
+            // 
+            this.vand_Y_MontiDataSet.DataSetName = "Vand_Y_MontiDataSet";
+            this.vand_Y_MontiDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // productosBindingSource
+            // 
+            this.productosBindingSource.DataMember = "productos";
+            this.productosBindingSource.DataSource = this.vand_Y_MontiDataSet;
+            // 
+            // productosTableAdapter
+            // 
+            this.productosTableAdapter.ClearBeforeFill = true;
+            // 
             // FrmCrearFactura
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -406,6 +429,8 @@
             this.panel2.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.vand_Y_MontiDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -441,5 +466,8 @@
         private System.Windows.Forms.Button btnVender;
         private System.Windows.Forms.Button btnAñadir;
         private System.Windows.Forms.Button btnEliminar;
+        private Vand_Y_MontiDataSet vand_Y_MontiDataSet;
+        private System.Windows.Forms.BindingSource productosBindingSource;
+        private Vand_Y_MontiDataSetTableAdapters.productosTableAdapter productosTableAdapter;
     }
 }

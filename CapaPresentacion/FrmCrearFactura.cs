@@ -59,7 +59,14 @@ namespace CapaPresentacion
 
         private void FrmCrearFactura_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'vand_Y_MontiDataSet.productos' Puede moverla o quitarla según sea necesario.
+            this.productosTableAdapter.Fill(this.vand_Y_MontiDataSet.productos);
             MostrarDetallesVenta();
+        }
+
+        private void cmbProducto1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
