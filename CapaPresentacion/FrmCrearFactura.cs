@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using CapaLogicaNegocio;
 using CapaLogicaNegocio.Entidades;
 
+
 namespace CapaPresentacion
 {
     public partial class FrmCrearFactura : Form
@@ -66,7 +67,18 @@ namespace CapaPresentacion
 
         private void cmbProducto1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            int cod;
+            string nom;
+            float precio;
 
+            cod = cmbProducto1.SelectedIndex;
+            nom = cmbProducto1.SelectedItem.ToString();
+            precio = cmbProducto1.SelectedIndex;
+
+            switch (cmbProducto1.SelectedIndex) 
+            { 
+              
+            }
         }
 
         private void dgvDetalles_CellContentClick(object sender, DataGridViewCellEventArgs e)

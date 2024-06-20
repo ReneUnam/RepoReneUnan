@@ -208,9 +208,11 @@
             // 
             // dgvDetalles
             // 
+            this.dgvDetalles.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dgvDetalles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDetalles.Location = new System.Drawing.Point(21, 496);
             this.dgvDetalles.Name = "dgvDetalles";
+            this.dgvDetalles.RowHeadersVisible = false;
             this.dgvDetalles.RowHeadersWidth = 62;
             this.dgvDetalles.RowTemplate.Height = 28;
             this.dgvDetalles.Size = new System.Drawing.Size(683, 179);
