@@ -8,23 +8,36 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaLogicaNegocio;
+using CapaLogicaNegocio.Entidades;
 
 
 namespace CapaPresentacion
 {
     public partial class FrmCRUDproductos : Form
     {
-        private SqlConnection connection;
+       private SqlConnection connection;
 
         public FrmCRUDproductos()
         {
             InitializeComponent();
         }
 
+        private void MostrarProductos()
+        {
+            NProducto PCP = new NProducto();
+            dataGridView1.DataSource = PCP.MostrarProductos();
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dataGridView1.DefaultCellStyle.ForeColor = Color.Black;
+        }
+
+
         private void FrmCRUDproductos_Load(object sender, EventArgs e)
         {
             // cargar la tabla de datos en la DataGridView
             object dataSource = dataGridView1.DataSource;
+            MostrarProductos();
         }
 
         private void label1_Click(object sender, EventArgs e)
