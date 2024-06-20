@@ -395,9 +395,9 @@
             this.label3.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
             this.label3.Location = new System.Drawing.Point(463, 166);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(194, 42);
+            this.label3.Size = new System.Drawing.Size(124, 42);
             this.label3.TabIndex = 43;
-            this.label3.Text = "PRODUCTO";
+            this.label3.Text = "Cliente";
             // 
             // FrmCrearFactura
             // 
