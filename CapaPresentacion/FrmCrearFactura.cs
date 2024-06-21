@@ -121,6 +121,21 @@ namespace CapaPresentacion
 
         private void btnAñadir_Click(object sender, EventArgs e)
         {
+            DataGridViewRow file = new DataGridViewRow();
+            file.CreateCells(dgvDetalles);
+
+            file.Cells[0].Value = lblCodigo1.Text;
+            file.Cells[1].Value = lblNombre1.Text;
+            file.Cells[2].Value = lblPrecio1.Text;
+            file.Cells[3].Value = txtCantidad.Text;
+            file.Cells[4].Value = (float.Parse(lblPrecio1.Text) * float.Parse(txtCantidad.Text)).ToString();
+
+            dgvDetalles.Rows.Add(file);
+
+            lblCodigo1.Text = lblNombre1.Text = lblPrecio1.Text = txtCantidad.Text = "";
+            
+            
+
 
         }
     }

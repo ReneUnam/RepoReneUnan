@@ -49,7 +49,7 @@
             this.vand_Y_MontiDataSet = new CapaPresentacion.Vand_Y_MontiDataSet();
             this.lblNombre1 = new System.Windows.Forms.Label();
             this.lblPrecio1 = new System.Windows.Forms.Label();
-            this.txtCantidd = new System.Windows.Forms.TextBox();
+            this.txtCantidad = new System.Windows.Forms.TextBox();
             this.lblTotal = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.lblTotalAPagar1 = new System.Windows.Forms.Label();
@@ -270,12 +270,12 @@
             this.lblPrecio1.TabIndex = 32;
             this.lblPrecio1.Text = "-";
             // 
-            // txtCantidd
+            // txtCantidad
             // 
-            this.txtCantidd.Location = new System.Drawing.Point(225, 407);
-            this.txtCantidd.Name = "txtCantidd";
-            this.txtCantidd.Size = new System.Drawing.Size(212, 26);
-            this.txtCantidd.TabIndex = 33;
+            this.txtCantidad.Location = new System.Drawing.Point(225, 407);
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(212, 26);
+            this.txtCantidad.TabIndex = 33;
             // 
             // lblTotal
             // 
@@ -415,7 +415,7 @@
             this.Controls.Add(this.lblDevolución);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.lblTotal);
-            this.Controls.Add(this.txtCantidd);
+            this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.lblPrecio1);
             this.Controls.Add(this.lblNombre1);
             this.Controls.Add(this.cmbProducto1);
@@ -469,7 +469,7 @@
         private System.Windows.Forms.ComboBox cmbProducto1;
         private System.Windows.Forms.Label lblNombre1;
         private System.Windows.Forms.Label lblPrecio1;
-        private System.Windows.Forms.TextBox txtCantidd;
+        private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label lblTotalAPagar1;
