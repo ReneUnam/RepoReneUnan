@@ -378,6 +378,7 @@
             this.btnAñadir.TabIndex = 41;
             this.btnAñadir.Text = "Añadir a lista";
             this.btnAñadir.UseVisualStyleBackColor = true;
+            this.btnAñadir.Click += new System.EventHandler(this.btnAñadir_Click);
             // 
             // btnEliminar
             // 
