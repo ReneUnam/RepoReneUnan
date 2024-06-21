@@ -20,9 +20,7 @@ namespace CapaPresentacion
 
         public FrmRegistrarUsuario()
         {
-            InitializeComponent();
-
-            
+            InitializeComponent();            
 
         }
 
@@ -34,7 +32,7 @@ namespace CapaPresentacion
 
         // Esta region es para limpiar los datos en los paneles
         #region
-        private void LimpiarCasillas()
+        private void LimpiarCasillas() 
         {
             foreach (TextBox textBox in panel1.Controls.OfType<TextBox>())
             {
@@ -59,7 +57,8 @@ namespace CapaPresentacion
             LimpiarCasillas();
         }
 
-        private void MostrarRoles()
+        private void MostrarRoles() 
+
         {
             NRoles RCP = new NRoles();
             DgvRoles.DataSource = RCP.MostrarRoles();
@@ -102,11 +101,20 @@ namespace CapaPresentacion
             textIdRol.Enabled = !textIdRol.Enabled;
             #endregion
         }
-
+        
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
             BtnGuardar.Enabled = !BtnGuardar.Enabled;
             BtnNuevo.Enabled = !BtnNuevo.Enabled;
+
+            //Entonces vamos a llamar a tu método iNsertar de la capa de negocio, ese es el paso
+            //NUsuario es tu clase de negocio y es donde esta el método a insertar usuario, ahora desntro de los 
+            //parentesis, vamos a pasar todas las cajas de texto y converti lo que se necesite para que lo reciba de forma correcta
+            //la capa de acceso a dato, me copias ? : si estba leyendo todo, ahora debemos escribirlos en el orden que deben llegar, entonces mira
+            //primer parámetro a recibir es:
+            NUsuario.InsertarUsuario(this.textNombre.Text, this.textApellido.Text, this.textContraseña.Text,
+                Convert.ToInt32(this.textTelefono.Text), this.textCorreo.Text, Convert.ToInt32(this.textIdRol.Text)
+                );
 
             //Para seguir la secuencia del nuevo y desactivar los text al darle guardar
             #region

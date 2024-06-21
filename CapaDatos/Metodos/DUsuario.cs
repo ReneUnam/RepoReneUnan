@@ -33,7 +33,7 @@ namespace CapaDatos.Metodos
         //Constructores
         public DUsuario()
         {
-
+           
         }
 
         public DUsuario( string nombre, string apellido, string contraseña, int telefeno, string correo, int idRoles)
@@ -48,7 +48,7 @@ namespace CapaDatos.Metodos
         }
 
 
-
+      
         public bool Login(int userId, string password)
         {
             using (var connection = GetConnection())
@@ -81,6 +81,7 @@ namespace CapaDatos.Metodos
             }
         }
 
+       
         public DataTable MostrarUsuarios()
         {
             using (var Connection = GetConnection())
@@ -111,20 +112,21 @@ namespace CapaDatos.Metodos
             }
         }
 
+      
         public string InsertarUsuario(DUsuario usuario)
         {
             string rpta = "";
             SqlConnection sqlCon = new SqlConnection();
-            using (var Connection = GetConnection())
+            using (var Connection = GetConnection()) //Error es porque en ningun momento le pasamos la cadena de conexion al command segun decía
             {
                 Connection.Open();
-                using (var Command = new SqlCommand())
+                using (var Command = new SqlCommand()) //Este que tenes aquí
                 {
-                    SqlCommand sqlCmd = new SqlCommand();
+                    SqlCommand sqlCmd = new SqlCommand(); //es lo mismo que este
 
                     try
                     {
-                        Command.Connection = Connection;
+                        Command.Connection = Connection; //Aqui el command recibe la cadena de conexion
                         Command.CommandType = CommandType.StoredProcedure;
                         Command.CommandText = "SpCrearUsuario";
 
@@ -139,53 +141,59 @@ namespace CapaDatos.Metodos
                         ParNombre.SqlDbType = SqlDbType.VarChar;
                         ParNombre.Size = 50;
                         ParNombre.Value = usuario.Nombre;
-                        sqlCmd.Parameters.Add(ParNombre);
+                        Command.Parameters.Add(ParNombre);
 
                         SqlParameter ParApellido = new SqlParameter();
                         ParApellido.ParameterName = "@Apellido";
                         ParApellido.SqlDbType = SqlDbType.VarChar;
                         ParApellido.Size = 50;
                         ParApellido.Value = usuario.Apellido;
-                        sqlCmd.Parameters.Add(ParApellido);
+                        Command.Parameters.Add(ParApellido);
 
-                        SqlParameter ParContraseña = new SqlParameter();
+                        SqlParameter ParContraseña = new SqlParameter();                       
                         ParContraseña.ParameterName = "@Contrasena";
                         ParContraseña.SqlDbType = SqlDbType.VarChar;
                         ParContraseña.Size = 30;
                         ParContraseña.Value = usuario.Contraseña;
-                        sqlCmd.Parameters.Add(ParContraseña);
+                        Command.Parameters.Add(ParContraseña);
 
                         SqlParameter ParTelefono = new SqlParameter();
                         ParTelefono.ParameterName = "@Telefeno";
                         ParTelefono.SqlDbType = SqlDbType.Int;
-                        ParTelefono.Direction = ParameterDirection.Output;
-                        sqlCmd.Parameters.Add(ParTelefono);
+                        ParTelefono.Value = usuario.Telefeno;
+                        //ParTelefono.Direction = ParameterDirection.Output; //Aquí hay que tener cuidado, los parámetros de salida son los que desde el SP lo genera el Sql
+                        //entonces aqui no va esta propiedad, esto se hace solo para los parámetros de salida que en el SP se especifico cual es de salida.
+                        Command.Parameters.Add(ParTelefono);
 
                         SqlParameter ParCorreo = new SqlParameter();
                         ParCorreo.ParameterName = "@Correo";
                         ParCorreo.SqlDbType = SqlDbType.VarChar;
                         ParCorreo.Size = 80;
                         ParCorreo.Value = usuario.Correo;
-                        sqlCmd.Parameters.Add(ParCorreo);
+                        Command.Parameters.Add(ParCorreo);
 
-                        SqlParameter ParIdRoles = new SqlParameter();
-                        ParIdRoles.ParameterName = "@idcategoria";
+                        SqlParameter ParIdRoles = new SqlParameter(); 
+                        ParIdRoles.ParameterName = "@IdRoles"; //Corregis luego, porque daria error
                         ParIdRoles.SqlDbType = SqlDbType.Int;
                         ParIdRoles.Value = usuario.IdRoles;
-                        sqlCmd.Parameters.Add(ParIdRoles);
+                        Command.Parameters.Add(ParIdRoles);
 
-                        rpta = sqlCmd.ExecuteNonQuery() == 1 ? "Ok" : "No se Ingreso el Reistro";
+                        //Si se ejecuta correctamente y es igual a 1 registro afectado, en caso verdadero envia un ok en string, caso contrario no se ingreso
+                        //la variable rpta es de tipo estring espera lo que devuelve este condicional, es como un if pero más elegante.
+                        rpta = Command.ExecuteNonQuery() == 1 ? "Ok" : "No se Ingreso el Reistro"; //aQUI sqlCmd, no es, aquí es command, porque ese si recibe la cadena
                     }
                     catch (Exception ex)
                     {
 
                         rpta = ex.Message;
-                    }
+                    } 
 
                     finally
                     {
+                        //Si todo es correcto cierra la conexion
                         if (sqlCon.State == ConnectionState.Open) sqlCon.Close();
                     }
+                    //Este metodo espera un retorno de string y aqui esta representado. todo ok, por este lado.
                     return rpta;
                     
 

@@ -12,8 +12,8 @@ namespace CapaLogicaNegocio.Entidades
 {
     public class NUsuario
     {
-
-        DUsuario dUsuario = new DUsuario();
+        //esto es para poder hacer uso de un objeto y a traves de él acceder a los métodos de la capa Datos
+        DUsuario dUsuario = new DUsuario(); //Parece que nunca lo utilizas
 
         public bool Login(int userId, string pass) => dUsuario.Login(userId, pass);
 
@@ -22,8 +22,11 @@ namespace CapaLogicaNegocio.Entidades
             return new DUsuario().MostrarUsuarios();
         }
 
+  
         public static string InsertarUsuario(string nombre, string apellido, string contraseña, int telefeno, string correo, int idRoles)
         {
+            //Aqui se crear un nuevo objeto que hace referencia a la capa datos DUsuario
+            // y se le envían los valores que traen los parametros y se le asignan a cada propiedad de la Capa Datos DUsuario
             DUsuario objUsuario = new DUsuario();
             objUsuario.Nombre = nombre;
             objUsuario.Apellido = apellido;
@@ -32,8 +35,10 @@ namespace CapaLogicaNegocio.Entidades
             objUsuario.Correo = correo;
             objUsuario.IdRoles = idRoles;
 
+            //se le envian todos al metos que esta en la capa Datos mediante el objeto objUsuario.
+            //por aquí todo ok.
             return objUsuario.InsertarUsuario(objUsuario);
         }
-    }
+    } 
 
 }
