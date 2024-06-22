@@ -253,7 +253,8 @@ namespace CapaDatos.Metodos
                 {
                     try
                     {
-                        Command.Connection = Connection; 
+                        Command.Connection = Connection;
+                        Command.Connection = sqlCon;0
                         Command.CommandType = CommandType.StoredProcedure;
                         Command.CommandText = "EliminarUsuario";
 

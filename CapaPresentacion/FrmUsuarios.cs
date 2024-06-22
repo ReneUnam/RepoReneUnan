@@ -57,7 +57,7 @@ namespace CapaPresentacion
             try
             {
                 DialogResult opcion;
-                opcion = MessageBox.Show("Está seguro de que desea proceder con la eliminación permanente de estos registros"); //MessageBoxButtons.OKCancel, MessageBoxIcon.Question); 
+                opcion = MessageBox.Show("Está seguro de que desea proceder con la eliminación permanente de estos registros", MessageBoxButtons.OKCancel, MessageBoxIcon.Question); 
                 if (opcion == DialogResult.OK)
                 {
                     string codigo;
@@ -72,12 +72,12 @@ namespace CapaPresentacion
 
                             if (Rpta.Equals("ok"))
                             {
-                           //     this.MensajeOk("Se Eliminó Correctamente el registro");
+                              this.MensajeOk("Se Eliminó Correctamente el registro");
                             }
 
                             else
                             {
-                              // this.MensajeError(Rpta);
+                              this.MensajeError(Rpta);
                             }
                         }
                     }
