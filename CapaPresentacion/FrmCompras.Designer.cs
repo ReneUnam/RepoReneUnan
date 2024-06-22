@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -121,7 +119,7 @@
             this.label1.Location = new System.Drawing.Point(75, 10);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 30);
+            this.label1.Size = new System.Drawing.Size(175, 42);
             this.label1.TabIndex = 8;
             this.label1.Text = "COMPRAS";
             // 
@@ -132,10 +130,10 @@
             this.tabPage2.Controls.Add(this.panel3);
             this.tabPage2.Controls.Add(this.panel4);
             this.tabPage2.Controls.Add(this.panel2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 37);
+            this.tabPage2.Location = new System.Drawing.Point(4, 50);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1203, 1312);
+            this.tabPage2.Size = new System.Drawing.Size(1203, 1299);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Nueva compra";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -148,7 +146,7 @@
             this.label18.Location = new System.Drawing.Point(15, 540);
             this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(82, 37);
+            this.label18.Size = new System.Drawing.Size(119, 55);
             this.label18.TabIndex = 27;
             this.label18.Text = "Total";
             // 
@@ -188,7 +186,7 @@
             this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox7.Location = new System.Drawing.Point(726, 90);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(195, 34);
+            this.textBox7.Size = new System.Drawing.Size(195, 47);
             this.textBox7.TabIndex = 29;
             // 
             // label12
@@ -199,7 +197,7 @@
             this.label12.Location = new System.Drawing.Point(719, 50);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(160, 37);
+            this.label12.Size = new System.Drawing.Size(238, 55);
             this.label12.TabIndex = 28;
             this.label12.Text = "Prec. Venta";
             // 
@@ -211,7 +209,7 @@
             this.label20.Location = new System.Drawing.Point(2, 0);
             this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(299, 37);
+            this.label20.Size = new System.Drawing.Size(456, 55);
             this.label20.TabIndex = 27;
             this.label20.Text = "Detalles del producto";
             // 
@@ -220,7 +218,7 @@
             this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox6.Location = new System.Drawing.Point(533, 90);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(171, 34);
+            this.textBox6.Size = new System.Drawing.Size(171, 47);
             this.textBox6.TabIndex = 26;
             // 
             // textBox5
@@ -228,7 +226,7 @@
             this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox5.Location = new System.Drawing.Point(377, 90);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(139, 34);
+            this.textBox5.Size = new System.Drawing.Size(139, 47);
             this.textBox5.TabIndex = 25;
             // 
             // textBox4
@@ -248,7 +246,7 @@
             this.label17.Location = new System.Drawing.Point(933, 50);
             this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(121, 37);
+            this.label17.Size = new System.Drawing.Size(178, 55);
             this.label17.TabIndex = 23;
             this.label17.Text = "Detalles";
             // 
@@ -260,7 +258,7 @@
             this.label16.Location = new System.Drawing.Point(526, 50);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(189, 37);
+            this.label16.Size = new System.Drawing.Size(281, 55);
             this.label16.TabIndex = 22;
             this.label16.Text = "Prec. Compra";
             // 
@@ -290,7 +288,7 @@
             this.label15.Location = new System.Drawing.Point(370, 50);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(133, 37);
+            this.label15.Size = new System.Drawing.Size(197, 55);
             this.label15.TabIndex = 21;
             this.label15.Text = "Cantidad";
             // 
@@ -299,7 +297,7 @@
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox3.Location = new System.Drawing.Point(111, 90);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(251, 34);
+            this.textBox3.Size = new System.Drawing.Size(251, 47);
             this.textBox3.TabIndex = 19;
             // 
             // textBox2
@@ -307,7 +305,7 @@
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox2.Location = new System.Drawing.Point(19, 90);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(80, 34);
+            this.textBox2.Size = new System.Drawing.Size(80, 47);
             this.textBox2.TabIndex = 18;
             // 
             // label14
@@ -318,7 +316,7 @@
             this.label14.Location = new System.Drawing.Point(104, 50);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(123, 37);
+            this.label14.Size = new System.Drawing.Size(182, 55);
             this.label14.TabIndex = 17;
             this.label14.Text = "Nombre";
             // 
@@ -330,7 +328,7 @@
             this.label13.Location = new System.Drawing.Point(12, 50);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(46, 37);
+            this.label13.Size = new System.Drawing.Size(67, 55);
             this.label13.TabIndex = 16;
             this.label13.Text = "ID";
             // 
@@ -355,7 +353,7 @@
             this.label7.Location = new System.Drawing.Point(2, 0);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(299, 37);
+            this.label7.Size = new System.Drawing.Size(453, 55);
             this.label7.TabIndex = 18;
             this.label7.Text = "Datos del Comprador";
             // 
@@ -367,7 +365,7 @@
             this.label11.Location = new System.Drawing.Point(129, 88);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(101, 37);
+            this.label11.Size = new System.Drawing.Size(148, 55);
             this.label11.TabIndex = 17;
             this.label11.Text = "correo";
             // 
@@ -379,7 +377,7 @@
             this.label10.Location = new System.Drawing.Point(129, 48);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(123, 37);
+            this.label10.Size = new System.Drawing.Size(182, 55);
             this.label10.TabIndex = 16;
             this.label10.Text = "Nombre";
             // 
@@ -388,7 +386,7 @@
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(9, 88);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(105, 36);
+            this.comboBox2.Size = new System.Drawing.Size(105, 49);
             this.comboBox2.TabIndex = 15;
             // 
             // label8
@@ -399,7 +397,7 @@
             this.label8.Location = new System.Drawing.Point(16, 48);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(46, 37);
+            this.label8.Size = new System.Drawing.Size(67, 55);
             this.label8.TabIndex = 15;
             this.label8.Text = "ID";
             // 
@@ -425,7 +423,7 @@
             this.label9.Location = new System.Drawing.Point(133, 96);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(107, 37);
+            this.label9.Size = new System.Drawing.Size(159, 55);
             this.label9.TabIndex = 15;
             this.label9.Text = "Sector:";
             // 
@@ -437,7 +435,7 @@
             this.label6.Location = new System.Drawing.Point(133, 48);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(133, 37);
+            this.label6.Size = new System.Drawing.Size(198, 55);
             this.label6.TabIndex = 14;
             this.label6.Text = "Empresa:";
             // 
@@ -449,7 +447,7 @@
             this.label5.Location = new System.Drawing.Point(12, 48);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(46, 37);
+            this.label5.Size = new System.Drawing.Size(67, 55);
             this.label5.TabIndex = 13;
             this.label5.Text = "ID";
             // 
@@ -458,7 +456,7 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(9, 88);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(100, 36);
+            this.comboBox1.Size = new System.Drawing.Size(100, 49);
             this.comboBox1.TabIndex = 12;
             // 
             // label4
@@ -469,7 +467,7 @@
             this.label4.Location = new System.Drawing.Point(2, -1);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(288, 37);
+            this.label4.Size = new System.Drawing.Size(436, 55);
             this.label4.TabIndex = 11;
             this.label4.Text = "Datos del Proveedor";
             // 
@@ -486,10 +484,10 @@
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.textBox1);
             this.tabPage1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.tabPage1.Location = new System.Drawing.Point(4, 37);
+            this.tabPage1.Location = new System.Drawing.Point(4, 50);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1203, 1312);
+            this.tabPage1.Size = new System.Drawing.Size(1203, 1299);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Historial";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -500,8 +498,9 @@
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(155, 59);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(166, 36);
+            this.comboBox3.Size = new System.Drawing.Size(166, 49);
             this.comboBox3.TabIndex = 20;
+            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
             // label19
             // 
@@ -509,7 +508,7 @@
             this.label19.Font = new System.Drawing.Font("Segoe UI Black", 13.14286F, System.Drawing.FontStyle.Bold);
             this.label19.Location = new System.Drawing.Point(42, 65);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(107, 25);
+            this.label19.Size = new System.Drawing.Size(160, 37);
             this.label19.TabIndex = 19;
             this.label19.Text = "Buscar por";
             // 
@@ -566,6 +565,7 @@
             this.btnAcceder.TabIndex = 16;
             this.btnAcceder.Text = "Buscar";
             this.btnAcceder.UseVisualStyleBackColor = false;
+            this.btnAcceder.Click += new System.EventHandler(this.btnAcceder_Click);
             // 
             // lblTotal
             // 
@@ -575,7 +575,7 @@
             this.lblTotal.Location = new System.Drawing.Point(202, 226);
             this.lblTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(79, 37);
+            this.lblTotal.Size = new System.Drawing.Size(120, 55);
             this.lblTotal.TabIndex = 15;
             this.lblTotal.Text = "total";
             // 
@@ -583,23 +583,7 @@
             // 
             this.dgvListado.AllowUserToAddRows = false;
             this.dgvListado.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 25F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvListado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvListado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Semibold", 25F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvListado.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvListado.Location = new System.Drawing.Point(47, 272);
             this.dgvListado.Name = "dgvListado";
             this.dgvListado.ReadOnly = true;
@@ -616,7 +600,7 @@
             this.label3.Location = new System.Drawing.Point(529, 226);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(92, 37);
+            this.label3.Size = new System.Drawing.Size(137, 55);
             this.label3.TabIndex = 14;
             this.label3.Text = "Fecha";
             // 
@@ -628,7 +612,7 @@
             this.label2.Location = new System.Drawing.Point(40, 226);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(142, 37);
+            this.label2.Size = new System.Drawing.Size(217, 55);
             this.label2.TabIndex = 10;
             this.label2.Text = "Recientes";
             // 
@@ -638,7 +622,7 @@
             this.textBox1.Font = new System.Drawing.Font("Segoe UI Black", 20F, System.Drawing.FontStyle.Bold);
             this.textBox1.Location = new System.Drawing.Point(47, 104);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(465, 44);
+            this.textBox1.Size = new System.Drawing.Size(465, 62);
             this.textBox1.TabIndex = 8;
             // 
             // tabControl1

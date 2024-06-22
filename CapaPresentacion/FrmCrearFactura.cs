@@ -138,5 +138,10 @@ namespace CapaPresentacion
 
 
         }
+
+        private void btnVender_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

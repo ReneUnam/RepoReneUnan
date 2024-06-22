@@ -174,5 +174,10 @@ namespace CapaPresentacion
                 dateTimePickerVencimiento.Text = fechaVencimiento.ToString("yyyy-MM-dd");
             }
         }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

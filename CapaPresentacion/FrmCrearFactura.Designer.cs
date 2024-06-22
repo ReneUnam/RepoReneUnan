@@ -369,10 +369,11 @@
             this.btnVender.TabIndex = 40;
             this.btnVender.Text = "Vender";
             this.btnVender.UseVisualStyleBackColor = true;
+            this.btnVender.Click += new System.EventHandler(this.btnVender_Click);
             // 
             // btnAñadir
             // 
-            this.btnAñadir.Location = new System.Drawing.Point(490, 256);
+            this.btnAñadir.Location = new System.Drawing.Point(1076, 243);
             this.btnAñadir.Name = "btnAñadir";
             this.btnAñadir.Size = new System.Drawing.Size(167, 50);
             this.btnAñadir.TabIndex = 41;
@@ -382,7 +383,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(490, 340);
+            this.btnEliminar.Location = new System.Drawing.Point(1017, 636);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(167, 50);
             this.btnEliminar.TabIndex = 42;
