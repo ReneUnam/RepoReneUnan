@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using CapaLogicaNegocio;
 using CapaLogicaNegocio.Entidades;
 
+
 namespace CapaPresentacion
 {
     public partial class FrmUsuarios : Form
@@ -19,10 +20,16 @@ namespace CapaPresentacion
             InitializeComponent();
         }
 
+        private void BuscarUsuario()
+        {
+            this.dgvUsuarios.DataSource = NUsuario.BuscarUsuario(this.TxtBuscar.Text);
+        }
+
         private void MostrarUsuarios()
         {
             NUsuario MCP = new NUsuario();
             dgvUsuarios.DataSource = MCP.MostrarUsuarios();
+           
         }
 
         private void FrmUsuarios_Load(object sender, EventArgs e)
@@ -38,6 +45,11 @@ namespace CapaPresentacion
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            this.BuscarUsuario();
         }
     }
 }

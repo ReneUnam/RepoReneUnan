@@ -39,6 +39,13 @@ namespace CapaLogicaNegocio.Entidades
             //por aquí todo ok.
             return objUsuario.InsertarUsuario(objUsuario);
         }
+
+        public static DataTable BuscarUsuario(string TBuscar)
+        {
+            DUsuario objUsuario = new DUsuario();
+            objUsuario.TBuscar = TBuscar;
+            return objUsuario.BuscarUsuario(objUsuario);
+        }
     } 
 
 }

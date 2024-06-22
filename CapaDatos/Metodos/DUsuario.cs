@@ -10,7 +10,7 @@ using CapaComun.Cache;
 
 namespace CapaDatos.Metodos
 {
-    public class DUsuario:ClassConnection
+    public class DUsuario : ClassConnection
     {
         // Propiedades
         private int _IdUsuario;
@@ -20,6 +20,7 @@ namespace CapaDatos.Metodos
         private int _Telefeno;
         private string _Correo;
         private int _IdRoles;
+        private string _TBuscar;
 
         //Atributos 
         public int IdUsuario { get => _IdUsuario; set => _IdUsuario = value; }
@@ -29,6 +30,9 @@ namespace CapaDatos.Metodos
         public int Telefeno { get => _Telefeno; set => _Telefeno = value; }
         public string Correo { get => _Correo; set => _Correo = value; }
         public int IdRoles { get => _IdRoles; set => _IdRoles = value; }
+        public string TBuscar { get => _TBuscar; set => _TBuscar = value; }
+
+        
 
         //Constructores
         public DUsuario()
@@ -198,6 +202,42 @@ namespace CapaDatos.Metodos
                     
 
                 }
+            }
+        }
+
+        public DataTable BuscarUsuario(DUsuario usuario)
+        {
+            using (var Connection = GetConnection())
+            {
+                Connection.Open();
+                DataTable dtResultado = new DataTable("Usuario");
+
+                using (var Command = new SqlCommand())
+                {
+                    try
+                    {
+                        Command.Connection = Connection; 
+                        Command.CommandType = CommandType.StoredProcedure;
+                        Command.CommandText = "SpBuscarUsuarios";
+
+                        SqlParameter ParBuscar = new SqlParameter();
+                        ParBuscar.ParameterName = "@filtro";
+                        ParBuscar.SqlDbType = SqlDbType.NVarChar;
+                        ParBuscar.Size = 100;
+                        ParBuscar.Value = usuario.TBuscar;
+                        Command.Parameters.Add(ParBuscar);
+
+                        SqlDataAdapter sqldat = new SqlDataAdapter(Command);
+                        sqldat.Fill(dtResultado);
+                    }
+                    catch (Exception)
+                    {
+                        dtResultado = null;
+                    }
+                    return dtResultado;
+
+                }
+
             }
         }
     } 
