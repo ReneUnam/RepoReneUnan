@@ -36,7 +36,8 @@
             this.BtnAgregar = new System.Windows.Forms.Button();
             this.TxtBuscar = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.BtnEliminar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
@@ -88,9 +89,9 @@
             this.BtnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(91)))), ((int)(((byte)(178)))));
             this.BtnAgregar.Font = new System.Drawing.Font("Segoe UI Black", 10F, System.Drawing.FontStyle.Bold);
             this.BtnAgregar.ForeColor = System.Drawing.Color.White;
-            this.BtnAgregar.Location = new System.Drawing.Point(1027, 220);
+            this.BtnAgregar.Location = new System.Drawing.Point(1058, 207);
             this.BtnAgregar.Name = "BtnAgregar";
-            this.BtnAgregar.Size = new System.Drawing.Size(172, 40);
+            this.BtnAgregar.Size = new System.Drawing.Size(124, 40);
             this.BtnAgregar.TabIndex = 3;
             this.BtnAgregar.Text = "Agregar";
             this.BtnAgregar.UseVisualStyleBackColor = false;
@@ -99,10 +100,10 @@
             // TxtBuscar
             // 
             this.TxtBuscar.Font = new System.Drawing.Font("Segoe UI Black", 10.14286F, System.Drawing.FontStyle.Bold);
-            this.TxtBuscar.Location = new System.Drawing.Point(140, 220);
+            this.TxtBuscar.Location = new System.Drawing.Point(151, 207);
             this.TxtBuscar.Multiline = true;
             this.TxtBuscar.Name = "TxtBuscar";
-            this.TxtBuscar.Size = new System.Drawing.Size(610, 40);
+            this.TxtBuscar.Size = new System.Drawing.Size(550, 40);
             this.TxtBuscar.TabIndex = 6;
             this.TxtBuscar.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -111,30 +112,44 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(15, 220);
+            this.label2.Location = new System.Drawing.Point(19, 207);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(126, 36);
             this.label2.TabIndex = 2;
             this.label2.Text = "Usuarios";
             // 
-            // btnGuardar
+            // btnBuscar
             // 
-            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(91)))), ((int)(((byte)(178)))));
-            this.btnGuardar.Font = new System.Drawing.Font("Segoe UI Black", 10F, System.Drawing.FontStyle.Bold);
-            this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(837, 220);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(172, 40);
-            this.btnGuardar.TabIndex = 7;
-            this.btnGuardar.Text = "Agregar";
-            this.btnGuardar.UseVisualStyleBackColor = false;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(91)))), ((int)(((byte)(178)))));
+            this.btnBuscar.Font = new System.Drawing.Font("Segoe UI Black", 10F, System.Drawing.FontStyle.Bold);
+            this.btnBuscar.ForeColor = System.Drawing.Color.White;
+            this.btnBuscar.Location = new System.Drawing.Point(731, 207);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(124, 40);
+            this.btnBuscar.TabIndex = 7;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // BtnEliminar
+            // 
+            this.BtnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(91)))), ((int)(((byte)(178)))));
+            this.BtnEliminar.Font = new System.Drawing.Font("Segoe UI Black", 10F, System.Drawing.FontStyle.Bold);
+            this.BtnEliminar.ForeColor = System.Drawing.Color.White;
+            this.BtnEliminar.Location = new System.Drawing.Point(898, 207);
+            this.BtnEliminar.Name = "BtnEliminar";
+            this.BtnEliminar.Size = new System.Drawing.Size(124, 40);
+            this.BtnEliminar.TabIndex = 8;
+            this.BtnEliminar.Text = "Eliminar";
+            this.BtnEliminar.UseVisualStyleBackColor = false;
+            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // FrmUsuarios
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1235, 734);
-            this.Controls.Add(this.btnGuardar);
+            this.Controls.Add(this.BtnEliminar);
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.TxtBuscar);
             this.Controls.Add(this.BtnAgregar);
@@ -163,6 +178,7 @@
         private System.Windows.Forms.Button BtnAgregar;
         private System.Windows.Forms.TextBox TxtBuscar;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Button BtnEliminar;
     }
 }

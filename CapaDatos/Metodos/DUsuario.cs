@@ -7,6 +7,7 @@ using System.Data.SqlClient;
 using CapaDatos.SQLConnection;
 using System.Data;
 using CapaComun.Cache;
+using System.Data.SqlTypes;
 
 namespace CapaDatos.Metodos
 {
@@ -237,6 +238,46 @@ namespace CapaDatos.Metodos
                     return dtResultado;
 
                 }
+
+            }
+        }
+
+        public string EliminarUsuario (DUsuario usuario)
+        {
+            string rpta = "";
+            SqlConnection sqlCon = new SqlConnection();
+            using (var Connection = GetConnection())
+            {
+                Connection.Open();
+                using (var Command = new SqlCommand())
+                {
+                    try
+                    {
+                        Command.Connection = Connection; 
+                        Command.CommandType = CommandType.StoredProcedure;
+                        Command.CommandText = "EliminarUsuario";
+
+                        SqlParameter ParIdUsuario = new SqlParameter();
+                        ParIdUsuario.ParameterName = "@id_Usuario";
+                        ParIdUsuario.SqlDbType = SqlDbType.Int;
+                        ParIdUsuario.Value = usuario.IdUsuario;
+                        Command.Parameters.Add(ParIdUsuario);
+
+                        rpta = Command.ExecuteNonQuery() == 1 ? "Ok" : "No se Ingreso el Reistro";
+                    }
+                    catch (Exception ex)
+                    {
+
+                        rpta = ex.Message;
+                    }
+
+                    finally
+                    {
+                        if (sqlCon.State == ConnectionState.Open) sqlCon.Close();
+                    }
+                    return rpta;
+                }
+
 
             }
         }

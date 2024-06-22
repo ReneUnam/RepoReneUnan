@@ -46,6 +46,15 @@ namespace CapaLogicaNegocio.Entidades
             objUsuario.TBuscar = TBuscar;
             return objUsuario.BuscarUsuario(objUsuario);
         }
+
+        public static string EliminarUsuario(int idUsuario)
+        {
+            DUsuario dUsuario = new DUsuario();
+            dUsuario.IdUsuario = idUsuario;
+
+            return dUsuario.EliminarUsuario(dUsuario);
+            
+        }
     } 
 
 }
