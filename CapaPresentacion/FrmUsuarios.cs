@@ -25,6 +25,7 @@ namespace CapaPresentacion
             this.dgvUsuarios.DataSource = NUsuario.BuscarUsuario(this.TxtBuscar.Text);
         }
 
+
         private void MostrarUsuarios()
         {
             NUsuario MCP = new NUsuario();
@@ -66,7 +67,8 @@ namespace CapaPresentacion
 
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
-            try
+          
+             try
             {
                 DialogResult opcion;
                 opcion = MessageBox.Show("Está seguro de que desea proceder con la eliminación permanente de estos registros", "Sistema de Usuarios ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question); 
@@ -93,13 +95,37 @@ namespace CapaPresentacion
                             }
                         }
                     }
+                    MostrarUsuarios();
+
                 }
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
+
+        private void chbEliminar_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chbEliminar.Checked)
+            {
+                this.dgvUsuarios.Columns[0].Visible = true;
+            }
+            else
+            {
+                this.dgvUsuarios.Columns[0].Visible=false;
+            }
+        }
+
+        private void dgvUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dgvUsuarios.Columns["Eliminar"].Index)
+            {
+                DataGridViewCheckBoxCell chbEliminar = (DataGridViewCheckBoxCell)dgvUsuarios.Rows[e.RowIndex].Cells["Eliminar"];
+                chbEliminar.Value = !Convert.ToBoolean(chbEliminar.Value);
+            }
+        }
+
+      
     }
 }
