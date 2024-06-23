@@ -28,7 +28,7 @@ namespace CapaPresentacion
         private void MostrarUsuarios()
         {
             NUsuario MCP = new NUsuario();
-            dgvUsuarios.DataSource = MCP.MostrarUsuarios();
+                dgvUsuarios.DataSource = MCP.MostrarUsuarios();
            
         }
 
@@ -52,12 +52,24 @@ namespace CapaPresentacion
             this.BuscarUsuario();
         }
 
+        private void MensajeOk(string mensaje)
+        {
+            MessageBox.Show(mensaje, "Sistema de Usuarios", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        
+        private void MensajeError(string mensaje)
+        {
+            MessageBox.Show(mensaje, "Sistema de Usuarios", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
             try
             {
                 DialogResult opcion;
-                opcion = MessageBox.Show("Está seguro de que desea proceder con la eliminación permanente de estos registros", MessageBoxButtons.OKCancel, MessageBoxIcon.Question); 
+                opcion = MessageBox.Show("Está seguro de que desea proceder con la eliminación permanente de estos registros", "Sistema de Usuarios ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question); 
                 if (opcion == DialogResult.OK)
                 {
                     string codigo;

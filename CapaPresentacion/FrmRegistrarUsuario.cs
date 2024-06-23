@@ -115,6 +115,7 @@ namespace CapaPresentacion
             NUsuario.InsertarUsuario(this.textNombre.Text, this.textApellido.Text, this.textContraseña.Text,
                 Convert.ToInt32(this.textTelefono.Text), this.textCorreo.Text, Convert.ToInt32(this.textIdRol.Text)
                 );
+            LimpiarCasillas();
 
             //Para seguir la secuencia del nuevo y desactivar los text al darle guardar
             #region

@@ -55,6 +55,19 @@ namespace CapaLogicaNegocio.Entidades
             return dUsuario.EliminarUsuario(dUsuario);
             
         }
+
+        public static string EditarUsuario(string nombre, string apellido, string contraseña, int telefeno, string correo, int idRoles)
+        {
+            DUsuario objUsuario = new DUsuario();
+            objUsuario.Nombre = nombre;
+            objUsuario.Apellido = apellido;
+            objUsuario.Contraseña = contraseña;
+            objUsuario.Telefeno = telefeno;
+            objUsuario.Correo = correo;
+            objUsuario.IdRoles = idRoles;
+
+            return objUsuario.InsertarUsuario(objUsuario);
+        }
     } 
 
 }

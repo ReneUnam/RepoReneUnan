@@ -38,6 +38,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.BtnEliminar = new System.Windows.Forms.Button();
+            this.chbEliminar = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
@@ -144,10 +145,22 @@
             this.BtnEliminar.UseVisualStyleBackColor = false;
             this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
+            // chbEliminar
+            // 
+            this.chbEliminar.AutoSize = true;
+            this.chbEliminar.Location = new System.Drawing.Point(25, 175);
+            this.chbEliminar.Name = "chbEliminar";
+            this.chbEliminar.Size = new System.Drawing.Size(77, 20);
+            this.chbEliminar.TabIndex = 9;
+            this.chbEliminar.Text = "Eliminar";
+            this.chbEliminar.UseVisualStyleBackColor = true;
+            this.chbEliminar.CheckedChanged += new System.EventHandler(this.chbEliminar_CheckedChanged);
+            // 
             // FrmUsuarios
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1235, 734);
+            this.Controls.Add(this.chbEliminar);
             this.Controls.Add(this.BtnEliminar);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.label2);
@@ -180,5 +193,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button BtnEliminar;
+        private System.Windows.Forms.CheckBox chbEliminar;
     }
 }
