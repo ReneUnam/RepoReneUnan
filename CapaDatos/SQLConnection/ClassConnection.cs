@@ -21,7 +21,7 @@ namespace CapaDatos.SQLConnection
         {
             return new SqlConnection(ConnectionToString);
         }
-        //Rene
+        //  (Rene) 
         //static public SqlConnection Connection = new SqlConnection("Data Source=ReneAlexander\SQLEXPRESS;Initial Catalog=Vand_Y_Monti;Integrated Security=True");
 
         //Gary Guapo
@@ -31,6 +31,6 @@ namespace CapaDatos.SQLConnection
         //Data Source=DESKTOP-69623FA;Initial Catalog=Vand_Y_Monti;Integrated Security=True;Encrypt=True;TrustServerCertificate=True
 
         //omar
-        //Data Source=ALLISON1822\SQLEXPRESS;Initial Catalog=Vand_Y_Monti;Integrated Security=True;Trust Server Certificate=True
+        //Data Source=ALLISON1822\SQLEXPRESS;Initial Catalog=Vand_Y_Monti;Integrated Security=True;TrustServerCertificate=True
     }
 }

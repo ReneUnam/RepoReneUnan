@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCrearFactura));
             this.label2 = new System.Windows.Forms.Label();
             this.dtmFecha = new System.Windows.Forms.DateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lblProducto = new System.Windows.Forms.Label();
@@ -43,14 +45,15 @@
             this.dgvDetalles = new System.Windows.Forms.DataGridView();
             this.lblCodigo1 = new System.Windows.Forms.Label();
             this.cmbProducto1 = new System.Windows.Forms.ComboBox();
+            this.productosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vand_Y_MontiDataSet = new CapaPresentacion.Vand_Y_MontiDataSet();
             this.lblNombre1 = new System.Windows.Forms.Label();
             this.lblPrecio1 = new System.Windows.Forms.Label();
-            this.txtCantidd = new System.Windows.Forms.TextBox();
+            this.txtCantidad = new System.Windows.Forms.TextBox();
             this.lblTotal = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.lblTotalAPagar1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.lblDevolución = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lblDevolución1 = new System.Windows.Forms.Label();
@@ -58,9 +61,13 @@
             this.btnVender = new System.Windows.Forms.Button();
             this.btnAñadir = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
+            this.productosTableAdapter = new CapaPresentacion.Vand_Y_MontiDataSetTableAdapters.productosTableAdapter();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalles)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vand_Y_MontiDataSet)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
@@ -110,6 +117,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1289, 72);
             this.panel1.TabIndex = 20;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(1185, 27);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button3
             // 
@@ -191,13 +208,16 @@
             // 
             // dgvDetalles
             // 
+            this.dgvDetalles.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dgvDetalles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDetalles.Location = new System.Drawing.Point(21, 496);
             this.dgvDetalles.Name = "dgvDetalles";
+            this.dgvDetalles.RowHeadersVisible = false;
             this.dgvDetalles.RowHeadersWidth = 62;
             this.dgvDetalles.RowTemplate.Height = 28;
             this.dgvDetalles.Size = new System.Drawing.Size(683, 179);
             this.dgvDetalles.TabIndex = 27;
+            this.dgvDetalles.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDetalles_CellContentClick);
             // 
             // lblCodigo1
             // 
@@ -211,11 +231,24 @@
             // 
             // cmbProducto1
             // 
+            this.cmbProducto1.DataSource = this.productosBindingSource;
+            this.cmbProducto1.DisplayMember = "nombre";
             this.cmbProducto1.FormattingEnabled = true;
             this.cmbProducto1.Location = new System.Drawing.Point(225, 225);
             this.cmbProducto1.Name = "cmbProducto1";
             this.cmbProducto1.Size = new System.Drawing.Size(212, 28);
             this.cmbProducto1.TabIndex = 29;
+            this.cmbProducto1.SelectedIndexChanged += new System.EventHandler(this.cmbProducto1_SelectedIndexChanged);
+            // 
+            // productosBindingSource
+            // 
+            this.productosBindingSource.DataMember = "productos";
+            this.productosBindingSource.DataSource = this.vand_Y_MontiDataSet;
+            // 
+            // vand_Y_MontiDataSet
+            // 
+            this.vand_Y_MontiDataSet.DataSetName = "Vand_Y_MontiDataSet";
+            this.vand_Y_MontiDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // lblNombre1
             // 
@@ -237,12 +270,12 @@
             this.lblPrecio1.TabIndex = 32;
             this.lblPrecio1.Text = "-";
             // 
-            // txtCantidd
+            // txtCantidad
             // 
-            this.txtCantidd.Location = new System.Drawing.Point(225, 407);
-            this.txtCantidd.Name = "txtCantidd";
-            this.txtCantidd.Size = new System.Drawing.Size(212, 26);
-            this.txtCantidd.TabIndex = 33;
+            this.txtCantidad.Location = new System.Drawing.Point(225, 407);
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(212, 26);
+            this.txtCantidad.TabIndex = 33;
             // 
             // lblTotal
             // 
@@ -285,16 +318,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(257, 69);
             this.panel2.TabIndex = 37;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(1185, 27);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // lblDevolución
             // 
@@ -346,29 +369,46 @@
             this.btnVender.TabIndex = 40;
             this.btnVender.Text = "Vender";
             this.btnVender.UseVisualStyleBackColor = true;
+            this.btnVender.Click += new System.EventHandler(this.btnVender_Click);
             // 
             // btnAñadir
             // 
-            this.btnAñadir.Location = new System.Drawing.Point(490, 273);
+            this.btnAñadir.Location = new System.Drawing.Point(1076, 243);
             this.btnAñadir.Name = "btnAñadir";
             this.btnAñadir.Size = new System.Drawing.Size(167, 50);
             this.btnAñadir.TabIndex = 41;
             this.btnAñadir.Text = "Añadir a lista";
             this.btnAñadir.UseVisualStyleBackColor = true;
+            this.btnAñadir.Click += new System.EventHandler(this.btnAñadir_Click);
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(490, 371);
+            this.btnEliminar.Location = new System.Drawing.Point(1017, 636);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(167, 50);
             this.btnEliminar.TabIndex = 42;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
             // 
+            // productosTableAdapter
+            // 
+            this.productosTableAdapter.ClearBeforeFill = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(463, 166);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(124, 42);
+            this.label3.TabIndex = 43;
+            this.label3.Text = "Cliente";
+            // 
             // FrmCrearFactura
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.ClientSize = new System.Drawing.Size(1275, 737);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnAñadir);
             this.Controls.Add(this.btnVender);
@@ -376,7 +416,7 @@
             this.Controls.Add(this.lblDevolución);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.lblTotal);
-            this.Controls.Add(this.txtCantidd);
+            this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.lblPrecio1);
             this.Controls.Add(this.lblNombre1);
             this.Controls.Add(this.cmbProducto1);
@@ -402,6 +442,8 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalles)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vand_Y_MontiDataSet)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel4.ResumeLayout(false);
@@ -428,7 +470,7 @@
         private System.Windows.Forms.ComboBox cmbProducto1;
         private System.Windows.Forms.Label lblNombre1;
         private System.Windows.Forms.Label lblPrecio1;
-        private System.Windows.Forms.TextBox txtCantidd;
+        private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label lblTotalAPagar1;
@@ -441,5 +483,9 @@
         private System.Windows.Forms.Button btnVender;
         private System.Windows.Forms.Button btnAñadir;
         private System.Windows.Forms.Button btnEliminar;
+        private Vand_Y_MontiDataSet vand_Y_MontiDataSet;
+        private System.Windows.Forms.BindingSource productosBindingSource;
+        private Vand_Y_MontiDataSetTableAdapters.productosTableAdapter productosTableAdapter;
+        private System.Windows.Forms.Label label3;
     }
 }

@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
+using System.Data;
+using CapaDatos.SQLConnection;
 
 namespace CapaDatos.Metodos
 {
-    internal class DProducto
+    public class DProducto: ClassConnection
     {
         //Propiedades
         private int _Id_Productos;
@@ -32,5 +35,37 @@ namespace CapaDatos.Metodos
         public int Stock { get; set; }
 
         public DateTime FechaVencimiento { get; set; }
+
+
+
+        public DataTable MostrarProductos()
+        {
+            using (var Connection = GetConnection())
+            {
+                Connection.Open();
+                DataTable dtResultado = new DataTable("Productos");
+
+                using (var Command = new SqlCommand())
+                {
+                    Command.Connection = Connection;
+                    Command.CommandType = CommandType.StoredProcedure;
+                    Command.CommandText = "spmostrar_Productos";
+
+                    try
+                    {
+                        SqlDataAdapter SqlDat = new SqlDataAdapter(Command);
+                        SqlDat.Fill(dtResultado);
+                    }
+                    catch (Exception ex)
+                    {
+                        // Log the exception or handle it as necessary (modo duolingo)
+                        Console.WriteLine("Error: " + ex.Message);
+                        dtResultado = null;
+                    }
+                }
+
+                return dtResultado;
+            }
+        }
     }
 }
