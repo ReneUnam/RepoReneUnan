@@ -14,7 +14,7 @@ namespace CapaDatos.Metodos
     public class DUsuario : ClassConnection
     {
         // Propiedades
-        private int _IdUsuarios;
+        private int _IdUsuario;
         private string _Nombre;
         private string _Apellido;
         private string _Contraseña;
@@ -24,7 +24,7 @@ namespace CapaDatos.Metodos
         private string _TBuscar;
 
         //Atributos 
-        public int IdUsuarios { get => _IdUsuarios; set => _IdUsuarios = value; }
+        public int IdUsuario { get => _IdUsuario; set => _IdUsuario = value; }
         public string Nombre { get => _Nombre; set => _Nombre = value; }
         public string Apellido { get => _Apellido; set => _Apellido = value; }
         public string Contraseña { get => _Contraseña; set => _Contraseña = value; }
@@ -41,9 +41,9 @@ namespace CapaDatos.Metodos
            
         }
 
-        public DUsuario(int idUsuarios, string nombre, string apellido, string contraseña, int telefeno, string correo, int idRoles)
+        public DUsuario( string nombre, string apellido, string contraseña, int telefeno, string correo, int idRoles)
         {
-            this.IdUsuarios = idUsuarios;
+           // this.IdUsuario = idUsuario;
             this.Nombre = nombre;
             this.Apellido = apellido;
             this.Contraseña = contraseña;
@@ -247,21 +247,21 @@ namespace CapaDatos.Metodos
             string rpta = "";
             SqlConnection sqlCon = new SqlConnection();
             using (var Connection = GetConnection())
-            {  
+            {
                 Connection.Open();
                 using (var Command = new SqlCommand())
                 {
                     try
                     {
                         Command.Connection = Connection;
-                        //Command.Connection = sqlCon;
+                        Command.Connection = sqlCon;
                         Command.CommandType = CommandType.StoredProcedure;
-                        Command.CommandText = "SpEliminarUsuario";
+                        Command.CommandText = "EliminarUsuario";
 
                         SqlParameter ParIdUsuario = new SqlParameter();
-                        ParIdUsuario.ParameterName = "@id_Usuarios";
+                        ParIdUsuario.ParameterName = "@id_Usuario";
                         ParIdUsuario.SqlDbType = SqlDbType.Int;
-                        ParIdUsuario.Value = usuario.IdUsuarios;
+                        ParIdUsuario.Value = usuario.IdUsuario;
                         Command.Parameters.Add(ParIdUsuario);
 
                         rpta = Command.ExecuteNonQuery() == 1 ? "Ok" : "No se Ingreso el Reistro";

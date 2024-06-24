@@ -47,10 +47,10 @@ namespace CapaLogicaNegocio.Entidades
             return objUsuario.BuscarUsuario(objUsuario);
         }
 
-        public static string EliminarUsuario(int idUsuarios)
+        public static string EliminarUsuario(int idUsuario)
         {
             DUsuario dUsuario = new DUsuario();
-            dUsuario.IdUsuarios = idUsuarios;
+            dUsuario.IdUsuario = idUsuario;
 
             return dUsuario.EliminarUsuario(dUsuario);
             
@@ -66,7 +66,7 @@ namespace CapaLogicaNegocio.Entidades
             objUsuario.Correo = correo;
             objUsuario.IdRoles = idRoles;
 
-            return objUsuario.EditarUsuario(objUsuario);
+            return objUsuario.InsertarUsuario(objUsuario);
         }
         public DataTable MostrarAdmins() => dUsuario.MostrarAdmins();
     } 
