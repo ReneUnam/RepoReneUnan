@@ -12,29 +12,33 @@ namespace CapaLogicaNegocio.Entidades
     public class NIngreso
     {
         //Metodo para insertar datos en la BD
-        public static string InsertarIngreso(int idIngreso, DateTime fecha, double iva,
-        double total, int idproveedor, int idUsuario, DataTable dtdetalles) //Aqui se reciben 
+        public static string InsertarIngreso(int idUsuario, DateTime fecha, int idProducto, double iva,
+        double total, int idproveedor, DataTable dtdetalles) //Aqui se reciben 
         {
+            float fIva = (float)iva; //convertimos de double a float
             DIngreso objIngreso = new DIngreso();
-            objIngreso.IdIngreso = idIngreso;
+            objIngreso.IdUsuario = idUsuario;
             objIngreso.Fecha = fecha;
-            objIngreso.Iva = iva;
+            objIngreso.Iva = fIva;
             objIngreso.Total = total;
             objIngreso.IdProveedor = idproveedor;
-            objIngreso.IdUsuario = idUsuario;
+  
 
             List<DDetalleIngreso> detalles = new List<DDetalleIngreso>();
 
             foreach (DataRow row in dtdetalles.Rows)
             {
+                
                 DDetalleIngreso detalle = new DDetalleIngreso();
                 detalle.Id_Productos = Convert.ToInt32(row["Id_Productos"].ToString());
+                //producto
                 detalle.Cantidad = Convert.ToInt32(row["Cantidad"].ToString());
-                detalle.PrecioUnitario = Convert.ToInt32(row["PrecioUnitario"].ToString());
-                detalle.PrecioVenta = Convert.ToInt32(row["PrecioVenta"].ToString());
+                detalle.PrecioUnitario = Convert.ToInt32(row["Prec.Compra"].ToString());
+                detalle.PrecioVenta = Convert.ToInt32(row["Prec.Venta"].ToString());
+                //descripcion
                 detalle.Stock = Convert.ToInt32(row["Stock"].ToString());
                 detalle.SubTotal = Convert.ToInt32(row["SubTotal"].ToString());
-
+                //tipo
                 detalles.Add(detalle);
             }
 

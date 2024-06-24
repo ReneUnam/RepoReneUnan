@@ -27,7 +27,7 @@ namespace CapaDatos.Metodos
         public double Total { get => _total; set=> _total = value; }
         public int IdProveedor { get=> _id_Proveedor; set=> _id_Proveedor = value; }
         public int IdUsuario { get=> -_id_Usuario; set=> _id_Usuario = value; }
-        
+       
         public string InsertarIngreso(DIngreso Ingreso, List<DDetalleIngreso> Detalle)
         {
             string rpta = "";
@@ -58,13 +58,13 @@ namespace CapaDatos.Metodos
 
                     SqlParameter ParIva = new SqlParameter();
                     ParIva.ParameterName = "@iva";
-                    ParIva.SqlDbType = SqlDbType.Float;
+                    ParIva.SqlDbType = SqlDbType.Money;
                     ParIva.Value = Ingreso.Iva;
                     command.Parameters.Add(ParIva);
 
                     SqlParameter ParTotal = new SqlParameter();
                     ParFecha.ParameterName = "@total";
-                    ParFecha.SqlDbType = SqlDbType.Money;
+                    ParFecha.SqlDbType = SqlDbType.Float;
                     //ParFecha.Size = 50;
                     ParFecha.Value = Ingreso.Fecha;
                     command.Parameters.Add(ParFecha);
@@ -103,6 +103,7 @@ namespace CapaDatos.Metodos
                     if (rpta.Equals("Ok"))
                     {
                         sqlTra.Commit();
+                        
                     }
                     else
                     {

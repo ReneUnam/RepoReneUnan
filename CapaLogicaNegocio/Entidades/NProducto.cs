@@ -18,5 +18,28 @@ namespace CapaLogicaNegocio.Entidades
             return new DProducto().MostrarProductos();
         }
 
+        public static string Insertar(string nombre, string descripcion, int categoria, int precioVenta, DateTime fecha, int stock)
+        {
+            DProducto objProducto = new DProducto();
+            
+            objProducto.Nombre = nombre;
+            objProducto.Descripcion = descripcion;
+            objProducto.IdCategoria = categoria;
+            objProducto.PrecioVenta = precioVenta;
+            objProducto.FechaVencimiento = fecha;
+            objProducto.Stock = stock;
+
+            return objProducto.Insertar(objProducto);
+        }
+
+        public static string SumarStock(int idproducto, int cantidad)
+        {
+            string rpta = "";
+
+            new DProducto().SumarStock(idproducto, cantidad);
+
+            return rpta;
+        }
+
     }
 }

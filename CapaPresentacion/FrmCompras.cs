@@ -14,7 +14,7 @@ namespace CapaPresentacion
 {
     public partial class FrmCompras : Form
     {
-        public int IdUsuario;
+       // public int IdUsuario;
         private DataTable dtDetalle;
 
         private decimal TotalPagado = 0;
@@ -55,7 +55,8 @@ namespace CapaPresentacion
             this.txtPrecVenta.ReadOnly = !valor;
             this.txtDetalles.ReadOnly = !valor;
             this.txtIva.ReadOnly = !valor;
-
+            dtFechaVencimiento.Enabled = valor;
+            cmbCategoria.Enabled = valor;
     
         }
 
@@ -97,12 +98,25 @@ namespace CapaPresentacion
 
             cmbUsuario.DataSource = nUsuario.MostrarAdmins();
             cmbUsuario.DisplayMember = "nombre";
-            cmbUsuario.ValueMember = "id_usuario";
+            cmbUsuario.ValueMember = "id_usuarios";
             cmbUsuario.SelectedItem = null;
             cmbUsuario.DropDownStyle = ComboBoxStyle.DropDownList;
 
 
         }
+
+        private void ListarCategorias()
+        {
+            NCategoria ncategoria = new NCategoria();
+
+            cmbCategoria.DataSource = ncategoria.ListarCategorias();
+            cmbCategoria.DisplayMember = "NombreDeCategoria";
+            cmbCategoria.ValueMember = "IdCategoria";
+            cmbCategoria.SelectedItem = null;
+            cmbCategoria.DropDownStyle = ComboBoxStyle.DropDownList;
+        }
+
+
 
         public FrmCompras()
         {
@@ -120,12 +134,29 @@ namespace CapaPresentacion
             MostrarIngresos();//Muestra los ingresos en el historial
             ListarProveedores();
             ListarUsuarios();
+            ListarCategorias();
+            fechaVecimientoVacia();
+            // dtFechaVencimiento.Value = dtFechaVencimiento.MinDate;
+            
+           
 
             Habilitar(false);
             Botones();
 
             CrearTabla();
         }
+
+        private void dtFechaVencimiento_ValueChanged(object sender, EventArgs e)
+        {
+            dtFechaVencimiento.CustomFormat = null;
+        }
+        private void fechaVecimientoVacia()
+        {
+            dtFechaVencimiento.CustomFormat = " ";
+            dtFechaVencimiento.Format = DateTimePickerFormat.Custom;
+
+        }
+
         private void Limpiar()
         {
             this.cmbProveedores.SelectedIndex = -1;
@@ -135,6 +166,8 @@ namespace CapaPresentacion
             this.lblId.Text = "ID: ";
             this.lblCorreo.Text = "Correo: ";
             this.txtIva.Text = string.Empty;
+            fechaVecimientoVacia();
+            
 
             this.lblTotalCompras.Text = "0";
 
@@ -150,8 +183,10 @@ namespace CapaPresentacion
             this.dtDetalle.Columns.Add("Prec.Venta", System.Type.GetType("System.Int32"));
             //this.dtDetalle.Columns.Add("FechaVencimiento", System.Type.GetType("System.DateTime"));
             this.dtDetalle.Columns.Add("Cantidad", System.Type.GetType("System.Int32"));
+            this.dtDetalle.Columns.Add("Descripcion", System.Type.GetType("System.String"));
+            this.dtDetalle.Columns.Add("Categoria", System.Type.GetType("System.String"));
             this.dtDetalle.Columns.Add("subtotal", System.Type.GetType("System.Decimal"));
-            this.dtDetalle.Columns.Add("Stock ", System.Type.GetType("System.Int32"));
+            this.dtDetalle.Columns.Add("Stock", System.Type.GetType("System.Int32"));
             this.dtDetalle.Columns.Add("Tipo", System.Type.GetType("System.String"));
             //Relacionar nuestro DataGridView con nuestro DataTable
 
@@ -166,6 +201,9 @@ namespace CapaPresentacion
             this.txtCantidadProducto.Text = string.Empty;
             this.txtPrecCompra.Text = string.Empty;
             this.txtPrecVenta.Text = string.Empty;
+            this.txtDetalles.Text = string.Empty;
+            cmbCategoria.SelectedIndex = -1;
+            dtFechaVencimiento.Format = DateTimePickerFormat.Custom;
         }
         private void OcultarColumnas()
         {
@@ -265,6 +303,7 @@ namespace CapaPresentacion
                 lblCorreo.Text = "Correo: " + sectorTxt;
             }
         }
+     
 
         private void FrmCompras_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -374,7 +413,7 @@ namespace CapaPresentacion
                 string rpta = "";
                 if (this.cmbProveedores.SelectedIndex == -1 || cmbUsuario.SelectedIndex == -1 || this.txtIdProducto.Text == string.Empty
                     || this.txtCantidadProducto.Text == string.Empty || this.txtPrecCompra.Text == string.Empty || this.txtPrecVenta.Text == string.Empty
-                    || this.txtIva.Text == string.Empty)
+                    || this.txtIva.Text == string.Empty || cmbCategoria.SelectedIndex == -1 || dtFechaVencimiento.CustomFormat == " ")
                 {
                     MensajeError("Falta ingresar algunos datos, serán remarcados");
                     //resalta donde es requerido llenar el campo
@@ -386,6 +425,8 @@ namespace CapaPresentacion
                     erroricono.SetError(txtPrecCompra, "Ingrese un Valor");
                     erroricono.SetError(txtPrecVenta, "Ingrese un Valor");
                     erroricono.SetError(txtIva, "Ingrese un Valor");
+                    erroricono.SetError(cmbCategoria, "Ingrese un Valor");
+                    erroricono.SetError(dtFechaVencimiento, "Ingrese un Valor");
                     timer1.Start();
                 }
                 else
@@ -394,17 +435,23 @@ namespace CapaPresentacion
                     if (this.IsNuevo)
                     {
                         rpta = NIngreso.InsertarIngreso
-                         (IdUsuario,
-                         FechaIngreso, Convert.ToDouble(txtIva.Text),
-                         Convert.ToDouble(lblTotalCompras.Text), Convert.ToInt32(cmbProveedores.SelectedValue),
-                         Convert.ToInt32(cmbUsuario.SelectedValue),dtDetalle);
+                         (Convert.ToInt32(cmbUsuario.SelectedValue),
+                         FechaIngreso, Convert.ToInt32(txtIdProducto), Convert.ToDouble(txtIva.Text),
+                         Convert.ToDouble(lblTotalCompras.Text), Convert.ToInt32(cmbProveedores.SelectedValue)
+                         ,dtDetalle);
                     }
                     else
                       if (rpta.Equals("Ok"))
                     {
                         if (this.IsNuevo)
                         {
+
                             this.MensajeOk("Se Inserto de forma correcta el registro");
+
+                            NProducto.Insertar(txtNombreProducto.Text, txtDetalles.Text, Convert.ToInt32(cmbCategoria.SelectedValue),
+                            Convert.ToInt32(txtPrecVenta), dtFechaVencimiento.Value, Convert.ToInt32(txtCantidadProducto)
+
+                            );
                         }
                     }
                     else
@@ -426,7 +473,7 @@ namespace CapaPresentacion
 
             }
         }
-
+       
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             if (btnCancelar.Enabled == true)
@@ -437,7 +484,7 @@ namespace CapaPresentacion
 
                     if (this.cmbProveedores.SelectedIndex == -1 || cmbUsuario.SelectedIndex == -1 || this.txtIdProducto.Text == string.Empty
                        || this.txtCantidadProducto.Text == string.Empty || this.txtPrecCompra.Text == string.Empty || this.txtPrecVenta.Text == string.Empty
-                       || this.txtIva.Text == string.Empty)
+                       || this.txtIva.Text == string.Empty || cmbCategoria.SelectedIndex == -1 || dtFechaVencimiento.CustomFormat == " ")
                     {
                     
                         MensajeError("Falta ingresar algunos datos, serán remarcados");
@@ -450,6 +497,8 @@ namespace CapaPresentacion
                         erroricono.SetError(txtPrecCompra, "Ingrese un Valor");
                         erroricono.SetError(txtPrecVenta, "Ingrese un Valor");
                         erroricono.SetError(txtIva, "Ingrese un Valor");
+                        erroricono.SetError(cmbCategoria, "Ingrese un Valor");
+                        erroricono.SetError(dtFechaVencimiento, "Ingrese un Valor");
 
                         timer1.Start();
                     }
@@ -479,8 +528,10 @@ namespace CapaPresentacion
                             row["Prec.Venta"] = Convert.ToInt32(this.txtPrecVenta.Text);
                             //row["FechaVencimiento"] = dtFechaVencimiento.Value;
                             row["Cantidad"] = Convert.ToInt32(this.txtCantidadProducto.Text);
+                            row["Descripcion"] = this.txtDetalles.Text;
+                            row["Categoria"] = cmbCategoria.SelectedIndex;
                             row["subtotal"] = subtotal;
-                            row["Stock"] = "0";
+                            row["Stock"] = 0;
                             row["Tipo"] = "Nuevo";
                             this.dtDetalle.Rows.Add(row);
                             this.LimpiarDetalle();
@@ -515,7 +566,17 @@ namespace CapaPresentacion
             AbrirFormularioSecundario();
 
 
-            
+
+            //SumarStock(Convert.ToInt32());
+
+
+
+        }
+
+        public void SumarStock(int id, int cantidad)
+        {
+           NProducto.SumarStock(id, cantidad);
+
         }
         private FrmOscuro formFondoOscuro;
 
@@ -532,5 +593,33 @@ namespace CapaPresentacion
             // Ocultar el formulario de fondo oscuro después de abrir el formulario secundario
             formFondoOscuro.Ocultar(); // Método en FormFondoOscuro para ocultar el fondo oscuro
         }
+
+        private void btnQuitar_Click(object sender, EventArgs e)
+        {
+            if (dgvListadoDetalle.Rows.Count >= 1)
+            {
+
+            try
+            {
+                int indiceFila = this.dgvListadoDetalle.CurrentCell.RowIndex;
+                DataRow row = this.dtDetalle.Rows[indiceFila];
+                //Disminuir el totalPagado
+                this.TotalPagado = this.TotalPagado - Convert.ToDecimal(row["subtotal"].ToString());
+                this.lblTotalCompras.Text = this.TotalPagado.ToString("#0.00#");
+                //removemos la fila
+                this.dtDetalle.Rows.Remove(row);
+
+            }
+            catch (Exception ex)
+            {
+
+                MensajeError("No hay fila para remover");
+            }
+
+            }
+            else MensajeError("Primero agregue un producto");
+
+        }
+
     }
 }

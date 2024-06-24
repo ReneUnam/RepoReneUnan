@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaLogicaNegocio.Entidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,6 +27,15 @@ namespace CapaPresentacion
 
         private void FrmProductoExistente_Load(object sender, EventArgs e)
         {
+            MostrarProductos();
+        }
+
+        public void MostrarProductos()
+        {
+            NProducto producto = new NProducto();
+            dtProductos.DataSource = producto.MostrarProductos();
+            dtProductos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dtProductos.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
 
         }
     }
