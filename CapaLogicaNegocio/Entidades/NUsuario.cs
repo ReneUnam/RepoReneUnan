@@ -68,9 +68,9 @@ namespace CapaLogicaNegocio.Entidades
 
             return objUsuario.EditarUsuario(objUsuario);
         }
+        public DataTable MostrarAdmins() => dUsuario.MostrarAdmins();
     } 
 
-        public DataTable MostrarAdmins() => dUsuario.MostrarAdmins();
-    }
+    
 
 }
