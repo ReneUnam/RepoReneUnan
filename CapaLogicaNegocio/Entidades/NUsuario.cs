@@ -21,6 +21,8 @@ namespace CapaLogicaNegocio.Entidades
         {
             return new DUsuario().MostrarUsuarios();
         }
+
+        public DataTable MostrarAdmins() => dUsuario.MostrarAdmins();
     }
 
 }

@@ -40,7 +40,7 @@ namespace CapaPresentacion
             // Mostrar la imagen con opacidad reducida en el PictureBox
             picLogo.Image = transparentImage;
 
-            userAccess();
+            //userAccess();
 
             lblNombre.Text = UserCache.Nombre + " " + UserCache.Apellido;
             lblEmail.Text = UserCache.Correo;
@@ -52,7 +52,10 @@ namespace CapaPresentacion
 
         private void userAccess()
         {
-            if (UserCache.IdRoles == Roles.Vendedor) btnUsers.Enabled = false;
+            if (UserCache.IdRoles == Roles.Vendedor) 
+            btnUsers.Enabled = false;
+            btnCompras.Enabled = false;
+
         }
 
         private Bitmap ChangeImageOpacity(Image originalImage, float opacity)

@@ -10,7 +10,7 @@ using CapaComun.Cache;
 
 namespace CapaDatos.Metodos
 {
-    public class DUsuario:ClassConnection
+    public class DUsuario : ClassConnection
     {
         // Propiedades
         private int _IdUsuario;
@@ -35,7 +35,7 @@ namespace CapaDatos.Metodos
             using (var connection = GetConnection())
             {
                 connection.Open();
-                using (var command = new SqlCommand()) 
+                using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
                     command.CommandType = CommandType.StoredProcedure;
@@ -46,7 +46,7 @@ namespace CapaDatos.Metodos
 
                     if (reader.HasRows)
                     {
-                        while(reader.Read())
+                        while (reader.Read())
                         {
                             UserCache.IdUsuario = reader.GetInt32(0);
                             UserCache.Nombre = reader.GetString(1);
@@ -90,6 +90,38 @@ namespace CapaDatos.Metodos
 
                 return dtResultado;
             }
+
+
         }
-    } 
+
+        public DataTable MostrarAdmins()
+        {
+            using (var Connection = GetConnection())
+            {
+                Connection.Open();
+                DataTable dtResultado = new DataTable("Admins");
+
+                using (var Command = new SqlCommand())
+                {
+                    Command.Connection = Connection;
+                    Command.CommandType = CommandType.StoredProcedure;
+                    Command.CommandText = "Sp_MostrarAdmins";
+
+                    try
+                    {
+                        SqlDataAdapter SqlDat = new SqlDataAdapter(Command);
+                        SqlDat.Fill(dtResultado);
+                    }
+                    catch (Exception ex)
+                    {
+                        // Log the exception or handle it as necessary (modo duolingo)
+                        Console.WriteLine("Error: " + ex.Message);
+                        dtResultado = null;
+                    }
+                }
+
+                return dtResultado;
+            }
+        }
+    }
 }

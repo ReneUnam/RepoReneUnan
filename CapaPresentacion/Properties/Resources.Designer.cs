@@ -113,6 +113,16 @@ namespace CapaPresentacion.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap agregar_documento {
+            get {
+                object obj = ResourceManager.GetObject("agregar-documento", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap agregar_usuario {
             get {
                 object obj = ResourceManager.GetObject("agregar-usuario", resourceCulture);
@@ -246,6 +256,26 @@ namespace CapaPresentacion.Properties {
         internal static System.Drawing.Bitmap coso_amarillo_arriba_derecha {
             get {
                 object obj = ResourceManager.GetObject("coso amarillo arriba derecha", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap disco {
+            get {
+                object obj = ResourceManager.GetObject("disco", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap eliminar_documento {
+            get {
+                object obj = ResourceManager.GetObject("eliminar-documento", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -141,6 +141,12 @@
     <Compile Include="FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmOscuro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOscuro.Designer.cs">
+      <DependentUpon>FrmOscuro.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,6 +164,12 @@
     </Compile>
     <Compile Include="FrmUsuarios.Designer.cs">
       <DependentUpon>FrmUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmProductoExistente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProductoExistente.Designer.cs">
+      <DependentUpon>FrmProductoExistente.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -180,6 +192,9 @@
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmOscuro.resx">
+      <DependentUpon>FrmOscuro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -188,6 +203,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmUsuarios.resx">
       <DependentUpon>FrmUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmProductoExistente.resx">
+      <DependentUpon>FrmProductoExistente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -369,6 +387,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\imprimir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agregar-documento.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eliminar-documento.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
