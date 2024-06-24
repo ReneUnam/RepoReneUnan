@@ -37,19 +37,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblProducto = new System.Windows.Forms.Label();
-            this.lblCodigo = new System.Windows.Forms.Label();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.lblPrecio = new System.Windows.Forms.Label();
-            this.lblCantidad = new System.Windows.Forms.Label();
             this.dgvDetalles = new System.Windows.Forms.DataGridView();
-            this.lblCodigo1 = new System.Windows.Forms.Label();
-            this.cmbProducto1 = new System.Windows.Forms.ComboBox();
             this.productosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vand_Y_MontiDataSet = new CapaPresentacion.Vand_Y_MontiDataSet();
-            this.lblNombre1 = new System.Windows.Forms.Label();
-            this.lblPrecio1 = new System.Windows.Forms.Label();
-            this.txtCantidad = new System.Windows.Forms.TextBox();
             this.lblTotal = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.lblTotalAPagar1 = new System.Windows.Forms.Label();
@@ -60,9 +50,7 @@
             this.label18 = new System.Windows.Forms.Label();
             this.btnVender = new System.Windows.Forms.Button();
             this.btnAñadir = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
             this.productosTableAdapter = new CapaPresentacion.Vand_Y_MontiDataSetTableAdapters.productosTableAdapter();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalles)).BeginInit();
@@ -155,57 +143,6 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "CREAR FACTURA";
             // 
-            // lblProducto
-            // 
-            this.lblProducto.AutoSize = true;
-            this.lblProducto.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
-            this.lblProducto.Location = new System.Drawing.Point(14, 212);
-            this.lblProducto.Name = "lblProducto";
-            this.lblProducto.Size = new System.Drawing.Size(194, 42);
-            this.lblProducto.TabIndex = 21;
-            this.lblProducto.Text = "PRODUCTO";
-            this.lblProducto.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // lblCodigo
-            // 
-            this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
-            this.lblCodigo.Location = new System.Drawing.Point(11, 254);
-            this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(144, 42);
-            this.lblCodigo.TabIndex = 22;
-            this.lblCodigo.Text = "CODIGO";
-            // 
-            // lblNombre
-            // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
-            this.lblNombre.Location = new System.Drawing.Point(14, 296);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(157, 42);
-            this.lblNombre.TabIndex = 23;
-            this.lblNombre.Text = "NOMBRE";
-            // 
-            // lblPrecio
-            // 
-            this.lblPrecio.AutoSize = true;
-            this.lblPrecio.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
-            this.lblPrecio.Location = new System.Drawing.Point(14, 338);
-            this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(131, 42);
-            this.lblPrecio.TabIndex = 25;
-            this.lblPrecio.Text = "PRECIO";
-            // 
-            // lblCantidad
-            // 
-            this.lblCantidad.AutoSize = true;
-            this.lblCantidad.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
-            this.lblCantidad.Location = new System.Drawing.Point(12, 391);
-            this.lblCantidad.Name = "lblCantidad";
-            this.lblCantidad.Size = new System.Drawing.Size(188, 42);
-            this.lblCantidad.TabIndex = 26;
-            this.lblCantidad.Text = "CANTIDAD";
-            // 
             // dgvDetalles
             // 
             this.dgvDetalles.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
@@ -219,27 +156,6 @@
             this.dgvDetalles.TabIndex = 27;
             this.dgvDetalles.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDetalles_CellContentClick);
             // 
-            // lblCodigo1
-            // 
-            this.lblCodigo1.AutoSize = true;
-            this.lblCodigo1.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
-            this.lblCodigo1.Location = new System.Drawing.Point(218, 253);
-            this.lblCodigo1.Name = "lblCodigo1";
-            this.lblCodigo1.Size = new System.Drawing.Size(31, 42);
-            this.lblCodigo1.TabIndex = 28;
-            this.lblCodigo1.Text = "-";
-            // 
-            // cmbProducto1
-            // 
-            this.cmbProducto1.DataSource = this.productosBindingSource;
-            this.cmbProducto1.DisplayMember = "nombre";
-            this.cmbProducto1.FormattingEnabled = true;
-            this.cmbProducto1.Location = new System.Drawing.Point(225, 225);
-            this.cmbProducto1.Name = "cmbProducto1";
-            this.cmbProducto1.Size = new System.Drawing.Size(212, 28);
-            this.cmbProducto1.TabIndex = 29;
-            this.cmbProducto1.SelectedIndexChanged += new System.EventHandler(this.cmbProducto1_SelectedIndexChanged);
-            // 
             // productosBindingSource
             // 
             this.productosBindingSource.DataMember = "productos";
@@ -249,33 +165,6 @@
             // 
             this.vand_Y_MontiDataSet.DataSetName = "Vand_Y_MontiDataSet";
             this.vand_Y_MontiDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // lblNombre1
-            // 
-            this.lblNombre1.AutoSize = true;
-            this.lblNombre1.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
-            this.lblNombre1.Location = new System.Drawing.Point(218, 295);
-            this.lblNombre1.Name = "lblNombre1";
-            this.lblNombre1.Size = new System.Drawing.Size(31, 42);
-            this.lblNombre1.TabIndex = 30;
-            this.lblNombre1.Text = "-";
-            // 
-            // lblPrecio1
-            // 
-            this.lblPrecio1.AutoSize = true;
-            this.lblPrecio1.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
-            this.lblPrecio1.Location = new System.Drawing.Point(218, 338);
-            this.lblPrecio1.Name = "lblPrecio1";
-            this.lblPrecio1.Size = new System.Drawing.Size(31, 42);
-            this.lblPrecio1.TabIndex = 32;
-            this.lblPrecio1.Text = "-";
-            // 
-            // txtCantidad
-            // 
-            this.txtCantidad.Location = new System.Drawing.Point(225, 407);
-            this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(212, 26);
-            this.txtCantidad.TabIndex = 33;
             // 
             // lblTotal
             // 
@@ -373,7 +262,7 @@
             // 
             // btnAñadir
             // 
-            this.btnAñadir.Location = new System.Drawing.Point(1076, 243);
+            this.btnAñadir.Location = new System.Drawing.Point(460, 327);
             this.btnAñadir.Name = "btnAñadir";
             this.btnAñadir.Size = new System.Drawing.Size(167, 50);
             this.btnAñadir.TabIndex = 41;
@@ -381,52 +270,21 @@
             this.btnAñadir.UseVisualStyleBackColor = true;
             this.btnAñadir.Click += new System.EventHandler(this.btnAñadir_Click);
             // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Location = new System.Drawing.Point(1017, 636);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(167, 50);
-            this.btnEliminar.TabIndex = 42;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            // 
             // productosTableAdapter
             // 
             this.productosTableAdapter.ClearBeforeFill = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(463, 166);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(124, 42);
-            this.label3.TabIndex = 43;
-            this.label3.Text = "Cliente";
             // 
             // FrmCrearFactura
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.ClientSize = new System.Drawing.Size(1275, 737);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnAñadir);
             this.Controls.Add(this.btnVender);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.lblDevolución);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.lblTotal);
-            this.Controls.Add(this.txtCantidad);
-            this.Controls.Add(this.lblPrecio1);
-            this.Controls.Add(this.lblNombre1);
-            this.Controls.Add(this.cmbProducto1);
-            this.Controls.Add(this.lblCodigo1);
             this.Controls.Add(this.dgvDetalles);
-            this.Controls.Add(this.lblCantidad);
-            this.Controls.Add(this.lblPrecio);
-            this.Controls.Add(this.lblNombre);
-            this.Controls.Add(this.lblCodigo);
-            this.Controls.Add(this.lblProducto);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dtmFecha);
             this.Controls.Add(this.panel3);
@@ -460,17 +318,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblProducto;
-        private System.Windows.Forms.Label lblCodigo;
-        private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.Label lblPrecio;
-        private System.Windows.Forms.Label lblCantidad;
         private System.Windows.Forms.DataGridView dgvDetalles;
-        private System.Windows.Forms.Label lblCodigo1;
-        private System.Windows.Forms.ComboBox cmbProducto1;
-        private System.Windows.Forms.Label lblNombre1;
-        private System.Windows.Forms.Label lblPrecio1;
-        private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label lblTotalAPagar1;
@@ -482,10 +330,8 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Button btnVender;
         private System.Windows.Forms.Button btnAñadir;
-        private System.Windows.Forms.Button btnEliminar;
         private Vand_Y_MontiDataSet vand_Y_MontiDataSet;
         private System.Windows.Forms.BindingSource productosBindingSource;
         private Vand_Y_MontiDataSetTableAdapters.productosTableAdapter productosTableAdapter;
-        private System.Windows.Forms.Label label3;
     }
 }
