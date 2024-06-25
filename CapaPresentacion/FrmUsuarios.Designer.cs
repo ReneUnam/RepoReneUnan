@@ -39,7 +39,6 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.BtnEliminar = new System.Windows.Forms.Button();
             this.chbEliminar = new System.Windows.Forms.CheckBox();
-            this.Eliminar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
@@ -79,15 +78,12 @@
             // dgvUsuarios
             // 
             this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Eliminar});
             this.dgvUsuarios.Location = new System.Drawing.Point(25, 266);
             this.dgvUsuarios.Name = "dgvUsuarios";
             this.dgvUsuarios.RowHeadersWidth = 51;
             this.dgvUsuarios.RowTemplate.Height = 24;
             this.dgvUsuarios.Size = new System.Drawing.Size(1174, 409);
             this.dgvUsuarios.TabIndex = 2;
-            this.dgvUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuarios_CellContentClick);
             // 
             // BtnAgregar
             // 
@@ -141,7 +137,7 @@
             this.BtnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(91)))), ((int)(((byte)(178)))));
             this.BtnEliminar.Font = new System.Drawing.Font("Segoe UI Black", 10F, System.Drawing.FontStyle.Bold);
             this.BtnEliminar.ForeColor = System.Drawing.Color.White;
-            this.BtnEliminar.Location = new System.Drawing.Point(897, 207);
+            this.BtnEliminar.Location = new System.Drawing.Point(898, 207);
             this.BtnEliminar.Name = "BtnEliminar";
             this.BtnEliminar.Size = new System.Drawing.Size(124, 40);
             this.BtnEliminar.TabIndex = 8;
@@ -158,14 +154,7 @@
             this.chbEliminar.TabIndex = 9;
             this.chbEliminar.Text = "Eliminar";
             this.chbEliminar.UseVisualStyleBackColor = true;
-            this.chbEliminar.CheckedChanged += new System.EventHandler(this.chbEliminar_CheckedChanged);
-            // 
-            // Eliminar
-            // 
-            this.Eliminar.HeaderText = "Eliminar";
-            this.Eliminar.MinimumWidth = 6;
-            this.Eliminar.Name = "Eliminar";
-            this.Eliminar.Width = 125;
+           // this.chbEliminar.CheckedChanged += new System.EventHandler(this.chbEliminar_CheckedChanged);
             // 
             // FrmUsuarios
             // 
@@ -205,6 +194,5 @@
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button BtnEliminar;
         private System.Windows.Forms.CheckBox chbEliminar;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Eliminar;
     }
 }
