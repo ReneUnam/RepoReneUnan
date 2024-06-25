@@ -133,7 +133,7 @@ namespace CapaPresentacion
             timer1.Interval = 8000; // 8 segundos
             timer1.Tick += timer1_Tick;
 
-            MostrarIngresos();//Muestra los ingresos en el historial
+           // MostrarIngresos();//Muestra los ingresos en el historial
             ListarProveedores();
             ListarUsuarios();
             ListarCategorias();
@@ -207,13 +207,7 @@ namespace CapaPresentacion
             cmbCategoria.SelectedIndex = -1;
             dtFechaVencimiento.Format = DateTimePickerFormat.Custom;
         }
-        private void OcultarColumnas()
-        {
-            //oculta campos en la data grid
-            this.dgvListado.Columns[0].Visible = false;
-            this.dgvListado.Columns[1].Visible = false;
-
-        }
+  
 
         //Metodo para buscar por
 
@@ -230,22 +224,7 @@ namespace CapaPresentacion
         
 
         //Buscar Por fechas //TODOOOOOOOOOOOOO
-        private void BuscarFechas()
-        {
-            
-            lblFecha.Visible = true;
-            lblHasta.Visible = true;
-            dtFechaInicio.Visible = true;
-            dtFechaFin.Visible = true;
 
-
-
-          //TODO  this.dgvListado.DataSource = NIngreso.BuscarFechas(this.dtFecha1.Value.ToString("dd/MM/yyy"),
-             //TODO   this.dtFecha2.Value.ToString("dd/MM/yyy"));
-            this.OcultarColumnas();
-            //Totalizar los registros
-            lblTotal.Text = "Total de Registros: " + Convert.ToString(dgvListado.Rows.Count);
-        }
         //Buscar por id de ingreso //TODOOOOOOOOOOOOOOOO
 
 
@@ -256,14 +235,7 @@ namespace CapaPresentacion
 
 
         //Metodo que muestra los ingresos recientes
-        private void MostrarIngresos()
-        {
-            dgvListado.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            dgvListado.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvListado.DataSource = new NIngreso().MostrarIngresos();
-            //Totalizar los registros
-            lblTotal.Text = "Total de Registros: " + Convert.ToString(dgvListado.Rows.Count);
-        }
+  
 
         //Metodo que cambia los labels segun el nombre seleccionado para los datos de los proveedores
         private void cmbProveedores_SelectedIndexChanged(object sender, EventArgs e)
@@ -315,30 +287,30 @@ namespace CapaPresentacion
 
         private void chkEliminar_CheckedChanged(object sender, EventArgs e)
         {
-            if (chkEliminar.Checked)
+            //if (chkEliminar.Checked)
             {
-                this.dgvListado.Columns[0].Visible = true;
+            //    this.dgvListado.Columns[0].Visible = true;
             }
-            else
+           // else
             {
-                this.dgvListado.Columns[0].Visible = false;
+             //   this.dgvListado.Columns[0].Visible = false;
             }
         }
 
         private void dgvListado_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             // Verificar que la fila es válida (e.RowIndex >= 0)
-            if (e.RowIndex >= 0 && e.ColumnIndex == dgvListado.Columns["Eliminar"].Index)
+            //if (e.RowIndex >= 0 && e.ColumnIndex == dgvListado.Columns["Eliminar"].Index)
             {
                 // Verificar que la celda es de tipo DataGridViewCheckBoxCell antes de convertirla
-                if (dgvListado.Rows[e.RowIndex].Cells["Eliminar"] is DataGridViewCheckBoxCell ChkEliminar)
+             //   if (dgvListado.Rows[e.RowIndex].Cells["Eliminar"] is DataGridViewCheckBoxCell ChkEliminar)
                 {
-                    ChkEliminar.Value = !Convert.ToBoolean(ChkEliminar.Value);
+               //     ChkEliminar.Value = !Convert.ToBoolean(ChkEliminar.Value);
                 }
-                else
+                ;//else
                 {
                     // Opcional: manejar el caso donde la celda no es del tipo esperado
-                    MessageBox.Show("La celda no es un checkbox.");
+                  //  MessageBox.Show("La celda no es un checkbox.");
                 }
             }
         }
@@ -356,7 +328,7 @@ namespace CapaPresentacion
                     string Codigo;
                     //Recibir la respuesta de elimino o no 
                     string Rpta = "";
-
+                    /*
                     foreach (DataGridViewRow row in dgvListado.Rows)
                     {
                         if (Convert.ToBoolean(row.Cells[0].Value))
@@ -374,8 +346,9 @@ namespace CapaPresentacion
                             }
                         }
                     }
+                    */
 
-                    this.MostrarIngresos();
+                    //this.MostrarIngresos();
                 }
             }
             catch (Exception ex)
@@ -384,6 +357,7 @@ namespace CapaPresentacion
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
+                    
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
@@ -459,7 +433,6 @@ namespace CapaPresentacion
                     this.Botones();
                     this.Limpiar();
                     this.LimpiarDetalle();
-                    this.MostrarIngresos();
                 }
             }
             catch (Exception ex)

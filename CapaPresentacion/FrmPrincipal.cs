@@ -21,7 +21,8 @@ namespace CapaPresentacion
         {
             InitializeComponent();
             picLogo.SizeMode = PictureBoxSizeMode.StretchImage; // Ajustar el modo de tamaño del PictureBox
-  
+            
+
         }
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
@@ -30,6 +31,7 @@ namespace CapaPresentacion
             // Cargar la imagen original en el PictureBox
             originalImage = Properties.Resources.logopng;
             picLogo.Image = originalImage;
+            
 
 
             float opacity = 0.5f; // Cambia este valor según lo necesites
@@ -42,19 +44,19 @@ namespace CapaPresentacion
 
             //userAccess();
 
-            lblNombre.Text = UserCache.Nombre + " " + UserCache.Apellido;
-            lblEmail.Text = UserCache.Correo;
-            lblID.Text = UserCache.IdUsuario.ToString();//Convertimos el id de usuario a string para que sea compatible con el texto de textbox
+            //lblNombre.Text = UserCache.Nombre + " " + UserCache.Apellido;
+            //lblEmail.Text = UserCache.Correo;
+           // lblID.Text = UserCache.IdUsuario.ToString();//Convertimos el id de usuario a string para que sea compatible con el texto de textbox
             //Convertimos el id del rol a string con el metodo ya hecho en la clase roles. Despues esto se lo asignamos al texto del label rol.
-            lblRol.Text = Roles.rolConverter(UserCache.IdRoles);
+            //lblRol.Text = Roles.rolConverter(UserCache.IdRoles);
 
         }
 
         private void userAccess()
         {
-            if (UserCache.IdRoles == Roles.Vendedor) 
-            btnUsers.Enabled = false;
-            btnCompras.Enabled = false;
+            //if (UserCache.IdRoles == Roles.Vendedor) 
+            //btnUsers.Enabled = false;
+            //btnCompras.Enabled = false;
 
         }
 
@@ -79,28 +81,7 @@ namespace CapaPresentacion
             return bitmap;
         }
         bool sideBarExpand;
-        private void sideBarTimer_Tick(object sender, EventArgs e)
-        {
-            if (sideBarExpand)
-            {
-                sideBar.Width -= 10;
-                if (sideBar.Width == sideBar.MinimumSize.Width)
-                {
-                    sideBarExpand = false;
-                    sideBarTimer.Stop();
-                }
-            }
-            else
-            {
-                sideBar.Width += 10;
-                if (sideBar.Width == sideBar.MaximumSize.Width)
-                {
-                    sideBarExpand = true;
-                    sideBarTimer.Stop();
-                }
-
-            }
-        }
+      
         //Variable para cerrar formularios abiertos y abrir formularios cerrados
         private Form activeForm = null;
 
@@ -130,10 +111,7 @@ namespace CapaPresentacion
             openChildForm(new FrmUsuarios());
         }
 
-        private void btnMenu_Click(object sender, EventArgs e)
-        {
-            sideBarTimer.Start();
-        }
+        
 
         private void btnProductos_Click(object sender, EventArgs e)
         {
@@ -162,7 +140,16 @@ namespace CapaPresentacion
                 this.Close();
         }
 
-     
+        private void btnAcercaDe_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void btnNuevaCompra_Click(object sender, EventArgs e)
+        {
+            openChildForm(new FrmCompras());
+        }
     }
 }
 

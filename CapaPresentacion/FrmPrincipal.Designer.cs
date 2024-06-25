@@ -28,363 +28,315 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
-            this.sideBar = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.ImageUser = new System.Windows.Forms.PictureBox();
-            this.lblID = new System.Windows.Forms.Label();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.lblRol = new System.Windows.Forms.Label();
-            this.btnOff = new System.Windows.Forms.Button();
-            this.btnAjustes = new System.Windows.Forms.Button();
-            this.btnUsers = new System.Windows.Forms.Button();
-            this.btnReports = new System.Windows.Forms.Button();
-            this.btnCompras = new System.Windows.Forms.Button();
-            this.btnVentas = new System.Windows.Forms.Button();
-            this.btnProductos = new System.Windows.Forms.Button();
-            this.btnMenu = new System.Windows.Forms.Button();
-            this.sideBarTimer = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.picLogo = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.sideBar.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ImageUser)).BeginInit();
+            this.menuTitulo = new System.Windows.Forms.MenuStrip();
+            this.btnVentas = new FontAwesome.Sharp.IconMenuItem();
+            this.nuevaVentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.historialDeVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnCompras = new FontAwesome.Sharp.IconMenuItem();
+            this.btnNuevaCompra = new System.Windows.Forms.ToolStripMenuItem();
+            this.historialDeComprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnReportes = new FontAwesome.Sharp.IconMenuItem();
+            this.reportesDeVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportesDeComprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnUsuarios = new FontAwesome.Sharp.IconMenuItem();
+            this.btnProveedores = new FontAwesome.Sharp.IconMenuItem();
+            this.btnMantenedor = new FontAwesome.Sharp.IconMenuItem();
+            this.categoriasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.productosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.negocioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnAcercaDe = new FontAwesome.Sharp.IconMenuItem();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.panelChildForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // sideBar
+            // label1
             // 
-            this.sideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(91)))), ((int)(((byte)(178)))));
-            this.sideBar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.sideBar.Controls.Add(this.panel2);
-            this.sideBar.Controls.Add(this.btnOff);
-            this.sideBar.Controls.Add(this.btnAjustes);
-            this.sideBar.Controls.Add(this.btnUsers);
-            this.sideBar.Controls.Add(this.btnReports);
-            this.sideBar.Controls.Add(this.btnCompras);
-            this.sideBar.Controls.Add(this.btnVentas);
-            this.sideBar.Controls.Add(this.btnProductos);
-            this.sideBar.Controls.Add(this.btnMenu);
-            this.sideBar.Location = new System.Drawing.Point(1, 0);
-            this.sideBar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.sideBar.MaximumSize = new System.Drawing.Size(223, 749);
-            this.sideBar.MinimumSize = new System.Drawing.Size(41, 749);
-            this.sideBar.Name = "sideBar";
-            this.sideBar.Size = new System.Drawing.Size(41, 749);
-            this.sideBar.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.ImageUser);
-            this.panel2.Controls.Add(this.lblID);
-            this.panel2.Controls.Add(this.lblEmail);
-            this.panel2.Controls.Add(this.lblNombre);
-            this.panel2.Controls.Add(this.lblRol);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 461);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(37, 284);
-            this.panel2.TabIndex = 2;
-            // 
-            // ImageUser
-            // 
-            this.ImageUser.Image = global::CapaPresentacion.Properties.Resources.agregar_usuario;
-            this.ImageUser.Location = new System.Drawing.Point(51, 25);
-            this.ImageUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.ImageUser.Name = "ImageUser";
-            this.ImageUser.Size = new System.Drawing.Size(92, 79);
-            this.ImageUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ImageUser.TabIndex = 4;
-            this.ImageUser.TabStop = false;
-            // 
-            // lblID
-            // 
-            this.lblID.AutoSize = true;
-            this.lblID.Font = new System.Drawing.Font("Segoe UI Black", 11.14286F, System.Drawing.FontStyle.Bold);
-            this.lblID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(0)))));
-            this.lblID.Location = new System.Drawing.Point(32, 146);
-            this.lblID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(25, 20);
-            this.lblID.TabIndex = 3;
-            this.lblID.Text = "ID";
-            // 
-            // lblEmail
-            // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Segoe UI Black", 11.14286F, System.Drawing.FontStyle.Bold);
-            this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(0)))));
-            this.lblEmail.Location = new System.Drawing.Point(32, 209);
-            this.lblEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(49, 20);
-            this.lblEmail.TabIndex = 2;
-            this.lblEmail.Text = "email";
-            // 
-            // lblNombre
-            // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Segoe UI Black", 11.14286F, System.Drawing.FontStyle.Bold);
-            this.lblNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(0)))));
-            this.lblNombre.Location = new System.Drawing.Point(32, 114);
-            this.lblNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(70, 20);
-            this.lblNombre.TabIndex = 1;
-            this.lblNombre.Text = "Nombre";
-            // 
-            // lblRol
-            // 
-            this.lblRol.AutoSize = true;
-            this.lblRol.Font = new System.Drawing.Font("Segoe UI Black", 11.14286F, System.Drawing.FontStyle.Bold);
-            this.lblRol.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(0)))));
-            this.lblRol.Location = new System.Drawing.Point(32, 180);
-            this.lblRol.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblRol.Name = "lblRol";
-            this.lblRol.Size = new System.Drawing.Size(34, 20);
-            this.lblRol.TabIndex = 0;
-            this.lblRol.Text = "Rol";
-            // 
-            // btnOff
-            // 
-            this.btnOff.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnOff.FlatAppearance.BorderSize = 0;
-            this.btnOff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOff.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
-            this.btnOff.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(0)))));
-            this.btnOff.Image = global::CapaPresentacion.Properties.Resources.energia;
-            this.btnOff.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOff.Location = new System.Drawing.Point(0, 393);
-            this.btnOff.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnOff.Name = "btnOff";
-            this.btnOff.Size = new System.Drawing.Size(37, 48);
-            this.btnOff.TabIndex = 8;
-            this.btnOff.Text = "      Cerrar Sesión";
-            this.btnOff.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOff.UseVisualStyleBackColor = true;
-            this.btnOff.Click += new System.EventHandler(this.btnOff_Click);
-            // 
-            // btnAjustes
-            // 
-            this.btnAjustes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAjustes.FlatAppearance.BorderSize = 0;
-            this.btnAjustes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAjustes.Font = new System.Drawing.Font("Segoe UI Black", 13.14286F, System.Drawing.FontStyle.Bold);
-            this.btnAjustes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(0)))));
-            this.btnAjustes.Image = global::CapaPresentacion.Properties.Resources.ajustes;
-            this.btnAjustes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAjustes.Location = new System.Drawing.Point(0, 330);
-            this.btnAjustes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnAjustes.Name = "btnAjustes";
-            this.btnAjustes.Size = new System.Drawing.Size(37, 63);
-            this.btnAjustes.TabIndex = 7;
-            this.btnAjustes.Text = "       Ajustes";
-            this.btnAjustes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAjustes.UseVisualStyleBackColor = true;
-            // 
-            // btnUsers
-            // 
-            this.btnUsers.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnUsers.FlatAppearance.BorderSize = 0;
-            this.btnUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUsers.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
-            this.btnUsers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(0)))));
-            this.btnUsers.Image = global::CapaPresentacion.Properties.Resources.usuarios_alt;
-            this.btnUsers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUsers.Location = new System.Drawing.Point(0, 275);
-            this.btnUsers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnUsers.Name = "btnUsers";
-            this.btnUsers.Size = new System.Drawing.Size(37, 55);
-            this.btnUsers.TabIndex = 6;
-            this.btnUsers.Text = "       Usuarios";
-            this.btnUsers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUsers.UseVisualStyleBackColor = true;
-            this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click);
-            // 
-            // btnReports
-            // 
-            this.btnReports.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnReports.FlatAppearance.BorderSize = 0;
-            this.btnReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReports.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
-            this.btnReports.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(0)))));
-            this.btnReports.Image = global::CapaPresentacion.Properties.Resources.lista_del_portapapeles;
-            this.btnReports.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReports.Location = new System.Drawing.Point(0, 220);
-            this.btnReports.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnReports.Name = "btnReports";
-            this.btnReports.Size = new System.Drawing.Size(37, 55);
-            this.btnReports.TabIndex = 5;
-            this.btnReports.Text = "       Reportes";
-            this.btnReports.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReports.UseVisualStyleBackColor = true;
-            this.btnReports.Click += new System.EventHandler(this.btnReports_Click);
-            // 
-            // btnCompras
-            // 
-            this.btnCompras.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCompras.FlatAppearance.BorderSize = 0;
-            this.btnCompras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCompras.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
-            this.btnCompras.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(0)))));
-            this.btnCompras.Image = global::CapaPresentacion.Properties.Resources.carrito_de_compras;
-            this.btnCompras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCompras.Location = new System.Drawing.Point(0, 165);
-            this.btnCompras.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnCompras.Name = "btnCompras";
-            this.btnCompras.Size = new System.Drawing.Size(37, 55);
-            this.btnCompras.TabIndex = 4;
-            this.btnCompras.Text = "       Compras";
-            this.btnCompras.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCompras.UseVisualStyleBackColor = true;
-            this.btnCompras.Click += new System.EventHandler(this.btnHistorial_Click);
-            // 
-            // btnVentas
-            // 
-            this.btnVentas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnVentas.FlatAppearance.BorderSize = 0;
-            this.btnVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVentas.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
-            this.btnVentas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(0)))));
-            this.btnVentas.Image = global::CapaPresentacion.Properties.Resources.factura_punto_de_venta__1_;
-            this.btnVentas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVentas.Location = new System.Drawing.Point(0, 110);
-            this.btnVentas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnVentas.Name = "btnVentas";
-            this.btnVentas.Size = new System.Drawing.Size(37, 55);
-            this.btnVentas.TabIndex = 3;
-            this.btnVentas.Text = "       Ventas";
-            this.btnVentas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVentas.UseVisualStyleBackColor = true;
-            this.btnVentas.Click += new System.EventHandler(this.btnCrearFactura_Click);
-            // 
-            // btnProductos
-            // 
-            this.btnProductos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnProductos.FlatAppearance.BorderSize = 0;
-            this.btnProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProductos.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
-            this.btnProductos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(0)))));
-            this.btnProductos.Image = global::CapaPresentacion.Properties.Resources.caja_de_herramientas;
-            this.btnProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProductos.Location = new System.Drawing.Point(0, 55);
-            this.btnProductos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnProductos.Name = "btnProductos";
-            this.btnProductos.Size = new System.Drawing.Size(37, 55);
-            this.btnProductos.TabIndex = 2;
-            this.btnProductos.Text = "       Productos";
-            this.btnProductos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProductos.UseVisualStyleBackColor = true;
-            this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
-            // 
-            // btnMenu
-            // 
-            this.btnMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMenu.FlatAppearance.BorderSize = 0;
-            this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMenu.Font = new System.Drawing.Font("Segoe UI Black", 15.14286F, System.Drawing.FontStyle.Bold);
-            this.btnMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(0)))));
-            this.btnMenu.Image = global::CapaPresentacion.Properties.Resources.menu_hamburguesa__1_;
-            this.btnMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenu.Location = new System.Drawing.Point(0, 0);
-            this.btnMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(37, 55);
-            this.btnMenu.TabIndex = 1;
-            this.btnMenu.Text = "       Menú";
-            this.btnMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenu.UseVisualStyleBackColor = true;
-            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
-            // 
-            // sideBarTimer
-            // 
-            this.sideBarTimer.Interval = 10;
-            this.sideBarTimer.Tick += new System.EventHandler(this.sideBarTimer_Tick);
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(91)))), ((int)(((byte)(178)))));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(0)))));
+            this.label1.Location = new System.Drawing.Point(18, 17);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(478, 47);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "SISTEMA DE FACTURACION";
             // 
             // panelChildForm
             // 
+            this.panelChildForm.AutoSize = true;
             this.panelChildForm.BackColor = System.Drawing.SystemColors.Control;
             this.panelChildForm.Controls.Add(this.picLogo);
-            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelChildForm.Location = new System.Drawing.Point(40, 0);
-            this.panelChildForm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelChildForm.Location = new System.Drawing.Point(0, 334);
+            this.panelChildForm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(660, 423);
+            this.panelChildForm.Size = new System.Drawing.Size(2356, 1017);
             this.panelChildForm.TabIndex = 3;
             // 
             // picLogo
             // 
             this.picLogo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.picLogo.BackColor = System.Drawing.Color.Transparent;
-            this.picLogo.Location = new System.Drawing.Point(182, 92);
-            this.picLogo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picLogo.Location = new System.Drawing.Point(908, 288);
+            this.picLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(271, 254);
+            this.picLogo.Size = new System.Drawing.Size(497, 469);
             this.picLogo.TabIndex = 1;
             this.picLogo.TabStop = false;
             // 
-            // panel1
+            // menuTitulo
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(91)))), ((int)(((byte)(178)))));
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(40, 423);
-            this.panel1.TabIndex = 4;
+            this.menuTitulo.AutoSize = false;
+            this.menuTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(91)))), ((int)(((byte)(178)))));
+            this.menuTitulo.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.menuTitulo.ImageScalingSize = new System.Drawing.Size(28, 28);
+            this.menuTitulo.Location = new System.Drawing.Point(0, 0);
+            this.menuTitulo.Name = "menuTitulo";
+            this.menuTitulo.Padding = new System.Windows.Forms.Padding(11, 4, 0, 4);
+            this.menuTitulo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.menuTitulo.Size = new System.Drawing.Size(2244, 94);
+            this.menuTitulo.TabIndex = 8;
+            this.menuTitulo.Text = "menuStrip2";
+            // 
+            // btnVentas
+            // 
+            this.btnVentas.AutoSize = false;
+            this.btnVentas.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nuevaVentaToolStripMenuItem,
+            this.historialDeVentasToolStripMenuItem});
+            this.btnVentas.IconChar = FontAwesome.Sharp.IconChar.Tags;
+            this.btnVentas.IconColor = System.Drawing.Color.Black;
+            this.btnVentas.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnVentas.IconSize = 50;
+            this.btnVentas.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnVentas.Name = "btnVentas";
+            this.btnVentas.Size = new System.Drawing.Size(100, 100);
+            this.btnVentas.Text = "Ventas";
+            this.btnVentas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // nuevaVentaToolStripMenuItem
+            // 
+            this.nuevaVentaToolStripMenuItem.Name = "nuevaVentaToolStripMenuItem";
+            this.nuevaVentaToolStripMenuItem.Size = new System.Drawing.Size(313, 40);
+            this.nuevaVentaToolStripMenuItem.Text = "Nueva venta";
+            // 
+            // historialDeVentasToolStripMenuItem
+            // 
+            this.historialDeVentasToolStripMenuItem.Name = "historialDeVentasToolStripMenuItem";
+            this.historialDeVentasToolStripMenuItem.Size = new System.Drawing.Size(313, 40);
+            this.historialDeVentasToolStripMenuItem.Text = "Historial de ventas";
+            // 
+            // btnCompras
+            // 
+            this.btnCompras.AutoSize = false;
+            this.btnCompras.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnNuevaCompra,
+            this.historialDeComprasToolStripMenuItem});
+            this.btnCompras.IconChar = FontAwesome.Sharp.IconChar.DollyFlatbed;
+            this.btnCompras.IconColor = System.Drawing.Color.Black;
+            this.btnCompras.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCompras.IconSize = 50;
+            this.btnCompras.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnCompras.Name = "btnCompras";
+            this.btnCompras.Size = new System.Drawing.Size(100, 100);
+            this.btnCompras.Text = "Compras";
+            this.btnCompras.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // btnNuevaCompra
+            // 
+            this.btnNuevaCompra.Name = "btnNuevaCompra";
+            this.btnNuevaCompra.Size = new System.Drawing.Size(333, 40);
+            this.btnNuevaCompra.Text = "Nueva compra";
+            this.btnNuevaCompra.Click += new System.EventHandler(this.btnNuevaCompra_Click);
+            // 
+            // historialDeComprasToolStripMenuItem
+            // 
+            this.historialDeComprasToolStripMenuItem.Name = "historialDeComprasToolStripMenuItem";
+            this.historialDeComprasToolStripMenuItem.Size = new System.Drawing.Size(333, 40);
+            this.historialDeComprasToolStripMenuItem.Text = "Historial de compras";
+            // 
+            // btnReportes
+            // 
+            this.btnReportes.AutoSize = false;
+            this.btnReportes.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.reportesDeVentasToolStripMenuItem,
+            this.reportesDeComprasToolStripMenuItem});
+            this.btnReportes.IconChar = FontAwesome.Sharp.IconChar.BarChart;
+            this.btnReportes.IconColor = System.Drawing.Color.Black;
+            this.btnReportes.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnReportes.IconSize = 50;
+            this.btnReportes.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnReportes.Name = "btnReportes";
+            this.btnReportes.Size = new System.Drawing.Size(100, 100);
+            this.btnReportes.Text = "Reportes";
+            this.btnReportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // reportesDeVentasToolStripMenuItem
+            // 
+            this.reportesDeVentasToolStripMenuItem.Name = "reportesDeVentasToolStripMenuItem";
+            this.reportesDeVentasToolStripMenuItem.Size = new System.Drawing.Size(337, 40);
+            this.reportesDeVentasToolStripMenuItem.Text = "Reportes de ventas";
+            // 
+            // reportesDeComprasToolStripMenuItem
+            // 
+            this.reportesDeComprasToolStripMenuItem.Name = "reportesDeComprasToolStripMenuItem";
+            this.reportesDeComprasToolStripMenuItem.Size = new System.Drawing.Size(337, 40);
+            this.reportesDeComprasToolStripMenuItem.Text = "Reportes de compras";
+            // 
+            // btnUsuarios
+            // 
+            this.btnUsuarios.AutoSize = false;
+            this.btnUsuarios.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnUsuarios.IconChar = FontAwesome.Sharp.IconChar.UsersCog;
+            this.btnUsuarios.IconColor = System.Drawing.Color.Black;
+            this.btnUsuarios.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnUsuarios.IconSize = 50;
+            this.btnUsuarios.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnUsuarios.Name = "btnUsuarios";
+            this.btnUsuarios.Size = new System.Drawing.Size(100, 100);
+            this.btnUsuarios.Text = "Usuarios";
+            this.btnUsuarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // btnProveedores
+            // 
+            this.btnProveedores.AutoSize = false;
+            this.btnProveedores.IconChar = FontAwesome.Sharp.IconChar.AddressCard;
+            this.btnProveedores.IconColor = System.Drawing.Color.Black;
+            this.btnProveedores.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnProveedores.IconSize = 50;
+            this.btnProveedores.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnProveedores.Name = "btnProveedores";
+            this.btnProveedores.Size = new System.Drawing.Size(100, 100);
+            this.btnProveedores.Text = "Proveedores";
+            this.btnProveedores.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // btnMantenedor
+            // 
+            this.btnMantenedor.AutoSize = false;
+            this.btnMantenedor.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.categoriasToolStripMenuItem,
+            this.productosToolStripMenuItem,
+            this.negocioToolStripMenuItem});
+            this.btnMantenedor.IconChar = FontAwesome.Sharp.IconChar.Tools;
+            this.btnMantenedor.IconColor = System.Drawing.Color.Black;
+            this.btnMantenedor.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMantenedor.IconSize = 50;
+            this.btnMantenedor.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnMantenedor.Name = "btnMantenedor";
+            this.btnMantenedor.Size = new System.Drawing.Size(100, 100);
+            this.btnMantenedor.Text = "Mantenedor";
+            this.btnMantenedor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // categoriasToolStripMenuItem
+            // 
+            this.categoriasToolStripMenuItem.Name = "categoriasToolStripMenuItem";
+            this.categoriasToolStripMenuItem.Size = new System.Drawing.Size(234, 40);
+            this.categoriasToolStripMenuItem.Text = "Categorias";
+            // 
+            // productosToolStripMenuItem
+            // 
+            this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
+            this.productosToolStripMenuItem.Size = new System.Drawing.Size(234, 40);
+            this.productosToolStripMenuItem.Text = "Productos";
+            // 
+            // negocioToolStripMenuItem
+            // 
+            this.negocioToolStripMenuItem.Name = "negocioToolStripMenuItem";
+            this.negocioToolStripMenuItem.Size = new System.Drawing.Size(234, 40);
+            this.negocioToolStripMenuItem.Text = "Negocio";
+            // 
+            // btnAcercaDe
+            // 
+            this.btnAcercaDe.AutoSize = false;
+            this.btnAcercaDe.IconChar = FontAwesome.Sharp.IconChar.CircleInfo;
+            this.btnAcercaDe.IconColor = System.Drawing.Color.Black;
+            this.btnAcercaDe.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAcercaDe.IconSize = 50;
+            this.btnAcercaDe.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnAcercaDe.Name = "btnAcercaDe";
+            this.btnAcercaDe.Size = new System.Drawing.Size(100, 100);
+            this.btnAcercaDe.Text = "Acerca de";
+            this.btnAcercaDe.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnAcercaDe.Click += new System.EventHandler(this.btnAcercaDe_Click);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(28, 28);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnVentas,
+            this.btnCompras,
+            this.btnReportes,
+            this.btnUsuarios,
+            this.btnProveedores,
+            this.btnMantenedor,
+            this.btnAcercaDe});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 94);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(11, 4, 0, 4);
+            this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.menuStrip1.Size = new System.Drawing.Size(2244, 108);
+            this.menuStrip1.TabIndex = 7;
+            this.menuStrip1.Text = "menuStrip1";
             // 
             // FrmPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(700, 423);
-            this.Controls.Add(this.sideBar);
+            this.ClientSize = new System.Drawing.Size(2244, 1364);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panelChildForm);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.menuTitulo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "FrmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "VAND y MONTI";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmPrincipal_Load);
-            this.sideBar.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ImageUser)).EndInit();
             this.panelChildForm.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel sideBar;
-        private System.Windows.Forms.Button btnMenu;
-        private System.Windows.Forms.Button btnAjustes;
-        private System.Windows.Forms.Button btnUsers;
-        private System.Windows.Forms.Button btnReports;
-        private System.Windows.Forms.Button btnVentas;
-        private System.Windows.Forms.Button btnProductos;
-        private System.Windows.Forms.PictureBox picLogo;
-        private System.Windows.Forms.Button btnOff;
-        private System.Windows.Forms.Timer sideBarTimer;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panelChildForm;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.Label lblRol;
-        private System.Windows.Forms.Label lblID;
-        private System.Windows.Forms.PictureBox ImageUser;
-        private System.Windows.Forms.Button btnCompras;
+        private System.Windows.Forms.PictureBox picLogo;
+        private System.Windows.Forms.MenuStrip menuTitulo;
+        private FontAwesome.Sharp.IconMenuItem btnVentas;
+        private System.Windows.Forms.ToolStripMenuItem nuevaVentaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem historialDeVentasToolStripMenuItem;
+        private FontAwesome.Sharp.IconMenuItem btnCompras;
+        private System.Windows.Forms.ToolStripMenuItem btnNuevaCompra;
+        private System.Windows.Forms.ToolStripMenuItem historialDeComprasToolStripMenuItem;
+        private FontAwesome.Sharp.IconMenuItem btnReportes;
+        private System.Windows.Forms.ToolStripMenuItem reportesDeVentasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reportesDeComprasToolStripMenuItem;
+        private FontAwesome.Sharp.IconMenuItem btnUsuarios;
+        private FontAwesome.Sharp.IconMenuItem btnProveedores;
+        private FontAwesome.Sharp.IconMenuItem btnMantenedor;
+        private System.Windows.Forms.ToolStripMenuItem categoriasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem productosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem negocioToolStripMenuItem;
+        private FontAwesome.Sharp.IconMenuItem btnAcercaDe;
+        private System.Windows.Forms.MenuStrip menuStrip1;
     }
 }
