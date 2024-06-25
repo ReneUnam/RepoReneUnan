@@ -12,7 +12,7 @@ namespace CapaLogicaNegocio.Entidades
     public class NIngreso
     {
         //Metodo para insertar datos en la BD
-        public static string InsertarIngreso(int idUsuario, DateTime fecha, int idProducto, double iva,
+        public static string InsertarIngreso(int idUsuario, DateTime fecha, double iva,
         double total, int idproveedor, DataTable dtdetalles) //Aqui se reciben 
         {
             float fIva = (float)iva; //convertimos de double a float
@@ -30,7 +30,7 @@ namespace CapaLogicaNegocio.Entidades
             {
                 
                 DDetalleIngreso detalle = new DDetalleIngreso();
-                detalle.Id_Productos = Convert.ToInt32(row["Id_Productos"].ToString());
+                detalle.Id_Productos = Convert.ToInt32(row["ID"].ToString());
                 //producto
                 detalle.Cantidad = Convert.ToInt32(row["Cantidad"].ToString());
                 detalle.PrecioUnitario = Convert.ToInt32(row["Prec.Compra"].ToString());

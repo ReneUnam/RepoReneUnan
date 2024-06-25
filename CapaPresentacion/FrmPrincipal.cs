@@ -26,7 +26,7 @@ namespace CapaPresentacion
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
             picLogo.BorderStyle = BorderStyle.None; // Establecer el borde del PictureBox a ninguno
-
+            //userAccess();
             // Cargar la imagen original en el PictureBox
             originalImage = Properties.Resources.logopng;
             picLogo.Image = originalImage;

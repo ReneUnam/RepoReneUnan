@@ -17,7 +17,7 @@ namespace CapaPresentacion
        // public int IdUsuario;
         private DataTable dtDetalle;
 
-        private decimal TotalPagado = 0;
+        private double TotalPagado = 0;
         private bool IsNuevo;
 
         private static FrmCompras _instance; //Patron singleton
@@ -68,6 +68,7 @@ namespace CapaPresentacion
             {
                 this.Habilitar(true);
                 this.btnNuevo.Enabled = false;
+                btnExistente.Enabled = false;
                 this.btnGuardar.Enabled = true;
                 this.btnCancelar.Enabled = true;
             }
@@ -75,6 +76,7 @@ namespace CapaPresentacion
             {
                 this.Habilitar(false);
                 this.btnNuevo.Enabled = true;
+                btnExistente.Enabled = true;
                 this.btnGuardar.Enabled = false;
                 this.btnCancelar.Enabled = false;
             }
@@ -291,12 +293,12 @@ namespace CapaPresentacion
             {
                 //int Id = int.Parse(cmbProveedores.SelectedValue.ToString());
 
-                DataRow[] foundRowsCorreo = new NUsuario().MostrarAdmins().Select($"id_usuario = '{id}'");
+                DataRow[] foundRowsCorreo = new NUsuario().MostrarAdmins().Select($"id_usuarios = '{id}'");
 
                 // Buscar el id del proveedor en el DataTable
-                DataRow[] foundRowsID = new NUsuario().MostrarAdmins().Select($"id_usuario = '{id}'");
+                DataRow[] foundRowsID = new NUsuario().MostrarAdmins().Select($"id_usuarios = '{id}'");
 
-                string idtxt = foundRowsID[0]["id_usuario"].ToString();
+                string idtxt = foundRowsID[0]["id_usuarios"].ToString();
                 string sectorTxt = foundRowsCorreo[0]["correo"].ToString();
                 // Actualizar el texto del Label
                 lblIdU.Text = "ID: " + idtxt;
@@ -410,20 +412,14 @@ namespace CapaPresentacion
             DateTime FechaIngreso = DateTime.Now;
             try
             {
-                string rpta = "";
-                if (this.cmbProveedores.SelectedIndex == -1 || cmbUsuario.SelectedIndex == -1 || this.txtIdProducto.Text == string.Empty
-                    || this.txtCantidadProducto.Text == string.Empty || this.txtPrecCompra.Text == string.Empty || this.txtPrecVenta.Text == string.Empty
-                    || this.txtIva.Text == string.Empty || cmbCategoria.SelectedIndex == -1 || dtFechaVencimiento.CustomFormat == " ")
+                string rpta = " ";
+                if (this.cmbProveedores.SelectedIndex == -1 || cmbUsuario.SelectedIndex == -1
+                    || this.txtIva.Text == string.Empty || dtFechaVencimiento.CustomFormat == " ")
                 {
                     MensajeError("Falta ingresar algunos datos, serán remarcados");
                     //resalta donde es requerido llenar el campo
                     erroricono.SetError(cmbProveedores, "Ingrese un Valor");
                     erroricono.SetError(cmbUsuario, "Ingrese un Valor");
-                    erroricono.SetError(txtIdProducto, "Ingrese un Valor");
-                    erroricono.SetError(txtNombreProducto, "Ingrese un Valor");
-                    erroricono.SetError(txtCantidadProducto, "Ingrese un Valor");
-                    erroricono.SetError(txtPrecCompra, "Ingrese un Valor");
-                    erroricono.SetError(txtPrecVenta, "Ingrese un Valor");
                     erroricono.SetError(txtIva, "Ingrese un Valor");
                     erroricono.SetError(cmbCategoria, "Ingrese un Valor");
                     erroricono.SetError(dtFechaVencimiento, "Ingrese un Valor");
@@ -435,9 +431,9 @@ namespace CapaPresentacion
                     if (this.IsNuevo)
                     {
                         rpta = NIngreso.InsertarIngreso
-                         (Convert.ToInt32(cmbUsuario.SelectedValue),
-                         FechaIngreso, Convert.ToInt32(txtIdProducto), Convert.ToDouble(txtIva.Text),
-                         Convert.ToDouble(lblTotalCompras.Text), Convert.ToInt32(cmbProveedores.SelectedValue)
+                         (Convert.ToInt32(cmbUsuario.SelectedValue.ToString()),
+                         FechaIngreso, Convert.ToDouble(txtIva.Text),
+                         Convert.ToDouble(TotalPagado), Convert.ToInt32(cmbProveedores.SelectedValue.ToString())
                          ,dtDetalle);
                     }
                     else
@@ -517,7 +513,7 @@ namespace CapaPresentacion
                         if (registrar)
                         {
                             //primero registrar el subtotal
-                            decimal subtotal = Convert.ToDecimal(this.txtCantidadProducto.Text) * Convert.ToDecimal(txtPrecCompra.Text);
+                            double subtotal = Convert.ToDouble(this.txtCantidadProducto.Text) * Convert.ToDouble(txtPrecCompra.Text);
                             TotalPagado = TotalPagado + subtotal;
                             this.lblTotalCompras.Text = TotalPagado.ToString("#0.00#");
                             //Agregar ese detalle al dgvListadoDetalle
@@ -604,7 +600,7 @@ namespace CapaPresentacion
                 int indiceFila = this.dgvListadoDetalle.CurrentCell.RowIndex;
                 DataRow row = this.dtDetalle.Rows[indiceFila];
                 //Disminuir el totalPagado
-                this.TotalPagado = this.TotalPagado - Convert.ToDecimal(row["subtotal"].ToString());
+                this.TotalPagado = this.TotalPagado - Convert.ToDouble(row["subtotal"].ToString());
                 this.lblTotalCompras.Text = this.TotalPagado.ToString("#0.00#");
                 //removemos la fila
                 this.dtDetalle.Rows.Remove(row);
