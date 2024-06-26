@@ -8,6 +8,6 @@ namespace CapaDatos
 {
     internal class Conexion
     {
-        public static string cadena = ConfigurationManager.ConnectionStrings["cadena_conexion"].ToString();
+       
     }
 }

@@ -22,6 +22,9 @@ namespace CapaPresentacion
         {
             InitializeComponent();
         }
+
+        string[,] ListaVenta = new string[200, 6];
+        int Fila = 0;
         private void MostrarProductos()
         {
             
@@ -29,18 +32,7 @@ namespace CapaPresentacion
 
         private void FrmFactura_Load(object sender, EventArgs e)
         {
-            cbotipodocumento.Items.Add(new OpcionCombo() { Valor = "Boleta", Texto = "Boleta" });
-            cbotipodocumento.Items.Add(new OpcionCombo() { Valor = "Factura", Texto = "Factura" });
-            cbotipodocumento.DisplayMember = "Texto";
-            cbotipodocumento.ValueMember = "Valor";
-            cbotipodocumento.SelectedIndex = 0;
-
-            txtfecha.Text = DateTime.Now.ToString("dd/MM/yyyy");
-            txtidproducto.Text = "0";
-
-            txtpagocon.Text = "";
-            txtcambio.Text = "";
-            txttotalpagar.Text = "0";
+        
         }
 
         private void txtproducto_TextChanged(object sender, EventArgs e)
@@ -81,6 +73,99 @@ namespace CapaPresentacion
         private void btnbuscarproducto_Click(object sender, EventArgs e)
         {
             
+
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if(txtIdArticulo.Text != "" && txtNombre.Text != "" && txtPrecio.Text != "" && txtCantidad.Text != "")
+                {
+                    ListaVenta[Fila, 0] = txtIdArticulo.Text;
+                    ListaVenta[Fila, 1] = txtNombre.Text;
+                    ListaVenta[Fila, 2] = txtCantidad.Text;
+                    ListaVenta[Fila, 3] = txtPrecio.Text;
+                    ListaVenta[Fila, 4] = (float.Parse(txtPrecio.Text) * float.Parse(txtCantidad.Text)).ToString();
+                    
+
+                    dgvLista.Rows.Add(ListaVenta[Fila, 0], ListaVenta[Fila, 1], ListaVenta[Fila, 2], ListaVenta[Fila, 3], ListaVenta[Fila, 4]);
+                    Fila++;
+                    txtIdArticulo.Text = txtNombre.Text = txtPrecio.Text = txtCantidad.Text = "";
+                }
+            }
+            catch
+            {
+
+                
+            }
+            CostoAagar();
+
+        }
+
+        public void CostoAagar()
+        {
+            float CostoTotal = 0;
+            int Conteo = 0;
+
+            Conteo = dgvLista.Rows.Count;
+            for (int i = 0; i < Conteo; i++) 
+            {
+                CostoTotal += float.Parse(dgvLista.Rows[i].Cells[4].Value.ToString());
+                
+            }
+            lblTotalAPagar.Text = CostoTotal.ToString();
+        }
+
+        private void txtpagocon_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                float pagoCon = float.Parse(txtpagocon.Text);
+                float totalAPagar = float.Parse(lblTotalAPagar.Text);
+                float cambio = pagoCon - totalAPagar;
+                lblCambio.Text = cambio.ToString();
+
+            }
+            catch 
+            {
+
+                lblCambio.Text = "0.00";
+            }
+        }
+
+        private void txtVender_Click(object sender, EventArgs e)
+        {
 
         }
     }

@@ -184,7 +184,7 @@
             this.Controls.Add(this.label10);
             this.Name = "MdCliente";
             this.Text = "MdCliente";
-            this.Load += new System.EventHandler(this.MdCliente_Load);
+   
             ((System.ComponentModel.ISupportInitialize)(this.dgvdata)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
