@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaPresentacion.Utilidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,18 @@ namespace CapaPresentacion
 
         private void FrmFactura_Load(object sender, EventArgs e)
         {
+            cbotipodocumento.Items.Add(new OpcionCombo() { Valor = "Boleta", Texto = "Boleta" });
+            cbotipodocumento.Items.Add(new OpcionCombo() { Valor = "Factura", Texto = "Factura" });
+            cbotipodocumento.DisplayMember = "Texto";
+            cbotipodocumento.ValueMember = "Valor";
+            cbotipodocumento.SelectedIndex = 0;
 
+            txtfecha.Text = DateTime.Now.ToString("dd/MM/yyyy");
+            txtidproducto.Text = "0";
+
+            txtpagocon.Text = "";
+            txtcambio.Text = "";
+            txttotalpagar.Text = "0";
         }
 
         private void txtproducto_TextChanged(object sender, EventArgs e)
