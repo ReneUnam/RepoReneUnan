@@ -21,5 +21,10 @@ namespace CapaPresentacion
         {
 
         }
+
+        private void txtproducto_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

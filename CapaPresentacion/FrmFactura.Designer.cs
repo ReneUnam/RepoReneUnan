@@ -35,7 +35,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.txtidproducto = new System.Windows.Forms.TextBox();
             this.txtcodproducto = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtproducto = new System.Windows.Forms.TextBox();
@@ -59,6 +58,7 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnbuscarproducto = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -130,7 +130,7 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.White;
-            this.groupBox3.Controls.Add(this.txtidproducto);
+            this.groupBox3.Controls.Add(this.btnbuscarproducto);
             this.groupBox3.Controls.Add(this.txtcodproducto);
             this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Controls.Add(this.txtproducto);
@@ -149,15 +149,6 @@
             this.groupBox3.TabIndex = 200;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Informacion de Producto";
-            // 
-            // txtidproducto
-            // 
-            this.txtidproducto.Location = new System.Drawing.Point(166, 29);
-            this.txtidproducto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtidproducto.Name = "txtidproducto";
-            this.txtidproducto.Size = new System.Drawing.Size(46, 26);
-            this.txtidproducto.TabIndex = 0;
-            this.txtidproducto.Visible = false;
             // 
             // txtcodproducto
             // 
@@ -179,12 +170,13 @@
             // 
             // txtproducto
             // 
-            this.txtproducto.Location = new System.Drawing.Point(290, 65);
+            this.txtproducto.Location = new System.Drawing.Point(316, 65);
             this.txtproducto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtproducto.Name = "txtproducto";
             this.txtproducto.ReadOnly = true;
             this.txtproducto.Size = new System.Drawing.Size(290, 26);
             this.txtproducto.TabIndex = 3;
+            this.txtproducto.TextChanged += new System.EventHandler(this.txtproducto_TextChanged);
             // 
             // txtcantidad
             // 
@@ -231,7 +223,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(285, 40);
+            this.label8.Location = new System.Drawing.Point(312, 40);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(77, 20);
@@ -410,6 +402,20 @@
             this.Column4.MinimumWidth = 8;
             this.Column4.Name = "Column4";
             // 
+            // btnbuscarproducto
+            // 
+            this.btnbuscarproducto.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.btnbuscarproducto.IconColor = System.Drawing.Color.Black;
+            this.btnbuscarproducto.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnbuscarproducto.IconSize = 18;
+            this.btnbuscarproducto.Location = new System.Drawing.Point(220, 65);
+            this.btnbuscarproducto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnbuscarproducto.Name = "btnbuscarproducto";
+            this.btnbuscarproducto.Padding = new System.Windows.Forms.Padding(0, 8, 0, 0);
+            this.btnbuscarproducto.Size = new System.Drawing.Size(56, 26);
+            this.btnbuscarproducto.TabIndex = 101;
+            this.btnbuscarproducto.UseVisualStyleBackColor = true;
+            // 
             // FrmFactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -454,7 +460,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox txtidproducto;
         private System.Windows.Forms.TextBox txtcodproducto;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtproducto;
@@ -478,5 +483,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private FontAwesome.Sharp.IconButton btnbuscarproducto;
     }
 }
