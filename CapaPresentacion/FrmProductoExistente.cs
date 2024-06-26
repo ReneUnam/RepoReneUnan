@@ -17,6 +17,7 @@ namespace CapaPresentacion
         {
             InitializeComponent();
         }
+        public FrmProductoExistente _Producto { get; set; }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -36,6 +37,11 @@ namespace CapaPresentacion
             dtProductos.DataSource = producto.MostrarProductos();
             dtProductos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dtProductos.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

@@ -1,4 +1,5 @@
-﻿using CapaPresentacion.Utilidades;
+﻿using CapaPresentacion.Modales;
+using CapaPresentacion.Utilidades;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -7,7 +8,11 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Documents;
 using System.Windows.Forms;
+using System.Collections.ObjectModel;
+using System.Diagnostics;
+using System.Reflection;
 
 namespace CapaPresentacion
 {
@@ -75,8 +80,36 @@ namespace CapaPresentacion
 
         private void btnbuscarproducto_Click(object sender, EventArgs e)
         {
-           
+            using (var modal = new FrmProductoExistente())
+            {
+                var result = modal.ShowDialog();
 
-        }
+                if (result == DialogResult.OK)
+                {
+                    txtidproducto.Text = modal._Producto.IdProducto.ToString();
+                    txtcodproducto.Text = modal._Producto.Codigo;
+                    txtproducto.Text = modal._Producto.Nombre;
+                    txtprecio.Text = modal._Producto.PrecioVenta.ToString("0.00");
+                    txtstock.Text = modal._Producto.Stock.ToString();
+                    txtcantidad.Select();
+                }
+                else
+                {
+                    txtcodproducto.Select();
+                }
+
+                foreach (FrmProductoExistente item in Lista)
+                {
+                    dgvdata.Rows.Add(new object[] {
+                    item.IdProducto,
+                    item.Codigo,
+                    item.Nombre,
+                    item.oCategoria.Descripcion,
+                    item.Stock,
+                    item.PrecioCompra,
+                    item.PrecioVenta
+                });
+                }
+            }
     }
 }

@@ -55,6 +55,7 @@
     <Compile Include="Metodos\DProducto.cs" />
     <Compile Include="Metodos\DRoles.cs" />
     <Compile Include="Metodos\DUsuario.cs" />
+    <Compile Include="Metodos\List.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SQLConnection\ClassConnection.cs" />
   </ItemGroup>
