@@ -10,7 +10,7 @@ namespace CapaDatos
 {
      public class CD_Producto
      {
-        public List <DProducto> Listar()
+       
 
 
      }

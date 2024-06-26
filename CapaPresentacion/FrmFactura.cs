@@ -80,36 +80,8 @@ namespace CapaPresentacion
 
         private void btnbuscarproducto_Click(object sender, EventArgs e)
         {
-            using (var modal = new FrmProductoExistente())
-            {
-                var result = modal.ShowDialog();
+            
 
-                if (result == DialogResult.OK)
-                {
-                    txtidproducto.Text = modal._Producto.IdProducto.ToString();
-                    txtcodproducto.Text = modal._Producto.Codigo;
-                    txtproducto.Text = modal._Producto.Nombre;
-                    txtprecio.Text = modal._Producto.PrecioVenta.ToString("0.00");
-                    txtstock.Text = modal._Producto.Stock.ToString();
-                    txtcantidad.Select();
-                }
-                else
-                {
-                    txtcodproducto.Select();
-                }
-
-                foreach (FrmProductoExistente item in Lista)
-                {
-                    dgvdata.Rows.Add(new object[] {
-                    item.IdProducto,
-                    item.Codigo,
-                    item.Nombre,
-                    item.oCategoria.Descripcion,
-                    item.Stock,
-                    item.PrecioCompra,
-                    item.PrecioVenta
-                });
-                }
-            }
+        }
     }
 }
