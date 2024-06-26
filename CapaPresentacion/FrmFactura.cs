@@ -26,5 +26,25 @@ namespace CapaPresentacion
         {
 
         }
+
+        private void submenucategoria_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void submenuproducto_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void submenunegocio_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iconMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
