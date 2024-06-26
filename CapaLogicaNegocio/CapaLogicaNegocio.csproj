@@ -54,6 +54,9 @@
     <Compile Include="Entidades\NRoles.cs" />
     <Compile Include="Entidades\NUsuario.cs" />
     <Compile Include="Entidades\Productos.cs" />
+    <Compile Include="FacturaService.cs" />
+    <Compile Include="FacturaServiceBaseBase.cs" />
+    <Compile Include="FacturaServiceHelpers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
