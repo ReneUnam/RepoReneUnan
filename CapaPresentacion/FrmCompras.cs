@@ -590,5 +590,9 @@ namespace CapaPresentacion
 
         }
 
+        private void cmbCategoria_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

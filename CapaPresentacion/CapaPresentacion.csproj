@@ -241,6 +241,9 @@
     <EmbeddedResource Include="Modales\MdCliente.resx">
       <DependentUpon>MdCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Modales\MdProducto.resx">
+      <DependentUpon>MdProducto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modales\MdProveedor.resx">
       <DependentUpon>MdProveedor.cs</DependentUpon>
     </EmbeddedResource>

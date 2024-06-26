@@ -17,6 +17,10 @@ namespace CapaPresentacion
         {
             InitializeComponent();
         }
+        private void MostrarProductos()
+        {
+            
+        }
 
         private void FrmFactura_Load(object sender, EventArgs e)
         {
@@ -56,6 +60,22 @@ namespace CapaPresentacion
 
         private void iconMenuItem1_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnbuscarproducto_Click(object sender, EventArgs e)
+        {
+            string textoABuscar = btnbuscarproducto.Text.ToLower();
 
         }
     }
