@@ -168,5 +168,10 @@ namespace CapaPresentacion
         {
 
         }
+
+        private void lblCntidad_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
