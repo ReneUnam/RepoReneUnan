@@ -75,7 +75,7 @@ namespace CapaPresentacion
 
         private void btnbuscarproducto_Click(object sender, EventArgs e)
         {
-            string textoABuscar = btnbuscarproducto.Text.ToLower();
+           
 
         }
     }
