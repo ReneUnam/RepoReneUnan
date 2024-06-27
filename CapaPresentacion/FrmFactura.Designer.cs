@@ -40,6 +40,11 @@
             this.lblTotalAPagar = new System.Windows.Forms.Label();
             this.lblPagaCon = new System.Windows.Forms.Label();
             this.dgvLista = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblIdArticulo = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.txtIdArticulo = new System.Windows.Forms.TextBox();
@@ -48,11 +53,6 @@
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -99,14 +99,14 @@
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(3, 86);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(2005, 115);
+            this.panel2.Size = new System.Drawing.Size(2005, 134);
             this.panel2.TabIndex = 1;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Black", 16F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(888, 60);
+            this.label3.Location = new System.Drawing.Point(888, 70);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(268, 45);
             this.label3.TabIndex = 3;
@@ -211,6 +211,36 @@
             this.dgvLista.TabIndex = 201;
             this.dgvLista.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "ID ARTICULO";
+            this.Column1.MinimumWidth = 8;
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "NOMBRE";
+            this.Column2.MinimumWidth = 8;
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "PRECIO";
+            this.Column3.MinimumWidth = 8;
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "CANTIDAD";
+            this.Column4.MinimumWidth = 8;
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "SUB TOTAL";
+            this.Column5.MinimumWidth = 8;
+            this.Column5.Name = "Column5";
+            // 
             // lblIdArticulo
             // 
             this.lblIdArticulo.AutoSize = true;
@@ -287,40 +317,10 @@
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Segoe UI Black", 16F, System.Drawing.FontStyle.Bold);
-            this.txtNombre.Location = new System.Drawing.Point(394, 362);
+            this.txtNombre.Location = new System.Drawing.Point(394, 368);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(184, 51);
             this.txtNombre.TabIndex = 215;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "ID ARTICULO";
-            this.Column1.MinimumWidth = 8;
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "NOMBRE";
-            this.Column2.MinimumWidth = 8;
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "PRECIO";
-            this.Column3.MinimumWidth = 8;
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "CANTIDAD";
-            this.Column4.MinimumWidth = 8;
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "SUB TOTAL";
-            this.Column5.MinimumWidth = 8;
-            this.Column5.Name = "Column5";
             // 
             // btnAgregar
             // 
@@ -331,10 +331,10 @@
             this.btnAgregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(0)))));
             this.btnAgregar.Image = global::CapaPresentacion.Properties.Resources.mas;
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregar.Location = new System.Drawing.Point(993, 482);
+            this.btnAgregar.Location = new System.Drawing.Point(967, 482);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnAgregar.Size = new System.Drawing.Size(205, 93);
+            this.btnAgregar.Size = new System.Drawing.Size(282, 121);
             this.btnAgregar.TabIndex = 220;
             this.btnAgregar.Text = "Añadir";
             this.btnAgregar.UseVisualStyleBackColor = false;

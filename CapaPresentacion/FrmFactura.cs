@@ -124,10 +124,10 @@ namespace CapaPresentacion
                     txtIdArticulo.Text = txtNombre.Text = txtPrecio.Text = txtCantidad.Text = "";
                 }
             }
-            catch
+            catch (Exception)
             {
+                MessageBox.Show("Todos los campos son obligatorios");
 
-                
             }
             CostoAagar();
 
@@ -166,7 +166,7 @@ namespace CapaPresentacion
 
         private void txtVender_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void lblCntidad_Click(object sender, EventArgs e)
