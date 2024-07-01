@@ -32,11 +32,11 @@ namespace CapaLogicaNegocio.Entidades
                 DDetalleIngreso detalle = new DDetalleIngreso();
                 detalle.Id_Productos = Convert.ToInt32(row["ID"].ToString());
                 //producto
+                detalle.PrecioUnitario = Convert.ToInt32(row["Precio Compra"].ToString());
+                detalle.PrecioVenta = Convert.ToInt32(row["Precio Venta"].ToString());
                 detalle.Cantidad = Convert.ToInt32(row["Cantidad"].ToString());
-                detalle.PrecioUnitario = Convert.ToInt32(row["Prec.Compra"].ToString());
-                detalle.PrecioVenta = Convert.ToInt32(row["Prec.Venta"].ToString());
                 //descripcion
-                detalle.Stock = Convert.ToInt32(row["Stock"].ToString());
+                //detalle.Stock = Convert.ToInt32(row["Stock"].ToString());
                 detalle.SubTotal = Convert.ToInt32(row["SubTotal"].ToString());
                 //tipo
                 detalles.Add(detalle);

@@ -21,7 +21,7 @@ namespace CapaLogicaNegocio.Entidades
         public static string Insertar(string nombre, string descripcion, int categoria, int precioVenta, DateTime fecha, int stock)
         {
             DProducto objProducto = new DProducto();
-            
+
             objProducto.Nombre = nombre;
             objProducto.Descripcion = descripcion;
             objProducto.IdCategoria = categoria;
@@ -40,6 +40,13 @@ namespace CapaLogicaNegocio.Entidades
 
             return rpta;
         }
+        public static DataTable BuscarNombre(string textobuscar)
+        {
+            DProducto objProducto = new DProducto();
+            objProducto.TextoBuscar = textobuscar;
+            return objProducto.BuscarProducto(objProducto);
 
-    }
+        }
+
+    }  
 }

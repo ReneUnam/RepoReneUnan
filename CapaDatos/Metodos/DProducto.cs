@@ -19,6 +19,7 @@ namespace CapaDatos.Metodos
         private float _PrecioVenta;
         private int _Stock;
         private DateTime _Fecha_Vencimiento;
+        private string _TextoBuscar;
      
 
         //Atributos
@@ -35,6 +36,8 @@ namespace CapaDatos.Metodos
         public int Stock { get; set; }
 
         public DateTime FechaVencimiento { get; set; }
+
+        public string TextoBuscar { get => _TextoBuscar; set => _TextoBuscar = value; }
 
 
 
@@ -174,6 +177,37 @@ namespace CapaDatos.Metodos
 
                 return rpta;
             }
+        }
+
+        public DataTable BuscarProducto(DProducto producto)
+        {
+            DataTable dtResultado = new DataTable("producto");
+            SqlConnection sqlCon = new SqlConnection();
+            try
+            {
+                sqlCon = GetConnection();
+                
+                SqlCommand Sqlcmd = new SqlCommand();
+                Sqlcmd.Connection = sqlCon;
+                Sqlcmd.CommandText = "Sp";
+                Sqlcmd.CommandType = CommandType.StoredProcedure;
+
+
+                SqlParameter PartextoBuscar = new SqlParameter();
+                PartextoBuscar.ParameterName = "@textobuscar";
+                PartextoBuscar.SqlDbType = SqlDbType.VarChar;
+                PartextoBuscar.Size = 50;
+                PartextoBuscar.Value = producto.TextoBuscar;
+                Sqlcmd.Parameters.Add(PartextoBuscar);
+
+                SqlDataAdapter SqlDat = new SqlDataAdapter(Sqlcmd);
+                SqlDat.Fill(dtResultado);
+            }
+            catch (Exception ex)
+            {
+                dtResultado = null;
+            }
+            return dtResultado;
         }
 
 

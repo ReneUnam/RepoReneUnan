@@ -124,11 +124,11 @@
     <Compile Include="FrmCRUDProductos.Designer.cs">
       <DependentUpon>FrmCRUDProductos.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmFactura.cs">
+    <Compile Include="frmComprasHistorial.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmFactura.Designer.cs">
-      <DependentUpon>FrmFactura.cs</DependentUpon>
+    <Compile Include="frmComprasHistorial.Designer.cs">
+      <DependentUpon>frmComprasHistorial.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmGenerarReporte.cs">
       <SubType>Form</SubType>
@@ -148,10 +148,10 @@
     <Compile Include="FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmOscuro.cs">
+    <Compile Include="Modales\FrmOscuro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmOscuro.Designer.cs">
+    <Compile Include="Modales\FrmOscuro.Designer.cs">
       <DependentUpon>FrmOscuro.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmPrincipal.cs">
@@ -172,11 +172,17 @@
     <Compile Include="FrmUsuarios.Designer.cs">
       <DependentUpon>FrmUsuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmProductoExistente.cs">
+    <Compile Include="Modales\FrmProductoExistente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmProductoExistente.Designer.cs">
+    <Compile Include="Modales\FrmProductoExistente.Designer.cs">
       <DependentUpon>FrmProductoExistente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modales\mdProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modales\mdProveedor.Designer.cs">
+      <DependentUpon>mdProveedor.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -191,8 +197,8 @@
     <EmbeddedResource Include="FrmCRUDProductos.resx">
       <DependentUpon>FrmCRUDProductos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmFactura.resx">
-      <DependentUpon>FrmFactura.cs</DependentUpon>
+    <EmbeddedResource Include="frmComprasHistorial.resx">
+      <DependentUpon>frmComprasHistorial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmGenerarReporte.resx">
       <DependentUpon>FrmGenerarReporte.cs</DependentUpon>
@@ -204,7 +210,7 @@
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmOscuro.resx">
+    <EmbeddedResource Include="Modales\FrmOscuro.resx">
       <DependentUpon>FrmOscuro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
@@ -216,8 +222,11 @@
     <EmbeddedResource Include="FrmUsuarios.resx">
       <DependentUpon>FrmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmProductoExistente.resx">
+    <EmbeddedResource Include="Modales\FrmProductoExistente.resx">
       <DependentUpon>FrmProductoExistente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modales\mdProveedor.resx">
+      <DependentUpon>mdProveedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -431,6 +440,57 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\usuarios.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\etiquetas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\etiquetas %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\etiquetas %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carrito-de-compras %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\equipo-de-usuarios.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\estadisticas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\proveedor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\herramientas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\informacion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\informacion1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\busqueda %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mas %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mas %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disco %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rectangulo-xmark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\basura %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\escoba.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

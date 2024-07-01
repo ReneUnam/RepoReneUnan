@@ -140,15 +140,14 @@ namespace CapaPresentacion
                 this.Close();
         }
 
-        private void btnAcercaDe_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void btnNuevaCompra_Click(object sender, EventArgs e)
+        private void btnRegistrarCompra_Click(object sender, EventArgs e)
         {
             openChildForm(new FrmCompras());
+        }
+
+        private void btnHistorialCompras_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frmComprasHistorial());
         }
     }
 }

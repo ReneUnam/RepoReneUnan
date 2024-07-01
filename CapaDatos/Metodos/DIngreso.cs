@@ -10,7 +10,7 @@ using CapaDatos.SQLConnection;
 
 namespace CapaDatos.Metodos
 {
-    public class DIngreso: ClassConnection
+    public class DIngreso : ClassConnection
     {
         //Atributos 
         private int _id_Ingreso;
@@ -21,125 +21,126 @@ namespace CapaDatos.Metodos
         private int _id_Usuario;
 
         //Propiedades
-        public int IdIngreso { get=> _id_Ingreso; set=> _id_Ingreso = value; }
-        public DateTime Fecha { get=> _fecha; set=> _fecha = value; }
-        public double Iva { get => _iva; set=> _iva =value; }
-        public double Total { get => _total; set=> _total = value; }
-        public int IdProveedor { get=> _id_Proveedor; set=> _id_Proveedor = value; }
-        public int IdUsuario { get=> -_id_Usuario; set=> _id_Usuario = value; }
-       
+        public int IdIngreso { get => _id_Ingreso; set => _id_Ingreso = value; }
+        public DateTime Fecha { get => _fecha; set => _fecha = value; }
+        public double Iva { get => _iva; set => _iva = value; }
+        public double Total { get => _total; set => _total = value; }
+        public int IdProveedor { get => _id_Proveedor; set => _id_Proveedor = value; }
+        public int IdUsuario { get => _id_Usuario; set => _id_Usuario = value; }
+
         public string InsertarIngreso(DIngreso Ingreso, List<DDetalleIngreso> Detalle)
         {
             string rpta = "";
-            using (var command = new SqlCommand())
+            SqlCommand command = new SqlCommand();
+            SqlConnection connection = new SqlConnection();
+            try
             {
-                SqlConnection connection = new SqlConnection();
-                try
+                connection = GetConnection();
+                connection.Open();
+                //Establecemos la transaccion la cual nos ayudara a no romper la base de datos en caso de una cagada
+                SqlTransaction sqlTra = connection.BeginTransaction();
+                command.Connection = connection;
+                command.Transaction = sqlTra;
+                command.CommandText = "Sp_InsertarIngreso";
+                command.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter ParIdIngreso = new SqlParameter();
+                ParIdIngreso.ParameterName = "@idingreso";
+                ParIdIngreso.SqlDbType = SqlDbType.Int;
+                ParIdIngreso.Direction = ParameterDirection.Output;
+                command.Parameters.Add(ParIdIngreso);
+
+                SqlParameter ParFecha = new SqlParameter();
+                ParFecha.ParameterName = "@fecha";
+                ParFecha.SqlDbType = SqlDbType.Date;
+                ParFecha.Value = Ingreso.Fecha;
+                command.Parameters.Add(ParFecha);
+
+                SqlParameter ParIva = new SqlParameter();
+                ParIva.ParameterName = "@iva";
+                ParIva.SqlDbType = SqlDbType.Money;
+                ParIva.Value = Ingreso.Iva;
+                command.Parameters.Add(ParIva);
+
+                SqlParameter ParTotal = new SqlParameter();
+                ParTotal.ParameterName = "@total";
+                ParTotal.SqlDbType = SqlDbType.Float;
+                //ParFecha.Size = 50;
+                ParTotal.Value = Ingreso.Total;
+                command.Parameters.Add(ParTotal);
+
+                SqlParameter ParIdProveedor = new SqlParameter();
+                ParIdProveedor.ParameterName = "@idProveedor";
+                ParIdProveedor.SqlDbType = SqlDbType.Int;
+                ParIdProveedor.Size = 20;
+                ParIdProveedor.Value = Ingreso.IdProveedor;
+                command.Parameters.Add(ParIdProveedor);
+
+                SqlParameter ParIdUsuario = new SqlParameter();
+                ParIdUsuario.ParameterName = "@idUsuario";
+                ParIdUsuario.SqlDbType = SqlDbType.Int;
+                ParIdUsuario.Size = 4;
+                ParIdUsuario.Value = Ingreso.IdUsuario;
+                command.Parameters.Add(ParIdUsuario);
+
+                rpta = command.ExecuteNonQuery() == 1 ? "Ok" : "No se Ingreso el Reistro";
+
+                if (rpta.Equals("Ok"))
                 {
-                    connection = GetConnection();
-                    connection.Open();
-                    //Establecemos la transaccion la cual nos ayudara a no romper la base de datos en caso de una cagada
-                    SqlTransaction sqlTra = connection.BeginTransaction();
-                    command.Transaction = sqlTra;
-                    command.CommandText = "Sp_InsertarIngreso";
-                    command.CommandType = CommandType.StoredProcedure;
+                    this.IdIngreso = Convert.ToInt32(command.Parameters["@idingreso"].Value);
 
-                    SqlParameter ParIdIngreso = new SqlParameter();
-                    ParIdIngreso.ParameterName = "@idingreso";
-                    ParIdIngreso.SqlDbType = SqlDbType.Int;
-                    ParIdIngreso.Direction = ParameterDirection.Output;
-                    command.Parameters.Add(ParIdIngreso);
-
-                    SqlParameter ParFecha = new SqlParameter();
-                    ParFecha.ParameterName = "@fecha";
-                    ParFecha.SqlDbType = SqlDbType.Date;
-                    ParFecha.Value = Ingreso.Fecha;
-                    command.Parameters.Add(ParFecha);
-
-                    SqlParameter ParIva = new SqlParameter();
-                    ParIva.ParameterName = "@iva";
-                    ParIva.SqlDbType = SqlDbType.Money;
-                    ParIva.Value = Ingreso.Iva;
-                    command.Parameters.Add(ParIva);
-
-                    SqlParameter ParTotal = new SqlParameter();
-                    ParFecha.ParameterName = "@total";
-                    ParFecha.SqlDbType = SqlDbType.Float;
-                    //ParFecha.Size = 50;
-                    ParFecha.Value = Ingreso.Fecha;
-                    command.Parameters.Add(ParFecha);
-
-                    SqlParameter ParIdProveedor = new SqlParameter();
-                    ParIdProveedor.ParameterName = "@idProveedor";
-                    ParIdProveedor.SqlDbType = SqlDbType.Int;
-                    ParIdProveedor.Size = 20;
-                    ParIdProveedor.Value = Ingreso.IdProveedor;
-                    command.Parameters.Add(ParIdProveedor);
-
-                    SqlParameter ParIdUsuario = new SqlParameter();
-                    ParIdUsuario.ParameterName = "@idUsuario";
-                    ParIdUsuario.SqlDbType = SqlDbType.Int;
-                    ParIdUsuario.Size = 4;
-                    ParIdUsuario.Value = Ingreso.IdUsuario;
-                    command.Parameters.Add(ParIdUsuario);
-
-                    rpta = command.ExecuteNonQuery() == 1 ? "Ok" : "No se Ingreso el Reistro";
-
-                    if (rpta.Equals("Ok"))
+                    foreach (DDetalleIngreso det in Detalle)
                     {
-                        this.IdIngreso = Convert.ToInt32(command.Parameters["@idingreso"].Value);
-
-                        foreach (DDetalleIngreso det in Detalle)
+                        det.Id_Ingreso = this.IdIngreso;
+                        //llamar al método insertar de la clase Detalle_Ingreso
+                        rpta = det.Insertar(det, ref connection, ref sqlTra);
+                        if (!rpta.Equals("Ok"))
                         {
-                            det.Id_Ingreso = this.IdIngreso;
-                            //llamar al método insertar de la clase Detalle_Ingreso
-                            rpta = det.Insertar(det, ref connection, ref sqlTra);
-                            if (!rpta.Equals("Ok"))
-                            {
-                                break;
-                            }
+                            break;
                         }
                     }
-                    if (rpta.Equals("Ok"))
-                    {
-                        sqlTra.Commit();
-                        
-                    }
-                    else
-                    {
-                        sqlTra.Rollback();
-                    }
                 }
-                catch (Exception ex)
+                if (rpta.Equals("Ok"))
                 {
+                    sqlTra.Commit();
 
-                    rpta = ex.Message;
                 }
-
-                finally
+                else
                 {
-                    if (connection.State == ConnectionState.Open) connection.Close();
+                    sqlTra.Rollback();
                 }
-                return rpta;
+            }
+            catch (Exception ex)
+            {
 
+                rpta = ex.Message;
             }
 
+            finally
+            {
+                if (connection.State == ConnectionState.Open) connection.Close();
+            }
+            return rpta;
+
         }
-        
+
+
+
 
         //Metodo que muestra los ingresos en el datagrid //TODOOOOOOOOOOOOOOOOOOOOOOOOOOOO
-        public DataTable MostrarIngresos() 
+        public DataTable MostrarIngresos()
         {
+
             using (var Connection = GetConnection())
             {
                 Connection.Open();
-                DataTable dtResultado = new DataTable("Ingresos");
+                DataTable dtResultado = new DataTable("ingresos");
 
                 using (var Command = new SqlCommand())
                 {
                     Command.Connection = Connection;
                     Command.CommandType = CommandType.StoredProcedure;
-                    Command.CommandText = "Sp_MostrarCompras";
+                    Command.CommandText = "sp_mostrarIngresos";
 
                     try
                     {
@@ -158,18 +159,19 @@ namespace CapaDatos.Metodos
             }
         }
 
-        
+
         public string Eliminar(DIngreso Ingreso)
         {
             string rpta = "";
-            SqlConnection connection = new SqlConnection();
+
+            SqlConnection Connection = GetConnection();
             try
             {
-                connection = GetConnection();
-                connection.Open();
+
+                Connection.Open();
 
                 SqlCommand sqlCmd = new SqlCommand();
-                sqlCmd.Connection = connection;
+                sqlCmd.Connection = Connection;
                 sqlCmd.CommandText = "Sp_EliminarIngreso";
                 sqlCmd.CommandType = CommandType.StoredProcedure;
 
@@ -189,7 +191,7 @@ namespace CapaDatos.Metodos
 
             finally
             {
-                if (connection.State == ConnectionState.Open) connection.Close();
+                if (Connection.State == ConnectionState.Open) Connection.Close();
             }
             return rpta;
         }
@@ -201,7 +203,7 @@ namespace CapaDatos.Metodos
             {
                 connection.Open();
                 try
-                {   
+                {
                     SqlCommand Sqlcmd = new SqlCommand();
                     Sqlcmd.Connection = connection;
                     Sqlcmd.CommandText = "Sp_BuscarPorFecha";
@@ -233,5 +235,7 @@ namespace CapaDatos.Metodos
             }
         }
     }
-
 }
+    
+
+
