@@ -726,5 +726,9 @@ private void btnQuitar_Click(object sender, EventArgs e)
 }
 */
 
+        private void cmbCategoria_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
